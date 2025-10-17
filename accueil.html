@@ -1,72 +1,134 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NAHA — Accueil</title>
-  <link rel="stylesheet" href="accueil-style.css">
+
+  <!-- Police -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="accueil-style.css" />
 </head>
 <body>
 
-  <!-- 🟩 Barre de navigation -->
-  <header class="navbar">
-    <div class="logo">🍃 <strong>NAHA</strong></div>
-    <nav>
-      <a href="#">Accueil</a>
-      <a href="#">Tableau de bord</a>
-      <a href="#">Calculateur</a>
-      <a href="#">Le Projet</a>
-      <a href="#">Consommation</a>
-    </nav>
-    <div class="actions">
-      <button class="btn-secondary">Se connecter</button>
-      <button class="btn-primary">S’inscrire</button>
+  <!-- NAVBAR -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a class="brand" href="#top"><span class="logo">🍃</span><strong>NAHA</strong></a>
+
+      <nav class="links" aria-label="Navigation principale">
+        <a href="#accueil" class="is-active">Accueil</a>
+        <a href="#dash">Tableau de bord</a>
+        <a href="#calc">Calculateur</a>
+        <a href="#projet">Le Projet</a>
+        <a href="#conso">Consommation</a>
+      </nav>
+
+      <div class="cta">
+        <a class="btn btn--ghost" href="#login">Se connecter</a>
+        <a class="btn" href="#register">S’inscrire</a>
+      </div>
+
+      <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
-  <!-- 🟦 Section d’intro -->
-  <section class="hero">
-    <h1>NAHA</h1>
-    <p>“Les grands accomplissements sont réussis non par la force, mais par la persévérance.” — Samuel Johnson</p>
-  </section>
+  <main id="accueil">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="container hero__inner">
+        <h1 class="hero__title">NAHA</h1>
+        <p class="hero__quote">« Les grands accomplissements sont réussis non par la force, mais par la persévérance. » — Samuel Johnson</p>
+      </div>
+    </section>
 
-  <!-- 🟪 Mission -->
-  <section class="mission">
-    <h2>Notre mission</h2>
-    <p>
-      Chez <strong>NAHA</strong>, on aide chaque sportif à mieux se comprendre, progresser et garder la motivation.
-      Nos outils statistiques t’accompagnent simplement dans ton évolution.
-    </p>
-  </section>
+    <!-- MISSION -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section__title">Notre mission</h2>
+        <p class="section__text">
+          Chez <strong>NAHA</strong>, on aide chaque sportif à mieux se comprendre, progresser et garder la motivation.
+          Nos outils data t’accompagnent simplement dans ton évolution.
+        </p>
+      </div>
+    </section>
 
-  <!-- 🟧 Boutons principaux -->
-  <section class="features">
-    <h2>Découvre nos outils</h2>
-    <div class="buttons">
-      <button class="btn-primary">Calculateur</button>
-      <button class="btn-primary">Contacte-nous</button>
-      <button class="btn-primary">Tableau de bord</button>
-      <button class="btn-primary">Entraînement</button>
+    <!-- FEATURES -->
+    <section class="section section--alt" id="features">
+      <div class="container">
+        <h2 class="section__title">Découvre nos outils</h2>
+
+        <div class="grid">
+          <a class="card" id="calc" href="#calc">
+            <h3>Calculateur</h3>
+            <p>Estime tes besoins & objectifs.</p>
+          </a>
+
+          <a class="card" href="#contact">
+            <h3>Contacte-nous</h3>
+            <p>Une question ? On répond vite.</p>
+          </a>
+
+          <a class="card" id="dash" href="#dash">
+            <h3>Tableau de bord</h3>
+            <p>Suis ta progression proprement.</p>
+          </a>
+
+          <a class="card" id="train" href="#train">
+            <h3>Entraînement</h3>
+            <p>Plans personnalisés & gamifiés.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section class="section" id="team">
+      <div class="container">
+        <h2 class="section__title">Notre équipe</h2>
+        <div class="team">
+          <span class="chip">Haitham</span>
+          <span class="chip">Ahmed</span>
+          <span class="chip">Noah</span>
+          <span class="chip">Arthur</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJET (ancre pour liens) -->
+    <section class="section section--alt" id="projet">
+      <div class="container">
+        <h2 class="section__title">Le projet</h2>
+        <p class="section__text">
+          NAHA centralise calculs, suivi et conseils pour t’aider à performer sans prise de tête.
+          Design simple, data claire, UX clean.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONSO (ancre) -->
+    <section class="section" id="conso">
+      <div class="container">
+        <h2 class="section__title">Consommation</h2>
+        <p class="section__text">Bientôt : suivi nutritionnel, recettes & macros par jour/semaine.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© 2025 NAHA — Données : Open Food Facts & Compendium MET</p>
+      <p class="quote">« Le futur c’est loin, j’attends pas assis. »</p>
     </div>
-  </section>
-
-  <!-- 🟨 Équipe -->
-  <section class="team">
-    <h2>Notre équipe</h2>
-    <div class="members">
-      <p>Haitham</p>
-      <p>Ahmed</p>
-      <p>Noah</p>
-      <p>Arthur</p>
-    </div>
-  </section>
-
-  <!-- 🟫 Footer -->
-  <footer>
-    <p>© 2025 NAHA — Données : Open Food Facts & Compendium MET</p>
-    <p class="quote">“Le futur c’est loin, j’attends pas assis.”</p>
   </footer>
 
+  <!-- JS -->
   <script src="accueil-script.js"></script>
 </body>
 </html>
