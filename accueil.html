@@ -5,20 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NAHA — Accueil</title>
 
-  <!-- Police -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
 
-  <!-- CSS -->
+  <!-- Styles -->
   <link rel="stylesheet" href="accueil-style.css" />
 </head>
 <body>
 
-  <!-- HEADER -->
+  <!-- Topbar -->
   <header class="topbar">
     <div class="container topbar__inner">
       <a class="brand" href="#">
-        <img src="assets/img/logo-naha.svg" alt="NAHA" class="brand__logo" />
+        <span class="brand__logo">🍃</span>
         <span class="brand__text">NAHA</span>
       </a>
 
@@ -53,24 +53,41 @@
       <div class="container">
         <h2 class="title">Notre mission</h2>
 
+        <!-- ligne texte + cartes à droite -->
         <div class="mission__row">
           <div class="mission__text">
-            <p>Chez <strong>NAHA</strong>, on veut aider chaque sportif à mieux se comprendre, à progresser jour après jour et à garder la motivation.<br>
-            Nos outils statistiques sont faits pour t’accompagner, simplement, dans ton évolution.</p>
+            <p>
+              Chez <strong>NAHA</strong>, on veut aider chaque sportif à mieux se comprendre, à progresser jour après jour et à garder la motivation.<br>
+              Nos outils statistiques sont faits pour t’accompagner, simplement, dans ton évolution.
+            </p>
           </div>
+
           <div class="mission__art">
-            <!-- visuel chart (SVG placeholder) -->
-            <div class="mock mock--chart"></div>
+            <div class="chart-card">
+              <canvas id="chart-perf" height="160"></canvas>
+            </div>
+            <div class="chart-row">
+              <div class="chart-card small">
+                <canvas id="chart-gauge" height="110"></canvas>
+              </div>
+              <div class="chart-card small">
+                <canvas id="chart-mini" height="110"></canvas>
+              </div>
+            </div>
           </div>
         </div>
 
+        <!-- ligne carte verte + citation -->
         <div class="mission__row mission__row--alt">
           <div class="mission__art">
-            <div class="mock mock--green"></div>
+            <div class="chart-card soft">
+              <canvas id="chart-green" height="130"></canvas>
+            </div>
           </div>
+
           <div class="mission__quote">
-            <p>“Chaque calorie compte, chaque effort te rapproche de ta meilleure version. <br>
-            La donnée, c’est notre langage — la persévérance, notre philosophie.”</p>
+            <p>“Chaque calorie compte, chaque effort te rapproche de ta meilleure version.<br>
+              La donnée, c’est notre langage — la persévérance, notre philosophie.”</p>
           </div>
         </div>
       </div>
@@ -78,7 +95,7 @@
 
     <div class="divider"></div>
 
-    <!-- BOUTONS FEATURES -->
+    <!-- FEATURES (boutons) -->
     <section class="features" id="features">
       <div class="container">
         <h3 class="features__title">Découvrez notre calculateur performant et<br>des entraînements personnalisés</h3>
@@ -88,10 +105,6 @@
           <a class="cta cta--right" href="#contact">Contactez nous !</a>
           <a class="cta" href="#dash">Tableau de bord</a>
           <a class="cta cta--right" href="#train">Entraînement</a>
-        </div>
-
-        <div class="features__art">
-          <div class="mock mock--purple"></div>
         </div>
       </div>
     </section>
@@ -104,10 +117,7 @@
         <h2 class="title title--spaced">DÉCOUVREZ&nbsp;&nbsp;NOTRE ÉQUIPE</h2>
 
         <div class="team__list">
-          <span>Haitham</span>
-          <span>Ahmed</span>
-          <span>Noah</span>
-          <span>Arthur</span>
+          <span>Haitham</span><span>Ahmed</span><span>Noah</span><span>Arthur</span>
         </div>
       </div>
     </section>
@@ -117,40 +127,24 @@
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__left">
-        <div class="socials">
-          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-          <span class="dot"></span><span class="dot"></span>
-        </div>
         <div class="cols">
           <div class="col">
             <h4>Use cases</h4>
-            <a href="#">UI design</a>
-            <a href="#">UX design</a>
-            <a href="#">Wireframing</a>
-            <a href="#">Diagramming</a>
-            <a href="#">Brainstorming</a>
-            <a href="#">Online whiteboard</a>
-            <a href="#">Team collaboration</a>
+            <a href="#">UI design</a><a href="#">UX design</a><a href="#">Wireframing</a>
+            <a href="#">Diagramming</a><a href="#">Brainstorming</a>
+            <a href="#">Online whiteboard</a><a href="#">Team collaboration</a>
           </div>
           <div class="col">
             <h4>Explore</h4>
-            <a href="#">Design</a>
-            <a href="#">Prototyping</a>
-            <a href="#">Development features</a>
-            <a href="#">Design systems</a>
-            <a href="#">Collaboration features</a>
-            <a href="#">Design process</a>
-            <a href="#">Figma</a>
+            <a href="#">Design</a><a href="#">Prototyping</a><a href="#">Development features</a>
+            <a href="#">Design systems</a><a href="#">Collaboration features</a>
+            <a href="#">Design process</a><a href="#">Figma</a>
           </div>
           <div class="col">
             <h4>Resources</h4>
-            <a href="#">Blog</a>
-            <a href="#">Best practices</a>
-            <a href="#">Colors</a>
-            <a href="#">Color wheel</a>
-            <a href="#">Support</a>
-            <a href="#">Developers</a>
-            <a href="#">Resource library</a>
+            <a href="#">Blog</a><a href="#">Best practices</a><a href="#">Colors</a>
+            <a href="#">Color wheel</a><a href="#">Support</a>
+            <a href="#">Developers</a><a href="#">Resource library</a>
           </div>
         </div>
       </div>
@@ -161,11 +155,11 @@
       </div>
     </div>
 
-    <div class="legal">
-      © 2025 NAHA — Données : Open Food Facts & Compendium MET
-    </div>
+    <div class="legal">© 2025 NAHA — Données : Open Food Facts & Compendium MET</div>
   </footer>
 
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="accueil-script.js"></script>
 </body>
 </html>
