@@ -14,108 +14,101 @@
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <header class="nav">
-    <div class="container nav__inner">
-      <a class="brand" href="#top"><span class="logo">🍃</span><strong>NAHA</strong></a>
+  <!-- HEADER -->
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="#">
+        <img src="assets/img/logo-naha.svg" alt="NAHA" class="brand__logo" />
+        <span class="brand__text">NAHA</span>
+      </a>
 
-      <nav class="links" aria-label="Navigation principale">
-        <a href="#accueil" class="is-active">Accueil</a>
-        <a href="#dash">Tableau de bord</a>
-        <a href="#calc">Calculateur</a>
-        <a href="#projet">Le Projet</a>
-        <a href="#conso">Consommation</a>
+      <nav class="menu">
+        <a class="pill is-active" href="#">Accueil</a>
+        <a class="pill" href="#dash">Tableau de bord</a>
+        <a class="pill" href="#calc">Calculateur</a>
+        <a class="pill" href="#projet">Le Projet</a>
+        <a class="pill" href="#conso">Consommation</a>
       </nav>
 
-      <div class="cta">
-        <a class="btn btn--ghost" href="#login">Se connecter</a>
+      <div class="auth">
+        <a class="link" href="#login">Se connecter</a>
         <a class="btn" href="#register">S’inscrire</a>
       </div>
-
-      <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
     </div>
   </header>
 
-  <main id="accueil">
+  <main>
     <!-- HERO -->
-    <section class="hero" id="top">
+    <section class="hero">
       <div class="container hero__inner">
         <h1 class="hero__title">NAHA</h1>
-        <p class="hero__quote">« Les grands accomplissements sont réussis non par la force, mais par la persévérance. » — Samuel Johnson</p>
+        <p class="hero__quote">“Les grands accomplissements sont réussis non par la force, mais par la persévérance.”<br><span>Samuel Johnson</span></p>
       </div>
     </section>
 
-    <!-- MISSION -->
-    <section class="section">
+    <div class="divider"></div>
+
+    <!-- NOTRE MISSION -->
+    <section class="mission">
       <div class="container">
-        <h2 class="section__title">Notre mission</h2>
-        <p class="section__text">
-          Chez <strong>NAHA</strong>, on aide chaque sportif à mieux se comprendre, progresser et garder la motivation.
-          Nos outils data t’accompagnent simplement dans ton évolution.
-        </p>
-      </div>
-    </section>
+        <h2 class="title">Notre mission</h2>
 
-    <!-- FEATURES -->
-    <section class="section section--alt" id="features">
-      <div class="container">
-        <h2 class="section__title">Découvre nos outils</h2>
+        <div class="mission__row">
+          <div class="mission__text">
+            <p>Chez <strong>NAHA</strong>, on veut aider chaque sportif à mieux se comprendre, à progresser jour après jour et à garder la motivation.<br>
+            Nos outils statistiques sont faits pour t’accompagner, simplement, dans ton évolution.</p>
+          </div>
+          <div class="mission__art">
+            <!-- visuel chart (SVG placeholder) -->
+            <div class="mock mock--chart"></div>
+          </div>
+        </div>
 
-        <div class="grid">
-          <a class="card" id="calc" href="#calc">
-            <h3>Calculateur</h3>
-            <p>Estime tes besoins & objectifs.</p>
-          </a>
-
-          <a class="card" href="#contact">
-            <h3>Contacte-nous</h3>
-            <p>Une question ? On répond vite.</p>
-          </a>
-
-          <a class="card" id="dash" href="#dash">
-            <h3>Tableau de bord</h3>
-            <p>Suis ta progression proprement.</p>
-          </a>
-
-          <a class="card" id="train" href="#train">
-            <h3>Entraînement</h3>
-            <p>Plans personnalisés & gamifiés.</p>
-          </a>
+        <div class="mission__row mission__row--alt">
+          <div class="mission__art">
+            <div class="mock mock--green"></div>
+          </div>
+          <div class="mission__quote">
+            <p>“Chaque calorie compte, chaque effort te rapproche de ta meilleure version. <br>
+            La donnée, c’est notre langage — la persévérance, notre philosophie.”</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- TEAM -->
-    <section class="section" id="team">
+    <div class="divider"></div>
+
+    <!-- BOUTONS FEATURES -->
+    <section class="features" id="features">
       <div class="container">
-        <h2 class="section__title">Notre équipe</h2>
-        <div class="team">
-          <span class="chip">Haitham</span>
-          <span class="chip">Ahmed</span>
-          <span class="chip">Noah</span>
-          <span class="chip">Arthur</span>
+        <h3 class="features__title">Découvrez notre calculateur performant et<br>des entraînements personnalisés</h3>
+
+        <div class="features__grid">
+          <a class="cta" href="#calc">Calculateur</a>
+          <a class="cta cta--right" href="#contact">Contactez nous !</a>
+          <a class="cta" href="#dash">Tableau de bord</a>
+          <a class="cta cta--right" href="#train">Entraînement</a>
+        </div>
+
+        <div class="features__art">
+          <div class="mock mock--purple"></div>
         </div>
       </div>
     </section>
 
-    <!-- PROJET (ancre pour liens) -->
-    <section class="section section--alt" id="projet">
-      <div class="container">
-        <h2 class="section__title">Le projet</h2>
-        <p class="section__text">
-          NAHA centralise calculs, suivi et conseils pour t’aider à performer sans prise de tête.
-          Design simple, data claire, UX clean.
-        </p>
-      </div>
-    </section>
+    <div class="divider"></div>
 
-    <!-- CONSO (ancre) -->
-    <section class="section" id="conso">
+    <!-- EQUIPE -->
+    <section class="team" id="team">
       <div class="container">
-        <h2 class="section__title">Consommation</h2>
-        <p class="section__text">Bientôt : suivi nutritionnel, recettes & macros par jour/semaine.</p>
+        <h2 class="title title--spaced">DÉCOUVREZ&nbsp;&nbsp;NOTRE ÉQUIPE</h2>
+
+        <div class="team__list">
+          <span>Haitham</span>
+          <span>Ahmed</span>
+          <span>Noah</span>
+          <span>Arthur</span>
+        </div>
       </div>
     </section>
   </main>
@@ -123,12 +116,56 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer__inner">
-      <p>© 2025 NAHA — Données : Open Food Facts & Compendium MET</p>
-      <p class="quote">« Le futur c’est loin, j’attends pas assis. »</p>
+      <div class="footer__left">
+        <div class="socials">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          <span class="dot"></span><span class="dot"></span>
+        </div>
+        <div class="cols">
+          <div class="col">
+            <h4>Use cases</h4>
+            <a href="#">UI design</a>
+            <a href="#">UX design</a>
+            <a href="#">Wireframing</a>
+            <a href="#">Diagramming</a>
+            <a href="#">Brainstorming</a>
+            <a href="#">Online whiteboard</a>
+            <a href="#">Team collaboration</a>
+          </div>
+          <div class="col">
+            <h4>Explore</h4>
+            <a href="#">Design</a>
+            <a href="#">Prototyping</a>
+            <a href="#">Development features</a>
+            <a href="#">Design systems</a>
+            <a href="#">Collaboration features</a>
+            <a href="#">Design process</a>
+            <a href="#">Figma</a>
+          </div>
+          <div class="col">
+            <h4>Resources</h4>
+            <a href="#">Blog</a>
+            <a href="#">Best practices</a>
+            <a href="#">Colors</a>
+            <a href="#">Color wheel</a>
+            <a href="#">Support</a>
+            <a href="#">Developers</a>
+            <a href="#">Resource library</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__right">
+        <div class="illus"></div>
+        <p class="mini-quote">“Le futur c’est loin, j’attends pas assis”.</p>
+      </div>
+    </div>
+
+    <div class="legal">
+      © 2025 NAHA — Données : Open Food Facts & Compendium MET
     </div>
   </footer>
 
-  <!-- JS -->
   <script src="accueil-script.js"></script>
 </body>
 </html>
