@@ -1,0 +1,1880 @@
+1;Danone;Activia Nature;94;4,6;14,1;10,2;3;1,8;0,2;0,15
+2.0;Danone;Activia Fruits Fraise;72.0;4.9;10.2;11.6;3.6;1.3;0.8;0.12
+3.0;Danone;Activia Fruits Abricot;105.0;3.0;13.3;8.7;3.9;1.1;0.9;0.19
+4.0;Danone;Activia 0% Nature;62.0;3.5;10.0;6.7;0.7;0.2;0.5;0.17
+5.0;Danone;Activia 0% Fruits;54.0;4.2;9.5;9.1;3.5;1.7;0.9;0.2
+6.0;Danone;Danette Chocolat;90.0;4.8;10.4;8.5;1.3;0.0;0.8;0.11
+7.0;Danone;Danette Vanille;93.0;4.3;6.2;10.9;0.6;0.8;0.5;0.08
+8.0;Danone;Danette Caramel;91.0;4.2;14.6;9.5;1.3;1.4;0.4;0.15
+9.0;Danone;Danette Café;76.0;3.1;13.0;9.4;1.7;0.1;0.8;0.19
+10.0;Danone;Danette Pistache;105.0;4.0;7.7;9.8;2.7;0.9;0.9;0.06
+11.0;Danone;Actimel Nature;96.0;4.6;6.1;10.2;0.3;1.4;0.9;0.19
+12.0;Danone;Actimel Fraise;93.0;4.5;10.8;6.1;2.5;1.9;0.7;0.12
+13.0;Danone;Actimel Multifruits;70.0;3.3;8.3;8.1;1.3;0.5;0.4;0.16
+14.0;Danone;Taillefine 0% Nature;58.0;4.4;14.2;9.3;2.2;0.6;0.0;0.12
+15.0;Danone;Taillefine 0% Vanille;67.0;4.4;13.5;5.6;2.1;1.0;0.2;0.11
+16.0;Danone;Danonino Fraise;283.0;9.7;41.6;18.3;13.5;3.2;1.2;0.61
+17.0;Danone;Danonino Banane;374.0;7.5;24.8;7.6;6.7;3.9;3.2;0.12
+18.0;Danone;Oikos Nature;60.0;4.0;8.1;6.4;1.2;1.7;0.3;0.1
+19.0;Danone;Oikos Fruits Rouges;78.0;3.5;9.7;5.6;1.2;1.7;1.0;0.19
+20.0;Danone;Danacol Nature;120.0;4.4;14.4;7.1;2.7;1.4;0.1;0.06
+21.0;Nestlé;Purée Mousline;333.0;6.1;35.8;2.9;8.7;6.9;0.4;0.87
+22.0;Nestlé;Nesquik Cacao;351.0;11.7;66.8;18.4;4.4;0.4;7.0;0.07
+23.0;Nestlé;Céréales Chocapic;340.0;11.9;70.6;5.6;3.1;1.4;2.2;0.03
+24.0;Nestlé;Céréales Lion;343.0;11.5;72.2;1.6;6.6;1.6;8.1;0.07
+25.0;Nestlé;Crunch;225.0;6.3;41.2;3.9;7.4;2.1;1.1;0.24
+26.0;Nestlé;Smarties;493.0;7.2;52.0;39.3;34.3;16.9;4.9;0.09
+27.0;Nestlé;KitKat;393.0;13.7;15.3;20.7;12.8;2.8;2.6;0.11
+28.0;Nestlé;After Eight;343.0;14.5;34.9;28.2;12.3;4.9;2.4;0.99
+29.0;Nestlé;Quality Street;271.0;9.2;46.1;21.0;5.1;4.5;4.3;0.61
+30.0;Nestlé;Nestlé Dessert Noir;329.0;10.5;23.4;27.6;18.2;4.9;1.1;0.87
+31.0;Nestlé;Céréales Nesquik;372.0;12.7;75.8;5.4;1.1;0.5;9.1;0.07
+32.0;Nestlé;Cookie Crisp;433.0;5.2;50.2;37.1;34.7;18.1;1.1;0.18
+33.0;Nestlé;Golden Grahams;214.0;10.1;49.0;18.3;15.9;4.8;0.3;0.86
+34.0;Nestlé;Ricoré;273.0;13.4;26.7;8.8;8.0;8.0;1.9;0.68
+35.0;Nestlé;Nescafé Classic;340.0;11.4;54.1;11.6;17.5;6.1;1.4;0.35
+36.0;Nestlé;Nespresso Capsules;317.0;7.8;31.6;6.1;5.6;2.4;1.0;1.01
+37.0;Nestlé;Fitness Chocolat;541.0;7.3;64.3;43.9;26.3;15.1;5.2;0.5
+38.0;Nestlé;Chocapic Bio;375.0;7.1;70.8;18.9;6.9;0.3;2.8;0.09
+39.0;Nestlé;Nesquik Sans Sucres;343.0;11.7;75.5;20.0;5.3;0.2;2.8;0.03
+40.0;Nestlé;Nestlé Dessert Lait;387.0;11.9;19.6;22.4;17.7;9.2;2.7;1.1
+41.0;Président;Beurre Doux;633.0;6.9;4.6;2.3;56.8;35.4;1.5;1.11
+42.0;Président;Beurre Demi-Sel;383.0;14.4;1.0;0.7;31.9;53.9;1.0;1.73
+43.0;Président;Emmental Râpé;297.0;15.2;0.2;1.6;62.0;52.8;2.0;1.55
+44.0;Président;Camembert;514.0;22.3;1.9;2.8;20.5;31.6;0.1;0.91
+45.0;Président;Brie;433.0;16.5;3.0;0.5;20.5;46.4;0.6;1.47
+46.0;Président;Mozzarella;608.0;27.8;1.3;0.1;54.3;25.0;0.1;1.87
+47.0;Président;Crème Fraîche Epaisse;262.0;10.7;2.7;0.2;28.8;44.7;0.8;2.17
+48.0;Président;Crème Fraîche Légère;435.0;8.3;0.7;1.9;57.0;32.7;0.4;1.12
+49.0;Président;Lait UHT Demi-écrémé;326.0;9.5;20.5;19.9;13.6;9.3;2.6;0.68
+50.0;Président;Chantilly;223.0;11.5;12.5;16.0;12.2;3.4;1.6;1.0
+51.0;Président;Comté;382.0;3.5;34.2;28.5;12.8;2.2;3.0;0.9
+52.0;Président;Cantal;362.0;9.7;54.8;15.0;13.2;3.7;2.6;0.39
+53.0;Président;Raclette;733.0;24.7;0.1;0.5;80.8;24.7;1.5;2.19
+54.0;Président;Fromage à Tartiner;484.0;10.3;3.4;1.7;44.8;39.0;1.9;1.2
+55.0;Président;Beurre Fin;359.0;18.6;3.1;3.0;53.0;41.3;1.9;1.16
+56.0;Président;Gouda;591.0;18.1;3.5;1.1;60.3;23.4;1.6;1.21
+57.0;Président;Emmental Bloc;292.0;25.2;1.5;1.6;80.4;33.3;0.3;1.21
+58.0;Président;Parmesan Râpé;362.0;14.7;37.5;9.9;15.4;6.9;4.0;0.7
+59.0;Président;Crème Liquide;642.0;23.4;0.5;0.6;51.0;52.7;1.0;2.03
+60.0;Président;Crème Dessert Vanille;557.0;23.6;1.7;2.5;50.9;27.9;0.9;1.32
+61.0;Yoplait;Panier Fraise;314.0;7.6;15.5;11.2;12.1;7.3;2.7;0.6
+62.0;Yoplait;Panier Abricot;252.0;7.7;12.7;28.1;18.4;10.0;4.1;0.66
+63.0;Yoplait;Petits Filous Nature;52.0;5.0;13.5;6.9;3.8;1.9;0.9;0.17
+64.0;Yoplait;Perle de Lait Nature;58.0;3.6;11.5;9.5;0.9;0.7;0.2;0.08
+65.0;Yoplait;Yop Fraise;49.0;4.1;6.6;11.9;3.8;1.6;0.2;0.11
+66.0;Yoplait;Yop Vanille;68.0;3.3;10.7;5.5;3.8;1.3;0.2;0.11
+67.0;Yoplait;Yop Banane;88.0;3.8;6.3;8.7;2.7;0.7;0.0;0.17
+68.0;Yoplait;Calin Nature;224.0;3.9;51.1;7.0;5.3;9.7;4.7;0.15
+69.0;Yoplait;Calin Fruits;391.0;4.8;35.6;1.6;5.1;10.0;2.7;0.97
+70.0;Yoplait;Perle de Lait Coco;56.0;3.1;14.5;8.2;2.1;1.8;0.4;0.07
+71.0;Yoplait;Perle de Lait Citron;67.0;4.5;13.4;12.0;2.6;0.8;0.4;0.16
+72.0;Yoplait;Frubes Fraise;210.0;3.9;54.4;1.6;8.0;8.5;2.8;0.39
+73.0;Yoplait;Frubes Abricot;224.0;12.3;21.5;13.9;11.2;3.9;1.5;0.83
+74.0;Yoplait;Yoplait Bio Nature;116.0;3.9;14.4;9.9;3.5;1.3;0.6;0.13
+75.0;Yoplait;Yop Chocolat;59.0;4.9;6.4;6.1;2.1;1.9;0.9;0.13
+76.0;Yoplait;Yop Framboise;69.0;3.3;14.6;11.0;3.9;1.1;0.6;0.19
+77.0;Yoplait;Yoplait Panier Framboise;69.0;4.4;9.4;6.7;1.1;1.7;0.6;0.15
+78.0;Yoplait;Panier Pêche;357.0;3.1;46.7;19.7;13.9;7.4;3.4;1.12
+79.0;Yoplait;Perle de Lait Vanille;77.0;3.4;6.1;9.0;1.5;0.7;0.6;0.12
+80.0;Yoplait;Petits Filous Fraise;99.0;4.5;5.8;8.8;0.6;0.2;0.2;0.17
+81.0;Fleury Michon;Jambon Cuit;196.0;20.1;4.4;0.1;12.8;5.9;0.6;2.98
+82.0;Fleury Michon;Jambon Sans Nitrite;100.0;13.7;2.3;0.2;13.5;7.1;0.1;1.17
+83.0;Fleury Michon;Dés de Jambon;199.0;21.4;0.1;0.1;8.7;8.9;0.4;1.41
+84.0;Fleury Michon;Bâtonnets de Surimi;301.0;3.1;16.7;23.4;6.4;3.4;4.0;0.63
+85.0;Fleury Michon;Filets de Poulet;237.0;20.9;3.3;0.2;13.4;7.2;0.1;2.21
+86.0;Fleury Michon;Dinde Rôtie;166.0;19.9;3.1;1.0;9.4;4.3;0.7;2.86
+87.0;Fleury Michon;Saucisson à l'Ail;109.0;24.5;2.9;1.2;11.2;8.6;0.9;1.4
+88.0;Fleury Michon;Pâté de Campagne;171.0;21.4;0.9;0.0;19.4;4.5;0.5;2.7
+89.0;Fleury Michon;Rillettes de Poulet;206.0;12.2;4.3;0.1;15.9;2.8;0.6;1.18
+90.0;Fleury Michon;Rillettes de Thon;268.0;14.5;0.1;1.3;15.2;3.5;0.5;2.91
+91.0;Fleury Michon;Salade Composée Thon;58.0;5.1;6.8;2.5;1.3;1.0;6.5;0.05
+92.0;Fleury Michon;Salade Poulet Caesar;159.0;23.3;5.0;1.4;20.1;4.2;0.5;2.22
+93.0;Fleury Michon;Couscous;345.0;8.6;72.8;13.1;1.5;1.4;9.6;0.05
+94.0;Fleury Michon;Paella;314.0;14.8;41.4;22.0;5.2;9.2;4.6;0.25
+95.0;Fleury Michon;Quiche Lorraine;367.0;5.0;20.3;27.3;9.8;6.8;3.9;0.36
+96.0;Fleury Michon;Lasagnes Bolognaise;402.0;7.7;69.6;15.4;1.4;1.9;2.3;0.07
+97.0;Fleury Michon;Hachis Parmentier;272.0;12.6;30.3;6.1;17.5;5.5;2.1;1.02
+98.0;Fleury Michon;Gratin Dauphinois;351.0;6.1;25.5;2.0;9.5;3.0;2.0;0.3
+99.0;Fleury Michon;Tagliatelles Bolognaise;390.0;8.4;72.1;9.3;3.5;0.9;3.5;0.03
+100.0;Fleury Michon;Poulet Rôti Tranches;153.0;15.0;2.8;0.4;15.6;7.3;0.0;1.56
+101.0;Herta;Jambon Le Bon Paris;162.0;22.1;3.0;1.0;13.5;2.3;0.4;1.31
+102.0;Herta;Knacki Original;245.0;21.9;4.3;0.7;10.8;4.9;0.2;2.52
+103.0;Herta;Pâte Brisée;327.0;6.3;22.1;21.3;11.9;2.4;0.2;0.89
+104.0;Herta;Pâte Feuilletée;351.0;4.1;50.7;28.4;16.4;8.3;3.8;0.42
+105.0;Herta;Pâte à Pizza;334.0;5.9;29.1;27.4;7.4;8.0;2.8;0.52
+106.0;Herta;Lardons Allumettes;266.0;18.4;3.6;0.6;21.9;6.8;0.4;1.61
+107.0;Herta;Bacon Fumé;246.0;21.4;4.4;0.0;9.2;4.6;0.8;1.61
+108.0;Herta;Saucisse de Strasbourg;217.0;17.5;0.3;0.6;19.7;8.4;0.2;3.11
+109.0;Herta;Chorizo Tranché;364.0;11.1;75.8;3.0;1.5;1.5;8.9;0.08
+110.0;Herta;Saucisson Sec;237.0;18.9;3.4;0.6;6.5;4.4;0.1;2.05
+111.0;Herta;Pâté en Croûte;267.0;23.6;3.3;0.6;14.6;7.1;0.3;2.63
+112.0;Herta;Rillettes de Porc;265.0;15.8;4.7;0.8;11.7;8.5;0.2;1.47
+113.0;Herta;Tartes Salées Quiche;400.0;5.3;42.6;19.7;7.4;8.5;3.4;0.53
+114.0;Herta;Mini Pizza Base;219.0;4.8;50.7;26.9;18.6;4.1;4.5;1.16
+115.0;Herta;Hot Dog Knacki;199.0;22.1;2.9;1.0;15.7;4.3;0.6;2.43
+116.0;Herta;Knacki Ball;245.0;17.9;2.3;0.7;12.6;4.7;0.6;2.01
+117.0;Herta;Saucisse Végétarienne;235.0;17.1;1.5;1.6;15.3;2.1;0.0;2.42
+118.0;Herta;Haché Végétal;215.0;8.2;27.3;8.4;15.3;3.6;3.1;0.9
+119.0;Herta;Jambon Bio;242.0;14.8;4.5;1.4;10.0;4.1;0.5;2.19
+120.0;Herta;Lardons Fumés;203.0;12.4;2.2;0.5;16.5;5.8;0.4;1.66
+121.0;Bonduelle;Maïs en Conserve;40.0;3.7;7.1;3.1;0.7;0.9;6.4;0.02
+122.0;Bonduelle;Petits Pois Carottes;95.0;2.8;3.9;4.3;0.6;0.3;4.0;0.11
+123.0;Bonduelle;Haricots Verts;26.0;4.0;7.6;1.4;1.0;0.7;2.6;0.08
+124.0;Bonduelle;Pois Chiches;39.0;2.8;6.1;3.9;0.3;0.5;5.9;0.13
+125.0;Bonduelle;Lentilles;97.0;4.5;13.7;5.4;0.8;0.9;5.7;0.07
+126.0;Bonduelle;Flageolets;322.0;4.4;54.6;12.9;14.8;9.0;1.8;0.64
+127.0;Bonduelle;Champignons émincés;250.0;9.5;32.4;9.4;6.4;7.5;3.5;0.18
+128.0;Bonduelle;Macédoine de Légumes;52.0;2.4;14.5;3.8;0.2;0.3;2.8;0.13
+129.0;Bonduelle;Mélange Mexicain;295.0;12.7;42.7;20.8;14.2;2.3;1.6;0.71
+130.0;Bonduelle;Épinards en branches;108.0;1.9;5.6;1.1;2.0;0.3;3.1;0.02
+131.0;Bonduelle;Brocolis;103.0;5.7;11.4;5.1;1.6;0.9;4.0;0.24
+132.0;Bonduelle;Carottes Râpées;23.0;5.1;12.4;5.1;0.5;1.0;2.0;0.17
+133.0;Bonduelle;Betteraves Cuites;94.0;2.8;7.5;5.5;0.2;0.2;2.1;0.11
+134.0;Bonduelle;Courgettes;392.0;11.7;20.4;3.3;12.0;4.0;3.2;0.81
+135.0;Bonduelle;Pois Gourmands;67.0;5.0;14.4;1.2;0.5;0.6;3.2;0.05
+136.0;Bonduelle;Salade Iceberg;96.0;1.5;8.9;5.7;1.4;0.3;1.8;0.11
+137.0;Bonduelle;Salade Roquette;68.0;5.7;14.1;3.9;2.8;0.8;4.9;0.07
+138.0;Bonduelle;Salade Mâche;94.0;3.8;10.7;3.2;1.1;0.8;3.1;0.06
+139.0;Bonduelle;Salade Mélange;91.0;1.2;14.5;2.9;1.1;0.2;1.8;0.15
+140.0;Bonduelle;Maïs Bio;44.0;3.4;14.8;3.3;1.1;0.7;6.1;0.22
+141.0;Lustucru;Coquillettes;333.0;11.8;31.7;10.1;18.6;8.5;2.4;0.81
+142.0;Lustucru;Penne;404.0;11.1;71.4;12.7;2.4;0.4;4.2;0.09
+143.0;Lustucru;Spaghetti;336.0;12.0;79.1;7.9;4.2;0.6;4.5;0.04
+144.0;Lustucru;Tagliatelles;341.0;10.3;77.4;15.2;7.1;1.5;4.2;0.08
+145.0;Lustucru;Farfalle;351.0;9.9;76.8;8.3;2.4;0.5;5.0;0.03
+146.0;Lustucru;Riz Long;383.0;9.1;73.9;9.2;7.9;1.6;6.9;0.02
+147.0;Lustucru;Riz Basmati;344.0;7.4;74.1;3.2;3.5;1.6;8.3;0.09
+148.0;Lustucru;Riz Thaï;351.0;12.5;74.3;9.7;2.6;1.9;9.7;0.05
+149.0;Lustucru;Riz Complet;334.0;7.6;71.9;18.0;4.6;1.9;7.7;0.08
+150.0;Lustucru;Riz Parfumé;371.0;12.7;68.6;6.8;4.1;1.5;3.5;0.04
+151.0;Lustucru;Riz Étuvé;354.0;10.1;75.4;2.1;4.6;1.2;4.2;0.05
+152.0;Lustucru;Riz Rond;392.0;9.2;67.4;19.4;4.0;0.8;8.9;0.04
+153.0;Lustucru;Riz à Risotto;340.0;9.6;72.1;15.1;5.1;0.5;2.3;0.08
+154.0;Lustucru;Pâtes Fraîches Tortellini;399.0;12.8;79.4;1.3;6.1;0.9;6.7;0.02
+155.0;Lustucru;Pâtes Fraîches Ravioli;352.0;9.0;76.4;16.5;3.6;1.7;2.2;0.09
+156.0;Lustucru;Pâtes Fraîches Tagliatelles;348.0;9.9;76.6;13.4;5.9;1.6;9.0;0.1
+157.0;Lustucru;Riz Sushi;330.0;7.6;67.9;11.1;4.4;1.5;7.8;0.04
+158.0;Lustucru;Riz Bio;335.0;11.3;65.5;18.2;6.7;0.6;2.4;0.08
+159.0;Lustucru;Pâtes Sans Gluten;389.0;7.9;72.0;19.7;5.8;1.2;8.4;0.05
+160.0;Lustucru;Gnocchi à Poêler;375.0;10.0;25.0;5.6;15.6;9.1;3.2;0.69
+161.0;Panzani;Spaghetti;334.0;9.2;70.4;12.1;6.7;1.0;8.0;0.05
+162.0;Panzani;Coquillettes;367.0;12.6;46.6;22.3;11.2;6.8;1.6;0.55
+163.0;Panzani;Tagliatelles;330.0;8.8;72.1;11.3;7.7;1.6;6.4;0.02
+164.0;Panzani;Penne Rigate;409.0;7.8;75.8;7.3;5.2;1.5;3.9;0.05
+165.0;Panzani;Fusilli;368.0;11.1;79.2;15.7;4.1;0.3;7.7;0.06
+166.0;Panzani;Macaroni;362.0;9.3;55.0;13.4;19.6;6.1;1.1;0.46
+167.0;Panzani;Lasagnes;356.0;12.1;70.5;9.8;3.6;1.4;6.2;0.06
+168.0;Panzani;Cannelloni;259.0;11.9;13.4;14.5;19.7;8.5;4.4;0.8
+169.0;Panzani;Capellini;287.0;4.0;15.5;12.9;19.2;6.5;1.7;0.9
+170.0;Panzani;Pâtes Bio;396.0;8.0;67.5;13.7;1.6;1.3;2.1;0.01
+171.0;Panzani;Sauce Bolognaise;297.0;0.2;11.8;9.3;56.5;12.4;0.8;0.84
+172.0;Panzani;Sauce Tomate Basilic;399.0;1.7;4.8;7.9;15.7;17.9;1.1;1.97
+173.0;Panzani;Sauce Carbonara;273.0;0.1;9.2;13.1;21.3;17.7;1.2;2.53
+174.0;Panzani;Sauce Arrabbiata;458.0;0.7;18.6;11.0;41.7;13.6;0.7;0.85
+175.0;Panzani;Sauce 4 Fromages;514.0;0.0;14.3;7.7;37.2;15.2;1.3;0.93
+176.0;Panzani;Sauce Champignons;664.0;0.7;18.0;11.8;20.8;2.5;1.0;2.71
+177.0;Panzani;Sauce Napolitaine;456.0;0.1;2.1;8.8;33.6;2.1;1.2;2.09
+178.0;Panzani;Ravioli;381.0;12.8;73.9;13.8;3.0;1.2;5.3;0.05
+179.0;Panzani;Tortellini;292.0;6.0;27.0;2.2;5.7;9.6;4.8;1.14
+180.0;Panzani;Gnocchi;391.0;7.5;39.3;5.1;14.6;4.1;1.8;0.43
+181.0;Barilla;Spaghetti;336.0;10.4;77.8;12.0;4.3;1.7;9.2;0.04
+182.0;Barilla;Penne Rigate;371.0;9.3;74.5;15.2;6.6;0.3;6.7;0.09
+183.0;Barilla;Fusilli;336.0;8.0;67.1;14.7;1.9;1.0;8.6;0.05
+184.0;Barilla;Farfalle;354.0;12.5;66.4;5.7;2.0;1.4;6.8;0.1
+185.0;Barilla;Linguine;357.0;11.3;65.1;11.0;3.1;0.9;7.3;0.05
+186.0;Barilla;Tagliatelle;343.0;8.2;74.2;1.2;2.7;0.4;8.1;0.06
+187.0;Barilla;Lasagne;366.0;8.8;68.2;18.7;3.1;1.8;9.5;0.06
+188.0;Barilla;Maccheroni;295.0;9.4;47.2;29.1;11.7;8.5;2.7;0.97
+189.0;Barilla;Tortiglioni;382.0;12.9;32.8;22.5;11.5;3.3;1.6;0.23
+190.0;Barilla;Rigatoni;294.0;7.4;19.0;11.9;18.1;9.2;1.8;0.88
+191.0;Barilla;Sauce Basilico;315.0;1.5;8.1;14.8;78.8;3.3;0.8;3.44
+192.0;Barilla;Sauce Arrabbiata;492.0;1.9;12.0;13.2;69.5;6.0;1.3;3.23
+193.0;Barilla;Sauce Napoletana;440.0;0.8;19.7;5.2;40.7;8.9;0.5;2.66
+194.0;Barilla;Sauce Carbonara;413.0;1.2;15.0;2.3;56.1;10.3;1.0;2.85
+195.0;Barilla;Pesto alla Genovese;408.0;0.6;16.0;12.1;59.3;13.9;0.7;1.73
+196.0;Barilla;Pesto Rosso;169.0;1.7;13.1;4.0;34.2;17.2;1.2;1.07
+197.0;Barilla;Sauce Ricotta;537.0;0.5;8.0;12.5;62.7;9.6;0.1;3.0
+198.0;Barilla;Sauce 4 Formaggi;199.0;1.8;18.4;3.3;76.9;9.0;0.0;1.07
+199.0;Barilla;Sauce Verdure;185.0;0.5;6.5;7.2;59.4;3.9;0.6;0.6
+200.0;Barilla;Sauce Pomodoro;432.0;1.7;1.6;1.3;36.3;16.9;1.3;3.47
+201.0;Tipiak;Taboulé;350.0;5.7;10.7;12.5;14.7;4.4;1.2;0.84
+202.0;Tipiak;Couscous;334.0;9.5;69.5;6.1;1.4;1.0;7.3;0.07
+203.0;Tipiak;Boulgour;397.0;6.0;58.2;6.9;11.8;4.6;0.1;0.29
+204.0;Tipiak;Quinoa;369.0;10.8;70.6;12.5;3.0;0.4;2.7;0.07
+205.0;Tipiak;Blé Gourmand;338.0;6.9;59.6;26.6;16.9;2.0;3.4;0.19
+206.0;Tipiak;Croûtons;295.0;10.0;34.5;16.8;12.4;5.6;3.6;0.34
+207.0;Tipiak;Perles de Blé;204.0;12.3;38.4;19.4;11.9;6.8;1.4;0.12
+208.0;Tipiak;Polenta;289.0;11.5;40.8;9.3;10.2;6.3;1.9;1.11
+209.0;Tipiak;Soupe Déshydratée;321.0;14.7;37.2;3.6;6.1;9.1;4.0;0.33
+210.0;Tipiak;Chapelure;312.0;4.0;43.4;28.7;11.2;3.3;4.0;0.49
+211.0;Tipiak;Graines Mélangées;374.0;14.4;13.5;2.6;11.2;5.5;1.2;0.87
+212.0;Tipiak;Riz Pilaf;377.0;10.9;69.2;5.3;4.3;1.2;3.7;0.05
+213.0;Tipiak;Riz Complet;336.0;7.7;72.9;16.6;2.6;1.2;5.1;0.05
+214.0;Tipiak;Riz Basmati;391.0;9.2;69.0;13.2;5.3;0.6;9.1;0.07
+215.0;Tipiak;Galettes de Maïs;38.0;4.4;12.7;1.5;1.4;0.3;4.1;0.22
+216.0;Tipiak;Croutons Ail;301.0;8.3;44.4;9.3;11.4;6.6;0.4;0.52
+217.0;Tipiak;Gnocchi à Poêler;268.0;11.2;28.2;17.8;5.4;6.3;0.9;0.22
+218.0;Tipiak;Farine de Sarrasin;348.0;14.5;54.9;18.5;18.6;6.9;0.9;0.22
+219.0;Tipiak;Pains Suédois;265.0;10.8;17.6;2.9;19.6;2.0;3.9;0.37
+220.0;Tipiak;Soupe Instantanée;343.0;11.2;30.9;1.2;9.8;5.5;4.2;0.19
+221.0;Madrange;Jambon Cuit;275.0;14.7;4.2;0.7;12.0;3.6;0.3;2.22
+222.0;Madrange;Jambon Supérieur;140.0;19.0;4.3;1.0;12.7;5.5;0.9;1.85
+223.0;Madrange;Jambon Bio;118.0;23.3;3.1;2.0;12.3;2.9;0.6;3.13
+224.0;Madrange;Rillettes;248.0;18.2;0.8;1.1;16.5;3.4;0.8;2.23
+225.0;Madrange;Saucisson;177.0;17.8;1.2;0.8;7.8;6.5;0.7;2.44
+226.0;Madrange;Saucisses;181.0;23.6;2.7;0.6;15.2;4.0;0.4;2.28
+227.0;Madrange;Pâté;165.0;23.2;1.0;1.6;18.2;3.5;0.8;2.66
+228.0;Madrange;Lardons;204.0;24.9;5.0;1.8;12.6;3.0;0.4;1.88
+229.0;Madrange;Fromage de Tête;358.0;21.8;3.7;0.6;74.9;35.3;0.1;0.61
+230.0;Madrange;Andouille;114.0;14.0;4.0;0.2;20.8;2.0;0.4;2.32
+231.0;Madrange;Terrine de Campagne;342.0;12.2;34.9;20.4;7.1;6.4;3.2;0.74
+232.0;Madrange;Saucisse Cocktail;104.0;16.8;4.1;1.2;10.6;8.8;0.5;1.06
+233.0;Madrange;Rôti de Porc Cuit;344.0;6.2;24.5;7.2;6.8;9.9;0.1;0.5
+234.0;Madrange;Dinde Cuite;191.0;20.4;0.7;1.3;13.6;6.1;0.1;2.05
+235.0;Madrange;Poulet Cuit;135.0;16.5;5.0;1.2;10.8;3.0;0.1;1.77
+236.0;Madrange;Saucisse Fumée;224.0;13.8;2.8;1.6;19.7;2.9;0.7;3.04
+237.0;Madrange;Merguez;347.0;7.0;56.8;9.4;9.4;6.8;0.3;1.04
+238.0;Madrange;Chipolata;352.0;5.6;42.9;15.6;9.0;8.9;3.8;0.43
+239.0;Madrange;Jambon Fumé;149.0;12.8;2.0;0.4;5.8;3.6;0.6;2.84
+240.0;Madrange;Lardons Fumés;191.0;20.2;4.2;1.7;13.3;5.5;0.8;2.55
+241.0;Harrys;Pain de Mie Nature;358.0;8.7;46.8;11.8;16.3;3.5;3.6;0.21
+242.0;Harrys;Pain de Mie Complet;356.0;8.9;38.4;20.9;18.1;5.7;2.2;0.81
+243.0;Harrys;Pain de Mie Sans Croûte;277.0;10.7;47.9;8.4;9.5;6.9;1.0;1.11
+244.0;Harrys;Pain de Mie Brioché;282.0;3.1;27.6;1.1;6.2;3.9;3.8;0.16
+245.0;Harrys;Pain de Mie Bio;225.0;4.8;21.3;9.7;8.5;4.0;2.2;0.45
+246.0;Harrys;Brioche Tressée;383.0;13.5;35.3;8.3;13.4;4.1;3.9;0.66
+247.0;Harrys;Brioche Tranchée;328.0;13.4;16.0;27.9;5.3;4.5;4.0;0.81
+248.0;Harrys;Briochettes;201.0;12.9;25.3;25.8;5.3;4.7;4.8;0.99
+249.0;Harrys;Pitch Chocolat;459.0;6.2;66.1;27.8;28.8;6.6;1.7;0.07
+250.0;Harrys;Pitch Fraise;237.0;9.4;32.1;20.9;16.2;5.5;3.3;0.99
+251.0;Harrys;Pain Burger;537.0;1.0;12.4;11.3;55.2;4.1;0.2;1.8
+252.0;Harrys;Pain Hot Dog;292.0;13.4;20.2;26.4;17.8;9.7;1.9;1.2
+253.0;Harrys;Pain Céréales;330.0;11.9;79.7;6.6;1.9;1.0;3.8;0.05
+254.0;Harrys;Pain Graines;235.0;12.5;21.4;16.3;12.0;3.5;3.8;0.17
+255.0;Harrys;Pain Viennois;334.0;9.6;39.1;26.0;9.4;4.4;4.3;0.17
+256.0;Harrys;Pain Sandwich;279.0;4.3;10.6;24.9;7.8;5.4;4.4;0.75
+257.0;Harrys;Pain Wrap;231.0;11.4;42.3;16.2;10.8;7.4;3.9;0.49
+258.0;Harrys;Pain Multi-Céréales;345.0;8.1;78.8;19.3;4.6;1.5;3.2;0.04
+259.0;Harrys;Brioche Chocolat;466.0;7.5;52.0;30.2;16.7;16.3;4.0;0.14
+260.0;Harrys;Brioche Raisins;363.0;12.7;33.3;25.1;7.7;4.5;4.1;0.61
+261.0;Brossard;Savane Chocolat;535.0;6.4;61.5;32.7;19.0;5.6;4.1;0.06
+262.0;Brossard;Savane Marbré;316.0;7.6;46.2;21.3;6.1;2.2;3.2;0.47
+263.0;Brossard;Brownie Chocolat;271.0;4.2;25.1;23.1;16.8;7.2;1.1;0.25
+264.0;Brossard;Brownie Noisette;200.0;4.9;27.8;20.8;15.8;9.2;0.4;0.08
+265.0;Brossard;Gâteau Roulé Fraise;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+266.0;Brossard;Gâteau Roulé Abricot;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+267.0;Brossard;Madeleines;455.0;7.1;65.3;26.2;17.6;18.5;5.7;0.24
+268.0;Brossard;Muffins Chocolat;516.0;6.0;55.1;37.9;30.0;13.7;3.9;0.48
+269.0;Brossard;Muffins Myrtilles;285.0;7.1;33.0;9.9;7.7;6.4;3.6;0.23
+270.0;Brossard;Cookies Chocolat;262.0;4.6;32.6;25.9;11.4;11.5;0.2;0.29
+271.0;Brossard;Cookies Noix;228.0;4.8;29.1;22.7;10.3;11.7;0.3;0.3
+272.0;Brossard;Quatre-Quarts;301.0;8.4;25.7;9.5;19.8;8.2;4.7;0.66
+273.0;Brossard;Gâteau Marbré;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+274.0;Brossard;Gâteau Chocolat;504.0;6.8;66.6;39.1;34.5;9.1;2.7;0.24
+275.0;Brossard;Gâteau Moelleux;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+276.0;Brossard;Mini Brownies;254.0;4.0;34.8;26.4;15.0;9.9;0.2;0.12
+277.0;Brossard;Mini Cakes;257.0;4.4;43.0;29.7;10.3;8.9;1.9;1.19
+278.0;Brossard;Mini Savane;254.0;3.7;49.8;2.4;13.9;6.9;3.2;0.84
+279.0;Brossard;Mini Madeleines;428.0;5.1;63.2;45.7;31.7;11.6;3.6;0.2
+280.0;Brossard;Mini Roulés;266.0;13.7;33.7;24.0;5.4;3.8;2.0;0.75
+281.0;LU;Petit Beurre;446.0;5.5;2.4;1.8;26.4;41.5;0.3;1.55
+282.0;LU;Prince Chocolat;491.0;4.8;62.5;20.4;26.5;14.6;3.0;0.29
+283.0;LU;Prince Vanille;276.0;3.0;32.2;18.6;17.7;7.5;1.8;0.09
+284.0;LU;Petit Écolier;239.0;14.7;40.4;15.5;15.0;4.1;0.6;1.04
+285.0;LU;Granola;384.0;11.1;74.7;19.4;5.9;0.9;3.0;0.05
+286.0;LU;Pépito;243.0;3.1;27.0;2.9;15.6;6.9;2.0;0.95
+287.0;LU;Barquettes Fraise;249.0;11.4;20.0;4.8;7.0;5.5;3.5;0.28
+288.0;LU;Barquettes Abricot;237.0;4.9;54.0;8.1;5.9;5.5;4.2;1.09
+289.0;LU;Barquettes Chocolat;540.0;5.9;67.3;45.6;20.2;18.5;4.9;0.23
+290.0;LU;Dinosaurus;208.0;11.4;54.1;2.6;12.3;8.0;2.5;0.53
+291.0;LU;TUC Original;362.0;14.2;59.2;17.6;19.7;3.4;1.7;0.6
+292.0;LU;Belvita Miel;399.0;5.5;52.3;1.6;7.2;5.8;2.2;0.98
+293.0;LU;Belvita Chocolat;476.0;6.7;57.8;30.8;24.3;9.9;5.6;0.46
+294.0;LU;Mikado Chocolat;538.0;6.6;56.0;31.1;19.5;16.3;4.1;0.33
+295.0;LU;Napolitain;537.0;6.4;64.7;38.6;34.5;7.7;2.6;0.34
+296.0;LU;Pim's Orange;391.0;10.6;15.9;14.3;17.3;4.0;1.4;0.22
+297.0;LU;Cracotte Nature;305.0;7.7;44.5;23.8;5.5;7.3;3.6;0.77
+298.0;LU;Figolu;287.0;7.3;39.6;6.9;18.5;4.2;4.1;1.04
+299.0;LU;Gaufrettes Vanille;186.0;2.2;28.4;19.6;11.4;8.6;1.5;0.28
+300.0;LU;Cakes Fourrés;384.0;8.7;24.0;19.5;13.0;7.3;2.1;0.9
+301.0;Milka;Tablette Lait;491.0;5.0;52.3;37.4;31.1;13.1;3.0;0.44
+302.0;Milka;Tablette Noisette;510.0;4.5;57.1;38.4;24.4;11.5;4.7;0.41
+303.0;Milka;Tablette Caramel;527.0;5.9;62.9;35.4;25.2;16.8;4.8;0.31
+304.0;Milka;Tablette Biscuit;439.0;7.8;58.2;41.9;26.2;14.2;3.5;0.29
+305.0;Milka;Tablette Oreo;447.0;5.6;62.8;40.0;27.9;12.4;1.3;0.02
+306.0;Milka;Barres Lait;534.0;6.2;52.0;30.3;17.2;7.1;1.4;0.38
+307.0;Milka;Barres Noisette;437.0;4.3;65.5;34.9;19.8;15.1;3.4;0.07
+308.0;Milka;Barres Oreo;491.0;4.9;66.9;28.2;20.8;10.6;3.1;0.31
+309.0;Milka;Barres Daim;525.0;5.6;51.5;25.6;32.9;9.3;3.0;0.06
+310.0;Milka;Biscuits Choco;465.0;4.9;50.7;28.8;30.8;17.0;5.6;0.01
+311.0;Milka;Biscuits Lait;553.0;5.9;69.7;29.0;27.4;5.2;2.0;0.07
+312.0;Milka;Biscuits Oreo;483.0;6.2;59.9;21.6;20.8;19.3;5.5;0.11
+313.0;Milka;Biscuits Noisette;457.0;5.1;62.5;21.6;24.2;17.0;3.8;0.1
+314.0;Milka;Biscuits Daim;496.0;7.7;58.3;40.9;29.5;13.5;3.4;0.06
+315.0;Milka;Cake Choco;355.0;14.3;11.4;1.8;13.5;4.6;0.4;0.46
+316.0;Milka;Cake Lait;283.0;7.9;47.2;6.4;13.1;3.4;4.0;1.13
+317.0;Milka;Chocolat à Pâtisser;438.0;6.0;57.4;48.4;15.2;7.2;2.1;0.21
+318.0;Milka;Tablette Extra Cacao;512.0;7.9;64.8;28.7;34.8;15.3;1.6;0.46
+319.0;Milka;Tablette Amande;519.0;6.9;68.0;31.9;28.3;17.3;1.1;0.17
+320.0;Milka;Mini Milka;468.0;7.7;64.9;45.0;22.1;13.9;3.3;0.38
+321.0;Lindt;Chocolat Noir 70%;560.0;7.0;58.6;20.2;23.9;14.7;2.1;0.51
+322.0;Lindt;Chocolat Noir 85%;483.0;4.2;59.4;32.6;20.7;7.6;3.9;0.03
+323.0;Lindt;Chocolat Noir 90%;513.0;4.2;66.8;47.5;27.2;7.3;5.3;0.14
+324.0;Lindt;Chocolat Lait;464.0;4.3;50.9;36.9;18.8;17.4;4.1;0.31
+325.0;Lindt;Chocolat Noisette;557.0;6.0;58.4;43.9;19.2;10.0;3.4;0.37
+326.0;Lindt;Chocolat Blanc;431.0;6.2;50.3;41.9;22.8;11.1;4.6;0.43
+327.0;Lindt;Praliné;522.0;6.5;50.4;50.0;20.5;7.5;2.3;0.23
+328.0;Lindt;Truffes;271.0;13.3;54.3;24.8;12.4;8.7;3.1;0.88
+329.0;Lindt;Lindor Lait;391.0;13.5;35.6;3.6;8.8;7.4;0.3;1.08
+330.0;Lindt;Lindor Noir;313.0;3.5;57.4;10.7;5.2;4.1;4.6;1.02
+331.0;Lindt;Lindor Blanc;389.0;8.0;53.2;29.6;19.5;6.6;0.8;0.5
+332.0;Lindt;Lindor Caramel;366.0;8.6;42.0;13.5;7.1;7.7;2.4;0.33
+333.0;Lindt;Lindor Noisette;383.0;4.2;14.2;10.1;13.7;9.5;1.5;0.72
+334.0;Lindt;Chocolat Caramel;512.0;4.6;53.7;43.9;21.7;16.6;5.3;0.41
+335.0;Lindt;Chocolat Menthe;508.0;4.7;66.6;23.0;24.3;10.1;5.6;0.23
+336.0;Lindt;Chocolat Amande;464.0;6.3;56.6;40.7;33.0;9.8;1.7;0.33
+337.0;Lindt;Chocolat Pistache;280.0;4.3;24.8;19.8;13.5;6.8;1.9;0.14
+338.0;Lindt;Tablette Bio;509.0;4.3;56.3;30.5;25.8;13.6;2.6;0.16
+339.0;Lindt;Tablette Dessert;445.0;6.1;59.4;46.2;34.2;7.9;3.5;0.25
+340.0;Lindt;Mini Tablette;452.0;6.9;51.9;31.9;26.8;16.0;5.5;0.27
+341.0;Côte dOr;Tablette Lait;435.0;5.6;62.6;29.3;31.4;8.6;5.6;0.15
+342.0;Côte dOr;Tablette Noir;465.0;6.3;67.1;44.8;20.8;18.8;2.2;0.55
+343.0;Côte dOr;Tablette Noisette;436.0;6.5;63.1;42.5;34.0;6.2;5.1;0.58
+344.0;Côte dOr;Tablette Caramel;538.0;7.1;57.5;40.5;20.7;5.6;5.2;0.24
+345.0;Côte dOr;Tablette Amande;515.0;4.4;64.5;21.2;23.6;12.6;4.0;0.06
+346.0;Côte dOr;Tablette Pistache;262.0;4.7;28.6;21.5;17.2;5.6;0.0;0.1
+347.0;Côte dOr;Tablette Blanc;519.0;5.0;63.5;31.7;18.1;12.1;4.1;0.53
+348.0;Côte dOr;Praliné;463.0;4.7;51.8;49.5;32.6;5.4;2.3;0.34
+349.0;Côte dOr;Truffes;268.0;4.6;19.3;11.4;18.0;4.6;4.1;0.39
+350.0;Côte dOr;Mini Tablettes;436.0;6.7;67.0;31.9;30.7;11.6;1.3;0.24
+351.0;Côte dOr;Tablette Bio;457.0;7.3;57.3;25.0;19.7;13.1;4.9;0.35
+352.0;Côte dOr;Tablette Dessert;539.0;8.0;52.2;28.7;23.7;9.3;2.1;0.26
+353.0;Côte dOr;Barres Lait;546.0;4.9;58.0;47.2;17.5;9.3;1.2;0.56
+354.0;Côte dOr;Barres Noir;485.0;7.3;51.9;49.6;27.1;10.9;4.2;0.08
+355.0;Côte dOr;Barres Noisette;534.0;6.3;60.0;49.2;31.8;11.8;4.5;0.23
+356.0;Côte dOr;Biscuits Choco;454.0;4.2;67.5;28.2;25.5;19.8;1.0;0.32
+357.0;Côte dOr;Biscuits Lait;480.0;6.0;63.8;32.4;34.5;17.0;5.2;0.46
+358.0;Côte dOr;Biscuits Noir;426.0;4.5;59.1;43.6;30.1;18.2;2.7;0.36
+359.0;Côte dOr;Biscuits Noisette;494.0;6.7;56.4;48.1;16.4;12.4;3.4;0.14
+360.0;Côte dOr;Biscuits Bio;531.0;6.1;65.5;49.8;33.8;19.4;4.0;0.48
+361.0;Carambar & Co;Carambar Classique;552.0;7.3;52.3;31.5;20.2;11.8;4.4;0.47
+362.0;Carambar & Co;Carambar Caramel;505.0;4.4;50.6;31.6;22.3;18.4;4.9;0.05
+363.0;Carambar & Co;Carambar Fruits;524.0;5.9;64.9;30.2;20.0;19.9;1.7;0.33
+364.0;Carambar & Co;Krema Réglisse;297.0;6.2;44.0;12.4;9.3;4.3;1.2;0.48
+365.0;Carambar & Co;Krema Fruits;383.0;3.0;48.9;2.2;7.6;3.9;0.7;0.95
+366.0;Carambar & Co;Poulain Chocolat Lait;529.0;7.1;65.6;42.6;22.5;19.4;3.1;0.11
+367.0;Carambar & Co;Poulain Chocolat Noir;550.0;6.7;57.2;36.2;28.8;7.7;3.6;0.06
+368.0;Carambar & Co;Poulain Dessert;242.0;7.7;41.5;17.6;7.4;7.5;3.1;0.28
+369.0;Carambar & Co;La Pie Qui Chante;258.0;5.7;56.9;12.1;5.9;8.5;3.6;1.03
+370.0;Carambar & Co;Mi-cho-ko;251.0;4.2;10.4;3.4;17.6;5.3;1.4;0.8
+371.0;Carambar & Co;Carambar Atomic;459.0;4.1;55.1;21.0;30.8;15.8;2.5;0.5
+372.0;Carambar & Co;Carambar Maxi;473.0;6.5;52.1;43.2;20.5;9.4;3.2;0.11
+373.0;Carambar & Co;Carambar Mini;539.0;5.9;58.2;31.2;29.0;11.1;4.4;0.16
+374.0;Carambar & Co;Krema Maxi;323.0;9.3;56.1;20.5;5.4;9.8;4.2;1.12
+375.0;Carambar & Co;Krema Mini;397.0;8.4;23.7;18.1;15.9;7.3;2.7;0.31
+376.0;Carambar & Co;Carambar Bio;549.0;4.0;68.4;44.2;16.6;9.0;1.2;0.07
+377.0;Carambar & Co;Carambar Sans Sucre;522.0;4.8;64.9;28.4;22.3;15.3;4.6;0.56
+378.0;Carambar & Co;Poulain Praliné;535.0;7.0;57.2;22.1;22.0;5.5;5.2;0.39
+379.0;Carambar & Co;Poulain Bio;350.0;12.6;15.4;25.0;11.2;8.4;1.4;0.15
+380.0;Carambar & Co;Poulain Extra Noir;335.0;8.7;55.2;9.4;8.9;4.7;1.4;1.01
+381.0;Findus;Poisson Pané;100.0;4.1;11.5;1.3;1.7;0.4;6.3;0.16
+382.0;Findus;Filet de Colin;316.0;14.1;50.3;20.8;10.9;2.2;4.8;0.1
+383.0;Findus;Saumon Surgelé;363.0;11.4;30.8;11.5;19.5;4.2;0.5;0.32
+384.0;Findus;Poisson Croustillant;27.0;1.7;10.7;3.8;2.0;0.7;6.0;0.03
+385.0;Findus;Croquettes de Poisson;78.0;1.0;14.9;4.6;1.7;0.4;4.9;0.19
+386.0;Findus;Épinards Surgelés;96.0;3.5;6.4;2.0;2.5;0.1;6.1;0.03
+387.0;Findus;Haricots Verts Surgelés;91.0;2.7;10.8;4.8;0.3;0.7;4.4;0.2
+388.0;Findus;Brocolis Surgelés;74.0;3.6;12.5;3.7;2.4;0.3;5.8;0.07
+389.0;Findus;Carottes Surgelées;104.0;1.8;2.9;1.3;0.3;0.9;3.7;0.19
+390.0;Findus;Petits Pois Surgelés;22.0;5.4;11.1;2.0;2.7;0.6;6.4;0.24
+391.0;Findus;Lasagnes;399.0;9.9;71.7;13.2;7.8;2.0;8.0;0.07
+392.0;Findus;Hachis Parmentier;244.0;5.0;31.7;27.4;7.5;6.3;2.2;0.28
+393.0;Findus;Gratin Dauphinois;234.0;3.5;52.0;22.3;8.2;5.3;2.6;0.19
+394.0;Findus;Pizza 4 Fromages;600.0;15.5;0.6;1.5;48.9;27.2;1.0;1.84
+395.0;Findus;Quiche Lorraine;364.0;7.8;25.6;11.0;15.2;8.2;0.2;0.79
+396.0;Findus;Nuggets de Poulet;250.0;18.4;4.5;0.6;5.6;7.5;0.6;1.32
+397.0;Findus;Cordon Bleu;349.0;5.3;38.6;5.7;12.3;5.3;3.6;0.17
+398.0;Findus;Frites Surgelées;307.0;8.3;34.3;15.5;17.8;2.0;2.8;0.21
+399.0;Findus;Pommes Rissolées;246.0;8.5;54.2;5.3;12.2;3.3;1.0;1.12
+400.0;Findus;Ratatouille Surgelée;317.0;9.8;42.8;22.7;17.7;3.6;0.6;0.97
+401.0;Bonne Maman;Confiture Fraise;290.0;3.9;18.5;11.9;14.5;7.1;1.3;0.94
+402.0;Bonne Maman;Confiture Abricot;304.0;14.7;58.8;19.0;11.2;9.2;4.4;1.09
+403.0;Bonne Maman;Confiture Framboise;209.0;9.2;52.6;25.9;15.7;8.5;3.4;0.81
+404.0;Bonne Maman;Confiture Myrtille;205.0;9.6;26.9;6.5;17.8;9.8;1.8;0.49
+405.0;Bonne Maman;Confiture Cerise;346.0;13.5;48.7;12.3;9.4;9.6;3.4;1.08
+406.0;Bonne Maman;Confiture Orange;364.0;8.0;46.7;2.6;8.6;3.8;0.6;0.4
+407.0;Bonne Maman;Confiture Pêche;321.0;3.5;55.2;16.0;5.1;4.0;1.3;0.15
+408.0;Bonne Maman;Confiture Poire;395.0;10.9;42.0;17.2;17.8;8.9;1.9;0.71
+409.0;Bonne Maman;Confiture Mûre;316.0;4.3;39.8;5.9;5.5;9.1;2.5;0.95
+410.0;Bonne Maman;Confiture Mirabelle;239.0;9.0;20.2;21.1;9.1;2.4;4.8;0.62
+411.0;Bonne Maman;Biscuits Sablés;451.0;5.8;63.7;28.4;24.5;9.0;5.4;0.52
+412.0;Bonne Maman;Madeleines;448.0;5.7;66.1;28.6;19.4;6.1;1.3;0.25
+413.0;Bonne Maman;Galettes;422.0;6.8;66.2;40.9;22.8;7.5;5.7;0.59
+414.0;Bonne Maman;Financiers;292.0;6.8;22.8;21.8;10.7;4.2;2.5;0.59
+415.0;Bonne Maman;Brownies;272.0;3.3;32.8;28.3;14.5;6.6;1.2;0.19
+416.0;Bonne Maman;Cookies Chocolat;193.0;3.3;29.1;23.2;9.3;10.2;1.7;0.11
+417.0;Bonne Maman;Tartelettes Fraise;259.0;6.0;16.9;26.9;16.5;6.3;2.8;0.54
+418.0;Bonne Maman;Moelleux Chocolat;448.0;6.7;67.9;23.1;17.7;19.5;2.2;0.17
+419.0;Bonne Maman;Cakes Natures;328.0;11.1;57.2;13.5;12.9;2.5;2.0;0.85
+420.0;Bonne Maman;Gaufrettes Vanille;213.0;4.3;34.8;27.2;12.2;6.4;0.0;0.15
+421.0;Nutella;Nutella Pot 200g;391.0;9.3;39.1;13.9;16.8;7.3;4.4;0.87
+422.0;Nutella;Nutella Pot 400g;277.0;11.9;54.6;19.6;10.5;5.5;4.8;1.11
+423.0;Nutella;Nutella Pot 750g;279.0;5.2;17.3;14.5;11.9;5.0;0.4;1.01
+424.0;Nutella;Nutella Pot 1kg;268.0;7.6;36.4;9.3;17.7;7.7;0.9;0.16
+425.0;Nutella;Nutella Biscuits;532.0;7.6;57.9;38.8;16.5;16.1;4.1;0.21
+426.0;Nutella;Nutella B-ready;262.0;3.2;28.4;3.9;20.0;7.6;4.9;0.86
+427.0;Nutella;Nutella & Go;218.0;14.4;58.8;13.4;9.5;4.0;5.0;0.21
+428.0;Nutella;Nutella Sans Huile Palme;325.0;8.4;56.3;12.4;16.5;6.1;4.9;0.22
+429.0;Nutella;Nutella Crunchy;358.0;9.0;54.6;18.7;19.8;6.9;4.3;0.52
+430.0;Nutella;Nutella Bio;326.0;7.8;43.1;10.2;13.3;9.2;2.1;0.58
+431.0;Nutella;Kinder Bueno;314.0;3.4;22.8;8.8;14.6;4.1;4.9;1.03
+432.0;Nutella;Kinder Country;332.0;3.2;17.3;16.5;13.0;7.7;4.1;0.9
+433.0;Nutella;Kinder Délice;364.0;11.8;31.9;10.2;15.4;5.1;0.6;0.62
+434.0;Nutella;Kinder Pingui;220.0;3.4;49.4;18.4;18.1;6.6;2.3;0.17
+435.0;Nutella;Kinder Maxi;324.0;9.7;58.7;14.6;18.5;5.1;0.1;0.34
+436.0;Nutella;Kinder Surprise;268.0;13.2;29.2;13.6;18.5;7.4;4.6;0.76
+437.0;Nutella;Schoko-bons;337.0;12.0;56.3;18.9;10.2;3.6;4.3;0.11
+438.0;Nutella;Kinder Chocolat;426.0;6.3;54.6;26.9;21.5;6.9;4.0;0.05
+439.0;Nutella;Kinder Mini;248.0;12.2;22.5;17.4;5.6;2.1;1.0;0.56
+440.0;Nutella;Kinder Cards;318.0;8.0;46.3;13.5;7.2;6.3;4.3;1.14
+441.0;Kinder;Kinder Bueno;347.0;14.2;38.0;19.0;18.9;8.4;0.7;0.77
+442.0;Kinder;Kinder Country;376.0;11.9;32.0;16.0;20.0;9.6;2.0;0.17
+443.0;Kinder;Kinder Délice;209.0;13.9;54.0;20.9;14.7;2.6;4.5;0.64
+444.0;Kinder;Kinder Pingui;263.0;8.9;40.5;12.6;8.7;2.4;1.5;0.52
+445.0;Kinder;Kinder Maxi;211.0;10.5;50.1;14.9;18.5;4.1;2.0;0.13
+446.0;Kinder;Kinder Surprise;320.0;9.0;21.6;8.1;11.1;7.0;4.0;0.81
+447.0;Kinder;Kinder Schoko-bons;372.0;5.5;37.4;3.7;8.8;6.1;3.1;0.73
+448.0;Kinder;Kinder Chocolat;452.0;6.7;57.1;37.2;29.9;17.7;2.0;0.14
+449.0;Kinder;Kinder Joy;300.0;6.8;14.1;29.9;10.9;7.4;2.8;1.18
+450.0;Kinder;Kinder Happy Hippo;326.0;3.8;55.6;22.6;18.7;7.2;0.1;0.38
+451.0;Kinder;Kinder Tranche Lait;289.0;3.7;57.4;8.1;9.3;5.1;4.6;0.22
+452.0;Kinder;Kinder Cards;361.0;7.9;16.4;16.5;18.6;5.1;4.7;1.16
+453.0;Kinder;Kinder Mini;236.0;14.1;54.9;15.6;12.6;9.3;4.3;0.38
+454.0;Kinder;Kinder Brioss;332.0;3.6;57.2;26.3;5.7;4.3;1.6;0.86
+455.0;Kinder;Kinder CereAlé;362.0;6.5;53.2;13.5;13.0;8.4;1.2;0.56
+456.0;Kinder;Kinder Délice Coco;392.0;13.4;14.8;24.8;7.0;3.6;2.0;0.63
+457.0;Kinder;Kinder Bueno White;332.0;7.9;37.6;5.3;9.3;6.0;0.1;0.33
+458.0;Kinder;Kinder Choco Fresh;321.0;15.0;26.2;27.9;19.1;8.8;0.8;0.93
+459.0;Kinder;Kinder Pingui Cacao;375.0;8.6;42.2;5.3;16.3;3.9;1.7;0.27
+460.0;Kinder;Kinder Pingui Noisette;302.0;6.3;58.9;1.9;8.7;8.8;1.5;0.89
+461.0;Ferrero Rocher;Ferrero Rocher;284.0;10.3;39.2;8.8;15.8;3.9;3.7;0.28
+462.0;Ferrero Rocher;Ferrero Collection;364.0;3.1;40.3;21.7;13.7;2.7;0.4;0.95
+463.0;Ferrero Rocher;Raffaello;230.0;12.2;11.1;25.8;13.0;3.2;2.8;0.52
+464.0;Ferrero Rocher;Mon Chéri;323.0;8.3;10.0;19.6;12.7;8.6;4.0;0.46
+465.0;Ferrero Rocher;Ferrero Rondnoir;321.0;3.5;39.7;22.4;7.8;6.9;2.8;0.58
+466.0;Ferrero Rocher;Ferrero Rocher Noir;316.0;10.0;35.9;13.3;6.3;4.2;4.1;0.1
+467.0;Ferrero Rocher;Rocher Lait;375.0;4.5;49.8;1.7;5.3;2.9;0.8;0.65
+468.0;Ferrero Rocher;Rocher Blanc;255.0;8.8;29.5;10.2;11.9;4.1;2.9;0.21
+469.0;Ferrero Rocher;Collection Assorti;209.0;14.9;29.1;6.0;17.8;6.2;1.6;0.9
+470.0;Ferrero Rocher;Raffaello Noix de Coco;211.0;4.8;26.9;14.7;15.4;9.8;3.7;0.82
+471.0;Ferrero Rocher;Mon Chéri Cerise;356.0;4.9;27.8;5.7;10.1;3.8;2.3;0.55
+472.0;Ferrero Rocher;Rocher Dark;230.0;11.3;22.5;16.1;17.5;7.8;0.1;0.77
+473.0;Ferrero Rocher;Rocher Caramel;250.0;3.4;10.3;23.7;9.5;4.2;4.1;1.15
+474.0;Ferrero Rocher;Rocher Praliné;478.0;6.7;62.3;29.4;24.9;5.9;4.8;0.33
+475.0;Ferrero Rocher;Rocher Noisette;215.0;9.9;56.4;14.1;16.7;6.7;1.2;0.48
+476.0;Ferrero Rocher;Rocher Pistache;192.0;2.4;34.1;20.1;8.8;10.0;0.8;0.29
+477.0;Ferrero Rocher;Rocher Amande;247.0;13.9;47.7;4.2;7.4;6.9;2.4;0.73
+478.0;Ferrero Rocher;Ferrero Garden;381.0;4.7;40.0;26.3;11.0;3.8;2.8;0.41
+479.0;Ferrero Rocher;Ferrero Eggs;264.0;11.2;49.6;24.1;16.4;7.9;0.7;1.1
+480.0;Ferrero Rocher;Ferrero Golden Gallery;261.0;8.4;21.1;12.2;9.9;4.8;1.4;1.04
+481.0;Coca-Cola;Coca-Cola Classique;50.0;0.0;10.6;11.8;0.0;0.0;0.0;0.02
+482.0;Coca-Cola;Coca-Cola Zéro;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+483.0;Coca-Cola;Coca-Cola Light;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+484.0;Coca-Cola;Coca-Cola Cherry;44.0;0.0;10.7;9.8;0.0;0.0;0.0;0.02
+485.0;Coca-Cola;Coca-Cola Vanilla;48.0;0.0;8.7;8.3;0.0;0.0;0.0;0.02
+486.0;Coca-Cola;Coca-Cola Citron;46.0;0.0;8.5;10.0;0.0;0.0;0.0;0.02
+487.0;Coca-Cola;Coca-Cola Sans Caféine;48.0;0.0;10.8;11.2;0.0;0.0;0.0;0.02
+488.0;Coca-Cola;Coca-Cola Energy;38.0;0.0;10.6;8.7;0.0;0.0;0.0;0.02
+489.0;Coca-Cola;Coca-Cola Stévia;40.0;0.0;8.7;10.0;0.0;0.0;0.0;0.02
+490.0;Coca-Cola;Coca-Cola Life;41.0;0.0;10.4;11.3;0.0;0.0;0.0;0.02
+491.0;Coca-Cola;Fanta Orange;35.0;0.0;8.6;8.9;0.0;0.0;0.0;0.02
+492.0;Coca-Cola;Fanta Citron;41.0;0.0;11.9;10.0;0.0;0.0;0.0;0.02
+493.0;Coca-Cola;Fanta Exotic;41.0;0.0;8.3;8.8;0.0;0.0;0.0;0.02
+494.0;Coca-Cola;Fanta Fraise;38.0;0.0;9.3;8.2;0.0;0.0;0.0;0.02
+495.0;Coca-Cola;Sprite;37.0;0.0;11.7;8.7;0.0;0.0;0.0;0.02
+496.0;Coca-Cola;Sprite Zéro;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+497.0;Coca-Cola;Minute Maid Orange;43.0;0.0;10.8;8.2;0.0;0.0;0.0;0.02
+498.0;Coca-Cola;Minute Maid Pomme;39.0;0.0;9.3;9.6;0.0;0.0;0.0;0.02
+499.0;Coca-Cola;Fuze Tea Pêche;43.0;0.0;9.8;8.9;0.0;0.0;0.0;0.02
+500.0;Coca-Cola;Fuze Tea Citron;40.0;0.0;12.0;9.6;0.0;0.0;0.0;0.02
+501.0;PepsiCo;Pepsi;42.0;0.0;8.5;8.6;0.0;0.0;0.0;0.02
+502.0;PepsiCo;Pepsi Max;40.0;0.0;10.0;11.9;0.0;0.0;0.0;0.02
+503.0;PepsiCo;Pepsi Light;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+504.0;PepsiCo;Pepsi Twist;44.0;0.0;9.8;9.6;0.0;0.0;0.0;0.02
+505.0;PepsiCo;7up;39.0;0.0;10.1;9.3;0.0;0.0;0.0;0.02
+506.0;PepsiCo;7up Free;48.0;0.0;9.0;8.4;0.0;0.0;0.0;0.02
+507.0;PepsiCo;Mountain Dew;281.0;10.1;27.2;4.4;18.0;3.3;1.4;0.68
+508.0;PepsiCo;Tropicana Orange;44.0;0.0;8.5;10.6;0.0;0.0;0.0;0.02
+509.0;PepsiCo;Tropicana Pomme;42.0;0.0;11.0;8.6;0.0;0.0;0.0;0.02
+510.0;PepsiCo;Tropicana Multifruits;45.0;0.0;8.1;9.5;0.0;0.0;0.0;0.02
+511.0;PepsiCo;Lays Nature;389.0;14.2;25.0;21.5;19.6;5.8;3.3;1.08
+512.0;PepsiCo;Lays Barbecue;424.0;1.9;9.5;9.4;54.5;17.4;0.3;3.05
+513.0;PepsiCo;Lays Poulet Rôti;149.0;14.2;0.7;0.3;15.9;5.8;0.1;3.15
+514.0;PepsiCo;Lays Crème Oignon;573.0;8.1;2.2;2.9;28.1;42.1;0.9;1.56
+515.0;PepsiCo;Doritos Nature;489.0;7.6;54.4;1.8;32.6;13.6;4.1;1.18
+516.0;PepsiCo;Doritos Fromage;607.0;7.0;3.6;3.0;72.1;15.2;1.8;1.92
+517.0;PepsiCo;Doritos Salsa;485.0;7.0;55.7;1.7;28.4;14.7;2.4;1.83
+518.0;PepsiCo;Cheetos;487.0;5.0;54.1;4.6;33.7;13.2;4.9;1.14
+519.0;PepsiCo;Ruffles Nature;504.0;6.0;57.4;1.3;34.7;10.8;4.1;1.66
+520.0;PepsiCo;Ruffles Fromage;299.0;19.7;4.3;2.6;44.0;25.6;0.3;0.65
+521.0;Kellogg's;Corn Flakes;369.0;11.7;65.1;3.1;2.3;1.5;6.7;0.02
+522.0;Kellogg's;Special K Nature;398.0;11.8;68.6;17.4;4.5;1.9;7.7;0.02
+523.0;Kellogg's;Special K Fruits Rouges;347.0;12.5;65.4;8.5;6.4;1.5;6.1;0.08
+524.0;Kellogg's;Special K Chocolat;388.0;10.1;78.3;17.2;3.6;1.8;7.9;0.06
+525.0;Kellogg's;Frosties;390.0;8.5;71.0;17.5;6.1;1.1;8.8;0.03
+526.0;Kellogg's;Choco Krispies;262.0;14.9;15.9;11.4;11.6;2.9;3.6;0.62
+527.0;Kellogg's;Miel Pops;241.0;9.8;30.6;2.4;9.6;6.9;0.1;0.8
+528.0;Kellogg's;Smacks;357.0;5.1;36.9;21.6;12.8;3.8;2.9;0.39
+529.0;Kellogg's;All-Bran;362.0;8.7;72.3;5.0;7.3;1.4;8.9;0.03
+530.0;Kellogg's;Trésor Chocolat;507.0;6.8;59.0;23.7;22.0;19.0;3.4;0.41
+531.0;Kellogg's;Trésor Noisette;342.0;6.1;36.0;12.2;16.1;3.3;4.3;1.18
+532.0;Kellogg's;Extra Chocolat;458.0;5.3;66.9;41.1;31.5;16.9;2.8;0.52
+533.0;Kellogg's;Extra Fruits;220.0;5.9;27.7;28.0;9.4;3.6;3.0;0.95
+534.0;Kellogg's;Extra Noix;243.0;6.0;20.0;3.9;7.0;3.7;2.0;0.59
+535.0;Kellogg's;Coco Pops;230.0;8.7;17.6;7.4;12.1;6.8;4.0;1.02
+536.0;Kellogg's;Rice Krispies;396.0;5.3;20.0;21.8;17.9;5.8;4.0;1.0
+537.0;Kellogg's;Froot Loops;333.0;5.5;22.2;27.3;19.2;8.3;2.6;0.94
+538.0;Kellogg's;Kelloggs Bio;361.0;12.7;12.4;29.5;13.8;2.2;4.7;0.26
+539.0;Kellogg's;Kelloggs Granola;389.0;10.0;77.7;10.5;2.0;0.7;5.6;0.07
+540.0;Kellogg's;Kelloggs Muesli;373.0;9.7;78.4;19.6;7.7;1.2;2.9;0.02
+541.0;Tropicana;Orange Sans Pulpe;295.0;6.2;26.4;2.0;6.2;2.6;1.7;0.48
+542.0;Tropicana;Orange Avec Pulpe;319.0;3.5;44.1;21.1;13.1;6.5;0.4;0.58
+543.0;Tropicana;Pomme;399.0;10.9;12.6;29.3;14.1;8.2;2.8;0.11
+544.0;Tropicana;Multifruits;342.0;8.7;50.2;14.1;12.1;3.3;3.3;0.91
+545.0;Tropicana;Mangue;342.0;3.7;18.0;8.2;14.1;5.2;3.9;0.84
+546.0;Tropicana;Ananas;205.0;9.1;59.3;1.3;5.3;5.1;4.4;0.44
+547.0;Tropicana;Fraise Banane;339.0;6.3;30.6;4.9;15.5;4.8;1.1;0.76
+548.0;Tropicana;Abricot;254.0;6.2;24.4;5.8;14.2;3.2;2.0;1.15
+549.0;Tropicana;Pêche;303.0;6.1;45.3;28.9;7.6;6.3;4.0;1.2
+550.0;Tropicana;Poire;359.0;3.5;48.9;19.8;14.6;4.3;4.8;0.93
+551.0;Tropicana;Orange Bio;360.0;14.7;37.6;7.2;11.8;2.4;2.3;0.49
+552.0;Tropicana;Clémentine;292.0;13.7;38.4;11.0;10.2;5.1;4.4;0.35
+553.0;Tropicana;Pamplemousse Rose;313.0;9.8;39.1;1.7;13.9;9.4;4.3;0.28
+554.0;Tropicana;Carotte Orange Citron;208.0;5.7;46.4;4.3;14.8;3.4;2.5;0.74
+555.0;Tropicana;ACE;328.0;6.8;25.1;14.7;13.3;7.2;1.0;0.65
+556.0;Tropicana;Fruits Rouges;269.0;13.4;49.9;23.1;9.9;6.3;4.8;0.57
+557.0;Tropicana;Framboise;315.0;5.5;25.8;27.1;12.0;7.7;1.2;0.36
+558.0;Tropicana;Pastèque;261.0;12.9;28.0;29.6;7.6;8.6;3.0;0.87
+559.0;Tropicana;Kiwi Pomme;350.0;12.1;14.8;5.6;19.9;5.6;4.6;0.65
+560.0;Tropicana;Citronnade;49.0;0.0;9.9;10.3;0.0;0.0;0.0;0.02
+561.0;Evian;Eau Minérale 50cl;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+562.0;Evian;Eau Minérale 1L;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+563.0;Evian;Eau Minérale 1,5L;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+564.0;Evian;Eau Minérale 33cl;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+565.0;Evian;Eau Minérale 75cl;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+566.0;Evian;Eau Minérale 2L;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+567.0;Evian;Bouteille Verre 75cl;265.0;7.5;33.8;24.1;6.3;9.0;4.0;0.85
+568.0;Evian;Édition Sport 75cl;242.0;13.3;19.2;2.5;18.2;2.4;5.0;1.09
+569.0;Evian;Édition Limitée;205.0;12.1;21.6;17.5;10.8;6.9;4.9;0.37
+570.0;Evian;Pack 6x1,5L;243.0;12.5;59.0;26.0;14.3;2.6;3.8;0.77
+571.0;Evian;Pack 6x50cl;298.0;13.0;13.5;5.2;14.0;5.6;1.9;1.03
+572.0;Evian;Pack 12x33cl;225.0;5.9;56.3;28.9;10.1;6.9;1.2;0.69
+573.0;Evian;Bouteille Bébé;360.0;5.2;38.6;16.6;7.4;3.0;3.8;1.04
+574.0;Evian;Evian+ Magnésium;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+575.0;Evian;Evian+ Zinc;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+576.0;Evian;Evian+ Potassium;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+577.0;Evian;Evian+ Fer;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+578.0;Evian;Evian Fruits & Plantes Citron;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+579.0;Evian;Evian Fruits & Plantes Pêche;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+580.0;Evian;Evian Fruits & Plantes Framboise;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+581.0;Volvic;Eau Minérale 50cl;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+582.0;Volvic;Eau Minérale 1L;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+583.0;Volvic;Eau Minérale 1,5L;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+584.0;Volvic;Eau Minérale 33cl;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+585.0;Volvic;Pack 6x1,5L;399.0;8.7;57.6;19.4;9.1;8.5;1.9;1.15
+586.0;Volvic;Volvic Juicy Orange;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+587.0;Volvic;Volvic Juicy Fraise;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+588.0;Volvic;Volvic Juicy Pomme;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+589.0;Volvic;Volvic Thé Pêche;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+590.0;Volvic;Volvic Thé Citron;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+591.0;Volvic;Volvic Zéro Citron;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+592.0;Volvic;Volvic Zéro Pêche;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+593.0;Volvic;Volvic Zéro Fruits Rouges;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+594.0;Volvic;Volvic Édition Sport;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+595.0;Volvic;Volvic Kids;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+596.0;Volvic;Volvic Bio Citron;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+597.0;Volvic;Volvic Bio Pêche;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+598.0;Volvic;Volvic Essence Citron;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+599.0;Volvic;Volvic Essence Framboise;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+600.0;Volvic;Volvic Essence Pamplemousse;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+601.0;Cristaline;Eau 50cl;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+602.0;Cristaline;Eau 1L;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+603.0;Cristaline;Eau 1,5L;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+604.0;Cristaline;Eau 33cl;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+605.0;Cristaline;Pack 6x1,5L;255.0;11.3;25.8;23.3;19.8;9.9;1.2;1.07
+606.0;Cristaline;Eau Pétillante 1L;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+607.0;Cristaline;Eau Pétillante 1,25L;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+608.0;Cristaline;Eau Pétillante 50cl;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+609.0;Cristaline;Eau Arômatisée Citron;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+610.0;Cristaline;Eau Arômatisée Pêche;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+611.0;Cristaline;Eau Arômatisée Fraise;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+612.0;Cristaline;Sirop Citron;277.0;0.0;66.2;62.9;0.0;0.0;0.0;0.02
+613.0;Cristaline;Sirop Grenadine;235.0;0.0;70.6;68.3;0.0;0.0;0.0;0.02
+614.0;Cristaline;Sirop Menthe;228.0;0.0;60.5;56.3;0.0;0.0;0.0;0.02
+615.0;Cristaline;Sirop Fraise;271.0;0.0;61.7;72.7;0.0;0.0;0.0;0.02
+616.0;Cristaline;Eau Enfants 33cl;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+617.0;Cristaline;Pack 12x50cl;257.0;8.8;23.2;19.4;17.2;2.4;4.0;0.94
+618.0;Cristaline;Pack 6x1L;267.0;12.1;45.8;8.4;11.6;2.4;4.4;0.32
+619.0;Cristaline;Eau Source Provence;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+620.0;Cristaline;Eau Source Bretagne;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+621.0;Vico;Chips Nature;540.0;5.3;51.4;3.7;33.3;14.0;2.2;1.96
+622.0;Vico;Chips Saveur Barbecue;440.0;0.8;7.3;1.8;12.3;17.7;0.5;1.12
+623.0;Vico;Chips Côté de Buf;538.0;5.1;57.2;5.6;32.8;10.4;4.0;1.03
+624.0;Vico;Chips Sel & Vinaigre;483.0;6.6;50.2;1.9;29.1;13.8;4.1;1.5
+625.0;Vico;Chips Poulet Rôti;188.0;20.1;0.0;0.9;20.3;4.5;0.4;2.45
+626.0;Vico;Curly;542.0;5.3;56.9;1.0;30.7;11.4;3.7;1.11
+627.0;Vico;Monster Munch Original;534.0;6.2;59.3;5.4;33.3;11.8;4.2;1.43
+628.0;Vico;Monster Munch Ketchup;509.0;1.0;3.4;8.4;26.0;12.5;0.4;2.05
+629.0;Vico;Tortillas Nature;526.0;5.2;52.6;3.4;32.4;14.8;4.0;1.62
+630.0;Vico;Tortillas Fromage;679.0;17.2;3.3;1.9;79.7;28.4;1.1;1.13
+631.0;Vico;Noix de Cajou Salées;241.0;13.1;55.4;20.4;8.3;3.4;0.1;0.71
+632.0;Vico;Cacahuètes Grillées;259.0;11.6;43.3;28.5;13.6;8.2;4.6;0.4
+633.0;Vico;Pistaches Salées;272.0;4.3;26.4;29.4;13.6;10.0;0.2;0.23
+634.0;Vico;Crackers Salés;385.0;4.0;16.1;14.9;11.1;4.6;1.1;1.01
+635.0;Vico;Biscuits Apéritif;447.0;5.0;50.7;33.6;25.7;15.1;2.2;0.54
+636.0;Vico;Chips Ondulées Nature;523.0;7.9;54.5;3.4;28.6;11.9;2.6;1.56
+637.0;Vico;Chips Ondulées Fromage;444.0;20.0;2.6;1.9;69.3;42.7;1.4;1.58
+638.0;Vico;Chips Légumes;65.0;3.3;3.0;4.3;0.9;0.5;4.7;0.22
+639.0;Vico;Popcorn Salé;537.0;7.7;50.6;5.9;26.1;14.6;3.8;1.64
+640.0;Vico;Popcorn Sucré;506.0;7.4;57.3;1.2;26.5;12.9;4.9;1.82
+641.0;Bjorg;Lait dAmande;253.0;12.4;18.0;25.8;19.9;8.4;1.3;0.31
+642.0;Bjorg;Lait de Soja;261.0;3.8;36.0;9.8;16.5;6.3;0.2;0.11
+643.0;Bjorg;Lait dAvoine;270.0;12.8;25.6;24.4;10.1;4.9;1.6;0.61
+644.0;Bjorg;Biscuits Sésame;559.0;4.6;52.6;39.2;30.0;18.1;5.8;0.44
+645.0;Bjorg;Biscuits Cacao;491.0;5.1;53.8;49.0;28.7;17.5;2.5;0.12
+646.0;Bjorg;Pain des Fleurs Sarrasin;356.0;9.0;51.0;25.5;14.4;4.2;2.0;1.2
+647.0;Bjorg;Muesli Fruits;358.0;12.4;72.5;13.4;4.7;0.9;5.2;0.05
+648.0;Bjorg;Muesli Chocolat;338.0;8.4;70.6;6.3;1.1;0.5;7.5;0.02
+649.0;Bjorg;Purée dAmande;360.0;9.3;26.7;9.4;7.5;9.5;3.5;0.14
+650.0;Bjorg;Purée de Noisette;240.0;10.9;27.8;19.9;13.2;3.1;4.1;0.17
+651.0;Bjorg;Céréales Croustillantes;400.0;9.7;73.9;13.4;5.5;1.0;7.8;0.02
+652.0;Bjorg;Galettes de Riz;407.0;12.8;69.1;9.5;6.5;0.4;6.2;0.05
+653.0;Bjorg;Galettes de Maïs;105.0;5.8;10.3;4.4;1.4;0.6;5.8;0.05
+654.0;Bjorg;Boisson Coco;274.0;3.1;38.4;18.1;7.8;3.6;0.2;0.92
+655.0;Bjorg;Boisson Riz;395.0;9.8;66.9;12.2;6.0;0.4;9.1;0.08
+656.0;Bjorg;Biscuits Avoine;447.0;7.4;52.4;41.9;21.5;8.6;3.2;0.3
+657.0;Bjorg;Tartines Craquantes Quinoa;349.0;10.0;76.1;18.4;3.8;1.5;8.9;0.03
+658.0;Bjorg;Tartines Craquantes Châtaigne;317.0;11.2;46.8;3.6;14.0;9.8;0.1;0.98
+659.0;Bjorg;Huile Colza Bio;356.0;5.2;36.3;3.1;6.5;9.8;2.6;0.72
+660.0;Bjorg;Sirop dAgave;252.0;0.0;64.7;68.6;0.0;0.0;0.0;0.02
+661.0;Gerblé;Biscuits Sésame;430.0;6.3;57.1;42.1;31.5;15.0;4.3;0.26
+662.0;Gerblé;Biscuits Chocolat;509.0;6.6;63.0;25.7;20.6;11.1;5.9;0.13
+663.0;Gerblé;Biscuits Miel;557.0;5.7;64.5;28.1;30.6;8.4;3.7;0.48
+664.0;Gerblé;Biscuits Noisette;432.0;7.3;68.9;33.9;21.1;16.8;5.0;0.2
+665.0;Gerblé;Biscuits Orange;524.0;5.9;54.2;40.7;22.6;8.2;1.0;0.55
+666.0;Gerblé;Galettes de Riz Choco;405.0;8.3;66.7;17.0;7.1;0.6;9.8;0.02
+667.0;Gerblé;Pain des Fleurs;297.0;7.5;10.5;7.9;5.6;5.6;0.2;0.29
+668.0;Gerblé;Céréales Fibres;388.0;12.1;79.6;4.7;4.7;0.7;9.2;0.06
+669.0;Gerblé;Barres Céréales Chocolat;382.0;9.6;75.2;6.0;2.6;0.4;2.7;0.07
+670.0;Gerblé;Barres Céréales Fruits;332.0;11.8;73.4;15.2;2.7;1.5;8.7;0.03
+671.0;Gerblé;Substitut Repas Vanille;243.0;4.6;29.3;27.0;13.9;5.6;1.5;0.28
+672.0;Gerblé;Substitut Repas Chocolat;532.0;5.9;51.2;42.3;17.6;17.9;1.6;0.15
+673.0;Gerblé;Compotes Sans Sucres;357.0;14.7;26.2;26.6;17.6;6.8;1.9;0.24
+674.0;Gerblé;Galettes Maïs;40.0;2.5;2.7;4.6;2.5;0.7;6.2;0.02
+675.0;Gerblé;Galettes Quinoa;384.0;8.5;68.4;6.4;1.7;0.6;2.6;0.1
+676.0;Gerblé;Biscuits Sans Sucre;443.0;4.7;53.0;33.4;20.8;17.0;2.4;0.25
+677.0;Gerblé;Biscuits Sans Gluten;442.0;4.6;58.7;45.7;27.3;14.0;5.4;0.39
+678.0;Gerblé;Céréales Complètes;345.0;12.8;73.2;14.0;6.8;2.0;9.0;0.09
+679.0;Gerblé;Barres Protéinées;539.0;6.8;63.3;20.6;24.1;11.1;5.8;0.44
+680.0;Gerblé;Biscuits Ligne;420.0;6.4;63.8;24.5;21.3;15.9;2.3;0.46
+681.0;Amora;Moutarde de Dijon;417.0;0.5;19.9;11.9;62.0;11.3;0.2;1.54
+682.0;Amora;Ketchup;664.0;1.9;11.7;1.6;33.8;14.7;0.1;1.53
+683.0;Amora;Mayonnaise Classique;302.0;0.3;12.3;11.5;11.7;6.8;0.3;0.58
+684.0;Amora;Mayonnaise Allégée;581.0;0.6;12.3;13.0;23.5;2.4;0.2;1.94
+685.0;Amora;Sauce Burger;675.0;1.1;19.0;11.9;25.4;16.9;0.6;3.32
+686.0;Amora;Sauce Andalouse;256.0;1.5;19.3;5.3;15.2;11.8;0.7;3.39
+687.0;Amora;Sauce Barbecue;589.0;1.1;15.4;6.5;50.9;2.9;1.3;2.01
+688.0;Amora;Sauce Samouraï;372.0;1.3;16.9;2.5;46.7;2.6;1.6;0.77
+689.0;Amora;Cornichons Fins;326.0;7.9;30.4;5.7;12.9;9.8;0.0;0.7
+690.0;Amora;Cornichons Extra-Fins;301.0;14.7;32.3;10.9;14.5;4.7;4.8;0.36
+691.0;Amora;Vinaigrette Classique;223.0;0.0;1.7;4.7;32.3;10.1;0.6;1.14
+692.0;Amora;Vinaigrette Allégée;384.0;0.1;8.4;1.5;34.8;6.4;0.0;2.4
+693.0;Amora;Sauce César;275.0;1.2;11.8;5.1;27.1;12.2;0.4;2.29
+694.0;Amora;Sauce Balsamique;342.0;0.7;9.2;11.2;68.3;11.1;1.8;3.38
+695.0;Amora;Sauce Poivre;691.0;1.3;13.5;13.3;45.2;14.5;1.5;2.57
+696.0;Amora;Sauce Aïoli;616.0;0.8;15.7;13.3;55.7;2.5;1.8;1.2
+697.0;Amora;Sauce Cocktail;381.0;0.8;4.5;4.6;72.0;7.7;1.6;2.67
+698.0;Amora;Sauce Béarnaise;647.0;1.3;11.1;1.0;56.4;16.4;0.1;2.45
+699.0;Amora;Sauce Tartare;462.0;0.6;18.9;14.8;19.4;7.4;1.2;0.52
+700.0;Amora;Sauce Pimentée;199.0;0.2;17.1;6.1;72.1;4.3;1.9;0.65
+701.0;Heinz;Ketchup Original;597.0;1.0;5.9;5.1;46.0;17.7;0.1;3.24
+702.0;Heinz;Ketchup Allégé;714.0;0.5;7.8;11.6;13.5;2.9;0.0;3.29
+703.0;Heinz;Ketchup Bio;221.0;1.3;12.0;6.4;18.5;16.3;0.2;0.78
+704.0;Heinz;Mayonnaise;223.0;0.4;2.9;15.0;79.6;12.0;0.6;3.08
+705.0;Heinz;Mayonnaise Allégée;547.0;1.8;9.8;2.2;30.0;14.9;1.2;2.13
+706.0;Heinz;Sauce Barbecue;653.0;0.9;17.2;8.0;10.6;6.4;2.0;3.03
+707.0;Heinz;Sauce Curry;718.0;1.6;7.1;1.5;66.9;5.3;1.8;1.95
+708.0;Heinz;Sauce Chili;405.0;0.1;5.8;2.3;78.0;9.3;1.1;3.44
+709.0;Heinz;Haricots Blancs Sauce Tomate;700.0;0.8;12.6;1.0;39.3;2.2;0.3;2.46
+710.0;Heinz;Soupe Tomate;285.0;9.4;10.5;11.2;17.2;8.4;0.2;1.16
+711.0;Heinz;Soupe Champignons;392.0;4.5;45.5;6.7;10.0;8.0;4.1;0.6
+712.0;Heinz;Soupe Poulet;253.0;16.6;4.6;0.6;16.1;6.0;0.4;1.75
+713.0;Heinz;Vinaigre Malt;335.0;8.4;42.3;29.0;17.3;2.5;1.8;0.26
+714.0;Heinz;Sauce Burger;306.0;0.5;17.2;9.0;28.2;10.0;1.5;1.65
+715.0;Heinz;Sauce Ail;550.0;0.3;16.5;2.9;46.0;9.2;1.9;0.73
+716.0;Heinz;Sauce Moutarde;232.0;1.7;14.6;2.6;13.3;14.9;0.1;2.15
+717.0;Heinz;Sauce Piri-Piri;659.0;1.9;3.1;8.2;69.9;8.7;1.2;1.44
+718.0;Heinz;Sauce Piment Doux;336.0;0.7;1.9;7.8;34.5;6.2;0.7;2.8
+719.0;Heinz;Ketchup Épices;236.0;1.6;2.1;14.5;14.1;3.1;0.4;2.67
+720.0;Heinz;Sauce Poivre;458.0;1.4;13.9;12.3;58.3;3.4;0.5;3.01
+721.0;Bénédicta;Mayonnaise;666.0;1.9;10.0;1.9;29.2;4.5;1.2;1.81
+722.0;Bénédicta;Mayonnaise Légère;570.0;0.6;9.3;8.1;14.7;17.2;0.5;2.94
+723.0;Bénédicta;Sauce Béarnaise;549.0;0.9;11.4;4.5;47.3;3.9;1.3;3.48
+724.0;Bénédicta;Sauce Aïoli;310.0;0.3;12.0;2.3;38.3;4.1;0.3;1.14
+725.0;Bénédicta;Sauce Tartare;550.0;1.6;18.0;3.9;11.1;11.4;0.8;2.72
+726.0;Bénédicta;Sauce Samouraï;595.0;0.7;17.1;14.6;33.3;9.7;1.2;2.58
+727.0;Bénédicta;Sauce Andalouse;529.0;1.3;17.9;12.9;73.3;17.4;1.0;2.12
+728.0;Bénédicta;Sauce Barbecue;638.0;1.7;5.8;1.0;79.3;15.6;0.1;2.48
+729.0;Bénédicta;Sauce Burger;559.0;0.0;14.3;3.7;76.1;14.8;0.6;3.27
+730.0;Bénédicta;Sauce Poivre;401.0;0.7;2.9;13.5;64.2;4.9;1.9;1.41
+731.0;Bénédicta;Sauce Hollandaise;413.0;1.7;12.8;2.7;49.7;6.9;1.4;2.7
+732.0;Bénédicta;Sauce Curry;657.0;1.1;18.9;5.3;57.8;10.8;0.2;1.47
+733.0;Bénédicta;Sauce Fromagère;532.0;0.7;14.8;2.4;53.7;14.5;1.9;2.33
+734.0;Bénédicta;Sauce Algérienne;202.0;1.5;12.2;13.3;58.9;12.0;1.4;3.1
+735.0;Bénédicta;Sauce César;530.0;0.2;7.1;2.1;44.7;10.4;1.9;2.65
+736.0;Bénédicta;Sauce Balsamique;251.0;1.9;14.1;7.3;35.0;11.5;2.0;2.54
+737.0;Bénédicta;Sauce Cocktail;391.0;0.3;8.0;5.8;58.9;8.2;0.5;0.7
+738.0;Bénédicta;Sauce Piment;339.0;1.9;17.9;8.7;57.5;12.0;1.1;2.45
+739.0;Bénédicta;Sauce Moutarde;176.0;1.8;3.3;9.2;52.2;16.9;1.3;2.4
+740.0;Bénédicta;Sauce Kebab;156.0;0.5;12.2;11.6;28.3;16.2;0.1;2.31
+741.0;Kiri;Kiri Portions;348.0;20.7;1.3;0.9;55.7;26.2;1.0;1.34
+742.0;Kiri;Kiri à Tartiner;397.0;15.5;2.8;0.5;75.1;44.2;1.3;1.5
+743.0;Kiri;Kiri Goûter;366.0;7.4;3.6;2.9;24.7;25.4;1.5;1.41
+744.0;Kiri;Kiri Concombre;599.0;12.8;0.6;2.1;27.9;45.4;1.4;2.14
+745.0;Kiri;Kiri Tomate;405.0;10.3;3.6;1.6;31.8;14.8;0.4;0.66
+746.0;Kiri;Kiri Herbes;370.0;12.6;2.4;2.3;75.0;38.6;0.4;1.09
+747.0;Kiri;Kiri Crème;689.0;21.7;3.4;2.6;50.3;48.8;1.2;1.82
+748.0;Kiri;Kiri Bio;411.0;12.6;1.0;2.5;20.8;40.9;1.9;1.24
+749.0;Kiri;Kiri Sans Lactose;290.0;22.3;2.3;2.7;47.8;30.1;1.1;1.79
+750.0;Kiri;Kiri Light;471.0;9.8;5.0;0.7;50.8;37.0;0.3;1.06
+751.0;Kiri;Kiri Cuisine;669.0;26.1;4.5;2.8;20.6;40.8;2.0;1.86
+752.0;Kiri;Kiri Brioche;462.0;15.4;4.3;0.2;71.5;54.4;1.4;1.52
+753.0;Kiri;Kiri Ail & Fines Herbes;677.0;22.8;2.6;0.2;32.5;29.9;0.2;1.04
+754.0;Kiri;Kiri Noix;592.0;7.9;0.7;0.5;41.2;21.7;0.4;1.39
+755.0;Kiri;Kiri Chèvre;542.0;26.3;2.8;2.6;43.7;35.5;1.7;1.51
+756.0;Kiri;Kiri Apéro;278.0;7.3;3.1;2.3;29.3;34.9;1.0;1.13
+757.0;Kiri;Kiri Mini;702.0;9.3;3.3;2.4;28.9;36.0;0.3;2.19
+758.0;Kiri;Kiri Kids;286.0;11.3;0.1;0.7;63.3;15.5;1.1;2.13
+759.0;Kiri;Kiri Snack;337.0;21.8;0.9;2.3;40.3;25.9;1.8;1.41
+760.0;Kiri;Kiri Frais;624.0;25.4;0.8;2.4;39.3;15.3;1.1;1.71
+761.0;La Vache qui Rit;Portions Originales;337.0;6.6;50.7;16.2;7.9;4.2;5.0;1.0
+762.0;La Vache qui Rit;Light;270.0;8.7;13.6;9.9;16.7;7.1;4.8;0.66
+763.0;La Vache qui Rit;Bio;269.0;6.6;19.1;25.0;19.1;2.4;4.0;0.66
+764.0;La Vache qui Rit;Sans Lactose;300.0;10.2;50.4;7.3;17.2;6.1;0.2;0.64
+765.0;La Vache qui Rit;Apéro;388.0;5.4;37.2;1.8;12.1;4.6;4.1;0.23
+766.0;La Vache qui Rit;Triangles Cheddar;283.0;9.4;46.0;20.1;9.8;7.5;3.5;0.18
+767.0;La Vache qui Rit;Triangles Emmental;720.0;6.4;1.1;1.2;80.1;17.2;0.6;1.15
+768.0;La Vache qui Rit;Triangles Jambon;148.0;14.9;2.1;0.5;12.0;4.9;0.3;1.98
+769.0;La Vache qui Rit;Triangles Herbes;364.0;6.0;20.1;11.5;9.7;2.5;4.7;0.3
+770.0;La Vache qui Rit;Triangles Bacon;138.0;22.7;0.1;1.0;5.3;6.0;0.6;2.73
+771.0;La Vache qui Rit;Crème à Tartiner;552.0;17.5;1.9;2.6;65.4;33.6;1.6;1.28
+772.0;La Vache qui Rit;Fromage à Tartiner Light;614.0;12.9;3.4;2.4;57.6;14.2;1.4;1.03
+773.0;La Vache qui Rit;Goûter;256.0;5.3;41.2;21.4;19.2;3.5;3.9;0.94
+774.0;La Vache qui Rit;Sandwich;258.0;12.6;39.7;13.6;19.9;9.1;2.2;0.7
+775.0;La Vache qui Rit;Croc;364.0;13.0;54.1;10.6;18.8;7.1;2.3;0.22
+776.0;La Vache qui Rit;Sticks;351.0;6.3;16.3;11.3;9.5;5.1;1.1;1.09
+777.0;La Vache qui Rit;Bruschetta;303.0;4.2;58.1;7.0;19.7;4.1;4.6;1.16
+778.0;La Vache qui Rit;Tartines;282.0;10.6;16.3;10.3;13.2;8.8;3.1;0.82
+779.0;La Vache qui Rit;Mini Cubes;392.0;14.7;48.0;23.2;17.4;7.1;4.2;1.15
+780.0;La Vache qui Rit;Kids;281.0;9.3;18.6;6.5;19.5;7.3;2.8;0.29
+781.0;Saint-Môret;Nature;346.0;5.3;15.7;26.8;16.5;3.3;0.7;0.73
+782.0;Saint-Môret;Léger;250.0;13.7;48.9;29.1;11.0;8.2;3.7;0.83
+783.0;Saint-Môret;Ciboulette;384.0;9.6;37.5;7.5;17.7;3.7;2.7;0.77
+784.0;Saint-Môret;Ail & Fines Herbes;218.0;5.1;14.1;20.5;6.9;6.0;0.7;0.24
+785.0;Saint-Môret;Poivre;284.0;12.3;20.2;13.7;11.4;5.8;3.0;0.13
+786.0;Saint-Môret;Noix;306.0;13.8;46.0;21.0;12.2;4.3;2.5;1.06
+787.0;Saint-Môret;Bio;343.0;3.6;32.9;11.8;8.9;9.3;3.6;1.05
+788.0;Saint-Môret;Sans Lactose;325.0;5.6;44.2;13.9;19.3;3.4;4.6;0.22
+789.0;Saint-Môret;Cuisine;354.0;8.1;47.8;17.7;12.5;2.7;4.0;1.17
+790.0;Saint-Môret;Gourmand;301.0;4.6;25.7;12.7;8.9;6.9;3.6;0.57
+791.0;Saint-Môret;À Tartiner;291.0;5.6;45.9;15.6;11.1;7.7;2.9;0.44
+792.0;Saint-Môret;Cube Apéro Nature;363.0;5.7;11.3;5.6;5.3;7.8;3.9;0.56
+793.0;Saint-Môret;Cube Apéro Herbes;400.0;7.3;39.6;10.0;13.4;4.1;0.9;0.45
+794.0;Saint-Môret;Cube Apéro Poivre;400.0;4.6;33.6;24.0;9.7;6.7;1.1;0.78
+795.0;Saint-Môret;Mini Portions;323.0;8.5;49.4;20.4;17.4;3.5;4.7;0.47
+796.0;Saint-Môret;Format Familial;321.0;9.4;59.9;15.9;10.0;5.2;3.3;0.38
+797.0;Saint-Môret;Format 150g;373.0;9.5;59.7;12.1;15.2;8.7;2.7;1.2
+798.0;Saint-Môret;Format 300g;387.0;10.3;55.4;11.5;19.6;7.9;3.4;0.61
+799.0;Saint-Môret;Riche en Protéines;372.0;12.6;11.6;27.9;13.9;5.8;4.6;0.37
+800.0;Saint-Môret;Zéro %;263.0;12.5;31.0;29.0;8.7;4.3;1.2;0.12
+801.0;Carte dOr;Vanille;247.0;4.0;24.1;29.6;15.5;11.9;0.2;0.28
+802.0;Carte dOr;Chocolat;440.0;5.3;66.3;36.7;30.7;7.8;6.0;0.1
+803.0;Carte dOr;Fraise;240.0;5.2;12.9;14.2;14.7;9.2;4.7;0.7
+804.0;Carte dOr;Caramel;319.0;14.3;34.6;6.8;6.9;9.4;2.2;0.32
+805.0;Carte dOr;Pistache;299.0;4.4;34.0;18.1;17.1;10.3;1.3;0.17
+806.0;Carte dOr;Noisette;214.0;10.0;51.8;8.3;13.5;2.6;1.1;0.1
+807.0;Carte dOr;Café;215.0;6.5;32.3;13.3;17.1;6.7;2.6;0.5
+808.0;Carte dOr;Citron;279.0;11.1;13.2;26.0;19.5;5.4;0.4;0.16
+809.0;Carte dOr;Mangue;379.0;10.4;32.7;16.1;15.5;9.8;4.0;0.61
+810.0;Carte dOr;Framboise;371.0;10.5;27.9;29.7;8.4;9.8;1.3;0.68
+811.0;Carte dOr;Vanille Noix de Pécan;294.0;2.9;27.1;22.6;8.2;11.7;1.5;0.26
+812.0;Carte dOr;Brownie;226.0;2.6;24.6;19.0;17.1;8.4;1.4;0.14
+813.0;Carte dOr;Cookies;191.0;3.9;27.9;23.1;14.6;10.7;1.2;0.2
+814.0;Carte dOr;Tiramisu;277.0;14.0;37.6;20.0;16.1;2.5;3.2;1.15
+815.0;Carte dOr;Yaourt Fruits;106.0;3.5;9.2;9.2;1.6;0.5;0.0;0.05
+816.0;Carte dOr;Banane;266.0;5.8;52.3;1.9;10.7;7.1;1.6;0.61
+817.0;Carte dOr;Rhum Raisins;257.0;8.6;23.1;11.3;18.1;7.3;4.5;0.37
+818.0;Carte dOr;Caramel Beurre Salé;701.0;12.7;2.6;1.6;32.9;49.3;0.2;1.27
+819.0;Carte dOr;Chocolat Noir;471.0;5.7;58.5;30.0;20.5;5.2;4.9;0.25
+820.0;Carte dOr;Sorbet Citron;251.0;3.2;31.9;23.0;8.4;9.7;0.3;0.11
+821.0;Magnum;Classique;228.0;5.9;41.6;25.6;17.0;7.4;3.2;0.82
+822.0;Magnum;Amande;381.0;11.7;31.6;26.9;18.5;6.2;4.5;0.95
+823.0;Magnum;Blanc;243.0;10.1;59.8;24.4;8.7;3.4;0.4;0.64
+824.0;Magnum;Noir;200.0;8.5;35.8;14.2;9.1;6.2;4.9;0.74
+825.0;Magnum;Double Caramel;387.0;3.1;60.0;10.1;7.6;4.7;4.9;0.4
+826.0;Magnum;Double Chocolat;525.0;5.7;61.1;29.7;25.6;17.7;5.2;0.17
+827.0;Magnum;Double Framboise;253.0;5.4;58.7;29.7;12.3;2.4;1.3;0.3
+828.0;Magnum;Double Pistache;262.0;2.2;24.3;26.6;10.9;7.6;1.5;0.26
+829.0;Magnum;Almond Remix;388.0;7.5;55.7;24.4;6.8;8.3;1.3;1.05
+830.0;Magnum;Classic Remix;393.0;9.0;41.1;2.0;16.6;9.1;4.6;0.25
+831.0;Magnum;Mini Classic;326.0;4.1;29.3;20.1;15.4;9.5;2.5;0.31
+832.0;Magnum;Mini Almond;379.0;13.4;17.0;29.3;19.9;8.5;4.5;0.19
+833.0;Magnum;Mini White;233.0;8.3;30.5;9.3;9.8;3.2;3.9;0.43
+834.0;Magnum;Sticks Vanille;299.0;4.0;24.9;21.9;9.6;10.9;0.6;0.19
+835.0;Magnum;Sticks Chocolat;440.0;7.8;62.8;24.7;19.3;14.8;4.1;0.47
+836.0;Magnum;Glace Noisette;267.0;3.4;31.6;19.1;15.8;10.7;1.1;0.23
+837.0;Magnum;Glace Chocolat;187.0;2.7;21.4;18.8;14.7;11.5;1.9;0.15
+838.0;Magnum;Glace Fraise;267.0;2.9;30.5;29.6;11.5;11.5;1.9;0.12
+839.0;Magnum;Glace Caramel;280.0;3.6;21.4;22.6;12.2;5.2;0.4;0.22
+840.0;Magnum;Remix Trio;224.0;11.0;18.8;10.3;6.2;7.9;0.1;0.84
+841.0;Lays;Nature;382.0;13.7;24.5;7.7;13.1;8.1;0.1;0.35
+842.0;Lays;Barbecue;229.0;1.9;15.4;7.1;10.7;16.6;0.5;2.58
+843.0;Lays;Poulet Rôti;150.0;19.6;4.1;0.6;8.8;4.2;0.8;1.74
+844.0;Lays;Sel & Vinaigre;375.0;9.6;46.8;3.4;19.1;2.6;4.0;0.78
+845.0;Lays;Crème Oignon;536.0;11.6;2.3;1.3;78.0;38.3;0.2;1.93
+846.0;Lays;Paprika;302.0;10.8;36.3;29.4;19.1;6.5;4.1;0.73
+847.0;Lays;Fromage;261.0;19.4;1.2;0.3;25.2;21.2;1.6;1.14
+848.0;Lays;Tomate Basilic;297.0;11.5;14.6;12.4;8.4;8.9;0.2;0.71
+849.0;Lays;Herbes de Provence;275.0;7.2;31.9;23.6;7.7;4.1;2.1;1.17
+850.0;Lays;Poivre;270.0;5.5;48.9;1.2;18.1;3.7;4.4;0.97
+851.0;Lays;Légères Nature;228.0;5.1;46.2;11.6;13.1;8.8;3.1;0.19
+852.0;Lays;Légères Sel;310.0;11.7;46.8;28.5;12.5;3.2;3.4;0.44
+853.0;Lays;Ondulées Nature;268.0;8.4;58.0;24.0;11.4;9.0;1.9;0.83
+854.0;Lays;Ondulées Paprika;370.0;12.3;39.9;28.0;5.9;4.9;4.8;0.19
+855.0;Lays;Four Nature;222.0;4.7;29.3;27.8;14.3;2.5;3.7;0.59
+856.0;Lays;Four Fromage;534.0;24.4;0.6;2.8;75.5;17.0;0.6;1.35
+857.0;Lays;Four Crème Oignon;414.0;8.3;3.2;3.0;42.5;37.2;0.5;0.77
+858.0;Lays;Rustic Nature;384.0;13.6;28.3;12.0;10.1;3.5;0.2;0.45
+859.0;Lays;Rustic Sel;254.0;13.9;33.1;1.3;11.5;4.5;3.5;0.14
+860.0;Lays;Saveur Ketchup;163.0;0.4;2.5;8.2;19.8;5.8;0.3;1.47
+861.0;Doritos;Nature;273.0;12.2;44.6;25.0;18.8;9.0;0.5;0.79
+862.0;Doritos;Fromage;686.0;12.4;4.5;0.1;37.7;14.9;0.9;1.29
+863.0;Doritos;Chili;360.0;13.2;41.7;17.7;18.3;9.5;3.8;0.28
+864.0;Doritos;Salsa;261.0;3.2;21.0;8.3;11.8;5.7;1.5;1.08
+865.0;Doritos;Barbecue;282.0;1.0;3.7;14.0;42.5;16.3;0.7;0.66
+866.0;Doritos;Sweet Chili Pepper;386.0;6.4;11.2;17.9;16.4;7.5;3.9;0.42
+867.0;Doritos;Cool Original;213.0;14.3;55.9;15.6;19.2;2.5;0.6;0.43
+868.0;Doritos;Guacamole;201.0;12.3;40.7;23.4;10.0;10.0;2.1;0.67
+869.0;Doritos;Taco;323.0;8.9;21.2;17.9;9.6;9.8;1.7;0.17
+870.0;Doritos;Lime;213.0;10.8;32.0;20.1;7.2;5.7;3.9;0.93
+871.0;Doritos;Hot Nacho;256.0;3.6;57.9;24.2;19.6;8.1;3.5;0.35
+872.0;Doritos;Flamin Hot;230.0;13.0;16.6;17.5;18.9;3.1;0.3;1.12
+873.0;Doritos;Tex-Mex;304.0;8.5;11.9;17.1;17.0;7.3;2.5;0.93
+874.0;Doritos;Nacho Cheese;264.0;10.0;54.5;12.4;18.0;3.5;2.1;0.18
+875.0;Doritos;Tangy Cheese;251.0;11.4;38.7;5.4;13.3;6.5;3.3;0.69
+876.0;Doritos;BBQ Chipotle;300.0;14.6;21.1;5.2;6.6;4.6;1.6;0.72
+877.0;Doritos;Piment Jalapeño;244.0;13.4;58.2;19.2;19.6;2.7;2.4;1.17
+878.0;Doritos;Blue Corn;363.0;3.8;54.8;14.7;9.3;8.4;2.7;1.07
+879.0;Doritos;Light Fromage;644.0;11.6;4.6;2.2;73.0;15.2;0.5;2.16
+880.0;Doritos;Light Nature;367.0;3.0;46.3;4.5;10.1;7.5;3.8;0.25
+881.0;Oreo;Original;344.0;10.4;55.0;2.7;9.0;8.6;0.8;0.53
+882.0;Oreo;Double;202.0;9.5;37.9;11.1;9.4;2.7;0.4;0.52
+883.0;Oreo;Golden;275.0;5.9;44.0;10.3;5.9;7.2;2.2;0.95
+884.0;Oreo;Chocolat Blanc;513.0;5.0;57.4;26.7;17.5;11.0;3.0;0.22
+885.0;Oreo;Chocolat Noir;422.0;7.7;61.4;25.0;34.8;15.7;3.9;0.38
+886.0;Oreo;Strawberry;263.0;8.7;37.2;2.0;12.9;4.9;4.0;0.67
+887.0;Oreo;Peanut Butter;300.0;12.9;44.9;22.5;7.0;9.9;1.3;1.04
+888.0;Oreo;Birthday Cake;261.0;9.6;33.9;5.0;11.1;9.0;4.7;0.88
+889.0;Oreo;Mint;388.0;5.8;20.2;2.0;11.4;7.6;4.2;0.32
+890.0;Oreo;Caramel;384.0;10.0;55.7;5.3;11.6;7.9;0.7;0.17
+891.0;Oreo;Thins Original;245.0;7.9;51.9;14.3;10.1;6.4;0.4;0.12
+892.0;Oreo;Thins Vanille;245.0;4.7;26.6;18.5;9.9;10.1;0.8;0.19
+893.0;Oreo;Thins Cacao;263.0;12.8;13.8;5.5;12.2;6.4;2.5;0.65
+894.0;Oreo;Mini;349.0;9.3;19.6;11.9;18.2;5.8;1.0;0.88
+895.0;Oreo;Double Golden;399.0;15.0;13.4;27.8;11.9;5.3;4.7;0.29
+896.0;Oreo;Brownie;286.0;2.2;23.4;19.5;16.2;5.6;0.5;0.13
+897.0;Oreo;Cinnamon Bun;238.0;14.2;35.1;14.5;9.5;2.9;0.9;0.97
+898.0;Oreo;Red Velvet;342.0;6.8;17.4;23.2;10.8;2.2;0.7;0.66
+899.0;Oreo;Lemon;201.0;3.2;10.2;20.1;12.5;5.1;4.0;0.95
+900.0;Oreo;Golden Thins;314.0;10.1;26.8;8.6;7.7;4.5;1.8;0.15
+901.0;Suchard;Tablette Lait;447.0;7.5;64.9;33.6;34.0;14.0;4.8;0.51
+902.0;Suchard;Tablette Noir;522.0;4.3;67.3;20.1;27.3;16.5;1.8;0.55
+903.0;Suchard;Tablette Noisettes;530.0;5.2;61.1;49.2;28.4;5.7;2.1;0.32
+904.0;Suchard;Tablette Amandes;501.0;6.6;54.6;49.7;15.7;11.8;1.8;0.35
+905.0;Suchard;Tablette Caramel;439.0;4.1;55.1;46.7;17.1;9.3;2.3;0.17
+906.0;Suchard;Ragusa;434.0;5.9;50.3;35.3;24.4;18.9;2.0;0.15
+907.0;Suchard;Toblerone Lait;444.0;5.5;58.5;45.0;23.5;18.7;1.2;0.59
+908.0;Suchard;Toblerone Noir;502.0;6.5;54.7;38.5;20.3;19.6;3.7;0.07
+909.0;Suchard;Toblerone Blanc;484.0;4.7;61.4;26.5;33.5;13.3;4.0;0.2
+910.0;Suchard;Chocolat Praliné;456.0;4.2;62.4;49.6;16.3;10.1;3.4;0.19
+911.0;Suchard;Chocolat Noir Orange;502.0;7.9;59.6;37.0;34.3;15.8;5.2;0.58
+912.0;Suchard;Chocolat Noir Menthe;523.0;5.6;53.2;30.3;31.4;12.3;1.6;0.59
+913.0;Suchard;Chocolat Lait Biscuit;471.0;5.3;60.8;25.9;33.8;7.0;3.4;0.15
+914.0;Suchard;Praliné Noisette;554.0;4.6;56.5;29.9;21.3;13.4;2.2;0.34
+915.0;Suchard;Chocolat Lait Noix;450.0;5.9;58.6;21.8;16.9;15.1;4.8;0.42
+916.0;Suchard;Chocolat Noir Amande;502.0;6.8;69.7;41.4;28.9;12.3;3.5;0.23
+917.0;Suchard;Chocolat Noir Noisette;550.0;5.5;59.6;45.7;34.3;15.3;2.4;0.33
+918.0;Suchard;Chocolat Dessert;486.0;6.7;59.8;27.7;34.8;12.8;2.0;0.56
+919.0;Suchard;Mini Tablettes;544.0;6.5;66.9;36.9;25.7;6.5;2.9;0.14
+920.0;Suchard;Pralinés Assortis;557.0;7.0;52.0;36.8;34.9;12.7;5.7;0.01
+921.0;Oasis;Pomme Cassis Framboise;234.0;5.7;16.9;5.9;5.4;8.8;3.3;1.0
+922.0;Oasis;Tropical;298.0;12.9;39.8;2.2;16.3;8.2;1.0;0.16
+923.0;Oasis;Orange;207.0;12.9;51.8;25.6;12.2;8.7;0.6;0.5
+924.0;Oasis;Fraise Framboise;340.0;3.6;39.0;24.4;13.0;3.8;2.6;0.73
+925.0;Oasis;Pêche Abricot;213.0;3.3;35.8;1.6;12.2;7.3;1.3;0.64
+926.0;Oasis;Pomme Poire;236.0;8.2;26.1;15.2;18.7;9.4;4.8;0.84
+927.0;Oasis;Citron;364.0;11.5;57.6;22.3;6.3;4.0;3.0;0.83
+928.0;Oasis;Exotic Zéro;303.0;5.9;54.1;27.8;8.9;9.1;5.0;0.95
+929.0;Oasis;Tropical Zéro;369.0;12.6;15.6;6.9;14.4;6.9;1.3;0.92
+930.0;Oasis;Orange Zéro;301.0;11.7;13.5;1.5;19.0;8.9;3.0;0.14
+931.0;Oasis;Fruits Rouges;357.0;6.5;28.8;24.7;8.0;8.2;2.4;0.95
+932.0;Oasis;Pomme Kiwi;287.0;14.6;39.9;2.5;19.8;8.1;0.5;0.86
+933.0;Oasis;Mangue Passion;321.0;10.9;45.8;4.0;15.5;5.8;4.1;0.22
+934.0;Oasis;Ananas;360.0;12.3;33.5;16.9;8.8;8.8;1.5;0.54
+935.0;Oasis;Pastèque;295.0;5.9;42.2;25.5;8.7;9.7;4.3;0.63
+936.0;Oasis;Litchi;296.0;4.0;41.7;28.1;11.2;2.7;4.2;0.48
+937.0;Oasis;Grenade;257.0;7.3;33.1;25.4;13.9;3.5;1.6;0.9
+938.0;Oasis;Pamplemousse;233.0;12.5;16.3;15.5;9.2;3.4;4.5;1.1
+939.0;Oasis;Citron Vert;251.0;6.0;46.4;12.2;9.2;6.0;2.6;0.33
+940.0;Oasis;Fruits du Dragon;385.0;6.7;54.6;1.0;6.7;9.3;2.7;0.71
+941.0;Orangina;Orangina Original;46.0;0.0;10.9;9.6;0.0;0.0;0.0;0.02
+942.0;Orangina;Orangina Light;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+943.0;Orangina;Orangina Sans Sucres;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+944.0;Orangina;Orangina Rouge;39.0;0.0;9.9;11.5;0.0;0.0;0.0;0.02
+945.0;Orangina;Orangina Tropical;37.0;0.0;9.6;11.9;0.0;0.0;0.0;0.02
+946.0;Orangina;Orangina Agrumes;50.0;0.0;10.2;8.7;0.0;0.0;0.0;0.02
+947.0;Orangina;Orangina Zéro Citron;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+948.0;Orangina;Orangina Zéro Orange;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0
+949.0;Orangina;Orangina Blood Orange;41.0;0.0;8.2;8.1;0.0;0.0;0.0;0.02
+950.0;Orangina;Orangina Lemon;47.0;0.0;8.5;11.2;0.0;0.0;0.0;0.02
+951.0;Orangina;Orangina Pamplemousse;35.0;0.0;8.1;11.3;0.0;0.0;0.0;0.02
+952.0;Orangina;Orangina Mandarine;48.0;0.0;11.6;11.4;0.0;0.0;0.0;0.02
+953.0;Orangina;Orangina Sanguine;50.0;0.0;11.7;8.1;0.0;0.0;0.0;0.02
+954.0;Orangina;Orangina Pêche;47.0;0.0;11.0;10.6;0.0;0.0;0.0;0.02
+955.0;Orangina;Orangina Fraise;36.0;0.0;10.2;10.5;0.0;0.0;0.0;0.02
+956.0;Orangina;Orangina Cassis;35.0;0.0;8.9;8.8;0.0;0.0;0.0;0.02
+957.0;Orangina;Orangina Framboise;35.0;0.0;11.5;10.9;0.0;0.0;0.0;0.02
+958.0;Orangina;Orangina Bio;49.0;0.0;11.6;10.0;0.0;0.0;0.0;0.02
+959.0;Orangina;Orangina Orange Intense;46.0;0.0;9.0;9.8;0.0;0.0;0.0;0.02
+960.0;Orangina;Orangina Citron Intense;44.0;0.0;11.0;10.2;0.0;0.0;0.0;0.02
+961.0;Teisseire;Sirop Grenadine;213.0;0.0;67.8;55.0;0.0;0.0;0.0;0.02
+962.0;Teisseire;Sirop Menthe;245.0;0.0;72.9;51.2;0.0;0.0;0.0;0.02
+963.0;Teisseire;Sirop Citron;210.0;0.0;70.4;63.0;0.0;0.0;0.0;0.02
+964.0;Teisseire;Sirop Fraise;224.0;0.0;54.8;59.8;0.0;0.0;0.0;0.02
+965.0;Teisseire;Sirop Pêche;293.0;0.0;68.6;73.3;0.0;0.0;0.0;0.02
+966.0;Teisseire;Sirop Framboise;222.0;0.0;73.2;64.0;0.0;0.0;0.0;0.02
+967.0;Teisseire;Sirop Cassis;278.0;0.0;62.6;50.7;0.0;0.0;0.0;0.02
+968.0;Teisseire;Sirop Orgeat;208.0;0.0;62.5;55.5;0.0;0.0;0.0;0.02
+969.0;Teisseire;Sirop Tropical;285.0;0.0;69.8;75.0;0.0;0.0;0.0;0.02
+970.0;Teisseire;Sirop Mojito;245.0;0.0;60.4;74.8;0.0;0.0;0.0;0.02
+971.0;Teisseire;Zéro Sucre Grenadine;252.0;11.5;58.4;10.4;8.4;8.9;1.0;1.18
+972.0;Teisseire;Zéro Sucre Menthe;396.0;6.3;16.2;14.6;12.5;7.5;0.4;0.72
+973.0;Teisseire;Zéro Sucre Citron;250.0;15.0;21.4;12.3;5.7;3.9;0.4;1.15
+974.0;Teisseire;Zéro Sucre Fraise;390.0;3.2;12.2;20.0;12.6;5.7;1.1;0.81
+975.0;Teisseire;Zéro Sucre Pêche;360.0;12.9;56.8;25.6;12.4;7.1;0.7;0.61
+976.0;Teisseire;Sirop Melon;241.0;0.0;61.1;74.6;0.0;0.0;0.0;0.02
+977.0;Teisseire;Sirop Cerise;296.0;0.0;56.3;62.1;0.0;0.0;0.0;0.02
+978.0;Teisseire;Sirop Pastèque;250.0;0.0;59.2;68.8;0.0;0.0;0.0;0.02
+979.0;Teisseire;Sirop Banane;268.0;0.0;50.8;60.8;0.0;0.0;0.0;0.02
+980.0;Teisseire;Sirop Abricot;208.0;0.0;75.0;71.8;0.0;0.0;0.0;0.02
+981.0;Mars;Barre Mars;516.0;5.5;51.3;49.8;33.7;6.6;3.7;0.34
+982.0;Mars;Twix;230.0;12.7;49.1;3.6;7.0;7.2;1.2;0.56
+983.0;Mars;Snickers;262.0;7.5;57.6;29.8;9.1;3.1;4.9;0.9
+984.0;Mars;Bounty;381.0;11.8;49.9;1.9;6.5;10.0;3.0;0.29
+985.0;Mars;Maltesers;281.0;8.2;34.1;5.7;12.2;6.0;2.6;0.68
+986.0;Mars;M&Ms Peanuts;494.0;7.0;61.6;39.7;20.5;18.9;2.8;0.06
+987.0;Mars;M&Ms Chocolat;454.0;5.1;50.6;35.4;30.2;18.1;5.6;0.14
+988.0;Mars;M&Ms Crispy;531.0;5.2;59.6;31.8;32.9;12.1;3.6;0.15
+989.0;Mars;Mars Ice Cream;378.0;8.7;58.7;22.2;15.4;6.1;2.7;0.47
+990.0;Mars;Twix Ice Cream;226.0;3.4;52.5;3.9;10.9;7.6;3.0;0.14
+991.0;Mars;Celebrations;383.0;9.8;20.1;13.2;8.6;2.2;1.6;1.17
+992.0;Mars;Balisto Muesli;401.0;11.3;67.5;2.1;3.3;0.4;7.0;0.1
+993.0;Mars;Balisto Noisettes;235.0;6.7;45.7;11.2;19.4;7.6;3.6;0.48
+994.0;Mars;Topic;284.0;11.1;13.5;17.4;10.6;7.5;0.3;0.16
+995.0;Mars;Milky Way;254.0;9.6;26.0;19.1;14.9;3.5;1.4;0.64
+996.0;Mars;Mars Mini;334.0;7.2;24.3;15.6;14.7;5.7;0.9;0.25
+997.0;Mars;Snickers Mini;310.0;6.0;31.8;25.8;16.4;2.9;2.5;1.05
+998.0;Mars;Twix Mini;358.0;6.9;13.5;18.8;7.4;2.9;5.0;0.78
+999.0;Mars;Bounty Mini;292.0;11.4;21.3;25.9;10.0;8.8;4.6;0.83
+1000.0;Mars;Maltesers Biscuits;478.0;6.2;69.6;48.9;32.3;8.8;3.9;0.31
+1001.0;M&Ms;Peanuts;259.0;10.0;22.1;17.5;11.9;2.4;4.2;0.42
+1002.0;M&Ms;Chocolat;509.0;6.0;62.3;46.4;15.6;18.4;4.6;0.29
+1003.0;M&Ms;Crispy;239.0;11.0;16.0;3.5;10.7;2.6;2.3;0.76
+1004.0;M&Ms;Caramel;326.0;9.2;56.0;27.6;5.3;8.2;1.8;0.19
+1005.0;M&Ms;Brownie;246.0;3.3;29.3;18.1;17.4;8.9;0.2;0.24
+1006.0;M&Ms;Arachide Maxi;341.0;3.7;39.1;21.3;6.4;6.7;0.1;0.69
+1007.0;M&Ms;Noisette;237.0;5.4;17.6;29.8;14.5;5.6;4.0;0.7
+1008.0;M&Ms;Beurre de Cacahuète;518.0;22.7;1.9;0.3;57.5;13.1;1.5;1.6
+1009.0;M&Ms;Dark;330.0;12.6;55.3;22.0;7.1;9.0;2.6;0.12
+1010.0;M&Ms;White;230.0;12.5;55.1;15.7;12.0;8.7;4.0;0.79
+1011.0;M&Ms;Mini;397.0;10.6;54.9;29.8;13.4;8.9;1.2;0.13
+1012.0;M&Ms;Barres Chocolat;506.0;6.6;64.0;35.4;30.3;9.4;3.0;0.51
+1013.0;M&Ms;Biscuits;480.0;4.0;62.6;44.2;29.9;18.4;4.0;0.47
+1014.0;M&Ms;Tablette Lait;521.0;4.0;57.5;42.4;28.7;14.9;5.8;0.49
+1015.0;M&Ms;Tablette Noir;448.0;7.6;51.4;26.2;32.4;12.5;4.3;0.48
+1016.0;M&Ms;Tablette Crispy;475.0;6.4;61.0;48.8;30.6;15.2;2.0;0.26
+1017.0;M&Ms;Tablette Peanuts;422.0;7.2;51.6;44.5;24.5;19.0;2.1;0.3
+1018.0;M&Ms;Tablette Noisettes;514.0;5.7;60.9;23.9;31.8;13.2;2.1;0.17
+1019.0;M&Ms;Dragées Mix;247.0;5.5;29.7;17.9;16.5;6.6;2.2;0.65
+1020.0;M&Ms;Mix Party;310.0;14.3;15.0;20.0;13.8;8.2;0.3;1.02
+1021.0;Céréal Bio;Galettes de Quinoa;298.0;11.4;61.3;2.4;4.1;1.7;6.3;0.04
+1022.0;Céréal Bio;Galettes de Blé;363.0;10.1;70.1;2.3;5.4;1.2;3.6;0.22
+1023.0;Céréal Bio;Galettes de Maïs;329.0;8.2;74.2;6.3;6.0;1.8;3.8;0.21
+1024.0;Céréal Bio;Galettes de Pois Chiches;296.0;8.7;66.3;3.3;5.0;1.4;3.7;0.1
+1025.0;Céréal Bio;Galettes de Lentilles;332.0;11.0;69.7;7.7;5.2;1.2;7.7;0.18
+1026.0;Céréal Bio;Galettes de Sarrasin;306.0;9.9;72.6;4.5;4.8;0.9;6.3;0.15
+1027.0;Céréal Bio;Quinoa Bio;369.0;17.3;56.5;2.8;3.3;0.6;11.6;0.18
+1028.0;Céréal Bio;Boulgour Bio;327.0;9.8;67.5;3.2;2.8;0.3;8.5;0.18
+1029.0;Céréal Bio;Riz Complet Bio;322.0;7.9;62.5;9.4;5.0;2.8;3.9;0.23
+1030.0;Céréal Bio;Riz Basmati Bio;316.0;13.5;58.7;12.2;9.8;1.9;4.6;0.11
+1031.0;Céréal Bio;Lentilles Vertes Bio;362.0;17.2;64.1;1.2;2.6;1.0;11.0;0.07
+1032.0;Céréal Bio;Pois Chiches Bio;367.0;22.0;53.5;2.5;1.9;0.5;8.2;0.15
+1033.0;Céréal Bio;Haricots Rouges Bio;355.0;21.0;65.6;1.8;2.4;0.9;9.9;0.19
+1034.0;Céréal Bio;Couscous Bio;329.0;24.4;58.5;2.1;1.6;0.6;8.1;0.12
+1035.0;Céréal Bio;Pâtes Complètes Bio;389.0;12.8;54.6;10.6;10.8;3.2;6.5;0.05
+1036.0;Céréal Bio;Pâtes Semi-complètes;321.0;14.1;50.7;14.9;9.7;4.7;6.8;0.3
+1037.0;Céréal Bio;Blé Gourmand;329.0;14.6;67.9;14.9;12.7;3.7;3.5;0.27
+1038.0;Céréal Bio;Graines de Lin;549.0;17.1;13.8;2.7;48.7;6.3;8.7;0.08
+1039.0;Céréal Bio;Graines de Chia;562.0;17.4;11.6;3.4;40.6;4.8;6.2;0.07
+1040.0;Céréal Bio;Muesli Bio;414.0;14.7;67.2;12.6;7.6;1.6;6.7;0.08
+1041.0;Jardin Bio Étic;Pâtes Complètes;344.0;8.4;63.9;14.5;10.9;3.3;5.1;0.18
+1042.0;Jardin Bio Étic;Pâtes Semi-complètes;381.0;6.7;60.6;8.1;13.6;1.6;3.4;0.21
+1043.0;Jardin Bio Étic;Riz Complet;302.0;14.1;59.1;5.4;13.0;2.8;3.2;0.19
+1044.0;Jardin Bio Étic;Riz Basmati;320.0;14.7;63.0;15.0;13.1;1.7;6.3;0.11
+1045.0;Jardin Bio Étic;Riz Thaï;336.0;10.0;50.5;10.5;5.4;3.9;6.1;0.23
+1046.0;Jardin Bio Étic;Quinoa;361.0;13.2;64.3;4.4;2.3;0.8;10.3;0.03
+1047.0;Jardin Bio Étic;Lentilles;320.0;22.2;61.8;1.6;3.6;0.6;8.2;0.09
+1048.0;Jardin Bio Étic;Pois Chiches;344.0;22.6;66.0;2.0;3.9;0.9;8.5;0.06
+1049.0;Jardin Bio Étic;Couscous;352.0;22.8;63.7;3.4;3.6;0.7;8.0;0.13
+1050.0;Jardin Bio Étic;Boulgour;329.0;21.5;55.1;4.8;3.7;0.3;9.8;0.18
+1051.0;Jardin Bio Étic;Flocons dAvoine;341.0;9.4;64.7;21.2;7.8;1.3;8.0;0.07
+1052.0;Jardin Bio Étic;Graines de Lin;582.0;22.9;22.3;7.2;45.2;9.0;10.8;0.17
+1053.0;Jardin Bio Étic;Graines de Tournesol;519.0;24.0;10.8;2.6;42.3;7.4;11.5;0.19
+1054.0;Jardin Bio Étic;Graines de Courge;541.0;19.7;12.5;2.2;53.9;8.3;7.4;0.11
+1055.0;Jardin Bio Étic;Muesli Fruits;376.0;10.7;57.5;11.6;9.2;3.0;8.4;0.11
+1056.0;Jardin Bio Étic;Biscuits Céréales;351.0;9.5;61.6;23.8;7.6;3.2;7.0;0.16
+1057.0;Jardin Bio Étic;Biscuits Sésame;401.0;8.7;55.3;24.7;16.0;7.4;3.4;0.18
+1058.0;Jardin Bio Étic;Biscuits Sans Sucre;450.0;6.9;63.6;19.9;14.0;7.3;5.7;0.32
+1059.0;Jardin Bio Étic;Galettes Maïs;339.0;7.2;70.5;3.2;4.9;1.8;6.4;0.17
+1060.0;Jardin Bio Étic;Galettes Riz;336.0;8.9;73.7;3.5;4.8;1.8;5.7;0.14
+1061.0;Seeberger;Amandes Nature;559.0;21.5;11.1;2.7;45.8;7.0;10.3;0.02
+1062.0;Seeberger;Noisettes Nature;582.0;17.1;16.4;2.2;45.1;7.2;9.0;0.1
+1063.0;Seeberger;Noix de Cajou;501.0;18.2;23.8;2.1;40.3;8.1;6.5;0.11
+1064.0;Seeberger;Noix;533.0;15.5;21.1;2.9;49.6;9.5;10.4;0.15
+1065.0;Seeberger;Mélange Rando;385.0;14.4;59.0;12.1;14.1;3.9;3.9;0.23
+1066.0;Seeberger;Raisins Secs;300.0;10.2;69.4;9.2;9.6;1.5;5.4;0.22
+1067.0;Seeberger;Abricots Secs;385.0;14.8;56.1;11.9;11.4;3.7;3.8;0.25
+1068.0;Seeberger;Dattes;326.0;7.3;55.6;14.4;15.0;2.5;4.8;0.27
+1069.0;Seeberger;Figues;397.0;11.9;55.1;7.6;11.1;1.5;5.9;0.16
+1070.0;Seeberger;Cranberries;314.0;14.9;54.0;9.5;12.5;2.1;6.2;0.06
+1071.0;Seeberger;Mélange Énergie;363.0;6.7;67.1;12.6;7.3;2.5;6.2;0.23
+1072.0;Seeberger;Pistaches;619.0;21.4;10.3;5.8;47.4;8.6;11.4;0.01
+1073.0;Seeberger;Graines de Courge;597.0;21.9;17.6;5.7;54.0;5.6;9.3;0.19
+1074.0;Seeberger;Graines de Tournesol;604.0;15.8;22.7;2.0;51.8;8.1;9.2;0.05
+1075.0;Seeberger;Chia;545.0;16.1;12.3;2.1;41.8;5.3;9.0;0.07
+1076.0;Seeberger;Lin;547.0;21.3;24.3;5.2;42.8;8.6;6.7;0.15
+1077.0;Seeberger;Noix du Brésil;550.0;18.4;12.2;2.7;43.4;5.7;11.6;0.13
+1078.0;Seeberger;Noix de Pécan;532.0;21.5;23.7;2.2;48.3;8.8;9.4;0.02
+1079.0;Seeberger;Macadamia;567.0;15.5;22.3;2.9;50.4;7.5;11.5;0.07
+1080.0;Seeberger;Mélange Étudiant;344.0;13.3;65.8;14.9;5.4;2.6;4.2;0.19
+1081.0;Priméal;Quinoa;361.0;12.3;64.8;3.7;2.5;0.7;9.7;0.14
+1082.0;Priméal;Boulgour;340.0;18.3;56.1;3.2;1.2;0.4;9.2;0.06
+1083.0;Priméal;Riz Complet;393.0;10.8;69.8;12.5;5.3;3.4;3.2;0.28
+1084.0;Priméal;Riz Basmati;393.0;9.2;69.9;5.5;7.0;4.3;7.9;0.25
+1085.0;Priméal;Riz Thaï;358.0;11.2;64.9;9.7;6.9;4.1;6.3;0.17
+1086.0;Priméal;Pois Chiches;340.0;22.8;52.6;2.4;2.9;0.3;10.3;0.16
+1087.0;Priméal;Lentilles Vertes;350.0;19.7;59.4;3.6;1.9;1.0;9.1;0.19
+1088.0;Priméal;Haricots Rouges;344.0;14.5;50.9;1.6;2.0;0.9;11.3;0.02
+1089.0;Priméal;Flageolets;377.0;6.4;57.9;12.2;8.6;4.4;4.4;0.07
+1090.0;Priméal;Petit Épeautre;324.0;10.9;57.4;4.0;2.8;0.6;9.4;0.17
+1091.0;Priméal;Orge Perlé;321.0;11.0;62.4;3.0;2.6;0.4;8.6;0.15
+1092.0;Priméal;Graines de Lin;577.0;19.6;21.0;2.5;54.7;8.3;8.6;0.13
+1093.0;Priméal;Graines de Chia;555.0;22.0;19.2;2.9;48.5;7.5;10.6;0.17
+1094.0;Priméal;Graines de Sésame;577.0;15.2;20.2;5.9;46.6;9.7;10.5;0.18
+1095.0;Priméal;Muesli Bio;378.0;13.0;62.5;18.1;10.8;2.5;9.0;0.17
+1096.0;Priméal;Couscous Complet;350.0;11.4;69.8;2.5;2.6;0.8;9.4;0.05
+1097.0;Priméal;Farine de Blé T110;318.0;11.2;64.0;2.1;2.8;1.8;5.9;0.21
+1098.0;Priméal;Farine de Sarrasin;349.0;11.6;56.3;1.3;2.8;1.6;6.1;0.03
+1099.0;Priméal;Farine de Seigle;314.0;10.4;60.6;2.0;4.8;2.0;7.5;0.1
+1100.0;Priméal;Farine Complète;324.0;11.2;68.1;3.6;1.4;1.7;5.6;0.11
+1101.0;Markal;Riz Complet;303.0;11.6;53.9;10.1;14.4;1.6;4.8;0.22
+1102.0;Markal;Riz Basmati;327.0;11.3;59.7;9.9;8.1;2.3;4.0;0.06
+1103.0;Markal;Quinoa;330.0;19.8;60.1;1.5;3.1;0.4;10.8;0.15
+1104.0;Markal;Boulgour;357.0;17.0;61.3;4.6;3.3;0.5;11.1;0.11
+1105.0;Markal;Couscous;367.0;11.9;61.5;1.9;2.1;0.8;10.4;0.08
+1106.0;Markal;Lentilles;370.0;23.3;66.6;4.6;1.9;0.3;9.2;0.07
+1107.0;Markal;Pois Chiches;329.0;17.8;66.9;3.3;1.1;0.4;8.3;0.09
+1108.0;Markal;Haricots Rouges;348.0;23.9;57.2;2.9;3.5;0.4;10.1;0.03
+1109.0;Markal;Farine Complète;335.0;12.2;64.9;1.1;1.7;1.7;7.0;0.28
+1110.0;Markal;Farine de Sarrasin;329.0;8.3;62.9;1.7;4.3;1.8;7.6;0.17
+1111.0;Markal;Flocons dAvoine;407.0;9.4;63.1;24.2;7.6;3.0;8.3;0.1
+1112.0;Markal;Graines de Lin;603.0;19.4;16.1;5.7;54.9;8.6;9.4;0.13
+1113.0;Markal;Graines de Tournesol;517.0;20.2;18.7;5.1;44.6;4.3;6.9;0.09
+1114.0;Markal;Graines de Courge;523.0;21.5;16.2;2.3;51.4;4.4;6.6;0.01
+1115.0;Markal;Farine dAvoine;305.0;10.4;63.1;1.9;2.6;0.9;6.0;0.18
+1116.0;Markal;Semoule Complète;370.0;9.0;53.9;11.0;11.3;3.7;6.3;0.06
+1117.0;Markal;Pâtes Complètes;312.0;14.1;51.4;7.8;14.8;4.5;5.4;0.2
+1118.0;Markal;Pâtes Semi-complètes;397.0;13.2;55.2;5.8;11.3;2.9;3.8;0.15
+1119.0;Markal;Farine de Seigle;325.0;8.2;68.6;2.2;4.6;0.8;4.9;0.02
+1120.0;Markal;Flocons de Quinoa;354.0;8.7;59.7;16.3;8.2;1.4;8.1;0.12
+1121.0;Alnatura;Muesli Bio;366.0;8.6;65.9;14.6;5.3;1.1;7.1;0.03
+1122.0;Alnatura;Granola Bio;377.0;13.7;64.4;24.4;11.9;3.3;6.5;0.16
+1123.0;Alnatura;Flocons Avoine Bio;352.0;9.9;68.8;11.0;11.4;1.7;8.6;0.2
+1124.0;Alnatura;Biscuits Bio;394.0;6.3;62.0;24.1;13.3;6.7;4.4;0.2
+1125.0;Alnatura;Pain Bio;348.0;12.7;65.7;2.1;1.5;1.9;7.9;0.2
+1126.0;Alnatura;Pâtes Complètes;356.0;7.2;51.2;14.0;9.5;2.8;3.5;0.18
+1127.0;Alnatura;Riz Complet;396.0;11.9;64.7;8.8;8.8;1.7;3.8;0.21
+1128.0;Alnatura;Riz Basmati;381.0;9.4;50.6;11.0;14.1;2.9;6.3;0.24
+1129.0;Alnatura;Riz Thaï;320.0;7.9;68.0;14.6;10.5;2.1;7.6;0.22
+1130.0;Alnatura;Quinoa;359.0;20.4;60.9;3.7;3.0;0.8;10.4;0.06
+1131.0;Alnatura;Pois Chiches;327.0;20.5;67.8;1.7;1.8;0.6;10.3;0.08
+1132.0;Alnatura;Lentilles;341.0;11.4;63.3;2.2;1.3;0.8;9.8;0.03
+1133.0;Alnatura;Haricots Rouges;327.0;11.8;55.9;1.7;3.8;0.6;10.5;0.12
+1134.0;Alnatura;Graines de Lin;563.0;19.5;19.3;5.7;46.5;7.2;10.7;0.12
+1135.0;Alnatura;Graines de Chia;572.0;18.8;17.2;7.5;46.6;5.0;10.9;0.09
+1136.0;Alnatura;Graines de Tournesol;610.0;17.7;17.5;7.2;49.9;4.3;10.7;0.06
+1137.0;Alnatura;Graines de Courge;581.0;20.1;13.7;6.3;46.6;6.5;7.7;0.02
+1138.0;Alnatura;Biscuits Sans Sucre;435.0;8.8;57.8;23.4;17.1;5.7;3.5;0.32
+1139.0;Alnatura;Galettes Riz;305.0;8.1;58.7;4.0;2.1;1.3;5.6;0.11
+1140.0;Alnatura;Galettes Maïs;320.0;8.0;61.5;3.2;2.8;1.3;5.6;0.1
+1141.0;Céréalpes;Galettes Céréales;402.0;9.7;69.8;18.4;8.4;3.8;8.3;0.06
+1142.0;Céréalpes;Galettes Quinoa;298.0;9.4;64.8;4.7;5.1;1.1;6.1;0.11
+1143.0;Céréalpes;Galettes Blé;294.0;7.2;65.1;2.8;3.1;0.9;6.7;0.3
+1144.0;Céréalpes;Galettes Maïs;310.0;10.3;72.2;4.6;5.8;1.1;3.9;0.11
+1145.0;Céréalpes;Galettes Lentilles;330.0;10.3;63.9;6.2;3.3;0.7;5.7;0.26
+1146.0;Céréalpes;Biscuits Sésame;423.0;8.0;64.5;22.6;14.5;5.6;3.4;0.11
+1147.0;Céréalpes;Biscuits Cacao;383.0;8.9;56.4;20.0;17.0;7.2;3.4;0.28
+1148.0;Céréalpes;Biscuits Avoine;406.0;8.2;58.3;23.2;12.8;5.7;4.5;0.27
+1149.0;Céréalpes;Crackers Blé;376.0;9.7;54.6;8.5;11.3;1.0;3.2;0.15
+1150.0;Céréalpes;Crackers Seigle;336.0;13.8;66.7;10.7;13.8;2.6;4.3;0.11
+1151.0;Céréalpes;Biscuits Fruits;442.0;7.8;60.7;24.6;14.9;7.3;4.6;0.38
+1152.0;Céréalpes;Biscuits Fibres;411.0;7.2;58.6;23.2;14.9;6.1;4.6;0.26
+1153.0;Céréalpes;Galettes Pois Chiches;283.0;9.5;59.9;2.7;2.1;1.7;5.3;0.29
+1154.0;Céréalpes;Galettes Pois Cassés;331.0;9.9;65.1;2.1;5.1;0.7;6.9;0.27
+1155.0;Céréalpes;Galettes Riz;308.0;9.0;73.8;5.5;5.2;1.1;5.1;0.19
+1156.0;Céréalpes;Galettes Multicéréales;365.0;9.0;64.1;11.7;11.0;3.6;9.5;0.12
+1157.0;Céréalpes;Biscuits Épeautre;364.0;12.4;60.3;4.5;1.4;0.8;11.9;0.04
+1158.0;Céréalpes;Biscuits Sarrasin;385.0;6.6;57.5;24.9;17.2;5.3;3.6;0.12
+1159.0;Céréalpes;Biscuits Lin;615.0;19.6;23.9;2.3;47.1;9.8;11.0;0.1
+1160.0;Céréalpes;Biscuits Noix;613.0;24.6;15.5;4.0;45.9;7.2;8.4;0.02
+1161.0;Bjorg Flocons;Flocons dAvoine;411.0;9.3;64.5;13.7;9.1;3.5;8.0;0.17
+1162.0;Bjorg Flocons;Flocons de Quinoa;407.0;8.0;66.8;12.6;5.9;2.3;6.6;0.13
+1163.0;Bjorg Flocons;Flocons de Riz;391.0;11.9;64.6;17.3;6.1;2.4;6.8;0.2
+1164.0;Bjorg Flocons;Flocons de Sarrasin;408.0;11.9;56.2;16.8;7.2;1.6;9.2;0.11
+1165.0;Bjorg Flocons;Flocons de Seigle;397.0;8.6;63.6;22.5;5.3;2.1;7.2;0.19
+1166.0;Bjorg Flocons;Granola Fruits;400.0;10.7;61.0;21.0;11.0;2.3;6.4;0.13
+1167.0;Bjorg Flocons;Granola Chocolat;380.0;13.0;67.7;20.6;6.8;2.7;7.2;0.12
+1168.0;Bjorg Flocons;Muesli Fruits;341.0;8.6;66.5;22.7;6.9;2.7;8.9;0.15
+1169.0;Bjorg Flocons;Muesli Chocolat;348.0;14.2;55.7;20.5;9.3;2.2;6.1;0.1
+1170.0;Bjorg Flocons;Muesli Protéiné;381.0;10.8;69.7;15.6;11.5;1.9;6.7;0.14
+1171.0;Bjorg Flocons;Céréales Complètes;340.0;10.1;62.2;15.2;8.9;3.1;9.9;0.05
+1172.0;Bjorg Flocons;Céréales Fibres;373.0;12.8;59.8;24.1;8.5;3.3;9.5;0.16
+1173.0;Bjorg Flocons;Céréales Fruits Rouges;411.0;12.6;58.5;18.2;9.7;1.2;7.1;0.19
+1174.0;Bjorg Flocons;Céréales Noisette;372.0;14.9;56.0;14.5;11.6;3.2;8.2;0.15
+1175.0;Bjorg Flocons;Céréales Chocolat;415.0;14.3;69.8;25.0;7.5;2.0;7.4;0.18
+1176.0;Bjorg Flocons;Graines de Lin;550.0;19.6;21.8;7.8;52.3;8.4;6.2;0.11
+1177.0;Bjorg Flocons;Graines de Chia;574.0;18.3;16.2;3.1;53.9;7.3;10.0;0.16
+1178.0;Bjorg Flocons;Graines de Tournesol;609.0;16.1;17.4;4.6;54.6;6.3;6.4;0.11
+1179.0;Bjorg Flocons;Graines de Courge;568.0;22.6;23.6;3.9;47.3;9.2;10.4;0.14
+1180.0;Bjorg Flocons;Graines de Sésame;501.0;23.1;22.1;7.8;50.2;4.9;11.9;0.19
+1181.0;Charal;Steak Haché 5% MG;198.0;19.6;1.5;0.5;13.9;5.8;0.0;0.26
+1182.0;Charal;Steak Haché 15% MG;249.0;20.0;1.7;0.8;17.9;6.8;0.0;0.23
+1183.0;Charal;Entrecôte;253.0;22.9;0.8;0.4;13.4;6.2;0.0;0.19
+1184.0;Charal;Pavé de Buf;238.0;19.0;0.0;0.0;15.6;7.8;0.0;1.16
+1185.0;Charal;Bifteck;264.0;20.9;0.0;0.0;10.5;7.5;0.0;1.05
+1186.0;Charal;Burger Pur Buf;208.0;16.1;0.0;0.0;19.6;4.6;0.0;0.74
+1187.0;Charal;Steak Angus;207.0;19.4;1.7;0.6;13.0;5.9;0.0;0.26
+1188.0;Charal;Steak Bio;198.0;19.5;1.3;0.2;15.0;5.2;0.0;0.17
+1189.0;Charal;Carpaccio de Buf;240.0;18.5;0.0;0.0;16.3;7.6;0.0;0.65
+1190.0;Charal;Bavette;215.0;21.0;1.2;0.4;14.5;6.0;0.0;0.3
+1191.0;Charal;Steak Tartare;220.0;23.7;1.7;0.3;17.1;9.0;0.0;0.27
+1192.0;Charal;Burger Cheddar;271.0;16.2;0.0;0.0;17.9;7.8;0.0;1.08
+1193.0;Charal;Burger Bacon;284.0;18.5;0.0;0.0;16.7;7.3;0.0;0.63
+1194.0;Charal;Haché Végétal;199.0;22.7;0.7;0.6;13.3;5.5;0.0;0.25
+1195.0;Charal;Saucisses Buf;274.0;15.6;1.3;0.7;22.0;8.0;0.0;1.54
+1196.0;Charal;Brochettes Buf;227.0;22.6;0.0;0.1;10.9;6.4;0.0;1.39
+1197.0;Charal;Faux Filet;249.0;22.0;1.0;1.7;12.1;4.8;0.0;0.83
+1198.0;Charal;Rôti de Buf;218.0;17.6;2.9;0.8;10.6;4.2;0.0;1.4
+1199.0;Charal;Viande Hachée Surgelée;217.0;19.2;0.6;0.3;12.7;5.6;0.0;0.27
+1200.0;Charal;Steak XXL;255.0;21.4;1.2;0.7;14.5;5.8;0.0;0.28
+1201.0;Socopa;Steak Haché 10% MG;248.0;19.9;0.1;0.9;16.1;5.8;0.0;0.19
+1202.0;Socopa;Steak Haché 20% MG;218.0;20.9;0.7;0.3;13.0;8.9;0.0;0.24
+1203.0;Socopa;Côte de Buf;238.0;19.0;0.0;0.0;14.0;4.1;0.0;0.89
+1204.0;Socopa;Chipolatas;347.0;17.8;2.5;0.2;26.3;8.4;0.0;1.49
+1205.0;Socopa;Merguez;337.0;19.7;2.5;0.1;24.9;8.2;0.0;1.26
+1206.0;Socopa;Brochettes;243.0;21.0;0.0;0.9;8.4;3.2;0.0;1.56
+1207.0;Socopa;Côtes de Porc;216.0;20.9;0.0;0.0;16.9;7.1;0.0;1.2
+1208.0;Socopa;Escalope de Dinde;120.0;24.0;2.0;0.5;9.7;3.3;0.0;0.17
+1209.0;Socopa;Escalope de Poulet;143.0;21.6;1.0;0.8;9.6;1.9;0.0;0.14
+1210.0;Socopa;Pavé de Rumsteck;235.0;22.6;1.6;1.0;12.7;5.1;0.0;0.21
+1211.0;Socopa;Boulettes de Buf;250.0;20.6;0.0;0.0;11.7;5.3;0.0;1.42
+1212.0;Socopa;Saucisses Toulouse;299.0;17.6;0.0;0.7;21.1;12.0;0.0;1.26
+1213.0;Socopa;Saucisses Fumées;327.0;17.6;0.8;0.4;21.0;8.1;0.0;2.35
+1214.0;Socopa;Rôti de Porc;232.0;22.5;2.7;1.1;11.7;4.5;0.0;1.6
+1215.0;Socopa;Rôti de Veau;234.0;20.7;0.9;1.3;9.6;6.6;0.0;1.53
+1216.0;Socopa;Filet de Poulet;120.0;23.0;0.2;0.8;8.7;2.4;0.0;0.12
+1217.0;Socopa;Cuisse de Poulet;162.0;20.2;1.3;0.5;4.0;2.2;0.0;0.12
+1218.0;Socopa;Filet de Dinde;163.0;24.3;0.2;1.0;7.5;2.0;0.0;0.15
+1219.0;Socopa;Sauté de Porc;244.0;16.0;0.0;0.0;17.1;7.9;0.0;1.08
+1220.0;Socopa;Côte de Veau;282.0;19.3;0.0;0.0;13.0;7.2;0.0;1.22
+1221.0;Bigard;Viande Hachée Fraîche;260.0;19.1;1.0;0.1;13.6;7.9;0.0;0.23
+1222.0;Bigard;Pavé Charolais;260.0;20.9;0.0;0.0;19.0;7.9;0.0;0.67
+1223.0;Bigard;Côte de Porc;262.0;19.7;0.0;0.0;12.4;6.6;0.0;0.55
+1224.0;Bigard;Entrecôte;232.0;20.0;0.4;0.3;18.6;8.2;0.0;0.11
+1225.0;Bigard;Rumsteck;217.0;24.0;0.7;0.4;13.7;5.8;0.0;0.18
+1226.0;Bigard;Bavette dAloyau;243.0;20.6;0.9;0.4;14.2;7.0;0.0;0.16
+1227.0;Bigard;Jarret de Buf;238.0;16.1;0.0;0.0;15.4;5.8;0.0;0.55
+1228.0;Bigard;Queue de Buf;252.0;20.6;0.0;0.0;10.6;7.5;0.0;0.79
+1229.0;Bigard;Saucisson Sec;314.0;21.6;1.3;0.9;24.0;8.0;0.0;1.66
+1230.0;Bigard;Saucisson à lAil;259.0;18.4;0.1;0.8;20.9;11.8;0.0;2.24
+1231.0;Bigard;Boudin Noir;309.0;17.8;2.4;0.1;26.3;7.3;0.0;2.0
+1232.0;Bigard;Boudin Blanc;317.0;16.5;1.7;0.7;27.5;10.1;0.0;2.17
+1233.0;Bigard;Rôti de Veau;210.0;21.6;3.0;1.0;9.4;4.2;0.0;1.53
+1234.0;Bigard;Rôti de Buf;188.0;21.5;3.0;1.9;8.2;5.7;0.0;0.93
+1235.0;Bigard;Rôti de Porc;174.0;22.1;0.8;1.7;11.8;3.0;0.0;1.22
+1236.0;Bigard;Côtelette Agneau;205.0;19.7;0.0;0.0;11.0;6.9;0.0;0.59
+1237.0;Bigard;Gigot Agneau;287.0;15.4;0.0;0.0;10.4;5.9;0.0;1.38
+1238.0;Bigard;Côte Première Agneau;211.0;20.3;0.0;0.0;14.2;5.7;0.0;0.6
+1239.0;Bigard;Steak Tendre;245.0;23.9;2.0;0.6;15.6;6.0;0.0;0.25
+1240.0;Bigard;Haché Bio;212.0;19.5;0.1;0.5;14.3;5.3;0.0;0.29
+1241.0;Jean Rozé;Jambon Supérieur;233.0;19.6;1.4;0.2;8.9;6.7;0.0;1.66
+1242.0;Jean Rozé;Jambon Cuit;204.0;20.9;2.3;0.7;12.8;3.9;0.0;1.77
+1243.0;Jean Rozé;Rôti de Porc;240.0;22.2;1.3;1.4;8.1;6.6;0.0;1.9
+1244.0;Jean Rozé;Rôti de Dinde;174.0;24.6;1.3;0.1;6.6;1.2;0.0;0.14
+1245.0;Jean Rozé;Escalope de Poulet;145.0;23.5;1.4;1.0;5.3;3.8;0.0;0.19
+1246.0;Jean Rozé;Escalope de Dinde;133.0;21.2;0.2;0.4;5.6;2.3;0.0;0.21
+1247.0;Jean Rozé;Brochettes de Poulet;161.0;21.2;0.0;0.0;7.7;3.3;0.0;0.1
+1248.0;Jean Rozé;Brochettes de Dinde;171.0;21.6;1.3;0.3;9.6;2.7;0.0;0.19
+1249.0;Jean Rozé;Sauté de Dinde;117.0;23.5;1.6;0.0;6.8;1.2;0.0;0.12
+1250.0;Jean Rozé;Filet de Poulet;117.0;23.7;0.4;0.8;7.7;3.6;0.0;0.11
+1251.0;Jean Rozé;Cuisse de Poulet;177.0;23.3;0.9;0.5;4.6;2.9;0.0;0.22
+1252.0;Jean Rozé;Rôti de Veau;240.0;21.1;0.7;1.5;14.3;3.3;0.0;1.74
+1253.0;Jean Rozé;Rôti de Buf;169.0;21.1;2.2;1.6;9.7;6.2;0.0;1.07
+1254.0;Jean Rozé;Chipolatas;307.0;18.9;2.1;1.0;20.9;9.0;0.0;2.01
+1255.0;Jean Rozé;Merguez;253.0;18.0;1.4;0.8;25.8;7.7;0.0;1.41
+1256.0;Jean Rozé;Pavé de Saumon;299.0;18.4;0.0;0.0;18.5;5.9;0.0;0.73
+1257.0;Jean Rozé;Saucisses de Volaille;163.0;23.9;1.0;0.3;3.7;2.4;0.0;0.23
+1258.0;Jean Rozé;Nuggets Poulet;140.0;24.7;0.1;0.2;7.0;3.1;0.0;0.21
+1259.0;Jean Rozé;Cordon Bleu Poulet;120.0;20.2;0.6;0.6;6.9;3.0;0.0;0.18
+1260.0;Jean Rozé;Rôti de Lapin;217.0;22.0;2.4;1.2;13.4;5.9;0.0;1.08
+1261.0;Loué;Poulet Fermier Entier;179.0;22.3;1.1;0.4;8.9;3.1;0.0;0.19
+1262.0;Loué;Cuisse de Poulet;138.0;20.8;1.7;0.2;9.3;3.5;0.0;0.2
+1263.0;Loué;Filet de Poulet;153.0;23.6;0.3;0.3;5.7;2.3;0.0;0.14
+1264.0;Loué;Escalope de Poulet;166.0;24.0;0.4;0.9;9.5;3.1;0.0;0.15
+1265.0;Loué;Aiguillettes de Poulet;118.0;21.2;1.5;0.0;6.0;2.8;0.0;0.12
+1266.0;Loué;Poulet Jaune Entier;169.0;21.5;0.2;0.4;3.1;3.8;0.0;0.14
+1267.0;Loué;Poulet Bio;151.0;23.8;2.0;0.9;9.6;2.1;0.0;0.19
+1268.0;Loué;Poulet Rôti;117.0;20.9;0.6;0.5;9.9;2.0;0.0;0.15
+1269.0;Loué;Rôti de Poulet;148.0;20.1;0.9;1.0;4.0;2.4;0.0;0.2
+1270.0;Loué;Brochettes Poulet;138.0;20.8;1.3;0.8;7.4;3.5;0.0;0.11
+1271.0;Loué;ufs de Poules Fermiers;214.0;16.9;0.0;0.0;11.3;5.8;0.0;1.23
+1272.0;Loué;Saucisses de Poulet;151.0;22.9;1.2;0.8;6.9;2.0;0.0;0.2
+1273.0;Loué;Nuggets Poulet;175.0;23.9;1.0;0.9;7.3;3.2;0.0;0.22
+1274.0;Loué;Cordon Bleu Poulet;178.0;23.4;1.1;0.8;8.9;1.6;0.0;0.16
+1275.0;Loué;Filet de Dinde;160.0;22.9;0.7;0.3;5.5;3.9;0.0;0.25
+1276.0;Loué;Cuisse de Dinde;172.0;24.3;0.7;0.3;5.5;1.9;0.0;0.2
+1277.0;Loué;Escalope de Dinde;155.0;23.7;1.2;0.2;7.7;3.3;0.0;0.1
+1278.0;Loué;Brochettes Dinde;171.0;20.2;1.5;0.1;5.9;1.9;0.0;0.17
+1279.0;Loué;Rôti de Dinde;180.0;24.2;1.7;1.0;3.9;3.8;0.0;0.14
+1280.0;Loué;Poulet Découpé;156.0;23.9;0.1;0.6;6.6;1.2;0.0;0.13
+1281.0;Le Gaulois;Cordon Bleu Poulet;163.0;23.5;0.9;0.8;4.3;3.3;0.0;0.17
+1282.0;Le Gaulois;Cordon Bleu Jambon;222.0;16.2;23.0;2.2;12.1;6.8;0.4;0.55
+1283.0;Le Gaulois;Escalope Panée;284.0;19.3;15.6;7.5;16.5;7.7;0.1;0.33
+1284.0;Le Gaulois;Escalope Croustillante;254.0;19.2;0.0;0.0;15.8;4.6;0.0;1.4
+1285.0;Le Gaulois;Nuggets Poulet;156.0;22.1;1.3;0.3;3.2;3.8;0.0;0.19
+1286.0;Le Gaulois;Wings Poulet;156.0;24.5;0.9;0.3;3.5;3.5;0.0;0.23
+1287.0;Le Gaulois;Tenders Poulet;158.0;20.8;0.6;0.5;6.2;1.6;0.0;0.11
+1288.0;Le Gaulois;Filet Croustillant;227.0;20.2;0.7;0.2;13.9;3.7;0.0;0.97
+1289.0;Le Gaulois;Poulet Rôti;120.0;23.2;1.0;0.8;3.8;1.7;0.0;0.18
+1290.0;Le Gaulois;Poulet Découpé;169.0;22.3;0.4;0.7;6.2;2.1;0.0;0.17
+1291.0;Le Gaulois;Brochettes Poulet;177.0;23.2;0.2;0.7;8.4;2.1;0.0;0.24
+1292.0;Le Gaulois;Brochettes Dinde;145.0;23.6;1.0;0.5;3.8;1.8;0.0;0.21
+1293.0;Le Gaulois;Saucisses Poulet;114.0;24.6;0.0;0.2;3.5;3.0;0.0;0.13
+1294.0;Le Gaulois;Saucisses Dinde;175.0;21.2;1.7;0.1;8.0;1.6;0.0;0.11
+1295.0;Le Gaulois;Crispy Dinde;154.0;24.0;1.7;0.2;5.1;2.5;0.0;0.21
+1296.0;Le Gaulois;Rôti Poulet;180.0;23.6;0.3;0.8;4.2;3.0;0.0;0.24
+1297.0;Le Gaulois;Rôti Dinde;163.0;22.7;1.8;0.5;4.4;1.5;0.0;0.17
+1298.0;Le Gaulois;Poulet Rôti Tranché;116.0;24.1;1.3;0.9;6.8;2.5;0.0;0.21
+1299.0;Le Gaulois;Poulet Pané Croustillant;138.0;20.4;1.9;0.7;8.5;1.9;0.0;0.18
+1300.0;Le Gaulois;Escalope Bio;272.0;15.5;0.0;0.0;13.6;7.4;0.0;0.57
+1301.0;Maître CoQ;Poulet Rôti Entier;167.0;23.2;0.5;0.4;3.3;2.2;0.0;0.14
+1302.0;Maître CoQ;Poulet Fermier;167.0;22.4;0.2;0.6;5.7;2.4;0.0;0.16
+1303.0;Maître CoQ;Poulet Jaune;150.0;20.6;0.7;0.5;4.8;3.5;0.0;0.24
+1304.0;Maître CoQ;Poulet Bio;126.0;24.5;1.2;0.2;7.5;2.0;0.0;0.22
+1305.0;Maître CoQ;Escalope Poulet;153.0;21.5;0.3;0.6;5.3;2.3;0.0;0.17
+1306.0;Maître CoQ;Escalope Dinde;147.0;21.7;1.8;0.2;5.4;2.3;0.0;0.16
+1307.0;Maître CoQ;Brochettes Poulet;178.0;21.2;1.0;0.7;7.6;3.0;0.0;0.18
+1308.0;Maître CoQ;Brochettes Dinde;143.0;20.8;1.1;0.5;8.2;1.2;0.0;0.23
+1309.0;Maître CoQ;Nuggets Poulet;137.0;24.6;1.1;0.8;8.4;1.2;0.0;0.11
+1310.0;Maître CoQ;Tenders Poulet;151.0;25.0;1.4;0.0;7.9;2.7;0.0;0.24
+1311.0;Maître CoQ;Filet Poulet Mariné;153.0;21.4;0.7;0.7;7.4;1.9;0.0;0.17
+1312.0;Maître CoQ;Cuisse Poulet Mariné;139.0;25.0;1.5;0.4;7.0;3.2;0.0;0.12
+1313.0;Maître CoQ;Rôti de Poulet;125.0;21.9;1.3;0.8;8.4;1.2;0.0;0.1
+1314.0;Maître CoQ;Poulet Grillé;118.0;22.0;1.4;0.1;8.6;1.2;0.0;0.2
+1315.0;Maître CoQ;Poulet Pané;161.0;22.3;1.0;0.8;6.5;2.7;0.0;0.17
+1316.0;Maître CoQ;Saucisses Poulet;123.0;20.8;1.2;0.1;5.1;2.3;0.0;0.11
+1317.0;Maître CoQ;Saucisses Dinde;136.0;20.2;0.2;0.5;6.0;1.7;0.0;0.19
+1318.0;Maître CoQ;Cordon Bleu Poulet;116.0;21.5;1.4;0.4;4.4;2.6;0.0;0.22
+1319.0;Maître CoQ;Poulet Barbecue;145.0;25.0;1.8;0.0;5.5;3.4;0.0;0.21
+1320.0;Maître CoQ;Poulet Rôti Tranché;176.0;20.1;0.2;0.4;3.7;3.9;0.0;0.14
+1321.0;Père Dodu;Cordon Bleu Classique;245.0;19.4;21.5;2.7;12.1;3.2;2.0;0.34
+1322.0;Père Dodu;Cordon Bleu Fromage;248.0;17.1;21.3;6.5;13.7;6.1;0.2;0.88
+1323.0;Père Dodu;Cordon Bleu Jambon;282.0;14.2;24.4;2.8;17.5;4.3;0.4;0.61
+1324.0;Père Dodu;Escalope Panée;235.0;18.0;17.5;5.7;14.5;7.3;1.3;0.61
+1325.0;Père Dodu;Nuggets Poulet;134.0;23.0;0.1;0.3;5.1;4.0;0.0;0.25
+1326.0;Père Dodu;Nuggets Croustillants;273.0;17.2;22.6;7.4;12.7;6.5;1.5;0.83
+1327.0;Père Dodu;Tenders Poulet;112.0;21.9;1.4;0.9;4.7;1.3;0.0;0.14
+1328.0;Père Dodu;Wings Poulet;127.0;20.1;0.2;0.7;3.3;3.9;0.0;0.24
+1329.0;Père Dodu;Poulet Pané;143.0;20.9;0.5;0.6;4.6;3.2;0.0;0.11
+1330.0;Père Dodu;Filet Poulet Pané;114.0;21.9;0.5;0.9;5.1;2.3;0.0;0.11
+1331.0;Père Dodu;Filet Poulet Mariné;165.0;23.4;0.5;0.6;6.4;3.6;0.0;0.19
+1332.0;Père Dodu;Poulet Bio Pané;143.0;23.5;1.7;0.2;4.3;3.1;0.0;0.25
+1333.0;Père Dodu;Cordon Bleu Bio;224.0;14.0;24.2;7.8;16.1;3.6;1.0;0.3
+1334.0;Père Dodu;Nuggets Bio;314.0;14.0;23.8;2.5;15.1;5.8;0.6;0.55
+1335.0;Père Dodu;Tenders Bio;252.0;14.1;16.9;2.8;17.2;3.9;0.3;0.73
+1336.0;Père Dodu;Poulet Rôti;174.0;21.8;0.4;0.6;7.7;1.0;0.0;0.11
+1337.0;Père Dodu;Poulet Découpé;137.0;24.6;1.8;0.6;7.8;2.7;0.0;0.23
+1338.0;Père Dodu;Brochettes Poulet;134.0;22.3;1.7;0.2;4.1;3.7;0.0;0.23
+1339.0;Père Dodu;Escalope Croustillante;239.0;18.7;0.0;0.0;18.2;5.0;0.0;0.52
+1340.0;Père Dodu;Poulet Pané Bio;125.0;24.4;1.0;0.7;3.5;3.3;0.0;0.22
+1341.0;Labeyrie;Foie Gras de Canard;452.0;12.8;0.8;0.5;37.0;17.2;0.0;1.88
+1342.0;Labeyrie;Foie Gras dOie;455.0;14.8;2.9;1.4;39.4;18.4;0.0;1.59
+1343.0;Labeyrie;Saumon Fumé;292.0;15.2;0.0;0.0;18.3;6.4;0.0;1.38
+1344.0;Labeyrie;Magret de Canard;405.0;14.2;1.6;1.4;42.8;17.5;0.0;1.93
+1345.0;Labeyrie;Bloc de Foie Gras;432.0;14.1;2.7;1.0;36.0;17.2;0.0;1.44
+1346.0;Labeyrie;Rillettes de Canard;345.0;17.4;1.2;0.9;26.3;14.8;0.0;1.65
+1347.0;Labeyrie;Rillettes dOie;313.0;17.6;2.0;0.5;34.6;11.4;0.0;1.77
+1348.0;Labeyrie;Rillettes de Saumon;377.0;12.9;0.5;1.5;29.9;14.0;0.0;1.88
+1349.0;Labeyrie;Rillettes de Truite;345.0;12.4;2.6;0.5;31.7;10.3;0.0;1.15
+1350.0;Labeyrie;Terrine de Canard;308.0;16.8;1.9;0.2;29.9;14.6;0.0;1.84
+1351.0;Labeyrie;Terrine de Lapin;367.0;13.4;2.8;0.8;30.2;14.8;0.0;1.65
+1352.0;Labeyrie;Terrine de Saumon;310.0;16.6;2.7;0.5;33.6;11.1;0.0;1.33
+1353.0;Labeyrie;Confit de Canard;421.0;15.0;2.0;0.8;36.2;17.3;0.0;1.34
+1354.0;Labeyrie;Confit dOie;495.0;11.0;0.4;0.1;35.1;16.9;0.0;1.94
+1355.0;Labeyrie;Magret Fumé;436.0;10.9;0.2;1.3;35.6;16.6;0.0;1.4
+1356.0;Labeyrie;Magret Séché;470.0;13.6;0.8;0.9;41.9;17.0;0.0;1.89
+1357.0;Labeyrie;Saumon Bio;281.0;20.1;0.0;0.0;19.6;5.4;0.0;0.73
+1358.0;Labeyrie;Foie Gras Entier;417.0;13.6;2.8;0.7;40.3;16.1;0.0;1.36
+1359.0;Labeyrie;Foie Gras Mi-Cuit;489.0;11.8;2.0;1.5;37.5;15.3;0.0;1.84
+1360.0;Labeyrie;Bloc Foie Gras Truffé;450.0;10.8;2.9;1.4;41.2;16.6;0.0;1.89
+1361.0;Delpeyrat;Foie Gras de Canard;401.0;11.3;3.0;0.1;43.4;15.8;0.0;1.26
+1362.0;Delpeyrat;Foie Gras Entier;461.0;13.0;1.2;1.0;41.2;16.9;0.0;1.36
+1363.0;Delpeyrat;Foie Gras Mi-Cuit;483.0;11.5;2.7;0.1;35.8;19.5;0.0;1.65
+1364.0;Delpeyrat;Bloc Foie Gras;497.0;11.4;0.2;2.0;44.6;15.3;0.0;1.69
+1365.0;Delpeyrat;Magret de Canard;402.0;10.5;1.1;1.7;42.0;18.5;0.0;1.91
+1366.0;Delpeyrat;Magret Séché;407.0;11.7;1.8;1.7;36.3;17.8;0.0;1.05
+1367.0;Delpeyrat;Confit de Canard;416.0;14.6;0.1;0.1;41.6;17.7;0.0;1.54
+1368.0;Delpeyrat;Rillettes de Canard;364.0;17.1;2.4;0.4;29.4;14.0;0.0;1.81
+1369.0;Delpeyrat;Rillettes dOie;306.0;14.1;2.9;1.9;34.3;14.6;0.0;1.82
+1370.0;Delpeyrat;Rillettes de Saumon;385.0;15.3;0.0;0.4;32.0;13.3;0.0;1.5
+1371.0;Delpeyrat;Saumon Fumé;247.0;21.9;0.0;0.0;17.1;7.3;0.0;1.32
+1372.0;Delpeyrat;Jambon de Bayonne;210.0;19.3;1.4;1.3;13.7;4.9;0.0;1.84
+1373.0;Delpeyrat;Jambon Sec;217.0;19.8;0.4;1.4;10.5;4.1;0.0;1.63
+1374.0;Delpeyrat;Terrine de Canard;341.0;13.6;2.1;1.5;27.5;12.4;0.0;1.82
+1375.0;Delpeyrat;Terrine de Porc;365.0;14.1;1.4;1.0;32.1;12.2;0.0;1.64
+1376.0;Delpeyrat;Confit de Porc;480.0;11.6;0.5;1.2;37.0;15.6;0.0;1.28
+1377.0;Delpeyrat;Bloc Foie Gras Truffé;423.0;11.1;2.8;0.9;39.6;15.1;0.0;1.74
+1378.0;Delpeyrat;Foie Gras Bio;494.0;12.8;1.3;1.8;43.5;16.2;0.0;1.53
+1379.0;Delpeyrat;Magret Bio;498.0;11.4;0.6;1.1;38.6;19.3;0.0;1.83
+1380.0;Delpeyrat;Confit Bio;487.0;12.5;1.0;0.9;41.3;19.3;0.0;1.73
+1381.0;Marque Repère;Biscuits Petit Beurre;84.0;5.5;19.5;7.2;10.5;3.8;0.0;0.05
+1382.0;Marque Repère;Biscuits Chocolat;419.0;5.1;58.5;34.4;17.8;6.3;2.8;0.35
+1383.0;Marque Repère;Biscuits Fourrés Fraise;412.0;5.5;58.6;35.7;17.6;5.5;4.8;0.28
+1384.0;Marque Repère;Pâtes Spaghetti;355.0;7.7;68.4;1.3;3.2;0.8;4.0;0.09
+1385.0;Marque Repère;Pizza 4 Fromages;201.0;8.9;17.7;6.7;14.3;5.3;1.1;1.15
+1386.0;Marque Repère;Biscuits Petit Beurre;104.0;5.2;17.5;14.6;3.2;7.9;0.0;0.18
+1387.0;Marque Repère;Biscuits Chocolat;447.0;7.6;58.3;35.4;18.1;6.0;3.7;0.45
+1388.0;Marque Repère;Biscuits Fourrés Fraise;442.0;5.7;58.9;32.4;24.4;6.2;2.9;0.44
+1389.0;Marque Repère;Pâtes Spaghetti;357.0;11.7;65.4;1.0;2.6;1.8;4.9;0.09
+1390.0;Marque Repère;Pizza 4 Fromages;298.0;8.8;24.1;2.1;8.7;3.5;1.9;0.67
+1391.0;Marque Repère;Biscuits Petit Beurre;118.0;5.0;14.4;15.0;8.6;2.6;0.0;0.1
+1392.0;Marque Repère;Biscuits Chocolat;462.0;6.5;60.4;23.9;17.5;5.5;2.5;0.34
+1393.0;Marque Repère;Biscuits Fourrés Fraise;480.0;5.6;63.0;32.8;19.7;8.4;2.4;0.47
+1394.0;Marque Repère;Pâtes Spaghetti;352.0;8.1;70.4;2.5;1.1;1.9;3.0;0.08
+1395.0;Marque Repère;Pizza 4 Fromages;197.0;10.8;28.8;2.6;11.1;7.3;2.4;1.04
+1396.0;Marque Repère;Biscuits Petit Beurre;87.0;3.4;10.3;10.0;7.6;6.5;0.0;0.11
+1397.0;Marque Repère;Biscuits Chocolat;400.0;6.4;59.5;31.9;19.0;9.7;4.9;0.44
+1398.0;Marque Repère;Biscuits Fourrés Fraise;431.0;6.7;64.7;24.9;16.4;8.4;3.5;0.3
+1399.0;Marque Repère;Pâtes Spaghetti;362.0;7.0;71.0;1.4;2.2;0.3;3.9;0.05
+1400.0;Marque Repère;Pizza 4 Fromages;218.0;9.0;27.0;3.1;12.5;7.2;1.8;0.62
+1401.0;Marque Repère;Biscuits Petit Beurre;131.0;5.8;11.7;10.8;10.5;6.2;0.0;0.11
+1402.0;Marque Repère;Biscuits Chocolat;406.0;7.3;63.5;24.7;21.9;5.6;4.4;0.21
+1403.0;Marque Repère;Biscuits Fourrés Fraise;419.0;7.6;57.5;26.9;18.9;6.5;2.0;0.33
+1404.0;Marque Repère;Pâtes Spaghetti;354.0;9.2;69.2;2.1;2.3;1.0;3.4;0.07
+1405.0;Marque Repère;Pizza 4 Fromages;207.0;11.7;24.0;6.5;14.2;4.6;1.1;0.91
+1406.0;Marque Repère;Biscuits Petit Beurre;157.0;5.3;14.2;7.6;11.7;3.3;0.0;0.09
+1407.0;Marque Repère;Biscuits Chocolat;442.0;6.8;57.0;25.6;24.5;7.6;3.8;0.47
+1408.0;Marque Repère;Biscuits Fourrés Fraise;420.0;5.6;57.8;26.8;23.6;8.6;2.7;0.23
+1409.0;Marque Repère;Pâtes Spaghetti;343.0;7.4;72.6;1.6;3.4;1.0;2.5;0.08
+1410.0;Marque Repère;Pizza 4 Fromages;245.0;10.1;20.0;3.6;10.1;4.8;1.5;1.44
+1411.0;Marque Repère;Biscuits Petit Beurre;144.0;3.3;6.7;12.8;4.9;7.6;0.0;0.06
+1412.0;Marque Repère;Biscuits Chocolat;430.0;7.6;62.1;23.9;16.8;5.6;4.1;0.43
+1413.0;Marque Repère;Biscuits Fourrés Fraise;443.0;6.5;55.8;39.7;24.1;8.4;3.6;0.34
+1414.0;Marque Repère;Pâtes Spaghetti;370.0;8.0;74.2;2.5;4.4;1.6;2.7;0.05
+1415.0;Marque Repère;Pizza 4 Fromages;213.0;11.5;23.5;3.7;9.2;7.4;2.8;1.42
+1416.0;Marque Repère;Biscuits Petit Beurre;121.0;3.9;13.8;8.6;3.9;4.1;0.0;0.16
+1417.0;Marque Repère;Biscuits Chocolat;474.0;5.3;57.3;32.0;23.3;8.2;3.5;0.49
+1418.0;Marque Repère;Biscuits Fourrés Fraise;458.0;6.0;64.6;20.5;21.9;8.0;5.0;0.37
+1419.0;Marque Repère;Pâtes Spaghetti;353.0;10.4;65.7;2.4;3.1;1.6;5.1;0.05
+1420.0;Marque Repère;Pizza 4 Fromages;270.0;8.5;29.8;5.0;10.9;5.0;1.9;1.16
+1421.0;Marque Repère;Biscuits Petit Beurre;72.0;4.0;10.0;9.4;10.0;4.5;0.0;0.19
+1422.0;Marque Repère;Biscuits Chocolat;492.0;7.5;57.7;39.6;18.2;7.9;4.5;0.36
+1423.0;Marque Repère;Biscuits Fourrés Fraise;445.0;6.8;57.7;20.4;21.1;7.3;3.0;0.2
+1424.0;Marque Repère;Pâtes Spaghetti;339.0;11.0;71.7;1.7;2.9;0.9;4.5;0.05
+1425.0;Marque Repère;Pizza 4 Fromages;287.0;13.4;24.7;6.0;9.7;3.4;1.7;1.18
+1426.0;Marque Repère;Biscuits Petit Beurre;110.0;4.6;11.8;11.3;6.0;3.9;0.0;0.13
+1427.0;Marque Repère;Biscuits Chocolat;420.0;6.7;60.7;23.1;20.8;9.9;3.6;0.22
+1428.0;Marque Repère;Biscuits Fourrés Fraise;429.0;7.2;63.8;38.5;17.0;9.4;2.4;0.5
+1429.0;Marque Repère;Pâtes Spaghetti;351.0;8.1;70.7;2.0;3.9;1.9;2.2;0.08
+1430.0;Marque Repère;Pizza 4 Fromages;285.0;9.9;24.1;6.6;12.4;3.1;1.5;0.75
+1431.0;Carrefour;Biscuits Petit Écolier;442.0;7.5;56.4;24.0;25.0;5.3;4.6;0.47
+1432.0;Carrefour;Corn Flakes;384.0;10.8;64.3;18.8;9.0;1.2;5.4;0.2
+1433.0;Carrefour;Pâtes Penne Rigate;363.0;8.0;74.5;2.4;3.2;1.8;5.8;0.03
+1434.0;Carrefour;Yaourt Fraise;91.0;4.6;16.0;7.2;3.3;6.1;0.0;0.1
+1435.0;Carrefour;Pizza Royale;204.0;13.1;17.4;7.7;11.5;6.3;1.9;1.34
+1436.0;Carrefour;Biscuits Petit Écolier;467.0;6.0;61.3;37.8;23.4;9.8;2.2;0.5
+1437.0;Carrefour;Corn Flakes;358.0;7.0;73.3;24.5;7.1;1.5;5.3;0.06
+1438.0;Carrefour;Pâtes Penne Rigate;336.0;10.1;74.5;1.4;4.9;0.7;5.4;0.08
+1439.0;Carrefour;Yaourt Fraise;138.0;5.8;19.9;12.0;10.1;2.8;0.0;0.13
+1440.0;Carrefour;Pizza Royale;215.0;9.0;24.6;7.1;14.9;6.8;1.6;0.79
+1441.0;Carrefour;Biscuits Petit Écolier;474.0;6.0;57.0;34.6;17.5;6.8;2.0;0.44
+1442.0;Carrefour;Corn Flakes;399.0;10.9;60.6;20.5;8.6;2.7;7.3;0.14
+1443.0;Carrefour;Pâtes Penne Rigate;337.0;8.8;67.5;1.1;3.2;0.7;3.7;0.06
+1444.0;Carrefour;Yaourt Fraise;157.0;3.1;11.0;12.5;4.5;7.1;0.0;0.11
+1445.0;Carrefour;Pizza Royale;288.0;14.9;25.8;6.4;12.2;5.7;1.9;0.67
+1446.0;Carrefour;Biscuits Petit Écolier;462.0;5.5;60.8;25.8;15.9;7.7;3.3;0.45
+1447.0;Carrefour;Corn Flakes;384.0;9.0;63.5;20.6;4.2;2.8;6.4;0.08
+1448.0;Carrefour;Pâtes Penne Rigate;345.0;11.7;70.8;2.1;3.5;0.9;2.0;0.05
+1449.0;Carrefour;Yaourt Fraise;94.0;4.0;16.1;12.7;11.8;2.2;0.0;0.15
+1450.0;Carrefour;Pizza Royale;266.0;14.6;18.8;6.4;9.0;3.6;2.8;1.1
+1451.0;Carrefour;Biscuits Petit Écolier;415.0;7.6;55.8;37.4;15.2;8.5;5.0;0.36
+1452.0;Carrefour;Corn Flakes;337.0;11.5;65.7;15.5;6.2;1.3;5.2;0.1
+1453.0;Carrefour;Pâtes Penne Rigate;330.0;10.5;66.9;2.8;4.6;1.8;5.1;0.06
+1454.0;Carrefour;Yaourt Fraise;84.0;3.5;9.7;8.4;8.9;4.5;0.0;0.14
+1455.0;Carrefour;Pizza Royale;223.0;14.4;16.2;4.3;8.2;3.4;2.6;1.29
+1456.0;Carrefour;Biscuits Petit Écolier;453.0;6.9;60.8;40.0;22.9;8.7;3.8;0.47
+1457.0;Carrefour;Corn Flakes;404.0;8.8;73.4;18.5;7.6;2.6;7.1;0.16
+1458.0;Carrefour;Pâtes Penne Rigate;342.0;7.3;69.9;2.3;3.2;1.4;3.8;0.08
+1459.0;Carrefour;Yaourt Fraise;143.0;5.8;15.4;11.6;7.3;7.2;0.0;0.17
+1460.0;Carrefour;Pizza Royale;289.0;13.0;29.7;7.0;12.4;4.7;2.1;1.41
+1461.0;Carrefour;Biscuits Petit Écolier;439.0;7.8;60.6;39.7;24.0;6.6;5.0;0.35
+1462.0;Carrefour;Corn Flakes;367.0;10.2;64.6;17.7;7.0;3.0;6.6;0.09
+1463.0;Carrefour;Pâtes Penne Rigate;336.0;9.4;73.9;2.8;4.0;1.5;3.2;0.05
+1464.0;Carrefour;Yaourt Fraise;114.0;3.8;19.2;13.1;6.6;5.9;0.0;0.13
+1465.0;Carrefour;Pizza Royale;184.0;13.8;19.9;5.5;14.6;5.5;2.6;1.38
+1466.0;Carrefour;Biscuits Petit Écolier;419.0;5.0;61.8;37.6;22.6;8.7;3.5;0.34
+1467.0;Carrefour;Corn Flakes;384.0;11.7;69.4;16.7;4.5;1.4;7.5;0.1
+1468.0;Carrefour;Pâtes Penne Rigate;367.0;7.3;69.1;1.8;1.8;0.9;4.0;0.08
+1469.0;Carrefour;Yaourt Fraise;78.0;5.5;17.3;13.7;4.5;6.5;0.0;0.11
+1470.0;Carrefour;Pizza Royale;274.0;11.0;16.0;5.6;11.1;4.4;1.8;1.36
+1471.0;Carrefour;Biscuits Petit Écolier;431.0;6.1;63.5;26.1;16.1;7.0;2.5;0.38
+1472.0;Carrefour;Corn Flakes;413.0;11.3;74.6;24.8;7.6;2.0;7.5;0.19
+1473.0;Carrefour;Pâtes Penne Rigate;365.0;8.8;68.2;2.2;1.1;2.0;2.4;0.06
+1474.0;Carrefour;Yaourt Fraise;106.0;3.8;13.0;7.2;4.8;6.9;0.0;0.06
+1475.0;Carrefour;Pizza Royale;278.0;11.6;27.2;6.0;10.2;5.5;1.5;1.23
+1476.0;Carrefour;Biscuits Petit Écolier;454.0;8.0;60.5;36.0;23.4;5.1;3.8;0.39
+1477.0;Carrefour;Corn Flakes;384.0;9.9;71.2;20.2;4.7;2.3;5.5;0.16
+1478.0;Carrefour;Pâtes Penne Rigate;362.0;10.4;67.9;1.7;2.4;0.6;2.7;0.02
+1479.0;Carrefour;Yaourt Fraise;81.0;6.0;16.6;8.3;3.3;2.9;0.0;0.06
+1480.0;Carrefour;Pizza Royale;223.0;13.8;20.1;4.7;8.4;6.4;1.2;0.85
+1481.0;Auchan;Biscuits Chocolat;417.0;6.4;57.8;20.1;23.6;9.5;2.7;0.26
+1482.0;Auchan;Muesli Fruits;349.0;10.4;72.5;17.5;6.1;1.8;6.8;0.12
+1483.0;Auchan;Riz Basmati;338.0;7.5;65.9;2.8;1.8;1.3;6.0;0.08
+1484.0;Auchan;Escalope Panée;314.0;19.1;9.3;1.1;17.8;9.8;0.0;2.19
+1485.0;Auchan;Compote Pomme;102.0;1.6;32.4;25.3;0.4;0.0;2.7;0.19
+1486.0;Auchan;Biscuits Chocolat;417.0;5.2;63.7;34.8;20.0;7.9;4.5;0.29
+1487.0;Auchan;Muesli Fruits;366.0;9.5;65.5;15.3;8.2;2.1;6.4;0.11
+1488.0;Auchan;Riz Basmati;365.0;9.4;74.1;2.5;2.4;0.9;5.5;0.09
+1489.0;Auchan;Escalope Panée;233.0;18.4;6.0;3.3;12.6;9.2;0.0;2.27
+1490.0;Auchan;Compote Pomme;61.0;1.6;39.2;13.1;0.4;0.0;2.1;0.12
+1491.0;Auchan;Biscuits Chocolat;431.0;7.7;61.8;32.5;19.7;6.5;4.7;0.36
+1492.0;Auchan;Muesli Fruits;360.0;9.1;71.2;18.6;6.6;1.4;7.3;0.07
+1493.0;Auchan;Riz Basmati;359.0;10.8;67.8;2.2;4.9;1.6;4.7;0.05
+1494.0;Auchan;Escalope Panée;318.0;18.9;6.6;1.8;15.2;7.5;0.0;2.38
+1495.0;Auchan;Compote Pomme;125.0;0.9;35.3;10.4;1.1;0.0;1.1;0.03
+1496.0;Auchan;Biscuits Chocolat;493.0;7.3;60.7;26.4;15.3;9.7;4.5;0.26
+1497.0;Auchan;Muesli Fruits;379.0;8.6;64.9;15.1;4.4;2.7;7.5;0.17
+1498.0;Auchan;Riz Basmati;337.0;8.6;74.9;1.1;1.6;1.0;4.2;0.04
+1499.0;Auchan;Escalope Panée;314.0;19.8;14.0;3.9;14.5;9.1;0.0;2.09
+1500.0;Auchan;Compote Pomme;81.0;0.7;27.1;16.3;0.9;0.0;2.3;0.1
+1501.0;Auchan;Biscuits Chocolat;473.0;6.3;56.2;22.0;20.2;6.2;2.1;0.46
+1502.0;Auchan;Muesli Fruits;386.0;11.1;68.4;17.7;8.6;2.9;6.6;0.13
+1503.0;Auchan;Riz Basmati;344.0;8.1;65.2;2.0;3.6;1.8;4.1;0.03
+1504.0;Auchan;Escalope Panée;289.0;15.1;9.4;3.1;15.7;5.3;0.0;1.87
+1505.0;Auchan;Compote Pomme;65.0;1.5;27.5;20.6;1.1;0.0;2.3;0.16
+1506.0;Auchan;Biscuits Chocolat;412.0;5.0;62.0;39.0;22.7;7.0;4.3;0.46
+1507.0;Auchan;Muesli Fruits;393.0;7.3;74.9;22.5;10.0;2.1;6.4;0.17
+1508.0;Auchan;Riz Basmati;352.0;9.0;67.8;2.4;2.2;1.7;2.4;0.08
+1509.0;Auchan;Escalope Panée;234.0;13.9;8.7;4.8;13.8;8.7;0.0;1.26
+1510.0;Auchan;Compote Pomme;143.0;0.1;22.6;15.4;0.6;0.0;2.0;0.05
+1511.0;Auchan;Biscuits Chocolat;407.0;6.5;62.6;24.9;21.3;6.9;4.8;0.3
+1512.0;Auchan;Muesli Fruits;367.0;9.1;69.2;21.9;6.0;2.5;5.6;0.12
+1513.0;Auchan;Riz Basmati;359.0;10.7;70.8;2.9;4.8;1.9;3.9;0.03
+1514.0;Auchan;Escalope Panée;247.0;17.4;8.6;4.2;18.3;8.0;0.0;2.16
+1515.0;Auchan;Compote Pomme;63.0;0.7;33.3;12.9;0.3;0.0;1.6;0.07
+1516.0;Auchan;Biscuits Chocolat;451.0;8.0;60.6;33.6;20.1;7.5;4.7;0.37
+1517.0;Auchan;Muesli Fruits;418.0;7.7;72.7;17.3;6.0;2.8;6.0;0.15
+1518.0;Auchan;Riz Basmati;365.0;11.0;74.1;1.0;1.9;0.6;3.5;0.09
+1519.0;Auchan;Escalope Panée;278.0;15.3;14.7;3.2;13.1;5.4;0.0;1.63
+1520.0;Auchan;Compote Pomme;138.0;1.7;35.7;26.4;1.8;0.0;1.7;0.13
+1521.0;Auchan;Biscuits Chocolat;461.0;6.3;58.9;37.6;21.3;9.8;3.3;0.36
+1522.0;Auchan;Muesli Fruits;376.0;11.8;68.6;20.2;7.3;2.5;6.1;0.09
+1523.0;Auchan;Riz Basmati;366.0;11.7;68.5;2.6;4.8;1.6;4.9;0.07
+1524.0;Auchan;Escalope Panée;316.0;19.5;5.9;3.8;15.7;8.2;0.0;1.36
+1525.0;Auchan;Compote Pomme;59.0;1.4;37.1;34.9;0.8;0.0;1.3;0.01
+1526.0;Auchan;Biscuits Chocolat;462.0;6.9;61.4;31.1;23.2;5.2;4.0;0.44
+1527.0;Auchan;Muesli Fruits;395.0;10.0;73.9;18.3;5.5;2.4;7.0;0.14
+1528.0;Auchan;Riz Basmati;338.0;7.5;67.0;1.7;2.3;1.8;3.7;0.06
+1529.0;Auchan;Escalope Panée;233.0;18.9;12.9;1.1;14.9;5.3;0.0;2.43
+1530.0;Auchan;Compote Pomme;120.0;0.8;19.6;26.3;0.3;0.0;2.2;0.16
+1531.0;Casino;Biscuits Fourrés Chocolat;473.0;7.2;56.9;31.9;20.4;8.0;2.5;0.49
+1532.0;Casino;Riz Long Grain;352.0;11.4;66.5;1.7;3.7;1.7;5.3;0.07
+1533.0;Casino;Yaourt Nature;136.0;4.1;10.6;6.3;10.4;7.4;0.0;0.16
+1534.0;Casino;Pizza Margherita;250.0;9.3;15.6;7.3;14.7;5.0;1.6;1.13
+1535.0;Casino;Chips Paprika;517.0;5.9;51.4;4.0;25.9;14.8;2.8;1.1
+1536.0;Casino;Biscuits Fourrés Chocolat;412.0;6.1;58.1;27.3;18.5;6.1;4.1;0.49
+1537.0;Casino;Riz Long Grain;353.0;7.5;67.3;2.9;1.4;0.6;2.8;0.05
+1538.0;Casino;Yaourt Nature;77.0;4.7;16.5;14.4;5.2;2.2;0.0;0.11
+1539.0;Casino;Pizza Margherita;230.0;14.4;18.2;7.4;10.5;3.9;1.7;1.45
+1540.0;Casino;Chips Paprika;518.0;6.1;53.2;4.8;27.5;10.8;3.4;1.93
+1541.0;Casino;Biscuits Fourrés Chocolat;461.0;6.0;63.0;21.4;19.0;8.1;4.6;0.27
+1542.0;Casino;Riz Long Grain;370.0;8.6;70.2;1.9;3.2;1.2;4.6;0.07
+1543.0;Casino;Yaourt Nature;132.0;3.4;6.4;12.8;4.9;7.5;0.0;0.19
+1544.0;Casino;Pizza Margherita;262.0;12.4;24.0;7.2;13.8;6.7;1.5;1.44
+1545.0;Casino;Chips Paprika;543.0;5.5;57.1;5.0;32.1;12.2;4.7;1.0
+1546.0;Casino;Biscuits Fourrés Chocolat;495.0;6.3;57.0;39.1;18.6;9.2;2.2;0.33
+1547.0;Casino;Riz Long Grain;345.0;11.5;74.7;1.0;2.3;1.2;3.2;0.02
+1548.0;Casino;Yaourt Nature;83.0;4.9;11.3;9.8;3.9;3.4;0.0;0.16
+1549.0;Casino;Pizza Margherita;218.0;9.2;24.3;6.2;11.6;7.4;1.4;1.2
+1550.0;Casino;Chips Paprika;526.0;7.8;58.5;4.1;25.8;12.0;2.4;1.09
+1551.0;Casino;Biscuits Fourrés Chocolat;474.0;5.0;61.0;37.6;19.6;9.6;3.2;0.3
+1552.0;Casino;Riz Long Grain;336.0;8.2;69.0;1.0;3.7;1.1;3.8;0.02
+1553.0;Casino;Yaourt Nature;111.0;4.3;13.0;6.1;9.6;3.5;0.0;0.05
+1554.0;Casino;Pizza Margherita;229.0;12.8;23.7;4.9;14.9;5.6;1.1;0.61
+1555.0;Casino;Chips Paprika;550.0;5.5;50.1;4.9;28.6;11.8;2.0;1.72
+1556.0;Casino;Biscuits Fourrés Chocolat;479.0;6.5;60.2;30.0;17.8;7.3;4.7;0.29
+1557.0;Casino;Riz Long Grain;369.0;7.1;72.4;1.7;1.8;1.5;5.6;0.07
+1558.0;Casino;Yaourt Nature;101.0;5.9;8.9;13.0;4.9;3.6;0.0;0.07
+1559.0;Casino;Pizza Margherita;245.0;14.6;23.5;3.4;12.7;5.4;1.7;0.64
+1560.0;Casino;Chips Paprika;511.0;7.2;50.7;2.6;31.7;10.0;4.9;1.66
+1561.0;Casino;Biscuits Fourrés Chocolat;488.0;5.0;60.6;25.4;24.9;6.9;2.9;0.26
+1562.0;Casino;Riz Long Grain;370.0;8.3;74.1;3.0;1.3;1.0;4.2;0.06
+1563.0;Casino;Yaourt Nature;120.0;5.0;11.3;7.2;3.4;6.6;0.0;0.12
+1564.0;Casino;Pizza Margherita;220.0;10.8;27.6;3.0;11.9;5.1;1.2;1.47
+1565.0;Casino;Chips Paprika;540.0;7.6;54.6;2.3;28.1;11.6;4.8;1.55
+1566.0;Casino;Biscuits Fourrés Chocolat;492.0;5.8;55.8;32.8;21.0;6.3;2.9;0.33
+1567.0;Casino;Riz Long Grain;355.0;10.3;66.6;1.5;3.5;0.4;5.8;0.06
+1568.0;Casino;Yaourt Nature;159.0;3.3;9.2;11.9;6.4;6.3;0.0;0.11
+1569.0;Casino;Pizza Margherita;268.0;8.6;20.6;7.0;9.7;4.2;2.0;0.85
+1570.0;Casino;Chips Paprika;531.0;7.1;53.0;4.6;33.9;12.9;3.1;1.54
+1571.0;Casino;Biscuits Fourrés Chocolat;495.0;5.5;56.6;29.7;17.1;5.2;2.2;0.35
+1572.0;Casino;Riz Long Grain;352.0;10.8;66.2;1.5;4.2;1.7;2.9;0.04
+1573.0;Casino;Yaourt Nature;86.0;5.4;18.4;11.7;4.4;5.2;0.0;0.09
+1574.0;Casino;Pizza Margherita;277.0;9.9;20.2;2.5;14.3;6.7;1.2;1.5
+1575.0;Casino;Chips Paprika;508.0;6.4;56.5;3.6;29.8;13.8;4.5;1.41
+1576.0;Casino;Biscuits Fourrés Chocolat;490.0;5.2;57.5;22.0;17.0;6.8;3.6;0.41
+1577.0;Casino;Riz Long Grain;354.0;10.1;74.8;2.7;3.9;0.8;6.0;0.03
+1578.0;Casino;Yaourt Nature;73.0;4.4;18.8;13.2;9.8;7.9;0.0;0.16
+1579.0;Casino;Pizza Margherita;276.0;9.2;16.2;5.8;14.1;3.7;2.1;0.92
+1580.0;Casino;Chips Paprika;501.0;6.7;55.9;1.8;32.6;13.8;3.4;1.64
+1581.0;Monoprix Bio;Muesli Bio Fruits;340.0;11.4;63.8;23.0;4.6;2.8;6.8;0.17
+1582.0;Monoprix Bio;Pâtes Complètes Bio;350.0;11.9;74.9;1.0;2.5;1.0;2.2;0.02
+1583.0;Monoprix Bio;Riz Complet Bio;341.0;7.1;68.4;1.7;3.0;1.9;2.8;0.06
+1584.0;Monoprix Bio;Compote Pomme Bio;171.0;1.5;17.2;23.0;1.7;0.0;1.6;0.11
+1585.0;Monoprix Bio;Pain Complet Bio;344.0;11.3;21.4;7.6;14.2;7.1;3.7;0.55
+1586.0;Monoprix Bio;Muesli Bio Fruits;386.0;7.4;60.9;15.9;5.8;2.7;5.6;0.14
+1587.0;Monoprix Bio;Pâtes Complètes Bio;339.0;9.0;67.9;2.5;3.9;1.9;3.3;0.06
+1588.0;Monoprix Bio;Riz Complet Bio;354.0;11.7;68.3;2.5;4.6;1.2;2.5;0.05
+1589.0;Monoprix Bio;Compote Pomme Bio;91.0;0.4;39.9;31.3;1.2;0.0;2.5;0.12
+1590.0;Monoprix Bio;Pain Complet Bio;400.0;11.9;23.4;14.6;6.6;2.1;1.1;0.28
+1591.0;Monoprix Bio;Muesli Bio Fruits;411.0;11.5;70.0;17.2;7.1;1.2;5.9;0.17
+1592.0;Monoprix Bio;Pâtes Complètes Bio;369.0;9.1;66.8;2.3;2.0;0.6;5.3;0.08
+1593.0;Monoprix Bio;Riz Complet Bio;331.0;8.0;67.9;2.9;3.3;0.5;2.4;0.01
+1594.0;Monoprix Bio;Compote Pomme Bio;111.0;0.2;30.9;32.3;0.5;0.0;2.5;0.06
+1595.0;Monoprix Bio;Pain Complet Bio;254.0;9.4;24.9;17.7;6.4;2.6;3.3;0.59
+1596.0;Monoprix Bio;Muesli Bio Fruits;414.0;11.5;61.9;22.7;9.0;1.2;6.5;0.11
+1597.0;Monoprix Bio;Pâtes Complètes Bio;367.0;10.1;72.1;2.5;1.2;1.1;5.1;0.08
+1598.0;Monoprix Bio;Riz Complet Bio;353.0;11.6;70.5;2.8;1.9;0.4;4.5;0.09
+1599.0;Monoprix Bio;Compote Pomme Bio;166.0;0.8;25.8;10.3;1.0;0.0;2.1;0.1
+1600.0;Monoprix Bio;Pain Complet Bio;392.0;7.8;50.3;14.8;15.9;6.4;1.3;0.55
+1601.0;Monoprix Bio;Muesli Bio Fruits;381.0;10.7;64.8;18.6;8.1;2.0;8.0;0.08
+1602.0;Monoprix Bio;Pâtes Complètes Bio;336.0;10.3;72.4;2.5;2.1;1.3;5.5;0.06
+1603.0;Monoprix Bio;Riz Complet Bio;353.0;8.0;71.4;1.2;4.2;1.9;5.5;0.03
+1604.0;Monoprix Bio;Compote Pomme Bio;129.0;0.9;27.6;27.5;0.0;0.0;2.4;0.11
+1605.0;Monoprix Bio;Pain Complet Bio;349.0;7.9;37.6;18.2;11.3;7.6;2.8;0.22
+1606.0;Monoprix Bio;Muesli Bio Fruits;368.0;9.9;72.6;24.3;10.0;1.7;5.2;0.19
+1607.0;Monoprix Bio;Pâtes Complètes Bio;358.0;8.7;65.9;1.5;4.3;1.1;4.7;0.03
+1608.0;Monoprix Bio;Riz Complet Bio;361.0;7.7;68.3;1.3;4.7;1.5;2.4;0.02
+1609.0;Monoprix Bio;Compote Pomme Bio;82.0;1.8;38.6;24.1;0.4;0.0;2.7;0.06
+1610.0;Monoprix Bio;Pain Complet Bio;269.0;7.5;39.9;13.6;15.2;6.4;1.6;0.33
+1611.0;Monoprix Bio;Muesli Bio Fruits;399.0;10.3;61.5;16.1;9.9;2.8;7.1;0.16
+1612.0;Monoprix Bio;Pâtes Complètes Bio;359.0;8.7;66.6;2.8;4.0;1.2;4.3;0.02
+1613.0;Monoprix Bio;Riz Complet Bio;367.0;8.3;68.4;1.9;3.7;0.8;4.9;0.07
+1614.0;Monoprix Bio;Compote Pomme Bio;133.0;0.8;28.2;12.5;0.8;0.0;1.9;0.02
+1615.0;Monoprix Bio;Pain Complet Bio;220.0;10.1;29.6;5.2;14.8;5.2;2.8;0.41
+1616.0;Monoprix Bio;Muesli Bio Fruits;395.0;11.5;61.5;17.9;5.1;2.3;5.8;0.07
+1617.0;Monoprix Bio;Pâtes Complètes Bio;349.0;9.4;68.2;1.0;1.5;1.0;5.6;0.09
+1618.0;Monoprix Bio;Riz Complet Bio;355.0;10.9;73.4;1.0;4.5;1.4;4.4;0.07
+1619.0;Monoprix Bio;Compote Pomme Bio;59.0;1.4;39.9;26.4;1.2;0.0;1.2;0.04
+1620.0;Monoprix Bio;Pain Complet Bio;316.0;8.5;25.5;15.2;14.1;6.8;1.1;0.31
+1621.0;Monoprix Bio;Muesli Bio Fruits;413.0;9.3;61.0;18.6;7.9;1.6;5.9;0.05
+1622.0;Monoprix Bio;Pâtes Complètes Bio;336.0;9.1;71.1;2.4;1.9;0.8;2.6;0.09
+1623.0;Monoprix Bio;Riz Complet Bio;350.0;10.6;65.9;2.0;4.7;0.8;3.0;0.03
+1624.0;Monoprix Bio;Compote Pomme Bio;88.0;1.7;34.2;12.9;0.9;0.0;1.7;0.15
+1625.0;Monoprix Bio;Pain Complet Bio;310.0;6.3;59.1;16.0;10.3;3.8;1.9;0.45
+1626.0;Monoprix Bio;Muesli Bio Fruits;405.0;8.7;62.6;18.5;6.2;1.1;6.4;0.17
+1627.0;Monoprix Bio;Pâtes Complètes Bio;355.0;11.3;66.3;1.8;3.8;2.0;3.7;0.03
+1628.0;Monoprix Bio;Riz Complet Bio;337.0;10.5;67.8;2.5;1.1;1.8;3.2;0.03
+1629.0;Monoprix Bio;Compote Pomme Bio;107.0;1.0;10.5;15.0;1.7;0.0;1.8;0.04
+1630.0;Monoprix Bio;Pain Complet Bio;206.0;11.1;57.6;15.8;16.5;2.0;1.5;0.4
+1631.0;Chabrior (Intermarché);Biscuits Petit Beurre;72.0;3.2;13.6;8.4;7.4;2.6;0.0;0.07
+1632.0;Chabrior (Intermarché);Cookies Chocolat;494.0;5.5;64.1;24.1;16.1;7.0;2.8;0.28
+1633.0;Chabrior (Intermarché);Prince Chocolat;488.0;6.0;64.6;30.0;23.4;8.1;2.2;0.43
+1634.0;Chabrior (Intermarché);Napolitain;403.0;7.7;60.0;25.3;18.9;5.0;2.5;0.34
+1635.0;Chabrior (Intermarché);Pain de Mie Nature;209.0;5.7;43.4;11.8;8.6;6.2;3.8;0.34
+1636.0;Chabrior (Intermarché);Biscuits Petit Beurre;127.0;5.9;18.5;9.9;5.9;6.7;0.0;0.19
+1637.0;Chabrior (Intermarché);Cookies Chocolat;424.0;5.6;64.6;37.3;22.8;8.4;4.7;0.38
+1638.0;Chabrior (Intermarché);Prince Chocolat;439.0;7.4;64.3;23.1;23.8;8.7;4.1;0.33
+1639.0;Chabrior (Intermarché);Napolitain;404.0;6.7;60.6;29.0;16.8;8.1;2.9;0.32
+1640.0;Chabrior (Intermarché);Pain de Mie Nature;289.0;7.1;41.0;18.3;11.8;4.4;1.5;0.34
+1641.0;Chabrior (Intermarché);Biscuits Petit Beurre;99.0;3.8;10.3;9.4;9.0;4.5;0.0;0.12
+1642.0;Chabrior (Intermarché);Cookies Chocolat;491.0;7.9;62.0;34.6;16.0;6.7;2.4;0.31
+1643.0;Chabrior (Intermarché);Prince Chocolat;426.0;6.9;59.1;36.0;15.4;7.9;3.4;0.31
+1644.0;Chabrior (Intermarché);Napolitain;475.0;6.6;55.4;20.3;15.0;9.6;2.9;0.32
+1645.0;Chabrior (Intermarché);Pain de Mie Nature;253.0;6.4;50.1;19.4;9.5;5.6;3.8;0.39
+1646.0;Chabrior (Intermarché);Biscuits Petit Beurre;97.0;3.6;19.5;7.5;3.9;4.0;0.0;0.06
+1647.0;Chabrior (Intermarché);Cookies Chocolat;487.0;5.2;58.4;23.4;24.1;8.5;3.6;0.39
+1648.0;Chabrior (Intermarché);Prince Chocolat;455.0;6.7;56.9;20.6;15.4;8.5;3.4;0.3
+1649.0;Chabrior (Intermarché);Napolitain;431.0;6.4;58.4;38.7;20.6;9.4;2.3;0.46
+1650.0;Chabrior (Intermarché);Pain de Mie Nature;265.0;6.8;51.0;5.9;19.1;2.4;2.9;0.57
+1651.0;Chabrior (Intermarché);Biscuits Petit Beurre;149.0;3.3;16.5;12.5;3.7;7.2;0.0;0.2
+1652.0;Chabrior (Intermarché);Cookies Chocolat;448.0;8.0;64.7;24.0;19.3;8.6;3.5;0.23
+1653.0;Chabrior (Intermarché);Prince Chocolat;443.0;6.5;64.6;27.7;16.5;5.1;3.5;0.48
+1654.0;Chabrior (Intermarché);Napolitain;493.0;7.2;56.0;37.8;21.7;7.6;2.8;0.25
+1655.0;Chabrior (Intermarché);Pain de Mie Nature;362.0;7.1;20.9;6.5;13.3;7.0;2.2;0.48
+1656.0;Chabrior (Intermarché);Biscuits Petit Beurre;78.0;5.7;10.8;7.2;8.5;6.5;0.0;0.19
+1657.0;Chabrior (Intermarché);Cookies Chocolat;401.0;7.4;63.4;25.6;17.8;6.4;2.1;0.32
+1658.0;Chabrior (Intermarché);Prince Chocolat;434.0;5.6;64.2;32.4;23.0;9.8;3.3;0.34
+1659.0;Chabrior (Intermarché);Napolitain;470.0;6.5;62.2;30.2;23.3;6.9;3.0;0.39
+1660.0;Chabrior (Intermarché);Pain de Mie Nature;378.0;10.2;46.8;6.4;17.6;4.7;2.5;0.29
+1661.0;Chabrior (Intermarché);Biscuits Petit Beurre;79.0;5.0;11.3;10.8;6.1;6.2;0.0;0.12
+1662.0;Chabrior (Intermarché);Cookies Chocolat;403.0;6.7;62.7;33.8;18.9;5.7;3.1;0.29
+1663.0;Chabrior (Intermarché);Prince Chocolat;479.0;5.2;57.5;34.8;17.9;9.9;5.0;0.44
+1664.0;Chabrior (Intermarché);Napolitain;402.0;5.9;56.8;26.7;21.4;5.2;4.8;0.21
+1665.0;Chabrior (Intermarché);Pain de Mie Nature;216.0;9.4;22.4;10.0;8.9;6.6;2.2;0.56
+1666.0;Chabrior (Intermarché);Biscuits Petit Beurre;145.0;4.0;17.4;13.9;4.7;7.9;0.0;0.1
+1667.0;Chabrior (Intermarché);Cookies Chocolat;409.0;7.6;55.3;29.1;21.6;6.2;2.4;0.4
+1668.0;Chabrior (Intermarché);Prince Chocolat;425.0;6.4;56.5;20.8;18.1;6.1;4.9;0.44
+1669.0;Chabrior (Intermarché);Napolitain;493.0;6.1;56.7;23.2;16.0;7.1;4.8;0.38
+1670.0;Chabrior (Intermarché);Pain de Mie Nature;231.0;10.5;36.2;9.3;18.2;7.8;1.3;0.34
+1671.0;Chabrior (Intermarché);Biscuits Petit Beurre;129.0;4.6;18.8;11.6;8.8;3.6;0.0;0.16
+1672.0;Chabrior (Intermarché);Cookies Chocolat;432.0;6.9;58.7;33.7;19.3;7.8;2.1;0.49
+1673.0;Chabrior (Intermarché);Prince Chocolat;438.0;7.0;56.9;36.5;16.3;7.7;2.8;0.38
+1674.0;Chabrior (Intermarché);Napolitain;402.0;7.2;59.7;24.5;17.3;8.2;2.1;0.21
+1675.0;Chabrior (Intermarché);Pain de Mie Nature;375.0;9.8;40.3;14.2;12.3;7.4;1.4;0.38
+1676.0;Chabrior (Intermarché);Biscuits Petit Beurre;75.0;6.0;18.5;10.0;3.4;7.9;0.0;0.13
+1677.0;Chabrior (Intermarché);Cookies Chocolat;479.0;6.7;56.9;30.1;23.5;6.4;2.8;0.38
+1678.0;Chabrior (Intermarché);Prince Chocolat;459.0;7.9;61.3;38.5;17.9;9.9;3.1;0.39
+1679.0;Chabrior (Intermarché);Napolitain;500.0;7.7;57.5;23.7;18.3;5.8;4.7;0.39
+1680.0;Chabrior (Intermarché);Pain de Mie Nature;238.0;11.7;24.1;5.7;8.7;6.8;2.4;0.37
+1681.0;Paquito (Intermarché);Jus Orange;100.0;1.6;18.3;28.6;0.6;0.0;1.3;0.06
+1682.0;Paquito (Intermarché);Jus Pomme;109.0;0.3;29.0;14.8;1.0;0.0;2.7;0.12
+1683.0;Paquito (Intermarché);Confiture Fraise;138.0;2.0;20.8;20.8;1.2;0.0;2.7;0.09
+1684.0;Paquito (Intermarché);Compote Pomme;179.0;0.8;14.1;33.4;0.7;0.0;1.1;0.03
+1685.0;Paquito (Intermarché);Smoothie Fraise Banane;174.0;0.6;14.6;21.1;0.3;0.0;2.4;0.12
+1686.0;Paquito (Intermarché);Jus Orange;132.0;1.8;12.3;21.0;1.0;0.0;2.6;0.06
+1687.0;Paquito (Intermarché);Jus Pomme;70.0;1.6;38.7;14.4;0.3;0.0;2.7;0.08
+1688.0;Paquito (Intermarché);Confiture Fraise;55.0;1.3;11.3;20.5;1.6;0.0;2.5;0.15
+1689.0;Paquito (Intermarché);Compote Pomme;75.0;0.3;34.9;33.4;1.5;0.0;2.8;0.18
+1690.0;Paquito (Intermarché);Smoothie Fraise Banane;70.0;0.3;13.1;22.7;1.4;0.0;2.9;0.09
+1691.0;Paquito (Intermarché);Jus Orange;112.0;1.3;34.8;21.2;1.2;0.0;1.1;0.06
+1692.0;Paquito (Intermarché);Jus Pomme;174.0;1.4;31.1;32.7;1.6;0.0;1.2;0.02
+1693.0;Paquito (Intermarché);Confiture Fraise;148.0;1.8;28.0;19.9;1.9;0.0;2.3;0.11
+1694.0;Paquito (Intermarché);Compote Pomme;117.0;0.9;37.8;24.1;0.1;0.0;2.5;0.11
+1695.0;Paquito (Intermarché);Smoothie Fraise Banane;117.0;0.8;32.5;20.9;0.7;0.0;1.2;0.14
+1696.0;Paquito (Intermarché);Jus Orange;78.0;1.3;21.6;31.3;0.9;0.0;2.8;0.11
+1697.0;Paquito (Intermarché);Jus Pomme;97.0;0.0;37.2;18.0;1.8;0.0;1.9;0.17
+1698.0;Paquito (Intermarché);Confiture Fraise;51.0;0.4;32.5;27.3;0.0;0.0;2.0;0.19
+1699.0;Paquito (Intermarché);Compote Pomme;85.0;1.6;21.5;24.8;0.5;0.0;2.3;0.08
+1700.0;Paquito (Intermarché);Smoothie Fraise Banane;158.0;1.3;20.2;18.9;1.5;0.0;2.8;0.09
+1701.0;Paquito (Intermarché);Jus Orange;159.0;0.3;19.8;28.3;0.2;0.0;2.3;0.06
+1702.0;Paquito (Intermarché);Jus Pomme;163.0;0.1;13.6;30.2;0.4;0.0;3.0;0.03
+1703.0;Paquito (Intermarché);Confiture Fraise;113.0;1.8;19.4;18.5;0.1;0.0;2.6;0.02
+1704.0;Paquito (Intermarché);Compote Pomme;64.0;1.7;13.7;28.5;1.5;0.0;2.9;0.05
+1705.0;Paquito (Intermarché);Smoothie Fraise Banane;93.0;0.4;13.1;20.9;0.1;0.0;1.5;0.04
+1706.0;Paquito (Intermarché);Jus Orange;67.0;0.4;33.4;29.0;0.2;0.0;1.7;0.04
+1707.0;Paquito (Intermarché);Jus Pomme;122.0;0.5;32.4;19.3;0.5;0.0;1.5;0.05
+1708.0;Paquito (Intermarché);Confiture Fraise;72.0;0.3;30.7;27.2;0.4;0.0;1.7;0.09
+1709.0;Paquito (Intermarché);Compote Pomme;151.0;1.8;17.6;19.5;0.7;0.0;2.5;0.19
+1710.0;Paquito (Intermarché);Smoothie Fraise Banane;172.0;0.8;29.0;16.1;0.6;0.0;1.6;0.15
+1711.0;Paquito (Intermarché);Jus Orange;157.0;1.2;25.2;34.7;1.1;0.0;1.2;0.03
+1712.0;Paquito (Intermarché);Jus Pomme;101.0;1.8;21.0;14.2;1.4;0.0;2.5;0.19
+1713.0;Paquito (Intermarché);Confiture Fraise;83.0;1.1;37.4;23.1;0.2;0.0;1.9;0.17
+1714.0;Paquito (Intermarché);Compote Pomme;71.0;0.9;30.8;27.6;1.7;0.0;2.6;0.08
+1715.0;Paquito (Intermarché);Smoothie Fraise Banane;148.0;1.9;11.1;32.0;0.1;0.0;2.3;0.03
+1716.0;Paquito (Intermarché);Jus Orange;89.0;0.8;33.3;14.9;0.4;0.0;1.6;0.1
+1717.0;Paquito (Intermarché);Jus Pomme;82.0;0.5;31.5;11.2;1.2;0.0;1.1;0.11
+1718.0;Paquito (Intermarché);Confiture Fraise;145.0;1.4;18.0;19.5;1.6;0.0;1.7;0.08
+1719.0;Paquito (Intermarché);Compote Pomme;154.0;0.7;13.9;17.6;1.4;0.0;2.2;0.03
+1720.0;Paquito (Intermarché);Smoothie Fraise Banane;135.0;0.9;25.7;12.3;0.2;0.0;2.7;0.09
+1721.0;Paquito (Intermarché);Jus Orange;139.0;0.7;19.1;22.2;0.9;0.0;2.4;0.1
+1722.0;Paquito (Intermarché);Jus Pomme;56.0;0.9;23.0;21.5;1.2;0.0;1.2;0.09
+1723.0;Paquito (Intermarché);Confiture Fraise;78.0;1.5;27.5;34.6;0.1;0.0;1.7;0.13
+1724.0;Paquito (Intermarché);Compote Pomme;118.0;1.2;20.6;27.4;1.6;0.0;1.3;0.04
+1725.0;Paquito (Intermarché);Smoothie Fraise Banane;85.0;1.9;35.4;13.2;1.5;0.0;1.2;0.05
+1726.0;Paquito (Intermarché);Jus Orange;112.0;1.7;12.1;16.1;0.2;0.0;1.9;0.18
+1727.0;Paquito (Intermarché);Jus Pomme;104.0;1.4;16.6;25.6;1.8;0.0;1.2;0.18
+1728.0;Paquito (Intermarché);Confiture Fraise;87.0;0.0;35.8;30.0;0.0;0.0;1.2;0.01
+1729.0;Paquito (Intermarché);Compote Pomme;180.0;1.7;31.8;25.1;0.2;0.0;2.6;0.09
+1730.0;Paquito (Intermarché);Smoothie Fraise Banane;110.0;0.1;32.5;30.3;1.4;0.0;1.9;0.1
+1731.0;Leader Price;Biscuits Petit Beurre;154.0;6.0;11.8;10.8;6.0;8.0;0.0;0.12
+1732.0;Leader Price;Céréales Choco Boules;357.0;10.8;72.8;15.5;7.8;1.1;6.7;0.1
+1733.0;Leader Price;Pâtes Spaghetti;366.0;8.6;67.0;1.8;4.7;0.4;4.5;0.07
+1734.0;Leader Price;Lasagnes Bolognaise;222.0;10.3;17.4;5.0;11.1;7.2;1.6;0.78
+1735.0;Leader Price;Chips Nature;487.0;7.8;57.4;2.5;29.3;10.3;3.3;1.62
+1736.0;Leader Price;Biscuits Petit Beurre;129.0;4.6;19.4;10.8;8.6;5.0;0.0;0.11
+1737.0;Leader Price;Céréales Choco Boules;337.0;10.6;64.1;18.0;4.6;1.0;7.3;0.06
+1738.0;Leader Price;Pâtes Spaghetti;341.0;9.2;66.2;1.0;4.6;1.2;2.9;0.08
+1739.0;Leader Price;Lasagnes Bolognaise;218.0;13.9;17.6;4.7;14.8;7.6;2.3;1.18
+1740.0;Leader Price;Chips Nature;543.0;7.2;50.4;3.7;25.7;13.0;4.2;1.33
+1741.0;Leader Price;Biscuits Petit Beurre;135.0;5.7;19.0;7.4;7.7;6.6;0.0;0.07
+1742.0;Leader Price;Céréales Choco Boules;344.0;11.6;73.9;16.0;9.0;1.3;6.7;0.06
+1743.0;Leader Price;Pâtes Spaghetti;355.0;10.3;72.8;1.9;3.8;0.5;2.3;0.07
+1744.0;Leader Price;Lasagnes Bolognaise;298.0;10.0;18.7;5.6;9.4;5.3;2.3;1.01
+1745.0;Leader Price;Chips Nature;490.0;6.3;51.6;1.4;34.5;13.8;4.3;1.29
+1746.0;Leader Price;Biscuits Petit Beurre;105.0;5.1;6.1;10.1;9.8;6.6;0.0;0.1
+1747.0;Leader Price;Céréales Choco Boules;378.0;9.3;73.8;17.7;8.7;2.4;5.9;0.09
+1748.0;Leader Price;Pâtes Spaghetti;356.0;10.0;65.8;1.5;3.2;1.4;5.5;0.09
+1749.0;Leader Price;Lasagnes Bolognaise;180.0;8.8;25.8;2.1;8.2;6.1;2.2;1.27
+1750.0;Leader Price;Chips Nature;497.0;6.4;57.5;4.8;25.9;12.9;5.0;1.24
+1751.0;Leader Price;Biscuits Petit Beurre;108.0;5.0;8.7;14.6;10.4;3.0;0.0;0.09
+1752.0;Leader Price;Céréales Choco Boules;331.0;10.3;67.2;21.4;5.9;1.5;5.3;0.08
+1753.0;Leader Price;Pâtes Spaghetti;333.0;7.3;69.3;2.5;3.2;0.4;5.7;0.01
+1754.0;Leader Price;Lasagnes Bolognaise;249.0;10.0;23.6;3.9;10.0;4.9;1.3;1.42
+1755.0;Leader Price;Chips Nature;487.0;7.8;57.4;1.2;25.8;14.2;5.4;1.78
+1756.0;Leader Price;Biscuits Petit Beurre;116.0;4.1;11.2;13.8;11.5;5.5;0.0;0.1
+1757.0;Leader Price;Céréales Choco Boules;349.0;9.7;64.5;17.7;4.2;1.0;6.3;0.08
+1758.0;Leader Price;Pâtes Spaghetti;351.0;11.8;66.0;2.5;1.3;1.4;3.3;0.1
+1759.0;Leader Price;Lasagnes Bolognaise;192.0;8.2;28.7;3.4;14.7;4.9;2.7;0.92
+1760.0;Leader Price;Chips Nature;530.0;5.7;50.5;4.9;27.4;14.2;4.4;1.77
+1761.0;Leader Price;Biscuits Petit Beurre;134.0;3.5;8.8;14.5;3.0;4.9;0.0;0.1
+1762.0;Leader Price;Céréales Choco Boules;341.0;7.1;66.6;23.1;5.1;2.1;7.0;0.11
+1763.0;Leader Price;Pâtes Spaghetti;330.0;8.3;65.5;1.5;3.7;1.7;3.0;0.03
+1764.0;Leader Price;Lasagnes Bolognaise;294.0;8.9;29.8;2.4;13.4;3.9;1.2;0.79
+1765.0;Leader Price;Chips Nature;521.0;5.1;56.2;3.0;29.3;13.5;5.2;1.66
+1766.0;Leader Price;Biscuits Petit Beurre;97.0;4.4;9.2;5.9;6.1;3.5;0.0;0.19
+1767.0;Leader Price;Céréales Choco Boules;371.0;10.1;71.0;18.0;8.6;1.7;7.3;0.12
+1768.0;Leader Price;Pâtes Spaghetti;356.0;11.0;73.1;2.9;1.8;1.1;3.4;0.04
+1769.0;Leader Price;Lasagnes Bolognaise;200.0;8.1;17.5;7.5;8.7;3.5;1.6;0.65
+1770.0;Leader Price;Chips Nature;540.0;5.7;51.4;1.1;27.7;13.5;5.6;1.92
+1771.0;Leader Price;Biscuits Petit Beurre;81.0;4.4;7.0;5.5;10.9;2.7;0.0;0.16
+1772.0;Leader Price;Céréales Choco Boules;339.0;7.5;60.0;19.0;9.8;1.4;6.1;0.16
+1773.0;Leader Price;Pâtes Spaghetti;347.0;7.7;72.7;2.9;3.0;0.6;3.3;0.03
+1774.0;Leader Price;Lasagnes Bolognaise;264.0;14.2;23.4;7.6;10.1;7.2;1.0;0.98
+1775.0;Leader Price;Chips Nature;517.0;7.9;56.0;3.0;31.2;12.6;4.7;1.85
+1776.0;Leader Price;Biscuits Petit Beurre;137.0;6.0;5.4;9.2;4.3;2.8;0.0;0.17
+1777.0;Leader Price;Céréales Choco Boules;357.0;8.6;62.3;18.7;6.6;2.5;7.7;0.19
+1778.0;Leader Price;Pâtes Spaghetti;339.0;10.8;70.3;1.3;2.2;1.8;2.7;0.05
+1779.0;Leader Price;Lasagnes Bolognaise;191.0;11.8;28.2;5.7;12.0;4.8;1.1;1.1
+1780.0;Leader Price;Chips Nature;545.0;6.4;51.4;4.0;32.0;14.4;4.9;1.36
+1781.0;U (Super U);Biscuits Petit Beurre;87.0;4.0;5.2;9.7;4.5;3.9;0.0;0.19
+1782.0;U (Super U);Corn Flakes;402.0;9.1;62.7;21.9;5.1;2.0;5.6;0.13
+1783.0;U (Super U);Riz Long Grain;341.0;8.3;68.8;1.7;1.5;1.4;3.6;0.09
+1784.0;U (Super U);Nuggets Poulet;317.0;14.4;12.2;2.9;12.3;8.6;0.0;1.79
+1785.0;U (Super U);Confiture Abricot;54.0;0.0;33.6;30.3;0.4;0.0;1.0;0.1
+1786.0;U (Super U);Biscuits Petit Beurre;121.0;4.4;8.2;9.0;9.1;2.2;0.0;0.08
+1787.0;U (Super U);Corn Flakes;392.0;7.6;69.9;23.6;6.5;2.2;6.9;0.18
+1788.0;U (Super U);Riz Long Grain;357.0;7.5;72.9;2.3;4.5;1.8;3.7;0.05
+1789.0;U (Super U);Nuggets Poulet;275.0;14.1;13.3;3.6;13.4;6.4;0.0;1.23
+1790.0;U (Super U);Confiture Abricot;79.0;2.0;32.0;19.0;1.6;0.0;2.1;0.13
+1791.0;U (Super U);Biscuits Petit Beurre;158.0;3.6;19.7;11.4;5.4;5.4;0.0;0.1
+1792.0;U (Super U);Corn Flakes;351.0;10.9;74.5;19.3;8.7;2.6;7.9;0.14
+1793.0;U (Super U);Riz Long Grain;369.0;9.7;69.2;2.8;1.4;1.2;5.2;0.06
+1794.0;U (Super U);Nuggets Poulet;304.0;18.2;10.6;3.5;14.4;5.6;0.0;1.5
+1795.0;U (Super U);Confiture Abricot;158.0;0.6;38.9;28.3;1.1;0.0;1.7;0.16
+1796.0;U (Super U);Biscuits Petit Beurre;124.0;3.2;14.1;6.7;7.3;3.9;0.0;0.15
+1797.0;U (Super U);Corn Flakes;402.0;7.6;69.6;16.9;9.9;1.7;8.0;0.13
+1798.0;U (Super U);Riz Long Grain;336.0;11.3;71.4;2.0;1.6;1.2;3.4;0.08
+1799.0;U (Super U);Nuggets Poulet;306.0;14.0;11.8;3.0;15.1;8.3;0.0;1.74
+1800.0;U (Super U);Confiture Abricot;107.0;0.3;37.8;18.4;1.5;0.0;1.0;0.16
+1801.0;U (Super U);Biscuits Petit Beurre;111.0;3.4;15.7;12.8;10.1;3.7;0.0;0.16
+1802.0;U (Super U);Corn Flakes;417.0;7.3;68.9;19.4;4.8;2.1;5.8;0.07
+1803.0;U (Super U);Riz Long Grain;357.0;7.8;69.5;2.4;2.4;1.7;3.5;0.08
+1804.0;U (Super U);Nuggets Poulet;278.0;19.5;12.6;2.8;14.0;5.9;0.0;2.05
+1805.0;U (Super U);Confiture Abricot;145.0;1.4;16.9;31.4;1.2;0.0;2.1;0.03
+1806.0;U (Super U);Biscuits Petit Beurre;149.0;3.3;7.3;13.2;10.2;7.2;0.0;0.13
+1807.0;U (Super U);Corn Flakes;343.0;8.2;68.8;22.4;7.2;1.6;5.4;0.18
+1808.0;U (Super U);Riz Long Grain;337.0;9.5;70.4;1.2;5.0;0.6;4.5;0.03
+1809.0;U (Super U);Nuggets Poulet;239.0;13.0;9.4;3.3;15.8;9.1;0.0;1.11
+1810.0;U (Super U);Confiture Abricot;156.0;0.5;26.6;21.0;0.3;0.0;2.4;0.11
+1811.0;U (Super U);Biscuits Petit Beurre;109.0;5.0;9.5;13.8;5.2;2.4;0.0;0.15
+1812.0;U (Super U);Corn Flakes;372.0;8.6;69.2;24.2;7.7;1.7;5.7;0.07
+1813.0;U (Super U);Riz Long Grain;368.0;9.8;71.9;2.4;1.5;0.3;2.3;0.09
+1814.0;U (Super U);Nuggets Poulet;232.0;16.6;8.0;1.3;15.8;6.1;0.0;2.25
+1815.0;U (Super U);Confiture Abricot;136.0;0.9;32.1;20.9;0.0;0.0;2.4;0.15
+1816.0;U (Super U);Biscuits Petit Beurre;126.0;3.3;10.8;14.4;7.0;7.8;0.0;0.13
+1817.0;U (Super U);Corn Flakes;335.0;11.3;73.7;21.2;8.7;1.8;5.4;0.19
+1818.0;U (Super U);Riz Long Grain;357.0;11.8;65.8;2.9;3.6;0.4;4.9;0.04
+1819.0;U (Super U);Nuggets Poulet;274.0;17.2;10.1;2.0;17.2;6.6;0.0;1.2
+1820.0;U (Super U);Confiture Abricot;124.0;0.9;16.8;19.1;0.7;0.0;1.3;0.09
+1821.0;U (Super U);Biscuits Petit Beurre;125.0;5.1;7.8;7.7;8.5;3.4;0.0;0.12
+1822.0;U (Super U);Corn Flakes;368.0;11.4;63.9;22.4;10.0;1.4;5.7;0.08
+1823.0;U (Super U);Riz Long Grain;331.0;7.3;69.8;2.8;3.7;1.8;2.1;0.08
+1824.0;U (Super U);Nuggets Poulet;259.0;14.5;12.9;4.3;19.0;6.3;0.0;1.48
+1825.0;U (Super U);Confiture Abricot;69.0;1.8;13.7;19.4;0.5;0.0;2.8;0.15
+1826.0;U (Super U);Biscuits Petit Beurre;80.0;5.2;13.2;8.8;3.1;5.8;0.0;0.1
+1827.0;U (Super U);Corn Flakes;408.0;8.7;68.7;21.0;9.4;1.5;5.2;0.09
+1828.0;U (Super U);Riz Long Grain;362.0;8.2;69.8;1.4;4.4;2.0;3.2;0.05
+1829.0;U (Super U);Nuggets Poulet;244.0;17.8;6.1;2.9;19.2;6.3;0.0;1.93
+1830.0;U (Super U);Confiture Abricot;119.0;1.5;25.4;29.0;0.7;0.0;2.1;0.13
+1831.0;Dia;Biscuits Chocolat;429.0;7.7;58.4;29.6;18.1;8.2;4.5;0.38
+1832.0;Dia;Muesli Fruits;414.0;8.0;70.5;17.0;5.1;2.4;7.4;0.05
+1833.0;Dia;Pâtes Fusilli;367.0;11.6;74.0;1.4;4.6;0.6;5.1;0.09
+1834.0;Dia;Yaourt Nature;120.0;5.0;19.2;14.0;5.5;3.2;0.0;0.16
+1835.0;Dia;Pizza Royale;215.0;13.7;17.6;4.1;9.4;3.1;1.6;0.81
+1836.0;Dia;Biscuits Chocolat;405.0;7.8;59.8;26.7;20.8;8.8;3.9;0.41
+1837.0;Dia;Muesli Fruits;361.0;11.5;64.9;17.8;9.8;2.9;6.5;0.07
+1838.0;Dia;Pâtes Fusilli;360.0;7.4;73.5;1.3;1.3;2.0;5.3;0.02
+1839.0;Dia;Yaourt Nature;103.0;4.5;8.9;13.3;9.0;4.4;0.0;0.18
+1840.0;Dia;Pizza Royale;252.0;13.4;17.5;4.7;14.0;4.7;1.7;1.32
+1841.0;Dia;Biscuits Chocolat;421.0;6.5;55.0;34.6;24.3;7.8;2.1;0.47
+1842.0;Dia;Muesli Fruits;385.0;7.8;71.7;23.7;4.8;2.8;5.7;0.05
+1843.0;Dia;Pâtes Fusilli;338.0;11.1;65.4;2.2;3.3;1.5;2.6;0.08
+1844.0;Dia;Yaourt Nature;116.0;3.5;7.7;10.9;10.3;6.2;0.0;0.07
+1845.0;Dia;Pizza Royale;184.0;9.0;16.0;5.9;14.9;4.9;1.8;0.83
+1846.0;Dia;Biscuits Chocolat;439.0;6.2;57.9;35.5;17.3;5.2;2.1;0.28
+1847.0;Dia;Muesli Fruits;330.0;11.2;70.6;18.6;8.0;1.2;6.1;0.12
+1848.0;Dia;Pâtes Fusilli;331.0;9.4;69.8;1.1;3.6;1.6;5.7;0.08
+1849.0;Dia;Yaourt Nature;106.0;4.1;11.0;8.4;3.1;2.4;0.0;0.09
+1850.0;Dia;Pizza Royale;278.0;11.8;16.7;5.7;9.0;7.7;2.5;1.31
+1851.0;Dia;Biscuits Chocolat;422.0;6.3;59.9;38.6;18.8;7.1;4.3;0.46
+1852.0;Dia;Muesli Fruits;374.0;7.4;70.9;21.7;7.8;2.7;6.3;0.05
+1853.0;Dia;Pâtes Fusilli;344.0;10.5;70.7;2.0;1.4;1.1;2.6;0.01
+1854.0;Dia;Yaourt Nature;157.0;4.6;8.4;14.4;9.4;5.1;0.0;0.19
+1855.0;Dia;Pizza Royale;250.0;12.7;23.5;3.2;9.6;4.8;2.6;0.61
+1856.0;Dia;Biscuits Chocolat;426.0;5.2;60.2;39.4;24.0;6.8;4.4;0.49
+1857.0;Dia;Muesli Fruits;369.0;11.5;69.8;21.6;5.0;2.7;6.5;0.11
+1858.0;Dia;Pâtes Fusilli;332.0;11.7;66.9;2.4;2.7;1.1;5.2;0.05
+1859.0;Dia;Yaourt Nature;105.0;5.0;6.9;9.6;7.5;4.9;0.0;0.06
+1860.0;Dia;Pizza Royale;225.0;12.0;27.1;4.6;8.0;5.9;2.1;1.42
+1861.0;Dia;Biscuits Chocolat;463.0;5.5;61.8;24.4;24.6;9.8;3.0;0.36
+1862.0;Dia;Muesli Fruits;400.0;11.0;61.7;20.3;7.3;2.5;6.3;0.15
+1863.0;Dia;Pâtes Fusilli;357.0;10.7;69.9;1.4;3.3;1.6;3.0;0.09
+1864.0;Dia;Yaourt Nature;89.0;3.6;15.0;7.1;8.2;7.9;0.0;0.05
+1865.0;Dia;Pizza Royale;213.0;12.3;19.6;7.8;8.3;6.3;2.0;1.33
+1866.0;Dia;Biscuits Chocolat;472.0;7.1;57.0;24.4;15.9;6.5;4.3;0.4
+1867.0;Dia;Muesli Fruits;362.0;7.9;67.6;22.2;4.3;1.8;5.5;0.12
+1868.0;Dia;Pâtes Fusilli;343.0;11.4;73.5;1.4;1.9;0.6;2.6;0.05
+1869.0;Dia;Yaourt Nature;100.0;3.2;18.4;14.0;6.5;7.5;0.0;0.07
+1870.0;Dia;Pizza Royale;210.0;12.6;18.7;3.2;10.4;3.2;1.4;0.79
+1871.0;Dia;Biscuits Chocolat;500.0;6.0;63.9;27.7;17.7;8.5;3.1;0.31
+1872.0;Dia;Muesli Fruits;372.0;7.7;64.5;24.1;9.1;2.3;6.1;0.07
+1873.0;Dia;Pâtes Fusilli;350.0;11.2;68.0;2.6;3.2;1.6;4.4;0.01
+1874.0;Dia;Yaourt Nature;149.0;4.5;11.7;6.2;4.8;5.0;0.0;0.08
+1875.0;Dia;Pizza Royale;241.0;13.8;25.8;2.6;11.5;3.1;1.7;1.37
+1876.0;Dia;Biscuits Chocolat;417.0;5.2;55.0;25.9;19.9;9.8;4.5;0.31
+1877.0;Dia;Muesli Fruits;378.0;9.2;63.8;22.7;7.1;2.7;7.0;0.08
+1878.0;Dia;Pâtes Fusilli;349.0;7.8;70.9;2.3;1.5;1.8;2.8;0.07
+1879.0;Dia;Yaourt Nature;92.0;5.7;14.6;14.9;10.5;6.3;0.0;0.12
+1880.0;Dia;Pizza Royale;217.0;13.9;21.1;6.7;10.4;7.3;2.0;1.4
