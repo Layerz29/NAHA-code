@@ -1,3 +1,12 @@
+<?php 
+session_start();
+if(!isset($_SESSION['utilisateur'])) {
+    header("Location: seconnecter.php");
+    exit;
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -15,27 +24,28 @@
 <body>
 
   <!-- Topbar -->
-  <header class="topbar">
-    <div class="container topbar__inner">
-      <a class="brand" href="#">
-        <span class="brand__logo">🍃</span>
-        <span class="brand__text">NAHA</span>
-      </a>
+<header class="topbar">
+  <div class="container topbar__inner">
+    <a class="brand" href="acceuil.php">
+      <span class="brand__logo">🍃</span>
+      <span class="brand__text">NAHA</span>
+    </a>
 
-      <nav class="menu">
-        <a class="pill is-active" href="#">Accueil</a>
-        <a class="pill" href="#dash">Tableau de bord</a>
-        <a class="pill" href="#calc">Calculateur</a>
-        <a class="pill" href="#projet">Le Projet</a>
-        <a class="pill" href="#conso">Consommation</a>
-      </nav>
+    <nav class="menu">
+      <a class="pill is-active" href="acceuil.php">Accueil</a>
+      <a class="pill" href="profil.php">Tableau de bord</a>
+      <a class="pill" href="calculateur.php">Calculateur</a>
+      <a class="pill" href="consommation.php">Consommation</a>
+      <a class="pill" href="activite.php">Activité</a>
+    </nav>
 
-      <div class="auth">
-        <a class="link" href="#login">Se connecter</a>
-        <a class="btn" href="#register">S’inscrire</a>
-      </div>
+    <div class="auth">
+      <span>Bonjour, <?php echo htmlspecialchars($_SESSION['utilisateur']['prenom']); ?>.</span>
+      <a class="btn" href="deconnexion.php">Déconnexion</a>
     </div>
-  </header>
+  </div>
+</header>
+
 
   <main>
     <!-- HERO -->

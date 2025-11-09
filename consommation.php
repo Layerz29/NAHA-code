@@ -11,7 +11,7 @@ if(!isset($_SESSION['utilisateur'])){
     header('location: seconnecter.php');
     exit;
 }
-$id_utilisateur = $_SESSION['utilisateur']['id_utilisateur'];
+$id_utilisateur = $_SESSION['utilisateur']['id'];
 
 if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['produit'], $_POST['quantite'], $_POST['date'])) {
     $produit = $_POST['produit'];
@@ -32,7 +32,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['produit'], $_POST['qua
 
 $produits = $bdd->query("SELECT * FROM produits ORDER BY nom_produit ASC")->fetchAll(PDO::FETCH_ASSOC);
 
-$sql = "SELECT c.id_conso, p.nom_produit AS produit, p.energie_kcal, c.quantite, c.date_conso 
+$sql = "SELECT p.nom_produit AS produit, p.energie_kcal, c.quantite, c.date_conso 
         FROM consommation c 
         JOIN produits p ON c.id_produit = p.id_produit 
         WHERE c.id_utilisateur = :id_utilisateur 
