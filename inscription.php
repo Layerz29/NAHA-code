@@ -1,58 +1,62 @@
-<?php 
-
+<?php
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
+require_once 'bdd.php';
 
-require_once('bdd.php');
+$bdd = getBD();
 
-    if(empty($_POST['n']) || empty($_POST['p']) || empty($_POST['adr']) || empty($_POST['num']) ||
-    empty($_POST['mail']) || ($_POST['pswrd1']!==$_POST['pswrd2'])){
-        
-        $url="sinscrire.php?n=". $_POST['n'] .
-                "&p=".$_POST['p'] .
-                "&adr=" . $_POST['adr'] .
-				"&num=" . $_POST['num'] .
-				"&mail=". $_POST['mail'];
-        
-        header("location:$url");
-        exit();
-    }
-    
+// Récup
+$nom    = trim($_POST['n']    ?? '');
+$prenom = trim($_POST['p']    ?? '');
+$adresse= trim($_POST['adr']  ?? '');
+$numero = trim($_POST['num']  ?? '');
+$mail   = trim($_POST['mail'] ?? '');
+$m1     = $_POST['pswrd1']    ?? '';
+$m2     = $_POST['pswrd2']    ?? '';
 
-?>
+$backUrl = 'sinscrire.php'
+         . '?n='   . urlencode($nom)
+         . '&p='   . urlencode($prenom)
+         . '&adr=' . urlencode($adresse)
+         . '&num=' . urlencode($numero)
+         . '&mail='. urlencode($mail);
 
-<?php 
-
-$bdd=getBD();
-
-$nom = $_POST['n'];
-$prenom = $_POST['p'];
-$adresse = $_POST['adr'];
-$numero = $_POST['num'];
-$mail = $_POST['mail'];
-$pswrd1 = $_POST['pswrd1'];
-
-$check=$bdd->prepare("SELECT mail FROM utilisateurs WHERE mail=?");
-$check->execute([$mail]);
-
-if($check ->rowCount()>0){
-    header("location:$url");
-    exit();
+// Validations
+if ($nom==='' || $prenom==='' || $mail==='' || $m1==='' || $m2==='') {
+  header("Location: $backUrl&err=" . urlencode('Champs manquants'));
+  exit;
+}
+if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
+  header("Location: $backUrl&err=" . urlencode('Email invalide'));
+  exit;
+}
+if ($m1 !== $m2) {
+  header("Location: $backUrl&err=" . urlencode('Mots de passe différents'));
+  exit;
 }
 
-$mdpHash = password_hash($pswrd1, PASSWORD_DEFAULT);
-$sql="INSERT INTO utilisateurs (nom, prenom, mail, adresse, numero, pswrd)
-        VALUES(:nom,:prenom,:mail,:adresse,:numero,:pswrd)";
-$stmt=$bdd->prepare($sql);
-$stmt->execute(['nom' => $nom,
-				'prenom' => $prenom,
-				'adresse' => $adresse,
-				'numero' => $numero,
-				'mail' => $mail,
-				'pswrd' => $mdpHash]);
+// Mail déjà utilisé ?
+$check = $bdd->prepare("SELECT 1 FROM utilisateurs WHERE mail = :mail LIMIT 1");
+$check->execute(['mail' => $mail]);
+if ($check->fetch()) {
+  header("Location: $backUrl&err=" . urlencode('Adresse mail déjà utilisée'));
+  exit;
+}
 
+// Insert
+$hash = password_hash($m1, PASSWORD_DEFAULT);
+$sql = "INSERT INTO utilisateurs (nom, prenom, adresse, numero, mail, pswrd)
+        VALUES (:nom, :prenom, :adresse, :numero, :mail, :pswrd)";
+$stmt = $bdd->prepare($sql);
+$stmt->execute([
+  'nom' => $nom,
+  'prenom' => $prenom,
+  'adresse' => $adresse,
+  'numero' => $numero,
+  'mail' => $mail,
+  'pswrd' => $hash
+]);
 
-
-header("location: seconnecter.php");
-exit();
-?>
+// Redirige vers la connexion
+header('Location: seconnecter.php');
+exit;

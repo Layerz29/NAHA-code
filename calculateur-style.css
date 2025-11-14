@@ -1,0 +1,311 @@
+/* ================================
+   Mise en page générale
+   ================================ */
+
+.calc-page {
+  min-height: calc(100vh - 72px); /* topbar */
+  padding: 3.5rem 1rem 4rem;
+  background: radial-gradient(circle at top, #eef2ff 0, #f9fafb 45%, #f3f4f6 100%);
+}
+
+.calc-hero .container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.calc-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: 2.75rem;
+  align-items: flex-start;
+}
+
+/* ================================
+   Cartes principales
+   ================================ */
+
+.card {
+  background: #ffffff;
+  border-radius: 1.9rem;
+  padding: 2.1rem 2.4rem;
+  box-shadow: 0 22px 50px rgba(15, 23, 42, 0.17);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 26px 60px rgba(15, 23, 42, 0.22);
+}
+
+.card.big h1 {
+  margin: 0 0 0.4rem;
+  font-size: clamp(2.1rem, 3vw, 2.6rem);
+}
+
+.card.big .sub {
+  margin: 0 0 1.6rem;
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+.card.side {
+  padding: 2rem 2.1rem;
+}
+
+.card.side h2 {
+  margin: 0 0 0.25rem;
+  font-size: 1.4rem;
+}
+
+.card.side > p {
+  margin: 0 0 1.1rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+/* ================================
+   Formulaire calcul maintenance
+   ================================ */
+
+.calc-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem 1.2rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.field label,
+.field span {
+  font-size: 0.85rem;
+  color: #4b5563;
+}
+
+.field input,
+.field select {
+  border-radius: 0.9rem;
+  border: 1px solid #e5e7eb;
+  padding: 0.55rem 0.9rem;
+  font-size: 0.9rem;
+  font-family: inherit;
+  outline: none;
+  background: #f9fafb;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.field input:focus,
+.field select:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 1px rgba(79, 70, 229, 0.25);
+  background: #ffffff;
+}
+
+/* ================================
+   Segmented control (sexe)
+   ================================ */
+
+.segmented {
+  display: inline-flex;
+  background: #111827;
+  border-radius: 999px;
+  padding: 0.15rem;
+}
+
+.segmented-btn {
+  border: none;
+  border-radius: 999px;
+  padding: 0.35rem 1.25rem;
+  background: transparent;
+  color: #e5e7eb;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s ease, color 0.15s ease, transform 0.1s ease;
+}
+
+.segmented-btn.is-active {
+  background: #22c55e;
+  color: #022c22;
+  transform: translateY(-1px);
+}
+
+/* ================================
+   Résultat maintenance
+   ================================ */
+
+.result-card {
+  margin-top: 1.7rem;
+  padding: 1.3rem 1.4rem 1.2rem;
+  border-radius: 1.35rem;
+  background: #eef2ff;
+  border: 1px solid rgba(79, 70, 229, 0.12);
+}
+
+.result-card h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+.res-main {
+  margin: 0 0 0.35rem;
+  font-weight: 600;
+  font-size: 0.98rem;
+}
+
+.res-main span {
+  font-size: 1.15rem;
+}
+
+.res-text {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ================================
+   Sous-cartes de droite (journal)
+   ================================ */
+
+.subcard {
+  margin-top: 1.4rem;
+  padding: 1.15rem 1.2rem 1rem;
+  border-radius: 1.2rem;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+}
+
+.subcard h3 {
+  margin: 0 0 0.6rem;
+  font-size: 1rem;
+}
+
+.subcard p {
+  margin: 0 0 0.6rem;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.mini {
+  margin: 0.1rem 0 0;
+  font-size: 0.88rem;
+  color: #4b5563;
+}
+
+/* ================================
+   Boutons & message de log
+   ================================ */
+
+.btn.big {
+  margin-top: 0.8rem;
+}
+
+.btn.full {
+  width: 100%;
+}
+
+.card.side .btn.full {
+  margin-top: 1.2rem;
+}
+
+.log-msg {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  min-height: 1.2em;
+}
+
+/* ================================
+   Auth / topbar (complément)
+   ================================ */
+
+.auth {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.auth-user {
+  color: #e5e7eb;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.auth-tag {
+  padding: 0.12rem 0.6rem;
+  border-radius: 999px;
+  background: #16a34a;
+  color: #ecfdf5;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.btn-ghost,
+.btn-ghost:visited,
+.btn-ghost:active {
+  background: transparent;
+  border: 1px solid #e5e7eb;
+  color: #e5e7eb !important;
+  font-size: 0.85rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  text-decoration: none !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-ghost:hover {
+  background: #f9fafb;
+  color: #111827 !important;
+}
+
+/* ================================
+   Footer
+   ================================ */
+
+.footer {
+  margin-top: 0;
+}
+
+/* ================================
+   Responsive
+   ================================ */
+
+@media (max-width: 960px) {
+  .calc-page {
+    padding-top: 2.5rem;
+  }
+
+  .calc-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+  }
+
+  .card {
+    padding: 1.7rem 1.6rem 1.9rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 16px 38px rgba(15, 23, 42, 0.12);
+  }
+}
+
+@media (max-width: 640px) {
+  .form-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .card.big h1 {
+    font-size: 1.9rem;
+  }
+}

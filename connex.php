@@ -1,41 +1,53 @@
-<?php 
-
+<?php
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 session_start();
 require_once('bdd.php');
 $bdd = getBD();
-$mail=$_POST['mail'] ?? '';
-$pswrd=$_POST['pswrd'] ?? '';
 
-if(empty($_POST['mail']) || empty($_POST['pswrd'])){
-    header("Location: seconnecter.php?erreur=champs_vides&mail=".$mail);
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    header('Location: seconnecter.php');
     exit;
 }
 
-$sql="SELECT * FROM utilisateurs WHERE mail=:mail";
-$stmt=$bdd->prepare($sql);
-$stmt->execute(['mail'=> $mail]);
-$utilisateur=$stmt->fetch(PDO::FETCH_ASSOC);
+$mail  = trim($_POST['mail'] ?? '');
+$pswrd = $_POST['pswrd'] ?? '';
 
-if(!$utilisateur){
-    header('location:seconnecter.php?erreur=mail_invalide');
-    exit;
-}  
-if (!password_verify($pswrd, $utilisateur['pswrd'])) {
-    echo "Mot de passe incorrect.";
+if ($mail === '' || $pswrd === '') {
+    header('Location: seconnecter.php?err=' . urlencode('Email ou mot de passe manquant.') . '&mail=' . urlencode($mail));
     exit;
 }
 
-$_SESSION['utilisateur']=[
-    'id'=>$utilisateur['id_utilisateur'],
-    'mail'=>$utilisateur['mail'] ,
-    'nom'=>$utilisateur['nom'],
-    'prenom'=>$utilisateur['prenom'] 
-    ];
+$stmt = $bdd->prepare("SELECT id_utilisateur, nom, prenom, mail, pswrd FROM utilisateurs WHERE mail = :mail LIMIT 1");
+$stmt->execute(['mail' => $mail]);
+$user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-header('location:acceuil.php');
+if (!$user) {
+    header('Location: seconnecter.php?err=' . urlencode('Compte introuvable.') . '&mail=' . urlencode($mail));
+    exit;
+}
+
+// Si le mot de passe en base est hashé (bcrypt)
+if (preg_match('/^\$2y\$/', $user['pswrd'])) {
+    $ok = password_verify($pswrd, $user['pswrd']);
+} else {
+    // ⚠️ fallback si tu as (temporairement) des mots de passe en clair
+    $ok = hash_equals($user['pswrd'], $pswrd);
+}
+
+if (!$ok) {
+    header('Location: seconnecter.php?err=' . urlencode('Mot de passe incorrect.') . '&mail=' . urlencode($mail));
+    exit;
+}
+
+// Login OK
+$_SESSION['utilisateur'] = [
+    'id_utilisateur' => (int)$user['id_utilisateur'],
+    'nom' => $user['nom'],
+    'prenom' => $user['prenom'],
+    'mail' => $user['mail'],
+];
+
+header('Location: accueil.php');
 exit;
-
-?>

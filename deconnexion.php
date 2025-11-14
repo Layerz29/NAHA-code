@@ -1,9 +1,6 @@
-<?php 
+<?php
 session_start();
-session_unset();
+$_SESSION = [];
 session_destroy();
-
-header("location: seconnecter.php");
+header('Location: seconnecter.php');
 exit;
-
-?>

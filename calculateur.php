@@ -118,7 +118,7 @@ if (!isset($_SESSION['utilisateur'])) {
       <a class="pill" href="accueil.php">Accueil</a>
       <a class="pill" href="tableau.php">Tableau de bord</a>
       <a class="pill is-active" href="calculateur.php">Calculateur</a>
-      <a class="pill" href="#projet">Le Projet</a>
+      <a class="pill" href="projet.php">Le Projet</a>
       <a class="pill" href="consommation.php">Consommation</a>
     </nav>
 

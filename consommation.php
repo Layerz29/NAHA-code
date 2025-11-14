@@ -1,3 +1,8 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+?>
 
 
 <?php
@@ -11,14 +16,14 @@ if(!isset($_SESSION['utilisateur'])){
     header('location: seconnecter.php');
     exit;
 }
-$id_utilisateur = $_SESSION['utilisateur']['id'];
+$id_utilisateur = $_SESSION['utilisateur']['id_utilisateur'];
 
 if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['produit'], $_POST['quantite'], $_POST['date'])) {
     $produit = $_POST['produit'];
     $quantite = (float)$_POST['quantite'];
     $date = $_POST['date'];
-    
-    $sql = "INSERT INTO consommation (id_utilisateur, id_produit, quantite, date_conso) 
+
+    $sql = "INSERT INTO consommation (id_utilisateur, id_produit, quantite, date_conso)
             VALUES (:id_utilisateur, :id_produit, :quantite, :date_conso)";
 
     $stmt = $bdd->prepare($sql);
@@ -32,10 +37,10 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['produit'], $_POST['qua
 
 $produits = $bdd->query("SELECT * FROM produits ORDER BY nom_produit ASC")->fetchAll(PDO::FETCH_ASSOC);
 
-$sql = "SELECT p.nom_produit AS produit, p.energie_kcal, c.quantite, c.date_conso 
-        FROM consommation c 
-        JOIN produits p ON c.id_produit = p.id_produit 
-        WHERE c.id_utilisateur = :id_utilisateur 
+$sql = "SELECT c.id_conso, p.nom_produit AS produit, p.energie_kcal, c.quantite, c.date_conso
+        FROM consommation c
+        JOIN produits p ON c.id_produit = p.id_produit
+        WHERE c.id_utilisateur = :id_utilisateur
         ORDER BY c.date_conso DESC
         LIMIT 10";
 $stmt = $bdd->prepare($sql);
@@ -111,4 +116,3 @@ $consommations = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </div>
 </body>
 </html>
-                
