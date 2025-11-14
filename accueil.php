@@ -1,4 +1,4 @@
-<?php
+<?php<?php
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
@@ -39,14 +39,17 @@ if (session_status() === PHP_SESSION_NONE) {
 <div class="auth">
   <?php if (isset($_SESSION['utilisateur'])): ?>
     <span class="auth-user">
-      👤 <?= htmlspecialchars($_SESSION['utilisateur']['prenom'].' '.$_SESSION['utilisateur']['nom']) ?>
+      👤 <?= htmlspecialchars($_SESSION['utilisateur']['prenom'].' '.$_SESSION['utilisateur']['nom'], ENT_QUOTES, 'UTF-8') ?>
       <span class="auth-tag">Connecté</span>
     </span>
     <a class="btn-ghost" href="deconnexion.php">Déconnexion</a>
   <?php else: ?>
-    ...
+    <a class="link <?= basename($_SERVER['PHP_SELF']) === 'seconnecter.php' ? 'is-active' : '' ?>"
+       href="seconnecter.php">Se connecter</a>
+    <a class="btn" href="sinscrire.php">S’inscrire</a>
   <?php endif; ?>
 </div>
+
 
 
 
@@ -60,10 +63,16 @@ if (session_status() === PHP_SESSION_NONE) {
       <h1 class="hero__title">NAHA</h1>
       <p class="hero__quote">“Les grands accomplissements sont réussis non par la force, mais par la persévérance.”<br><span>Samuel Johnson</span></p>
 
-      <div class="hero__cta">
-        <a class="btn big" href="sinscrire.php">Commencer</a>
-        <a class="btn ghost" href="#features">Découvrir</a>
-      </div>
+     <div class="hero__cta">
+       <?php if (isset($_SESSION['utilisateur'])): ?>
+         <a class="btn big" href="tableau.php">Accéder au tableau de bord</a>
+         <a class="btn ghost" href="#features">Découvrir</a>
+       <?php else: ?>
+         <a class="btn big" href="sinscrire.php">Commencer</a>
+         <a class="btn ghost" href="seconnecter.php">Se connecter</a>
+       <?php endif; ?>
+     </div>
+
     </div>
     <div class="scroll-progress"></div>
   </section>
@@ -225,3 +234,5 @@ if (session_status() === PHP_SESSION_NONE) {
 <script src="accueil-script.js"></script>
 </body>
 </html>
+
+
