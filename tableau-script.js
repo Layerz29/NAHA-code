@@ -142,46 +142,49 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 function donutMacros(canvas) {
-  // valeurs brutes venant du PHP (grammes)
   const p = macros.prot || 0;
   const g = macros.glu  || 0;
   const l = macros.lip  || 0;
-
-  const total = (p + g + l) || 1; // évite division par 0
-
-  const data = [
-    (p / total) * 100,
-    (g / total) * 100,
-    (l / total) * 100
-  ];
 
   new Chart(canvas.getContext('2d'), {
     type: 'doughnut',
     data: {
       labels: ['Protéines', 'Glucides', 'Lipides'],
       datasets: [{
-        data,
+        data: [p, g, l], // ⚠️ ON UTILISE LES GRAMMES DIRECTS
         backgroundColor: [prot, glu, lip],
         borderWidth: 0,
         hoverOffset: 4,
-        cutout: '65%'
+        cutout: '60%' // donut propre
       }]
     },
     options: {
       plugins: {
         legend: { display: false },
+
+        // 🔥 Affichage des grammes directement dans le donut
+        datalabels: {
+          color: "#111",
+          font: { weight: "700", size: 12 },
+          formatter: (val) => `${val.toFixed(0)} g`
+        },
+
+        // Tooltip = grammes + pourcentage
         tooltip: {
           callbacks: {
             label: (ctx) => {
-              const val = ctx.parsed;
-              return `${ctx.label} : ${val.toFixed(1)} %`;
+              const total = p + g + l || 1;
+              const pct = (ctx.raw * 100 / total).toFixed(1);
+              return `${ctx.label} : ${ctx.raw.toFixed(0)} g (${pct}%)`;
             }
           }
         }
       }
-    }
+    },
+    plugins: [ChartDataLabels]
   });
 }
+
 
 
   function lineCardio(canvas) {

@@ -25,55 +25,70 @@ try {
     $weekOut     = [];
     $weekCardio  = [];
 
-    // on remonte du J-6 à aujourd'hui
-    for ($i = 6; $i >= 0; $i--) {
-        $d = new DateTime("-$i days");
-        $dateStr = $d->format('Y-m-d');
+        // on remonte du J-6 à aujourd'hui
+        for ($i = 6; $i >= 0; $i--) {
+            $d = new DateTime("-$i days");
+            $dateStr = $d->format('Y-m-d');
 
-        // lettre du jour en FR
-        $jours = [1=>'L','M','M','J','V','S','D'];
-        $label = $jours[(int)$d->format('N')];
+            // lettre du jour en FR
+            $jours = [1=>'L','M','M','J','V','S','D'];
+            $label = $jours[(int)$d->format('N')];
 
-        // calories ingérées ce jour-là
-        $sqlInDay = "
-            SELECT SUM(p.energie_kcal * c.quantite / 100) AS kcal_in
-            FROM consommation c
-            JOIN produits p ON p.id_produit = c.id_produit
-            WHERE c.id_utilisateur = :u
-              AND DATE(c.date_conso) = :d
-        ";
-        $stmtInDay = $bdd->prepare($sqlInDay);
-        $stmtInDay->execute(['u' => $idUser, 'd' => $dateStr]);
-        $kIn = (int)($stmtInDay->fetchColumn() ?: 0);
+            // calories ingérées ce jour-là
+            $sqlInDay = "
+                SELECT SUM(p.energie_kcal * c.quantite / 100) AS kcal_in
+                FROM consommation c
+                JOIN produits p ON p.id_produit = c.id_produit
+                WHERE c.id_utilisateur = :u
+                  AND DATE(c.date_conso) = :d
+            ";
+            $stmtInDay = $bdd->prepare($sqlInDay);
+            $stmtInDay->execute(['u' => $idUser, 'd' => $dateStr]);
+            $kIn = (int)($stmtInDay->fetchColumn() ?: 0);
 
-        // calories dépensées ce jour-là
-        $sqlOutDay = "
-            SELECT SUM(s.kcal_h_70kg * (a.duree_minutes / 60)) AS kcal_out
-            FROM activite a
-            JOIN sports s ON s.id_sport = a.id_sport
-            WHERE a.id_utilisateur = :u
-              AND DATE(a.date_sport) = :d
-        ";
-        $stmtOutDay = $bdd->prepare($sqlOutDay);
-        $stmtOutDay->execute(['u' => $idUser, 'd' => $dateStr]);
-        $kOut = (int)($stmtOutDay->fetchColumn() ?: 0);
+            // calories dépensées ce jour-là
+            $sqlOutDay = "
+                SELECT SUM(s.kcal_h_70kg * (a.duree_minutes / 60)) AS kcal_out
+                FROM activite a
+                JOIN sports s ON s.id_sport = a.id_sport
+                WHERE a.id_utilisateur = :u
+                  AND DATE(a.date_sport) = :d
+            ";
+            $stmtOutDay = $bdd->prepare($sqlOutDay);
+            $stmtOutDay->execute(['u' => $idUser, 'd' => $dateStr]);
+            $kOut = (int)($stmtOutDay->fetchColumn() ?: 0);
 
-        // minutes de sport dans la journée (pour la courbe cardio)
-        $sqlCardioDay = "
-            SELECT SUM(a.duree_minutes) AS minutes
-            FROM activite a
-            WHERE a.id_utilisateur = :u
-              AND DATE(a.date_sport) = :d
-        ";
-        $stmtCardioDay = $bdd->prepare($sqlCardioDay);
-        $stmtCardioDay->execute(['u' => $idUser, 'd' => $dateStr]);
-        $mCardio = (int)($stmtCardioDay->fetchColumn() ?: 0);
+            // minutes de sport dans la journée
+            $sqlCardioDay = "
+                SELECT SUM(a.duree_minutes) AS minutes
+                FROM activite a
+                WHERE a.id_utilisateur = :u
+                  AND DATE(a.date_sport) = :d
+            ";
+            $stmtCardioDay = $bdd->prepare($sqlCardioDay);
+            $stmtCardioDay->execute(['u' => $idUser, 'd' => $dateStr]);
+            $mCardio = (int)($stmtCardioDay->fetchColumn() ?: 0);
 
-        $weekLabels[] = $label;
-        $weekIn[]     = $kIn;
-        $weekOut[]    = $kOut;
-        $weekCardio[] = $mCardio;
-    }
+            $weekLabels[] = $label;
+            $weekIn[]     = $kIn;
+            $weekOut[]    = $kOut;
+            $weekCardio[] = $mCardio;
+        }
+
+        /* === Bilan de la semaine === */
+        $totalIn      = array_sum($weekIn);
+        $totalOut     = array_sum($weekOut);
+        $soldeSem     = $totalIn - $totalOut;
+        $totalMinutes = array_sum($weekCardio);
+
+        $moyenneJour = $totalIn > 0 ? round($totalIn / 7) : 0;
+        $nbSeances   = 0;
+
+        foreach ($weekCardio as $min) {
+            if ($min > 0) {
+                $nbSeances++;
+            }
+        }
 
 
     /* === Objectif calorique de l'utilisateur === */
@@ -248,120 +263,212 @@ try {
 
     <div class="scroll-progress"></div>
   </section>
+<!-- GRID CHARTS -->
+<section class="dash-grid">
+  <div class="container grid">
 
-  <!-- GRID CHARTS -->
-  <section class="dash-grid">
-    <div class="container grid">
-           <?php if (!empty($goal)): ?>
-             <div class="card goal-card" data-animate="fade-up">
-               <div class="goal-row">
-                 <div class="goal-left">
-                   <p class="goal-label">Mon objectif calorique</p>
-                   <h3 class="goal-type">
-                     <?= htmlspecialchars($goal['objectif_nom']) ?>
-                   </h3>
-                   <p class="goal-text">
-                     Maintenance estimée :
-                     <strong><?= (int)$goal['maintenance'] ?> kcal / jour</strong>
-                   </p>
-                   <p class="goal-text">
-                     Dernière mise à jour :
-                     <?= (new DateTime($goal['date_maj']))->format('d/m/Y') ?>
-                   </p>
-                 </div>
-
-                 <div class="goal-right">
-                   <span class="goal-number"><?= (int)$goal['objectif_kcal'] ?></span>
-                   <span class="goal-unit">kcal / jour</span>
-                   <a href="calculateur.php" class="goal-link">Modifier dans le calculateur →</a>
-                 </div>
-               </div>
-             </div>
-           <?php endif; ?>
-
-
-
-      <!-- Bar chart -->
-      <div class="card" data-animate="fade-up">
-        <div class="card__head">
-          <h3>Calories / semaine</h3>
-          <span class="badge">Derniers 7 jours</span>
-        </div>
-        <div class="card__body">
-          <canvas data-chart="bars-week" height="220"></canvas>
-        </div>
-      </div>
-
-      <!-- Donut macros -->
-      <div class="card" data-animate="fade-up">
-        <div class="card__head">
-          <h3>Répartition macros</h3>
-          <span class="badge">Jour</span>
-        </div>
-        <div class="card__body donut-wrap">
-          <canvas data-chart="donut-macros" height="220"></canvas>
-          <ul class="legend">
-            <li><span class="dot dot--prot"></span> Protéines</li>
-            <li><span class="dot dot--glu"></span> Glucides</li>
-            <li><span class="dot dot--lip"></span> Lipides</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Line activités -->
-      <div class="card" data-animate="fade-up">
-        <div class="card__head">
-          <h3>Activité cardio (min)</h3>
-          <span class="badge">Semaine</span>
-        </div>
-        <div class="card__body">
-          <canvas data-chart="line-cardio" height="220"></canvas>
-        </div>
-      </div>
-
-      <!-- Liste récente -->
-      <div class="card" data-animate="fade-up">
-        <div class="card__head">
-          <h3>Dernières activités</h3>
-          <span class="badge">Auto</span>
+    <?php if (!empty($goal)): ?>
+    <div class="card goal-card" data-animate="fade-up">
+      <div class="goal-row">
+        <div class="goal-left">
+          <p class="goal-label">Mon objectif calorique</p>
+          <h3 class="goal-type">
+            <?= htmlspecialchars($goal['objectif_nom']) ?>
+          </h3>
+          <p class="goal-text">
+            Maintenance estimée :
+            <strong><?= (int)$goal['maintenance'] ?> kcal / jour</strong>
+          </p>
+          <p class="goal-text">
+            Dernière mise à jour :
+            <?= (new DateTime($goal['date_maj']))->format('d/m/Y') ?>
+          </p>
         </div>
 
-        <ul class="list">
-          <?php if (empty($lastActs)): ?>
-            <li>
-              <div class="list__left">
-                <span class="list__icon">ℹ️</span>
-                <div>
-                  <div class="list__title">Aucune activité enregistrée</div>
-                  <div class="list__sub">Utilise le calculateur pour ajouter un sport ✨</div>
-                </div>
-              </div>
-            </li>
-          <?php else: ?>
-            <?php foreach ($lastActs as $act): ?>
-              <li>
-                <div class="list__left">
-                  <span class="list__icon">🏃‍♂️</span>
-                  <div>
-                    <div class="list__title">
-                      <?= htmlspecialchars($act['nom_sport'], ENT_QUOTES, 'UTF-8') ?>
-                    </div>
-                    <div class="list__sub">
-                      <?= (int)$act['duree_min'] ?> min •
-                      <?= (int)round($act['kcal']) ?> kcal
-                    </div>
-                  </div>
-                </div>
-                <time>
-                  <?= date('d/m H:i', strtotime($act['date_sport'])) ?>
-                </time>
-              </li>
-            <?php endforeach; ?>
-          <?php endif; ?>
-        </ul>
+        <div class="goal-right">
+          <span class="goal-number"><?= (int)$goal['objectif_kcal'] ?></span>
+          <span class="goal-unit">kcal / jour</span>
+          <a href="calculateur.php" class="goal-link">Modifier dans le calculateur →</a>
+        </div>
       </div>
     </div>
-  </section>
+    <?php endif; ?>
+<!-- 🎯 CARD 2 — OBJECTIF DU JOUR -->
+<?php if (!empty($goal)):
+    $objectif = (int)$goal['objectif_kcal'];
+    $progress = min(200, max(0, round(($kcalIn / $objectif) * 100)));
+?>
+<div class="card" data-animate="fade-up">
+    <div class="card__head">
+        <h3>Objectif du jour</h3>
+        <span class="badge">Nutrition</span>
+    </div>
+    <div class="card__body mini-goal">
+        <p class="mini-goal-sub">Tu as atteint</p>
+        <p class="mini-goal-percent"><?= $progress ?>%</p>
+
+        <p class="mini-goal-sub">
+            de ton objectif de <strong><?= $objectif ?> kcal</strong>.
+        </p>
+
+        <div class="mini-bar">
+            <div class="mini-bar-fill" style="width: <?= $progress ?>%;"></div>
+        </div>
+
+        <?php if ($progress < 90): ?>
+          <p class="mini-goal-hint">Il te reste encore un peu de marge ✨</p>
+        <?php elseif ($progress <= 110): ?>
+          <p class="mini-goal-hint">Tu es pile dans la zone, beau taf 💪</p>
+        <?php else: ?>
+          <p class="mini-goal-hint">Tu as dépassé ton objectif aujourd’hui 😉</p>
+        <?php endif; ?>
+    </div>
+</div>
+<?php endif; ?>
+    <!-- Bar chart -->
+    <div class="card" data-animate="fade-up">
+      <div class="card__head">
+        <h3>Calories / semaine</h3>
+        <span class="badge">Derniers 7 jours</span>
+      </div>
+      <div class="card__body">
+        <canvas data-chart="bars-week" height="220"></canvas>
+      </div>
+   <div class="chart-legend">
+        <span><span class="dot legend-out"></span> Ingerées</span>
+        <span><span class="dot legend-in"></span> Dépensées</span>
+      </div>
+    </div>
+
+<!-- 🎯 CARD 1 — DONUT MACROS -->
+<div class="card" data-animate="fade-up">
+    <div class="card__head">
+        <h3>Répartition macros</h3>
+        <span class="badge">Jour</span>
+    </div>
+
+    <div class="card__body donut-wrap">
+        <canvas data-chart="donut-macros" height="220"></canvas>
+
+        <ul class="legend">
+          <li><span class="dot dot--prot"></span> Protéine</li>
+          <li><span class="dot dot--glu"></span> Glucide</li>
+          <li><span class="dot dot--lip"></span> Lipide</li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+<div class="card" data-animate="fade-up">
+  <div class="card__head">
+    <h3>Bilan de la semaine</h3>
+    <span class="badge">7 jours</span>
+  </div>
+
+  <div class="card__body bilan-week">
+    <ul class="bilan-list">
+      <li>
+        <span class="bilan-emoji">🔥</span>
+        <div>
+          <div class="bilan-title">Calories ingérées</div>
+          <div class="bilan-num"><?= number_format($totalIn, 0, ',', ' ') ?> kcal</div>
+        </div>
+      </li>
+
+      <li>
+        <span class="bilan-emoji">🏋️‍♂️</span>
+        <div>
+          <div class="bilan-title">Calories dépensées</div>
+          <div class="bilan-num"><?= number_format($totalOut, 0, ',', ' ') ?> kcal</div>
+        </div>
+      </li>
+
+      <li>
+        <span class="bilan-emoji">🧮</span>
+        <div>
+          <div class="bilan-title">Solde total</div>
+          <div class="bilan-num <?= $soldeSem >= 0 ? 'green' : 'red' ?>">
+            <?= $soldeSem >= 0 ? '+' : '' ?><?= number_format($soldeSem, 0, ',', ' ') ?> kcal
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <span class="bilan-emoji">⏱️</span>
+        <div>
+          <div class="bilan-title">Minutes de sport</div>
+          <div class="bilan-num"><?= $totalMinutes ?> min</div>
+        </div>
+      </li>
+
+      <li>
+        <span class="bilan-emoji">📊</span>
+        <div>
+          <div class="bilan-title">Moyenne / jour</div>
+          <div class="bilan-num"><?= number_format($moyenneJour, 0, ',', ' ') ?> kcal</div>
+        </div>
+      </li>
+
+      <li>
+        <span class="bilan-emoji">💪</span>
+        <div>
+          <div class="bilan-title">Séances</div>
+          <div class="bilan-num"><?= $nbSeances ?></div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+    <!-- Liste des dernières activités -->
+    <div class="card" data-animate="fade-up">
+      <div class="card__head">
+        <h3>Dernières activités</h3>
+        <span class="badge">Auto</span>
+      </div>
+
+      <ul class="list">
+        <?php if (empty($lastActs)): ?>
+        <li>
+          <div class="list__left">
+            <span class="list__icon">ℹ️</span>
+            <div>
+              <div class="list__title">Aucune activité enregistrée</div>
+              <div class="list__sub">Utilise le calculateur pour ajouter un sport ✨</div>
+            </div>
+          </div>
+        </li>
+        <?php else: ?>
+          <?php foreach ($lastActs as $act): ?>
+          <li>
+            <div class="list__left">
+              <span class="list__icon">🏃‍♂️</span>
+              <div>
+                <div class="list__title">
+                  <?= htmlspecialchars($act['nom_sport'], ENT_QUOTES, 'UTF-8') ?>
+                </div>
+                <div class="list__sub">
+                  <?= (int)$act['duree_min'] ?> min • <?= (int)round($act['kcal']) ?> kcal
+                </div>
+              </div>
+            </div>
+
+            <?php
+              $dt = strtotime($act['date_sport']);
+              $heure = date('H:i', $dt);
+              $affiche = ($heure === '00:00') ? date('d/m', $dt) : date('d/m H:i', $dt);
+            ?>
+            <time><?= $affiche ?></time>
+          </li>
+          <?php endforeach; ?>
+        <?php endif; ?>
+      </ul>
+    </div>
+
+  </div> <!-- FIN .grid -->
+</section>
 
   <!-- CTA -->
   <section class="dash-cta" data-animate="fade-up">
@@ -375,39 +482,15 @@ try {
   </section>
 
 </main>
-
 <footer class="footer">
   <div class="container footer__inner">
     <div class="footer__left">
-      <div class="cols">
-        <div class="col">
-          <h4>Use cases</h4>
-          <a href="#">UI design</a><a href="#">UX design</a><a href="#">Wireframing</a>
-          <a href="#">Diagramming</a><a href="#">Brainstorming</a>
-          <a href="#">Online whiteboard</a><a href="#">Team collaboration</a>
-        </div>
-        <div class="col">
-          <h4>Explore</h4>
-          <a href="#">Design</a><a href="#">Prototyping</a><a href="#">Development features</a>
-          <a href="#">Design systems</a><a href="#">Collaboration features</a>
-          <a href="#">Design process</a><a href="#">Figma</a>
-        </div>
-        <div class="col">
-          <h4>Resources</h4>
-          <a href="#">Blog</a><a href="#">Best practices</a><a href="#">Colors</a>
-          <a href="#">Color wheel</a><a href="#">Support</a>
-          <a href="#">Developers</a><a href="#">Resource library</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer__right">
-      <div class="illus"></div>
       <p class="mini-quote">“Le futur c’est loin, j’attends pas assis”.</p>
     </div>
+    <div class="footer__right">
+      <div class="legal">© 2025 NAHA — Données : Open Food Facts & Compendium MET</div>
+    </div>
   </div>
-
-  <div class="legal">© 2025 NAHA — Données : Open Food Facts & Compendium MET</div>
 </footer>
 
 <script>
@@ -424,10 +507,10 @@ try {
   };
 </script>
 
-
 <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
 <script defer src="tableau-script.js"></script>
+
 </body>
 </html>

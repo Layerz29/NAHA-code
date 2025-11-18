@@ -196,40 +196,15 @@ if (session_status() === PHP_SESSION_NONE) {
 
   <button class="to-top" aria-label="Remonter">↑</button>
 </main>
-
-<!-- FOOTER -->
 <footer class="footer">
   <div class="container footer__inner">
     <div class="footer__left">
-      <div class="cols">
-        <div class="col">
-          <h4>Use cases</h4>
-          <a href="#">UI design</a><a href="#">UX design</a><a href="#">Wireframing</a>
-          <a href="#">Diagramming</a><a href="#">Brainstorming</a>
-          <a href="#">Online whiteboard</a><a href="#">Team collaboration</a>
-        </div>
-        <div class="col">
-          <h4>Explore</h4>
-          <a href="#">Design</a><a href="#">Prototyping</a><a href="#">Development features</a>
-          <a href="#">Design systems</a><a href="#">Collaboration features</a>
-          <a href="#">Design process</a><a href="#">Figma</a>
-        </div>
-        <div class="col">
-          <h4>Resources</h4>
-          <a href="#">Blog</a><a href="#">Best practices</a><a href="#">Colors</a>
-          <a href="#">Color wheel</a><a href="#">Support</a>
-          <a href="#">Developers</a><a href="#">Resource library</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer__right">
-      <div class="illus"></div>
       <p class="mini-quote">“Le futur c’est loin, j’attends pas assis”.</p>
     </div>
+    <div class="footer__right">
+      <div class="legal">© 2025 NAHA — Données : Open Food Facts & Compendium MET</div>
+    </div>
   </div>
-
-  <div class="legal">© 2025 NAHA — Données : Open Food Facts & Compendium MET</div>
 </footer>
 
 <!-- Scripts -->

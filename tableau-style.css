@@ -303,3 +303,140 @@
   font-size: 0.8rem;
   color: #6b7280;
 }
+.macro-goal-box {
+  margin-top: 20px;
+  padding: 14px 18px;
+  background: #f7f9fc;
+  border-radius: 14px;
+  border: 1px solid #e6e7eb;
+}
+
+.macro-goal-box h4 {
+  margin: 0 0 6px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.macro-goal-box p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+.mini-goal {
+    padding: 20px;
+    border-top: 1px solid #eee;
+    margin-top: 10px;
+}
+
+.mini-goal-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.mini-goal-head h4 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.mini-goal-sub {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.mini-goal-percent {
+    font-size: 32px;
+    font-weight: 800;
+    margin: 5px 0;
+}
+
+.mini-bar {
+    width: 100%;
+    height: 7px;
+    background: #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.mini-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #4c5bf9, #45c778);
+    border-radius: 10px;
+}
+
+.mini-goal-hint {
+    font-size: 14px;
+    color: #6b7280;
+    margin-top: 6px;
+}
+.bilan-week {
+  padding: 10px 0;
+}
+
+.bilan-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.bilan-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.bilan-emoji {
+  font-size: 28px;
+}
+
+.bilan-title {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 3px;
+}
+
+.bilan-num {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.bilan-num.green {
+  color: #45c778;
+}.chart-legend {
+   display: flex;
+   gap: 16px;
+   font-size: 14px;
+   color: var(--muted);
+   padding: 0 16px 6px;
+   margin-top: -10px;
+ }
+
+ .chart-legend .dot {
+   width: 10px;
+   height: 10px;
+   border-radius: 50%;
+   display: inline-block;
+   margin-right: 6px;
+   position: relative;
+   top: 1px;
+ }
+
+ /* Couleurs alignées avec les barres du chart */
+ .legend-in {
+   background: #4ade80; /* vert */
+ }
+
+ .legend-out {
+   background: #60a5fa; /* bleu */
+ }
+
+ .legend-cardio {
+   background: #facc15; /* jaune/orangé */
+ }
+
+}

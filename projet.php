@@ -318,14 +318,13 @@ if (isset($_GET['ajax']) && $_GET['ajax'] === 'feedback') {
     </section>
 </main>
 
-
 <footer class="footer">
   <div class="container footer__inner">
     <div class="footer__left">
       <p class="mini-quote">“Le futur c’est loin, j’attends pas assis”.</p>
     </div>
     <div class="footer__right">
-      <div class="legal">© 2025 NAHA — Données : Open Food Facts &amp; Compendium MET</div>
+      <div class="legal">© 2025 NAHA — Données : Open Food Facts & Compendium MET</div>
     </div>
   </div>
 </footer>
