@@ -1,270 +1,305 @@
-/* ===== Page Le Projet ===== */
-
-.projet-page {
-  background: #f5f7fb;
-  min-height: calc(100vh - 72px);
-}
-
-/* Hero */
-
-.projet-hero {
-  padding: 64px 0 40px;
-  background: radial-gradient(circle at top, #eef2ff 0, #f5f7fb 45%, #f3f4f6 100%);
-}
-
-.projet-hero__inner {
-  max-width: 780px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.projet-tag {
-  display: inline-block;
-  padding: 4px 12px;
-  border-radius: 999px;
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  background: #e0e7ff;
-  color: #3730a3;
-  margin-bottom: 10px;
-}
-
-.projet-title {
-  font-size: clamp(2.2rem, 4vw, 2.8rem);
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  margin-bottom: 8px;
-}
-
-.projet-subtitle {
-  color: #4b5563;
-  font-size: 0.98rem;
-  max-width: 540px;
-  margin: 0 auto;
-}
-
-/* Sections génériques */
+/* =====================================================
+   BASE
+===================================================== */
 
 .projet-section {
-  padding: 40px 0;
+  padding: 60px 0;
 }
 
 .section-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: #e5e7eb;
+  margin: 50px 0;
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.projet-hero {
+  padding: 100px 0 60px;
   text-align: center;
-  font-size: 1.6rem;
-  font-weight: 800;
-  margin-bottom: 26px;
 }
 
-/* Vision */
-
-.vision-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
-  gap: 32px;
-  align-items: flex-start;
+.projet-hero__inner {
+  max-width: 700px;
+  margin: auto;
 }
 
-.vision-text p {
+.projet-tag {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
   margin-bottom: 10px;
+  color: #6366f1;
+  font-weight: 700;
 }
 
-.vision-text ul {
-  margin: 0 0 12px 1.25rem;
-  padding: 0;
+.projet-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #0f172a;
 }
 
-.vision-text li {
-  margin-bottom: 4px;
+.projet-subtitle {
+  font-size: 1.1rem;
+  color: #475569;
+}
+
+/* =====================================================
+   VISION (cartes)
+===================================================== */
+
+.vision-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
 }
 
 .vision-card {
+  padding: 25px;
   background: #ffffff;
   border-radius: 18px;
-  padding: 18px 20px;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+  border: 1px solid #e2e8f0;
+  transition: transform 0.20s ease, box-shadow 0.20s ease, border-color 0.20s ease;
+  cursor: pointer;
 }
 
-.vision-card h3 {
-  margin: 0 0 10px;
-  font-size: 1.05rem;
+.vision-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #1e293b;
 }
 
-.vision-card ul {
-  margin: 0;
-  padding-left: 1.1rem;
+.vision-caption {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #64748b;
 }
 
-.vision-card li {
-  margin-bottom: 4px;
+/* Hover */
+.vision-card.is-hovered {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
 }
 
-/* Piliers */
+/* Pinned (au clic) */
+.vision-card.is-pinned {
+  border-color: #6366f1;
+  box-shadow: 0 15px 45px rgba(99, 102, 241, 0.25);
+}
+
+/* =====================================================
+   PILIERS
+===================================================== */
 
 .pillars-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
 }
 
 .pillar-card {
-  background: #ffffff;
+  background: white;
+  padding: 25px;
   border-radius: 18px;
-  padding: 18px 18px 20px;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.06);
+  border: 1px solid #e2e8f0;
   text-align: center;
-  transition: transform 0.16s ease, box-shadow 0.16s ease;
+  transition: transform .20s, box-shadow .20s;
 }
 
 .pillar-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 22px 48px rgba(15, 23, 42, 0.12);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.08);
 }
 
 .pillar-icon {
   font-size: 2rem;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
-.pillar-card h3 {
-  margin: 0 0 6px;
-  font-size: 1.05rem;
-}
+/* =====================================================
+   STEPS (parcours)
+===================================================== */
 
-.pillar-card p {
-  margin: 0;
-  font-size: 0.92rem;
-  color: #4b5563;
-}
-
-/* Steps / Timeline */
-
-.steps {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  max-width: 720px;
-  margin-inline: auto;
+.steps-cards {
   display: grid;
-  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
 }
 
-.steps li {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  gap: 10px;
-  align-items: flex-start;
+.step-card {
+  padding: 25px;
+  background: white;
+  border-radius: 18px;
+  border: 1px solid #e2e8f0;
+  transition: transform .20s ease, box-shadow .20s ease;
 }
 
-.step-badge {
-  width: 30px;
-  height: 30px;
-  border-radius: 999px;
-  background: #4c5bf9;
-  color: #fff;
-  font-size: 0.9rem;
-  display: inline-flex;
+.step-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+}
+
+.step-chip {
+  width: 35px;
+  height: 35px;
+  display: flex;
   align-items: center;
   justify-content: center;
+  background: #6366f1;
+  border-radius: 50%;
+  color: white;
   font-weight: 700;
-  box-shadow: 0 6px 16px rgba(76, 91, 249, 0.35);
+  margin-bottom: 10px;
 }
 
-.steps h3 {
-  margin: 2px 0 4px;
-  font-size: 1rem;
-}
+/* =====================================================
+   ÉQUIPE
+===================================================== */
 
-.steps p {
-  margin: 0;
-  font-size: 0.92rem;
-  color: #4b5563;
-}
-
-/* Feedback */
-
-.projet-feedback {
-  background: #f9fafb;
-}
-
-.feedback-intro {
-  max-width: 580px;
-  margin: 0 auto 16px;
+.team-section {
   text-align: center;
-  color: #4b5563;
-  font-size: 0.95rem;
 }
+
+.team-grid {
+  margin-top: 35px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 30px;
+}
+
+.team-card {
+  background: white;
+  padding: 25px;
+  border-radius: 18px;
+  border: 1px solid #e2e8f0;
+  transition: transform .20s ease, box-shadow .20s ease, border-color .20s ease;
+  cursor: pointer;
+}
+
+.team-card h3 {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.team-role {
+  margin-top: 4px;
+  color: #475569;
+}
+
+/* avatar rond */
+.team-avatar {
+  width: 75px;
+  height: 75px;
+  background: #6366f1;
+  border-radius: 50%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: white;
+}
+
+/* Hover */
+.team-card.is-hovered {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+}
+
+/* Focus au clic */
+.team-card.is-active {
+  border-color: #6366f1;
+  box-shadow: 0 12px 45px rgba(99,102,241,0.25);
+}
+
+/* =====================================================
+   FEEDBACK
+===================================================== */
 
 .feedback-form {
-  max-width: 580px;
-  margin: 0 auto;
-  display: grid;
-  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 25px;
 }
 
 .feedback-form textarea {
-  resize: vertical;
-  min-height: 120px;
-  max-height: 260px;
-  border-radius: 14px;
-  border: 1px solid #e5e7eb;
-  padding: 10px 12px;
-  font-family: inherit;
-  font-size: 0.95rem;
-  outline: none;
-  transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
-  background: #ffffff;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #cbd5e1;
+  font-size: 1rem;
+  resize: none;
+  background: #f8fafc;
+  transition: border-color .2s ease, box-shadow .2s ease;
 }
 
 .feedback-form textarea:focus {
-  border-color: #4c5bf9;
-  box-shadow: 0 0 0 1px rgba(76, 91, 249, 0.25);
-  background: #ffffff;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.15);
+  outline: none;
 }
 
 .feedback-btn {
-  justify-self: flex-end;
-  border-radius: 999px;
+  background: #6366f1;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: background .20s ease, transform .20s ease;
+}
+
+.feedback-btn:hover {
+  background: #4f46e5;
+  transform: translateY(-2px);
 }
 
 .feedback-status {
-  max-width: 580px;
-  margin: 6px auto 0;
-  min-height: 1.2em;
+  margin-top: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  min-height: 20px;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 40px 0;
+  margin-top: 60px;
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mini-quote {
   font-size: 0.9rem;
-  text-align: left;
-}
-
-/* Responsive */
-
-@media (max-width: 960px) {
-  .vision-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .pillars-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .feedback-btn {
-    justify-self: stretch;
-    text-align: center;
-  }
-}
-
-@media (max-width: 640px) {
-  .pillars-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .projet-hero {
-    padding-top: 48px;
-  }
-
-  .projet-title {
-    font-size: 2rem;
-  }
+  opacity: 0.8;
 }

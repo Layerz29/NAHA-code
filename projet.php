@@ -77,6 +77,7 @@ if (isset($_GET['ajax']) && $_GET['ajax'] === 'feedback') {
       <a class="pill" href="calculateur.php">Calculateur</a>
       <a class="pill is-active" href="projet.php">Le Projet</a>
       <a class="pill" href="consommation.php">Consommation</a>
+      <a class="pill" href="contact.php">Contact</a>
     </nav>
 
     <div class="auth">
@@ -109,39 +110,58 @@ if (isset($_GET['ajax']) && $_GET['ajax'] === 'feedback') {
 
   <div class="divider"></div>
 
-  <!-- Vision -->
-  <section class="projet-section">
-    <div class="container">
-      <h2 class="section-title">Notre vision</h2>
-      <div class="vision-grid">
-        <div class="vision-text">
-          <p>
-            Chez <strong>NAHA</strong>, on part d’un constat simple :
-          </p>
-          <ul>
-            <li>la plupart des sportifs galèrent à trouver un équilibre entre alimentation, sport et motivation ;</li>
-            <li>les applis existantes sont souvent trop compliquées ou pas adaptées à la vraie vie ;</li>
-            <li>le suivi des calories est soit trop flou, soit trop extrême.</li>
-          </ul>
-          <p>
-            Notre objectif : te donner un <strong>outil clair, moderne et motivant</strong> pour suivre ton activité, tes apports,
-            et mieux comprendre ton corps jour après jour.
-          </p>
-        </div>
+    <!-- Vision -->
+    <section class="projet-section">
+        <div class="container">
+            <h2 class="section-title">Notre vision</h2>
+            <p class="vision-intro">
+                NAHA répond à des besoins très concrets : mieux se repérer dans sa consommation,
+                comprendre ses dépenses énergétiques et garder la motivation sur le long terme.
+            </p>
 
-        <div class="vision-card">
-          <h3>Ce qu’on veut pour toi</h3>
-          <ul>
-            <li>Un suivi simple, sans prise de tête.</li>
-            <li>Des stats lisibles, pas des murs de chiffres.</li>
-            <li>Un équilibre entre performance, santé et kiff.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+            <div class="vision-cards">
+                <article class="vision-card">
+                    <h3 class="vision-title">Besoins &amp; problèmes</h3>
+                    <p class="vision-caption">
+                        À quel(s) besoin(s) ou problème(s) rencontrés par les usagers notre solution répond ?
+                    </p>
+                    <p>
+                        Aujourd’hui, la santé est impactée par plusieurs facteurs dont la nutrition et le sport.
+                        Beaucoup d’utilisateurs n’ont pas de repères sur leurs consommations caloriques
+                        et leurs dépenses journalières. NAHA vient poser un cadre clair et lisible.
+                    </p>
+                </article>
 
-  <div class="divider"></div>
+                <article class="vision-card">
+                    <h3 class="vision-title">Usagers</h3>
+                    <p class="vision-caption">
+                        Quels sont les différents usagers que notre solution va cibler ?
+                    </p>
+                    <p>
+                        Le projet s’adresse à des personnes qui veulent se remettre au sport, à des sportifs
+                        aguerris avec des objectifs personnels, mais aussi à celles et ceux qui cherchent
+                        des conseils de bien-être et des outils simples pour améliorer leur quotidien.
+                    </p>
+                </article>
+
+                <article class="vision-card">
+                    <h3 class="vision-title">Solutions existantes</h3>
+                    <p class="vision-caption">
+                        Qu’est-ce qui existe aujourd’hui et en quoi NAHA est différent ?
+                    </p>
+                    <p>
+                        Se documenter reste la solution la plus pertinente, mais c’est long, technique
+                        et souvent décourageant. Tout retenir est quasi impossible, et garder seulement
+                        l’essentiel demande de l’expérience. NAHA rend ces informations
+                        <strong>accessibles et actionnables pour tous</strong>, peu importe le niveau de pratique.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="divider"></div>
 
   <!-- Piliers -->
   <section class="projet-section">
@@ -177,68 +197,127 @@ if (isset($_GET['ajax']) && $_GET['ajax'] === 'feedback') {
 
   <div class="divider"></div>
 
-  <!-- Timeline / Parcours utilisateur -->
-  <section class="projet-section">
-    <div class="container">
-      <h2 class="section-title">Comment NAHA t’accompagne</h2>
-      <ol class="steps">
-        <li>
-          <span class="step-badge">1</span>
-          <div>
-            <h3>Tu crées ton compte</h3>
-            <p>Quelques infos, pas plus. On préfère la simplicité à la fiche d’état civil.</p>
-          </div>
-        </li>
-        <li>
-          <span class="step-badge">2</span>
-          <div>
-            <h3>Tu suis tes journées</h3>
-            <p>Aliments, sports, ressenti : tu renseignes ce qui compte pour toi, à ton rythme.</p>
-          </div>
-        </li>
-        <li>
-          <span class="step-badge">3</span>
-          <div>
-            <h3>Tu regardes les tendances</h3>
-            <p>Le tableau de bord et le calculateur t’aident à ajuster petit à petit, sans extrêmes.</p>
-          </div>
-        </li>
-      </ol>
-    </div>
-  </section>
+    <!-- Parcours utilisateur en cartes -->
+    <section class="projet-section">
+        <div class="container">
+            <h2 class="section-title">Comment NAHA t’accompagne</h2>
+            <p class="steps-intro">
+                L’idée est simple : tu crées ton espace, tu suis ce que tu fais, et tu lis les tendances
+                pour ajuster tranquillement ton mode de vie.
+            </p>
 
-  <div class="divider"></div>
+            <div class="steps-cards">
+                <article class="step-card">
+                    <div class="step-chip">1</div>
+                    <h3 class="step-title">Tu crées ton compte</h3>
+                    <p class="step-text">
+                        Quelques infos, pas plus. On préfère la simplicité à la fiche d’état civil.
+                    </p>
+                </article>
 
-  <!-- Feedback avec formulaire AJAX sécurisé -->
-  <section class="projet-section projet-feedback">
-    <div class="container">
-      <h2 class="section-title">Ton avis compte</h2>
-      <p class="feedback-intro">
-        Dis-nous en deux mots ce que tu aimerais voir dans NAHA (fonction, graphique, idée…).
-        On ne promet pas tout, mais on lit tout. 🤝
-      </p>
+                <article class="step-card">
+                    <div class="step-chip">2</div>
+                    <h3 class="step-title">Tu suis tes journées</h3>
+                    <p class="step-text">
+                        Aliments, sports, ressenti : tu renseignes ce qui compte pour toi, à ton rythme.
+                    </p>
+                </article>
 
-      <form id="feedback-form" class="feedback-form" autocomplete="off">
-        <textarea
-          id="feedback-message"
-          name="message"
-          rows="4"
-          maxlength="600"
-          placeholder="Exemple : un mode ‘match day’, un suivi de sommeil, des rappels, etc."
-          required
+                <article class="step-card">
+                    <div class="step-chip">3</div>
+                    <h3 class="step-title">Tu regardes les tendances</h3>
+                    <p class="step-text">
+                        Le tableau de bord et le calculateur t’aident à ajuster petit à petit, sans extrêmes.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="divider"></div>
+
+    <!-- 🔥 Nouvelle section : Notre équipe -->
+    <section class="projet-section team-section">
+        <div class="container">
+            <h2 class="section-title">Notre équipe</h2>
+            <p class="team-intro">
+                NAHA, c’est un projet construit par une petite équipe de passionnés de sport, de data et de web.
+            </p>
+
+            <div class="team-grid">
+                <article class="team-card">
+                    <div class="team-avatar">
+                        <!-- Plus tard tu pourras mettre : <img src="images/arthur.jpg" alt="Photo de Arthur Feschet"> -->
+                        <span class="team-initials">AF</span>
+                    </div>
+                    <h3>Arthur Feschet</h3>
+                    <p class="team-role">Développement & architecture</p>
+                </article>
+
+                <article class="team-card">
+                    <div class="team-avatar">
+                        <!-- <img src="images/noah.jpg" alt="Photo de Noah Chayrigues"> -->
+                        <span class="team-initials">NC</span>
+                    </div>
+                    <h3>Noah Chayrigues</h3>
+                    <p class="team-role">Produit, data & expérience utilisateur</p>
+                </article>
+
+                <article class="team-card">
+                    <div class="team-avatar">
+                        <!-- <img src="images/ahmed.jpg" alt="Photo de Ahmed Bekakria"> -->
+                        <span class="team-initials">AB</span>
+                    </div>
+                    <h3>Ahmed Bekakria</h3>
+                    <p class="team-role">Back-end & base de données</p>
+                </article>
+
+                <article class="team-card">
+                    <div class="team-avatar">
+                        <!-- <img src="images/haitham.jpg" alt="Photo de Haitham Alfakhry"> -->
+                        <span class="team-initials">HA</span>
+                    </div>
+                    <h3>Haitham Alfakhry</h3>
+                    <p class="team-role">Front-end & intégration</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Feedback avec formulaire AJAX sécurisé -->
+    <section class="projet-section projet-feedback">
+        <div class="container">
+            <h2 class="section-title">Ton avis compte</h2>
+            <p class="feedback-intro">
+                Dis-nous en deux mots ce que tu aimerais voir dans NAHA (fonction, graphique, idée…).
+                On ne promet pas tout, mais on lit tout. 🤝
+            </p>
+
+            <form id="feedback-form" class="feedback-form" autocomplete="off">
+                <label for="feedback-message"></label><textarea
+                id="feedback-message"
+                name="message"
+                rows="4"
+                maxlength="600"
+                placeholder="Exemple : un mode ‘match day’, un suivi de sommeil, des rappels, etc."
+                required
         ></textarea>
-        <input type="hidden" name="csrf" value="<?=
-          htmlspecialchars($_SESSION['csrf'], ENT_QUOTES, 'UTF-8');
-        ?>">
-        <button type="submit" class="btn big feedback-btn">
-          Envoyer mon idée
-        </button>
-      </form>
+                <input type="hidden" name="csrf" value="<?=
+                htmlspecialchars($_SESSION['csrf'], ENT_QUOTES, 'UTF-8');
+                ?>">
+                <button type="submit" class="btn big feedback-btn">
+                    Envoyer mon idée
+                </button>
+            </form>
 
-      <p id="feedback-status" class="feedback-status" aria-live="polite"></p>
-    </div>
-  </section>
+            <p id="feedback-status" class="feedback-status" aria-live="polite"></p>
+        </div>
+    </section>
 </main>
+
 
 <footer class="footer">
   <div class="container footer__inner">

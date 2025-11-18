@@ -1,168 +1,234 @@
 // calculateur-script.js
 
 document.addEventListener('DOMContentLoaded', () => {
-  const sexeBtns   = document.querySelectorAll('.segmented-btn');
-  const sexeInput  = document.querySelector('#sexe');
-  const form       = document.querySelector('#calc-form');
-  const resKcal    = document.querySelector('#res-kcal');
-  const resText    = document.querySelector('#res-text');
+  const form = document.getElementById('calc-form');
 
-  const prodSelect = document.querySelector('#prod-select');
-  const prodQte    = document.querySelector('#prod-qte');
-  const prodKcal   = document.querySelector('#prod-kcal');
+  const ageInput     = document.getElementById('age');
+  const tailleInput  = document.getElementById('taille');
+  const poidsInput   = document.getElementById('poids');
+  const activiteSel  = document.getElementById('activite');
+  const sexeHidden   = document.getElementById('sexe');
+  const sexeButtons  = document.querySelectorAll('.segmented-btn');
 
-  const sportSelect = document.querySelector('#sport-select');
-  const sportDuree  = document.querySelector('#sport-duree');
-  const sportKcal   = document.querySelector('#sport-kcal');
+  const resKcal   = document.getElementById('res-kcal');
+  const resText   = document.getElementById('res-text');
 
-  const btnLog = document.querySelector('#btn-log');
-  const logMsg = document.querySelector('#log-msg');
+  const goalBtns      = document.querySelectorAll('.goal-btn');
+  const goalMaintien  = document.getElementById('goal-maintien');
+  const goalPerte     = document.getElementById('goal-perte');
+  const goalPrise     = document.getElementById('goal-prise');
 
-  /* ===========================
-   *  Sexe toggle
-   * =========================*/
-  sexeBtns.forEach(btn => {
+  let maintenanceKcal = null;
+
+  /* ==========================
+     Switch Homme / Femme
+     ========================== */
+  sexeButtons.forEach(btn => {
     btn.addEventListener('click', () => {
-      sexeBtns.forEach(b => b.classList.remove('is-active'));
+      sexeButtons.forEach(b => b.classList.remove('is-active'));
       btn.classList.add('is-active');
-      sexeInput.value = btn.dataset.sexe;
+      sexeHidden.value = btn.dataset.sexe; // "H" ou "F"
     });
   });
 
-  /* ===========================
-   *  Produits : chargement BDD
-   * =========================*/
-  fetch('calculateur.php?ajax=produits')
-    .then(r => r.json())
-    .then(data => {
-      prodSelect.innerHTML = '<option value="">Sélectionne un produit…</option>';
-      data.forEach(p => {
-        const opt = document.createElement('option');
-        opt.value = p.id_produit;
-        opt.dataset.kcal = p.energie_kcal; // kcal pour 100 g
-        opt.textContent = `${p.nom_produit} (${p.energie_kcal} kcal / 100g)`;
-        prodSelect.appendChild(opt);
-      });
-    })
-    .catch(() => {
-      prodSelect.innerHTML = '<option value="">Erreur de chargement</option>';
-    });
+  /* ==========================
+     Soumission du formulaire
+     ========================== */
+  form.addEventListener('submit', (e) => {
+    e.preventDefault(); // pas de reload
 
-  /* ===========================
-   *  Sports : chargement BDD
-   * =========================*/
-  fetch('calculateur.php?ajax=sports')
-    .then(r => r.json())
-    .then(data => {
-      sportSelect.innerHTML = '<option value="">Choisir une activité…</option>';
-      data.forEach(s => {
-        const opt = document.createElement('option');
-        opt.value = s.id_sport;
-        opt.dataset.kcalH70 = s.kcal_h_70kg; // kcal / h pour 70 kg
-        opt.textContent = `${s.nom_sport} (${s.MET} MET)`;
-        sportSelect.appendChild(opt);
-      });
-    })
-    .catch(err => {
-      console.error('Erreur chargement sports :', err);
-      sportSelect.innerHTML = '<option value="">Erreur de chargement</option>';
-    });
+    const age      = Number(ageInput.value);
+    const taille   = Number(tailleInput.value);
+    const poids    = Number(poidsInput.value);
+    const activite = Number(activiteSel.value);
+    const sexe     = sexeHidden.value || 'H';
 
-  /* ===========================
-   *  Calcul kcal produit
-   * =========================*/
-  function updateProdKcal() {
-    const opt = prodSelect.selectedOptions[0];
-    if (!opt) {
-      prodKcal.textContent = '0';
-      return;
-    }
-    const base = parseFloat(opt.dataset.kcal || '0'); // kcal / 100 g
-    const qte  = parseFloat(prodQte.value || '0');
-    const total = base * qte / 100;
-    prodKcal.textContent = Math.round(total);
-  }
-
-  prodSelect.addEventListener('change', updateProdKcal);
-  prodQte.addEventListener('input', updateProdKcal);
-
-  /* ===========================
-   *  Calcul kcal sport
-   * =========================*/
-  function updateSportKcal() {
-    if (!sportSelect || !sportDuree || !sportKcal) return;
-
-    const opt   = sportSelect.selectedOptions[0];
-    const duree = parseFloat(sportDuree.value || '0'); // minutes
-
-    if (!opt || !opt.dataset.kcalH70 || !duree) {
-      sportKcal.textContent = '≈ 0 kcal dépensées.';
+    if (!age || !taille || !poids || !activite) {
+      resText.textContent = "Complète toutes les infos avant de lancer le calcul.";
       return;
     }
 
-    const kcalH = parseFloat(opt.dataset.kcalH70 || '0'); // kcal/h (70kg)
-    const kcal  = Math.round(kcalH * (duree / 60));
-
-    sportKcal.textContent = `≈ ${kcal} kcal dépensées.`;
-  }
-
-  sportSelect.addEventListener('change', updateSportKcal);
-  sportDuree.addEventListener('input', updateSportKcal);
-
-  /* ===========================
-   *  Calcul besoins caloriques
-   * =========================*/
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-
-    const age      = parseFloat(document.querySelector('#age').value    || '0');
-    const taille   = parseFloat(document.querySelector('#taille').value || '0'); // cm
-    const poids    = parseFloat(document.querySelector('#poids').value  || '0'); // kg
-    const activite = parseFloat(document.querySelector('#activite').value || '1.2');
-    const sexe     = sexeInput.value;
-
-    if (!age || !taille || !poids) return;
-
-    let mb;
+    // Mifflin-St Jeor
+    let bmr;
     if (sexe === 'H') {
-      mb = 88.362 + (13.397 * poids) + (4.799 * taille) - (5.677 * age);
+      bmr = 10 * poids + 6.25 * taille - 5 * age + 5;
     } else {
-      mb = 447.593 + (9.247 * poids) + (3.098 * taille) - (4.330 * age);
+      bmr = 10 * poids + 6.25 * taille - 5 * age - 161;
     }
 
-    const maintenance = Math.round(mb * activite);
-    resKcal.textContent = maintenance.toString();
-    resText.textContent =
-      `Pour maintenir ton poids actuel, vise environ ${maintenance} kcal / jour. ` +
-      `Augmente pour prendre du poids, baisse pour en perdre.`;
+    maintenanceKcal = Math.round(bmr * activite);
+
+    resKcal.textContent = maintenanceKcal;
+    resText.textContent = "C'est l'estimation de tes besoins journaliers pour rester stable.";
+
+    updateGoals();
+
+    // on stocke côté navigateur
+    const data = { age, taille, poids, activite, sexe, maintenanceKcal };
+    localStorage.setItem('naha_calc', JSON.stringify(data));
   });
 
-  btnLog.addEventListener('click', () => {
-    const fd = new FormData();
-    fd.append('id_produit', prodSelect.value);
-    fd.append('quantite', prodQte.value);
-    fd.append('id_sport', sportSelect.value);
-    fd.append('duree', sportDuree.value);
+  /* ==========================
+     Mise à jour des 3 objectifs
+     ========================== */
+  function updateGoals() {
+    if (!maintenanceKcal) {
+      goalMaintien.textContent = "–";
+      goalPerte.textContent    = "–";
+      goalPrise.textContent    = "–";
+      return;
+    }
 
-    fetch('calculateur.php?ajax=log', {
-      method: 'POST',
-      body: fd
-    })
-      .then(r => r.json())
-      .then(data => {
-        console.log('Réponse log :', data); // ← IMPORTANT
+    goalMaintien.textContent = maintenanceKcal + " kcal / jour";
+    goalPerte.textContent    = Math.max(maintenanceKcal - 400, 0) + " kcal / jour";
+    goalPrise.textContent    = (maintenanceKcal + 300) + " kcal / jour";
+  }
 
-        if (data.ok) {
-          logMsg.textContent = 'Enregistré ✅';
-          logMsg.style.color = 'green';
-        } else {
-          logMsg.textContent = 'Erreur : ' + (data.error || 'Erreur lors de l’enregistrement.');
-          logMsg.style.color = 'red';
+  /* ==========================
+     Clic sur un objectif
+     ========================== */
+  goalBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (!maintenanceKcal) return;
+
+      goalBtns.forEach(b => b.classList.remove('is-active'));
+      btn.classList.add('is-active');
+
+      const name  = btn.dataset.name || "";
+      const delta = Number(btn.dataset.delta || 0);
+      const target = maintenanceKcal + delta;
+
+      // on affiche dans la petite ligne "Objectif actuel" de la carte active
+      const activeText = btn.querySelector('.goal-active-text');
+      if (activeText) {
+        activeText.textContent = `Objectif actuel — ≈ ${target} kcal / jour`;
+      }
+
+      // on vide les autres
+      goalBtns.forEach(b => {
+        if (b !== btn) {
+          const t = b.querySelector('.goal-active-text');
+          if (t) t.textContent = '';
         }
-      })
-      .catch(err => {
-        console.error(err);
-        logMsg.textContent = 'Erreur réseau.';
-        logMsg.style.color = 'red';
       });
+
+      // on garde l’objectif en mémoire (navigateur)
+      const goalData = { name, delta };
+      localStorage.setItem('naha_goal', JSON.stringify(goalData));
+    });
   });
+
+  /* ==========================
+     Rechargement depuis localStorage
+     ========================== */
+  const saved = localStorage.getItem('naha_calc');
+  if (saved) {
+    try {
+      const data = JSON.parse(saved);
+      if (data.age)      ageInput.value    = data.age;
+      if (data.taille)   tailleInput.value = data.taille;
+      if (data.poids)    poidsInput.value  = data.poids;
+      if (data.activite) activiteSel.value = data.activite;
+      if (data.sexe)     sexeHidden.value  = data.sexe;
+
+      sexeButtons.forEach(b => {
+        b.classList.toggle('is-active', b.dataset.sexe === sexeHidden.value);
+      });
+
+      if (data.maintenanceKcal) {
+        maintenanceKcal = data.maintenanceKcal;
+        resKcal.textContent = maintenanceKcal;
+        resText.textContent = "Valeur rechargée depuis ta dernière visite.";
+        updateGoals();
+      }
+    } catch (err) {
+      console.error("Erreur parse stockage NAHA :", err);
+    }
+  }
+
+  const savedGoal = localStorage.getItem('naha_goal');
+  if (savedGoal && maintenanceKcal) {
+    try {
+      const g = JSON.parse(savedGoal);
+      goalBtns.forEach(b => {
+        const isActive = (b.dataset.name === g.name);
+        b.classList.toggle('is-active', isActive);
+        if (isActive) {
+          const delta  = Number(b.dataset.delta || 0);
+          const target = maintenanceKcal + delta;
+          const t = b.querySelector('.goal-active-text');
+          if (t) t.textContent = `Objectif actuel — ≈ ${target} kcal / jour`;
+        }
+      });
+    } catch (err) {
+      console.error("Erreur parse objectif NAHA :", err);
+    }
+  }
+
+  /* ==========================
+     Bouton "Enregistrer cet objectif"
+     ========================== */
+  const saveBtn = document.getElementById('save-goal');
+  const saveMsg = document.getElementById('save-goal-msg');
+
+  console.log('saveBtn =', saveBtn);
+
+  function getCurrentGoal() {
+    if (!maintenanceKcal) return null;
+    const activeBtn = document.querySelector('.goal-btn.is-active');
+    if (!activeBtn) return null;
+
+    const name  = activeBtn.dataset.name || '';
+    const delta = Number(activeBtn.dataset.delta || 0);
+    const target = maintenanceKcal + delta;
+
+    return { name, target };
+  }
+
+  if (saveBtn) {
+    saveBtn.addEventListener('click', async () => {
+      const goal = getCurrentGoal();
+
+      if (!maintenanceKcal || !goal) {
+        saveMsg.textContent = "Calcule d'abord tes besoins et choisis un objectif.";
+        return;
+      }
+
+      // === Version 1 : juste test visuel ===
+      // décommente ça pour vérifier que le clic marche
+      // alert("Click OK, objectif : " + goal.name + " (" + goal.target + " kcal)");
+
+      saveMsg.textContent = "Enregistrement en cours...";
+
+      const payload = {
+        age: Number(ageInput.value),
+        taille: Number(tailleInput.value),
+        poids: Number(poidsInput.value),
+        activite: Number(activiteSel.value),
+        sexe: sexeHidden.value || 'H',
+        maintenance: maintenanceKcal,
+        objectif_nom: goal.name,
+        objectif_kcal: goal.target
+      };
+
+      try {
+        const res = await fetch('save_goal.php', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        const json = await res.json();
+        if (!res.ok || !json.ok) {
+          saveMsg.textContent = json.message || "Erreur lors de l'enregistrement.";
+        } else {
+          saveMsg.textContent = "Objectif enregistré dans ton tableau de bord ✅";
+        }
+      } catch (err) {
+        console.error(err);
+        saveMsg.textContent = "Erreur réseau, réessaie dans un instant.";
+      }
+    });
+  }
+
+});

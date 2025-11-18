@@ -3,89 +3,8 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 require_once 'bdd.php';
-$bdd = getBD();
 
-/* ================== AJAX ================== */
-if (isset($_GET['ajax'])) {
-    header('Content-Type: application/json; charset=utf-8');
-    $action = $_GET['ajax'];
-
-    // --- liste des produits ---
-    if ($action === 'produits') {
-        $sql = "SELECT id_produit, nom_produit, energie_kcal
-                FROM produits
-                ORDER BY nom_produit";
-        $stmt = $bdd->query($sql);
-        echo json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
-        exit;
-    }
-
-    // --- liste des sports ---
-    if ($action === 'sports') {
-        $sql = "SELECT id_sport, nom_sport, MET, kcal_h_70kg
-                FROM sports
-                ORDER BY nom_sport";
-        $stmt = $bdd->query($sql);
-        echo json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
-        exit;
-    }
-
-    // --- enregistrement conso + sport ---
-    if ($action === 'log') {
-        if (!isset($_SESSION['utilisateur'])) {
-            echo json_encode(['ok' => false, 'error' => 'not_logged']);
-            exit;
-        }
-
-        $idUser    = (int) $_SESSION['utilisateur']['id_utilisateur'];
-        $idProduit = !empty($_POST['id_produit']) ? (int) $_POST['id_produit'] : null;
-        $quantite  = !empty($_POST['quantite'])   ? (int) $_POST['quantite']   : null;
-        $idSport   = !empty($_POST['id_sport'])   ? (int) $_POST['id_sport']   : null;
-        $duree     = !empty($_POST['duree'])      ? (int) $_POST['duree']      : null;
-
-        try {
-            $bdd->beginTransaction();
-
-            // conso
-            if ($idProduit && $quantite > 0) {
-                $sqlC = "INSERT INTO consommation (id_utilisateur, id_produit, quantite, date_conso)
-                         VALUES (:u, :p, :q, NOW())";
-                $stC = $bdd->prepare($sqlC);
-                $stC->execute([
-                    'u' => $idUser,
-                    'p' => $idProduit,
-                    'q' => $quantite
-                ]);
-            }
-
-            // sport
-            if ($idSport && $duree > 0) {
-                $sqlS = "INSERT INTO activite (id_utilisateur, id_sport, date_sport, duree_minutes)
-                         VALUES (:u, :s, NOW(), :d)";
-                $stS = $bdd->prepare($sqlS);
-                $stS->execute([
-                    'u' => $idUser,
-                    's' => $idSport,
-                    'd' => $duree
-                ]);
-            }
-
-            $bdd->commit();
-            echo json_encode(['ok' => true]);
-        } catch (Exception $e) {
-            $bdd->rollBack();
-            echo json_encode(['ok' => false, 'error' => $e->getMessage()]);
-        }
-        exit;
-    }
-
-    echo json_encode(['error' => 'action inconnue']);
-    exit;
-}
-
-// ================== PAGE NORMALE (HTML) ==================
-
-// obligé d’être connecté pour voir la page
+// obligé d’être connecté
 if (!isset($_SESSION['utilisateur'])) {
     header('Location: seconnecter.php');
     exit;
@@ -101,7 +20,6 @@ if (!isset($_SESSION['utilisateur'])) {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
 
-  <!-- style commun + style calculateur -->
   <link rel="stylesheet" href="accueil-style.css" />
   <link rel="stylesheet" href="calculateur-style.css" />
 </head>
@@ -120,25 +38,16 @@ if (!isset($_SESSION['utilisateur'])) {
       <a class="pill is-active" href="calculateur.php">Calculateur</a>
       <a class="pill" href="projet.php">Le Projet</a>
       <a class="pill" href="consommation.php">Consommation</a>
+      <a class="pill" href="contact.php">Contact</a>
+
     </nav>
 
     <div class="auth">
-      <?php if (isset($_SESSION['utilisateur'])): ?>
-        <span class="auth-user">
-          👤 <?=
-            htmlspecialchars(
-              $_SESSION['utilisateur']['prenom'].' '.$_SESSION['utilisateur']['nom'],
-              ENT_QUOTES,
-              'UTF-8'
-            )
-          ?>
-          <span class="auth-tag">Connecté</span>
-        </span>
-        <a class="btn-ghost" href="deconnexion.php">Déconnexion</a>
-      <?php else: ?>
-        <a class="link" href="seconnecter.php">Se connecter</a>
-        <a class="btn" href="sinscrire.php">S’inscrire</a>
-      <?php endif; ?>
+      <span class="auth-user">
+        👤 <?= htmlspecialchars($_SESSION['utilisateur']['prenom']." ".$_SESSION['utilisateur']['nom']) ?>
+        <span class="auth-tag">Connecté</span>
+      </span>
+      <a class="btn-ghost" href="deconnexion.php">Déconnexion</a>
     </div>
   </div>
 </header>
@@ -147,17 +56,15 @@ if (!isset($_SESSION['utilisateur'])) {
   <section class="calc-hero">
     <div class="container calc-grid">
 
-      <!-- Bloc calcul besoins -->
       <section class="card big">
         <h1>Ton calculateur personnalisé</h1>
-        <p class="sub">
-          Découvre combien ton corps dépense chaque jour, puis ajoute tes aliments et tes sports.
-        </p>
+        <p class="sub">  Découvre combien ton corps dépense chaque jour, puis laisse NAHA t’aider à organiser
+            ton alimentation et tes entraînements autour de cet objectif.</p>
 
         <form id="calc-form" class="calc-form">
           <div class="form-grid">
             <div class="field">
-              <label for="age">Âge (années)</label>
+              <label for="age">Âge</label>
               <input type="number" id="age" min="10" max="99" value="20" />
             </div>
             <div class="field">
@@ -171,11 +78,11 @@ if (!isset($_SESSION['utilisateur'])) {
             <div class="field">
               <label for="activite">Niveau d’activité</label>
               <select id="activite">
-                <option value="1.2">Sédentaire</option>
-                <option value="1.375">Léger (1–3 séances / semaine)</option>
-                <option value="1.55" selected>Modéré (3–5 séances / semaine)</option>
-                <option value="1.725">Intense (6–7 séances / semaine)</option>
-                <option value="1.9">Très intense (2x / jour)</option>
+                <option value="1.2">Sédentaire activité faible</option>
+                <option value="1.375">Léger 1-2 séances/semaines</option>
+                <option value="1.55" selected>Modéré 3-4 séances/semaines</option>
+                <option value="1.725">Intense 4-6 séances/semaines</option>
+                <option value="1.9">Très intense 7 séances/semaines</option>
               </select>
             </div>
           </div>
@@ -192,65 +99,72 @@ if (!isset($_SESSION['utilisateur'])) {
           <button type="submit" class="btn big">Calculer mes besoins</button>
         </form>
 
-        <div class="result-card">
-          <h2>Résultat</h2>
-          <p class="res-main">
-            Maintenance estimée : <span id="res-kcal">–</span> kcal / jour
-          </p>
-          <p id="res-text" class="res-text">
-            Renseigne tes infos puis lance le calcul pour voir ta maintenance.
-          </p>
-        </div>
-      </section>
+   <div class="result-card">
+     <h2>Résultat</h2>
+     <p class="res-main">
+       Maintenance : <span id="res-kcal">–</span> kcal / jour
+     </p>
+     <p class="res-text" id="res-text">
+         C’est l’énergie que ton corps dépense chaque jour en moyenne, en fonction de ton âge, ton poids, ta taille et ton niveau d’activité.
+     </p>
 
-      <!-- Bloc produits + sport -->
-      <section class="card side">
-        <h2>Journal rapide</h2>
+     <div class="goals">
+       <button type="button" class="goal-btn is-active" data-delta="0" data-name="Maintien">
+         <span class="goal-label">MAINTIEN</span>
+         <span class="goal-kcal" id="goal-maintien">–</span>
+         <span class="goal-active-text">Objectif actuel</span>
 
-        <!-- produit -->
-        <div class="subcard">
-          <h3>Produit de la base</h3>
-          <div class="field">
-            <label for="prod-select">Aliment</label>
-            <select id="prod-select">
-              <option value="">Chargement...</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="prod-qte">Quantité (g)</label>
-            <input type="number" id="prod-qte" min="0" step="10" value="100" />
-          </div>
-          <p class="mini">
-            ≈ <span id="prod-kcal">0</span> kcal.
-          </p>
-        </div>
+         <span class="goal-sub">Rester au même poids, sans prise ni perte.</span>
+       </button>
 
-        <!-- sport -->
-        <div class="subcard">
-          <h3>Sports de la base</h3>
-          <p>Choisis une activité pour estimer les calories dépensées.</p>
+       <button type="button" class="goal-btn" data-delta="-400" data-name="Perte de poids">
+         <span class="goal-label">PERTE DE POIDS</span>
+         <span class="goal-kcal" id="goal-perte">–</span>
+         <span class="goal-active-text">Objectif actuel</span>
 
-          <div class="field">
-            <label for="sport-select">Sport / activité</label>
-            <select id="sport-select">
-              <option value="">Chargement...</option>
-            </select>
-          </div>
+         <span class="goal-sub">Déficit léger, durable (environ -400 kcal / jour).</span>
+       </button>
 
-          <div class="field">
-            <label for="sport-duree">Durée (minutes)</label>
-            <input type="number" id="sport-duree" min="0" step="5" value="60" />
-          </div>
+       <button type="button" class="goal-btn" data-delta="300" data-name="Prise de masse">
+         <span class="goal-label">PRISE DE MASSE</span>
+         <span class="goal-kcal" id="goal-prise">–</span>
+         <span class="goal-active-text">Objectif actuel</span>
 
-          <p class="mini">
-            ≈ <span id="sport-kcal">0</span> kcal dépensées.
-          </p>
-        </div>
+         <span class="goal-sub">Excédent contrôlé (+300 kcal / jour pour construire du muscle).</span>
+       </button>
 
-        <button id="btn-log" type="button" class="btn big full">
-          Enregistrer dans ma journée
-        </button>
-        <p id="log-msg" class="log-msg"></p>
+     </div>
+ <button type="button" class="btn small outline" id="save-goal">
+   Enregistrer cet objectif sur mon profil
+ </button>
+ <p class="mini" id="save-goal-msg"></p>
+
+ <div class="next-steps">
+   <h3>Et maintenant, on fait quoi ?</h3>
+   <p>Choisis la suite pour mettre ces calories en pratique sur NAHA.</p>
+
+   <div class="next-steps__grid">
+     <div class="next-step">
+       <h4>Suivre mes calories</h4>
+       <p>Note ce que tu manges chaque jour et vois si tu respectes ton objectif.</p>
+       <a href="consommation.php" class="cta">Ouvrir mon journal alimentaire</a>
+     </div>
+
+     <div class="next-step">
+       <h4>Voir mon tableau de bord</h4>
+       <p>Visualise l’évolution de ton poids, de tes apports et de tes séances.</p>
+       <a href="tableau.php" class="cta">Aller au tableau de bord</a>
+     </div>
+
+     <div class="next-step">
+       <h4>Mes entraînements</h4>
+       <p>Accède à nos idées de séances adaptées à ton objectif.</p>
+       <a href="entrainements.php" class="cta">Voir les entraînements</a>
+     </div>
+   </div>
+ </div>
+
+
       </section>
 
     </div>

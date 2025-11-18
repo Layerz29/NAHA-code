@@ -1,3 +1,4 @@
+
 /* hérite de ta DA (accueil-style.css) */
 :root{
   --primary:#4c5bf9; --ink:#0f0f10; --muted:#6b7280;
@@ -64,8 +65,11 @@
 .btn.big{padding:12px 18px; border-radius:12px; font-weight:800}
 
 /* Animations */
-[data-animate]{opacity:0; transform:translateY(12px); transition:.4s ease}
-.is-inview{opacity:1; transform:none}
+[data-animate]{
+  opacity: 1;
+  transform: none;
+  transition: .4s ease;
+}
 
 /* Progress bar */
 .scroll-progress{position:sticky; top:0; height:3px; background:var(--primary); width:0; z-index:50}
@@ -74,4 +78,228 @@
 @media (max-width: 980px){
   .kpis{grid-template-columns:1fr; gap:12px}
   .grid{grid-template-columns:1fr; gap:14px}
+}
+/* ===== Carte objectif calorique ===== */
+
+.goal-card{
+  background: linear-gradient(180deg,#eef2ff,#ffffff);
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.goal-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:18px;
+}
+
+.goal-label{
+  font-size:0.8rem;
+  text-transform:uppercase;
+  letter-spacing:0.08em;
+  color:#6b7280;
+  margin:0 0 4px;
+}
+
+.goal-type{
+  margin:0;
+  font-size:1.1rem;
+  font-weight:800;
+}
+
+.goal-maint{
+  margin:6px 0 0;
+  font-size:0.9rem;
+  color:#4b5563;
+}
+
+.goal-main-number{
+  text-align:right;
+}
+
+.goal-number{
+  display:block;
+  font-size:2rem;
+  font-weight:800;
+  line-height:1;
+}
+
+.goal-unit{
+  display:block;
+  font-size:0.8rem;
+  color:#6b7280;
+}
+
+.goal-chip{
+  display:inline-block;
+  margin-top:8px;
+  padding:4px 10px;
+  border-radius:999px;
+  font-size:0.75rem;
+  background:#111827;
+  color:#f9fafb;
+}
+
+.goal-footer{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:0.8rem;
+  color:#6b7280;
+}
+
+.goal-link{
+  font-size:0.8rem;
+  text-decoration:none;
+  color:#4c5bf9;
+  font-weight:600;
+}
+
+.goal-link:hover{
+  text-decoration:underline;
+}
+
+.goal-chart{
+  margin-top:6px;
+}
+/* ===== Carte objectif calorique ===== */
+
+.goal-card{
+  background: linear-gradient(180deg,#eef2ff,#ffffff);
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  padding: 18px 20px;
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.10);
+}
+
+.goal-row{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.goal-left{
+  max-width: 60%;
+}
+
+.goal-label{
+  margin: 0 0 4px;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #6b7280;
+}
+
+.goal-type{
+  margin: 0 0 6px;
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+.goal-text{
+  margin: 2px 0;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.goal-right{
+  text-align: right;
+}
+
+.goal-number{
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.goal-unit{
+  display: block;
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.goal-link{
+  font-size: 0.8rem;
+  color: #4c5bf9;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.goal-link:hover{
+  text-decoration: underline;
+}
+
+@media (max-width: 900px){
+  .goal-row{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .goal-left{
+    max-width: 100%;
+  }
+  .goal-right{
+    text-align: left;
+  }
+}
+/* Donut plus petit */
+.donut-wrap canvas {
+  max-width: 220px;
+  max-height: 220px;
+}
+/* ===== Carte progression objectif du jour ===== */
+
+.day-progress-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.day-progress-card .card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.day-progress-label {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.day-progress-main {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.day-progress-sub {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.day-progress-bar {
+  margin-top: 10px;
+  width: 100%;
+  height: 8px;
+  border-radius: 999px;
+  background: #e5e7eb;
+  overflow: hidden;
+}
+
+.day-progress-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #4c5bf9, #45c778);
+  transition: width 0.4s ease-out;
+}
+
+.day-progress-hint {
+  margin: 6px 0 0;
+  font-size: 0.8rem;
+  color: #6b7280;
 }

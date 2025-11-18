@@ -1,3 +1,10 @@
+a {
+  text-decoration: none !important;
+}
+.brand {
+  margin-left: 1px;
+}
+
 :root{
   --bg:#ffffff;
   --ink:#0f0f10;
@@ -25,13 +32,7 @@ body{
 .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
 .brand__logo{font-size:22px}
 .brand__text{color:#fff; font-weight:800; letter-spacing:.3px}
-.menu{display:flex; gap:10px; flex-wrap:wrap}
-.pill{
-  background:var(--pill); color:#111; text-decoration:none;
-  padding:7px 12px; border-radius:10px; font-weight:600; font-size:.92rem; border:1px solid #dcdfe4;
-}
 .pill.is-active{background:#fff}
-.auth{display:flex; align-items:center; gap:12px}
 .link{color:#e9ecf3; text-decoration:none; font-weight:600}
 .link:hover{color:#fff}
 .btn{background:var(--primary); color:#fff; text-decoration:none; padding:8px 14px; border-radius:10px; font-weight:800; box-shadow:0 6px 14px rgba(76,91,249,.25)}
@@ -203,8 +204,8 @@ canvas{display:block; width:100% !important}
   border: 1px solid #e5e7eb;
   color: #e5e7eb !important;
   font-size: 0.85rem;
-  padding: 0.35rem 0.9rem;
-  border-radius: 999px;
+  padding: 6px 12px;
+  border-radius: 10px;   /* <= ici tu mets ce que TU veux globalement */
   text-decoration: none !important;
   display: inline-flex;
   align-items: center;
@@ -214,4 +215,44 @@ canvas{display:block; width:100% !important}
 .btn-ghost:hover {
   background: #f9fafb;
   color: #111827 !important;
+}
+/* ===== TOPBAR NAHA — VERSION CLEAN ===== */
+
+
+.menu {
+  display: flex;
+  gap: 10px;
+  flex: 1;               /* le menu prend l'espace au centre */
+  justify-content: center;
+  white-space: nowrap;   /* jamais de retour à la ligne */
+}
+
+.pill {
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  background: var(--pill);
+  border: 1px solid #dcdfe4;
+  color: #111;
+  font-weight: 600;
+}
+
+.pill.is-active {
+  background: #fff;
+  border-color: #fff;
+}
+
+/* bloc auth à droite */
+.auth {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0; /* empêche le bloc de se casser */
+}
+
+/* === Mobile === */
+@media (max-width: 960px) {
+  .menu {
+    display: none; /* ton menu burger plus tard */
+  }
 }

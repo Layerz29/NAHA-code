@@ -19,6 +19,77 @@ if (!isset($_SESSION['utilisateur'])) {
 $idUser = (int)$_SESSION['utilisateur']['id_utilisateur'];
 
 try {
+    /* === Données 7 derniers jours pour les graphes === */
+    $weekLabels  = [];
+    $weekIn      = [];
+    $weekOut     = [];
+    $weekCardio  = [];
+
+    // on remonte du J-6 à aujourd'hui
+    for ($i = 6; $i >= 0; $i--) {
+        $d = new DateTime("-$i days");
+        $dateStr = $d->format('Y-m-d');
+
+        // lettre du jour en FR
+        $jours = [1=>'L','M','M','J','V','S','D'];
+        $label = $jours[(int)$d->format('N')];
+
+        // calories ingérées ce jour-là
+        $sqlInDay = "
+            SELECT SUM(p.energie_kcal * c.quantite / 100) AS kcal_in
+            FROM consommation c
+            JOIN produits p ON p.id_produit = c.id_produit
+            WHERE c.id_utilisateur = :u
+              AND DATE(c.date_conso) = :d
+        ";
+        $stmtInDay = $bdd->prepare($sqlInDay);
+        $stmtInDay->execute(['u' => $idUser, 'd' => $dateStr]);
+        $kIn = (int)($stmtInDay->fetchColumn() ?: 0);
+
+        // calories dépensées ce jour-là
+        $sqlOutDay = "
+            SELECT SUM(s.kcal_h_70kg * (a.duree_minutes / 60)) AS kcal_out
+            FROM activite a
+            JOIN sports s ON s.id_sport = a.id_sport
+            WHERE a.id_utilisateur = :u
+              AND DATE(a.date_sport) = :d
+        ";
+        $stmtOutDay = $bdd->prepare($sqlOutDay);
+        $stmtOutDay->execute(['u' => $idUser, 'd' => $dateStr]);
+        $kOut = (int)($stmtOutDay->fetchColumn() ?: 0);
+
+        // minutes de sport dans la journée (pour la courbe cardio)
+        $sqlCardioDay = "
+            SELECT SUM(a.duree_minutes) AS minutes
+            FROM activite a
+            WHERE a.id_utilisateur = :u
+              AND DATE(a.date_sport) = :d
+        ";
+        $stmtCardioDay = $bdd->prepare($sqlCardioDay);
+        $stmtCardioDay->execute(['u' => $idUser, 'd' => $dateStr]);
+        $mCardio = (int)($stmtCardioDay->fetchColumn() ?: 0);
+
+        $weekLabels[] = $label;
+        $weekIn[]     = $kIn;
+        $weekOut[]    = $kOut;
+        $weekCardio[] = $mCardio;
+    }
+
+
+    /* === Objectif calorique de l'utilisateur === */
+    $sqlGoal = "
+        SELECT *
+        FROM objectif_utilisateur
+        WHERE id_utilisateur = :id
+        ORDER BY date_maj DESC
+        LIMIT 1
+    ";
+    $stmtGoal = $bdd->prepare($sqlGoal);
+    $stmtGoal->execute(['id' => $idUser]);
+    $goal = $stmtGoal->fetch(PDO::FETCH_ASSOC);
+
+
+
     /* === Calories ingérées aujourd’hui === */
     $sqlIn = "
         SELECT SUM(p.energie_kcal * c.quantite / 100) AS kcal_in
@@ -31,9 +102,7 @@ try {
     $stmtIn->execute(['u' => $idUser]);
     $kcalIn = (int)($stmtIn->fetchColumn() ?: 0);
 
-    /* === Calories dépensées aujourd’hui ===
-       -> on utilise sports.kcal_h_70kg * (duree_minutes/60)
-    */
+    /* === Calories dépensées aujourd’hui === */
     $sqlOut = "
         SELECT SUM(s.kcal_h_70kg * (a.duree_minutes / 60)) AS kcal_out
         FROM activite a
@@ -41,7 +110,6 @@ try {
         WHERE a.id_utilisateur = :u
           AND DATE(a.date_sport) = CURDATE()
     ";
-
     $stmtOut = $bdd->prepare($sqlOut);
     $stmtOut->execute(['u' => $idUser]);
     $kcalOut = (int)($stmtOut->fetchColumn() ?: 0);
@@ -60,15 +128,35 @@ try {
         ORDER BY a.date_sport DESC
         LIMIT 5
     ";
-
     $stmtLast = $bdd->prepare($sqlLast);
     $stmtLast->execute(['u' => $idUser]);
     $lastActs = $stmtLast->fetchAll(PDO::FETCH_ASSOC);
+    /* === Répartition macros aujourd’hui (prot / glu / lip) === */
+    $sqlMacros = "
+        SELECT
+          SUM(p.proteines * c.quantite / 100) AS prot,
+          SUM(p.glucides * c.quantite / 100)  AS glu,
+          SUM(p.lipides  * c.quantite / 100)  AS lip
+        FROM consommation c
+        JOIN produits p ON p.id_produit = c.id_produit
+        WHERE c.id_utilisateur = :u
+          AND DATE(c.date_conso) = CURDATE()
+    ";
+    $stmtMacros = $bdd->prepare($sqlMacros);
+    $stmtMacros->execute(['u' => $idUser]);
+    $rowMacros = $stmtMacros->fetch(PDO::FETCH_ASSOC) ?: [];
+
+    $macros = [
+        'prot' => (float)($rowMacros['prot'] ?? 0),
+        'glu'  => (float)($rowMacros['glu']  ?? 0),
+        'lip'  => (float)($rowMacros['lip']  ?? 0),
+    ];
+
 
 } catch (PDOException $e) {
-    // TEMPORAIRE pour debug : tu verras le message au lieu d'une page blanche
     die('Erreur SQL : ' . $e->getMessage());
 }
+
 ?>
 
 <?php /* NAHA — Tableau de bord */ ?>
@@ -103,6 +191,8 @@ try {
       <a class="pill" href="calculateur.php">Calculateur</a>
       <a class="pill" href="accueil.php#projet">Le Projet</a>
       <a class="pill" href="consommation.php">Consommation</a>
+      <a class="pill" href="contact.php">Contact</a>
+
     </nav>
 
     <div class="auth">
@@ -162,6 +252,35 @@ try {
   <!-- GRID CHARTS -->
   <section class="dash-grid">
     <div class="container grid">
+           <?php if (!empty($goal)): ?>
+             <div class="card goal-card" data-animate="fade-up">
+               <div class="goal-row">
+                 <div class="goal-left">
+                   <p class="goal-label">Mon objectif calorique</p>
+                   <h3 class="goal-type">
+                     <?= htmlspecialchars($goal['objectif_nom']) ?>
+                   </h3>
+                   <p class="goal-text">
+                     Maintenance estimée :
+                     <strong><?= (int)$goal['maintenance'] ?> kcal / jour</strong>
+                   </p>
+                   <p class="goal-text">
+                     Dernière mise à jour :
+                     <?= (new DateTime($goal['date_maj']))->format('d/m/Y') ?>
+                   </p>
+                 </div>
+
+                 <div class="goal-right">
+                   <span class="goal-number"><?= (int)$goal['objectif_kcal'] ?></span>
+                   <span class="goal-unit">kcal / jour</span>
+                   <a href="calculateur.php" class="goal-link">Modifier dans le calculateur →</a>
+                 </div>
+               </div>
+             </div>
+           <?php endif; ?>
+
+
+
       <!-- Bar chart -->
       <div class="card" data-animate="fade-up">
         <div class="card__head">
@@ -234,7 +353,7 @@ try {
                   </div>
                 </div>
                 <time>
-                  <?= date('d/m H:i', strtotime($act['date_activite'])) ?>
+                  <?= date('d/m H:i', strtotime($act['date_sport'])) ?>
                 </time>
               </li>
             <?php endforeach; ?>
@@ -291,8 +410,24 @@ try {
   <div class="legal">© 2025 NAHA — Données : Open Food Facts & Compendium MET</div>
 </footer>
 
+<script>
+  window.NAHA_DASH = {
+    weekLabels: <?= json_encode($weekLabels ?? []) ?>,
+    weekIn:     <?= json_encode($weekIn ?? []) ?>,
+    weekOut:    <?= json_encode($weekOut ?? []) ?>,
+    weekCardio: <?= json_encode($weekCardio ?? []) ?>,
+    macros: {
+      prot: <?= json_encode($macros['prot'] ?? 0) ?>,
+      glu:  <?= json_encode($macros['glu']  ?? 0) ?>,
+      lip:  <?= json_encode($macros['lip']  ?? 0) ?>
+    }
+  };
+</script>
+
+
 <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 <script defer src="tableau-script.js"></script>
 </body>
 </html>

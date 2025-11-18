@@ -3,7 +3,6 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -34,35 +33,44 @@ if (session_status() === PHP_SESSION_NONE) {
       <a class="pill" href="calculateur.php">Calculateur</a>
       <a class="pill" href="projet.php">Le Projet</a>
       <a class="pill" href="consommation.php">Consommation</a>
+      <a class="pill" href="contact.php">Contact</a>
+
     </nav>
 
-<div class="auth">
-  <?php if (isset($_SESSION['utilisateur'])): ?>
-    <span class="auth-user">
-      👤 <?= htmlspecialchars($_SESSION['utilisateur']['prenom'].' '.$_SESSION['utilisateur']['nom']) ?>
-      <span class="auth-tag">Connecté</span>
-    </span>
-    <a class="btn-ghost" href="deconnexion.php">Déconnexion</a>
-  <?php else: ?>
-    ...
-  <?php endif; ?>
-</div>
-
-
-
+    <div class="auth">
+      <?php if (isset($_SESSION['utilisateur'])): ?>
+        <span class="auth-user">
+          👤 <?= htmlspecialchars($_SESSION['utilisateur']['prenom'].' '.$_SESSION['utilisateur']['nom'], ENT_QUOTES, 'UTF-8') ?>
+          <span class="auth-tag">Connecté</span>
+        </span>
+        <a class="btn-ghost" href="deconnexion.php">Déconnexion</a>
+      <?php else: ?>
+        <a class="link <?= basename($_SERVER['PHP_SELF']) === 'seconnecter.php' ? 'is-active' : '' ?>"
+           href="seconnecter.php">Se connecter</a>
+        <a class="btn" href="sinscrire.php">S’inscrire</a>
+      <?php endif; ?>
+    </div>
   </div>
 </header>
 
 <main id="top">
-  <!-- HERO (parallaxe soft + progress bar) -->
+  <!-- HERO -->
   <section class="hero" data-parallax>
     <div class="container hero__inner" data-animate="fade-up">
       <h1 class="hero__title">NAHA</h1>
-      <p class="hero__quote">“Les grands accomplissements sont réussis non par la force, mais par la persévérance.”<br><span>Samuel Johnson</span></p>
+      <p class="hero__quote">
+        “Les grands accomplissements sont réussis non par la force, mais par la persévérance.”<br>
+        <span>Samuel Johnson</span>
+      </p>
 
       <div class="hero__cta">
-        <a class="btn big" href="sinscrire.php">Commencer</a>
-        <a class="btn ghost" href="#features">Découvrir</a>
+        <?php if (isset($_SESSION['utilisateur'])): ?>
+          <a class="btn big" href="tableau.php">Accéder au tableau de bord</a>
+          <a class="btn ghost" href="#features">Découvrir</a>
+        <?php else: ?>
+          <a class="btn big" href="sinscrire.php">Commencer</a>
+          <a class="btn ghost" href="seconnecter.php">Se connecter</a>
+        <?php endif; ?>
       </div>
     </div>
     <div class="scroll-progress"></div>
@@ -120,7 +128,7 @@ if (session_status() === PHP_SESSION_NONE) {
 
   <div class="divider"></div>
 
-  <!-- KPIs (compteurs animés) -->
+  <!-- KPIs -->
   <section class="kpis" id="dash" data-animate="fade-up">
     <div class="container kpis__grid">
       <div class="kpi">
@@ -143,12 +151,14 @@ if (session_status() === PHP_SESSION_NONE) {
   <!-- FEATURES -->
   <section class="features" id="features" data-animate="fade-up">
     <div class="container">
-      <h3 class="features__title">Découvrez notre calculateur performant et<br>des entraînements personnalisés</h3>
+      <h3 class="features__title">
+        Découvrez notre calculateur performant et<br>des entraînements personnalisés
+      </h3>
 
       <div class="features__grid">
-        <a class="cta" href="#calc">Calculateur</a>
-        <a class="cta cta--right" href="#contact">Contactez nous !</a>
-        <a class="cta" href="#dash">Tableau de bord</a>
+        <a class="cta" href="calculateur.php#top">Calculateur</a>
+        <a class="cta cta--right" href="contact.php">Contactez nous !</a>
+        <a class="cta" href="tableau.php">Tableau de bord</a>
         <a class="cta cta--right" href="#train">Entraînement</a>
       </div>
     </div>
@@ -156,7 +166,7 @@ if (session_status() === PHP_SESSION_NONE) {
 
   <div class="divider"></div>
 
-  <!-- Newsletter AJAX soft -->
+  <!-- Newsletter -->
   <section class="newsletter" id="contact" data-animate="fade-up">
     <div class="container newsletter__card">
       <h3>Reste dans le flow 📈</h3>
@@ -176,12 +186,14 @@ if (session_status() === PHP_SESSION_NONE) {
     <div class="container">
       <h2 class="title title--spaced">DÉCOUVREZ&nbsp;&nbsp;NOTRE ÉQUIPE</h2>
       <div class="team__list">
-        <span data-animate="pop">Haitham</span><span data-animate="pop">Ahmed</span><span data-animate="pop">Noah</span><span data-animate="pop">Arthur</span>
+        <span data-animate="pop">Haitham</span>
+        <span data-animate="pop">Ahmed</span>
+        <span data-animate="pop">Noah</span>
+        <span data-animate="pop">Arthur</span>
       </div>
     </div>
   </section>
 
-  <!-- Back to top -->
   <button class="to-top" aria-label="Remonter">↑</button>
 </main>
 
