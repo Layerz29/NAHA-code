@@ -204,7 +204,7 @@ try {
       <a class="pill" href="accueil.php">Accueil</a>
       <a class="pill is-active" href="tableau.php">Tableau de bord</a>
       <a class="pill" href="calculateur.php">Calculateur</a>
-      <a class="pill" href="accueil.php#projet">Le Projet</a>
+      <a class="pill" href="accueil.php">Le Projet</a>
       <a class="pill" href="consommation.php">Consommation</a>
       <a class="pill" href="contact.php">Contact</a>
 
@@ -231,6 +231,8 @@ try {
     <div class="container">
       <h1 class="dash-title" data-animate="fade-up">Mon suivi journalier</h1>
       <p class="dash-sub" data-animate="fade-up">Un coup d’œil sur tes progrès — nutrition, sport, équilibre</p>
+        <!-- ⭐ CONSEIL DU JOUR -->
+        <?php include 'conseil.php'; ?>
 
       <div class="kpis" data-animate="fade-up">
         <!-- Ingressées -->

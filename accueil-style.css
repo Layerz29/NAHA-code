@@ -100,13 +100,49 @@ canvas{display:block; width:100% !important}
 .cta:active{transform: translateY(1px)}
 .cta--right{justify-self:end}
 
-/* ===== Newsletter ===== */
-.newsletter{padding:64px 0}
-.newsletter__card{max-width:720px; margin:0 auto; text-align:center; background:#fff; border:1px solid var(--border); border-radius:24px; padding:28px; box-shadow:0 10px 30px rgba(17,24,39,.06)}
-.news-form{display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:12px}
-.news-form input[type="email"]{width:320px; height:44px; border:1px solid var(--border); border-radius:12px; padding:0 12px}
-.news-form .btn{height:44px; border-radius:12px}
-.news-msg{margin-top:10px; min-height:20px; color:#111}
+.newsletter{
+  padding:64px 0;
+}
+.newsletter__card{
+  max-width:720px;
+  margin:0 auto;
+  text-align:center;
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:24px;
+  padding:28px;
+  box-shadow:0 10px 30px rgba(17,24,39,.06);
+}
+
+.newsletter-form {
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top:12px;
+}
+
+.newsletter-input{
+  width:320px;
+  height:44px;
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:0 12px;
+}
+
+
+.newsletter-form .btn{
+  height:44px;
+  border-radius:12px;
+
+}
+
+.newsletter-feedback{
+  margin-top:10px;
+  min-height:20px;
+  color:#111;
+}
+
 
 /* ===== Team ===== */
 .team{padding:26px 0 50px}

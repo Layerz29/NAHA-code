@@ -156,7 +156,7 @@ if (session_status() === PHP_SESSION_NONE) {
       </h3>
 
       <div class="features__grid">
-        <a class="cta" href="calculateur.php#top">Calculateur</a>
+        <a class="cta" href="calculateur.php">Calculateur</a>
         <a class="cta cta--right" href="contact.php">Contactez nous !</a>
         <a class="cta" href="tableau.php">Tableau de bord</a>
         <a class="cta cta--right" href="#train">Entraînement</a>
@@ -171,11 +171,20 @@ if (session_status() === PHP_SESSION_NONE) {
     <div class="container newsletter__card">
       <h3>Reste dans le flow 📈</h3>
       <p>Reçois 1 tip data & perf par semaine. Pas de spam, juré.</p>
-      <form id="news-form" class="news-form" action="api/newsletter.php" method="post">
-        <input type="email" name="email" placeholder="tonemail@exemple.com" required>
-        <button class="btn" type="submit">S’abonner</button>
-      </form>
-      <div id="news-msg" class="news-msg" role="status" aria-live="polite"></div>
+        <form id="newsletter-form" class="newsletter-form" method="POST" action="newsletter.php">
+            <input type="email" name="email" class="newsletter-input" placeholder="tonemail@exemple.com" required>
+            <button type="submit" class="btn">S’abonner</button>
+        </form>
+
+        <?php if (!empty($_SESSION['newsletter_msg'])): ?>
+            <p class="newsletter-feedback">
+                <?= htmlspecialchars($_SESSION['newsletter_msg']) ?>
+            </p>
+            <?php unset($_SESSION['newsletter_msg']); ?>
+        <?php endif; ?>
+
+
+        <p id="newsletter-form"></p>
     </div>
   </section>
 
