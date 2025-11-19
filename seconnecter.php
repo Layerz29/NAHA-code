@@ -34,10 +34,11 @@ if (session_status() === PHP_SESSION_NONE) {
 
     <nav class="menu">
       <a class="pill" href="accueil.php">Accueil</a>
-      <a class="pill" href="accueil.php#dash">Tableau de bord</a>
-      <a class="pill" href="accueil.php#calc">Calculateur</a>
-      <a class="pill" href="accueil.php#projet">Le Projet</a>
-      <a class="pill" href="accueil.php#conso">Consommation</a>
+      <a class="pill" href="tableau.php">Tableau de bord</a>
+      <a class="pill" href="calculateur.php">Calculateur</a>
+      <a class="pill" href="projet.php">Le Projet</a>
+      <a class="pill" href="consommation.php">Consommation</a>
+      <a class="pill" href="contact.php">Contact</a>
     </nav>
 <div class="auth">
   <?php if (isset($_SESSION['utilisateur'])): ?>
