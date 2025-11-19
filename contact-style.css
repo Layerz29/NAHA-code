@@ -234,3 +234,22 @@ body{
 .btn{background:var(--primary); color:#fff; text-decoration:none; padding:8px 14px; border-radius:10px; font-weight:800; box-shadow:0 6px 14px rgba(76,91,249,.25)}
 .btn.big{padding:12px 18px; border-radius:12px}
 .btn.ghost{background:#fff; color:#111; box-shadow:none; border:1px solid var(--border)}
+
+/* ===== Footer version large EXCLUSIF à contact.php ===== */
+.contact-main ~ .footer {
+    padding: 1px 0;          /* footer plus haut */
+}
+
+.contact-main ~ .footer .footer__inner {
+    padding: 20px 0 10px;
+    gap: 40px;
+}
+
+.contact-main ~ .footer .legal {
+    padding: 18px 0;
+    font-size: 1rem;
+}
+
+.contact-main ~ .footer .mini-quote {
+    font-size: 1rem;
+}
