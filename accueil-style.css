@@ -256,3 +256,6 @@ canvas{display:block; width:100% !important}
     display: none; /* ton menu burger plus tard */
   }
 }
+.auth .link {
+    color: #ffffff !important;
+}

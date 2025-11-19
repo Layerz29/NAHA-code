@@ -45,9 +45,10 @@ $err    = $_GET['err'] ?? '';
     <nav class="menu">
       <a class="pill is-active" href="accueil.php">Accueil</a>
       <a class="pill" href="tableau.php">Tableau de bord</a>
-      <a class="pill" href="#calc">Calculateur</a>
-      <a class="pill" href="#projet">Le Projet</a>
-      <a class="pill" href="#conso">Consommation</a>
+      <a class="pill" href="calculateur.php">Calculateur</a>
+      <a class="pill" href="projet.php">Le Projet</a>
+      <a class="pill" href="consommation.php">Consommation</a>
+      <a class="pill" href="contact.php">Contact</a>
     </nav>
 
     <div class="auth">

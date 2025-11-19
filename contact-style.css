@@ -18,7 +18,7 @@ body{
 /* Container générique (same vibe que accueil-style si besoin) */
 .container{
     width:100%;
-    max-width:1080px;
+    max-width:1120px;
     margin:0 auto;
     padding:0 16px;
 }
@@ -28,10 +28,13 @@ body{
     padding-bottom:40px;
 }
 
-.contact-hero{
-    background:linear-gradient(180deg,#f7f9fc 0%, #ffffff 70%);
-    padding:32px 0 16px;
+
+.contact-hero {
+    padding: 80px 0 30px; /* déjà présent → OK */
+    margin-top: 60px; /* on ajoute ça */
 }
+
+
 
 .contact-hero__inner{
     display:flex;
