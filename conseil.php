@@ -7,15 +7,27 @@ require_once "bdd.php";
 $bdd = getBD();
 
 /* ========= CONSEIL DU JOUR ========= */
+/* ========= CONSEIL DU JOUR ========= */
 $dayIndex = date('z'); // 0 → 365
-$stmt = $bdd->prepare("SELECT * FROM conseils LIMIT 1 OFFSET :o");
-$stmt->bindValue(':o', $dayIndex, PDO::PARAM_INT);
-$stmt->execute();
-$conseil = $stmt->fetch();
 
+// compter les conseils
+$total = $bdd->query("SELECT COUNT(*) FROM conseils")->fetchColumn();
+
+if ($total > 0) {
+    // créer un index qui boucle entre 0 et total-1
+    $offset = $dayIndex % $total;
+
+    $stmt = $bdd->prepare("SELECT texte FROM conseils LIMIT 1 OFFSET :o");
+    $stmt->bindValue(':o', $offset, PDO::PARAM_INT);
+    $stmt->execute();
+    $conseil = $stmt->fetch();
+}
+
+// fallback si aucun conseil
 if (!$conseil) {
     $conseil = ["texte" => "Aucun conseil dispo aujourd’hui fréro 😭"];
 }
+
 
 /* ========= CSRF ========= */
 if (empty($_SESSION['csrf_news'])) {
@@ -52,6 +64,7 @@ if (isset($_GET['ajax']) && $_GET['ajax'] === 'newsletter') {
     } catch (Exception $e) {
         echo json_encode(['ok' => false, 'msg' => 'Erreur serveur 😭']);
     }
+
 
     exit;
 }
