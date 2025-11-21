@@ -438,3 +438,6 @@ canvas{display:block; width:100% !important}
     font-size: 0.85rem;
     margin-top: 2px;
 }
+#loginFeedback {
+    color: #dc2626 !important; /* rouge */
+}
