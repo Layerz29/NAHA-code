@@ -33,11 +33,13 @@ if (!password_verify($pass, $user['pswrd'])) {
 
 // On charge la session
 $_SESSION['utilisateur'] = [
-    "id" => $user['id_utilisateur'],
+    "id_utilisateur" => $user['id_utilisateur'],
     "nom" => $user['nom'],
     "prenom" => $user['prenom'],
     "mail" => $user['mail']
 ];
+
+
 
 // Réponse JSON → redirection accueil
 echo json_encode([
