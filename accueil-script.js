@@ -162,8 +162,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ===== Newsletter AJAX
-  const newsForm = document.getElementById('news-form');
-  const newsMsg  = document.getElementById('news-msg');
+  const newsForm = document.getElementById('newsletter-form');
+  const newsMsg  = document.getElementById('newsletter-msg');
   if (newsForm) {
     newsForm.addEventListener('submit', async (e) => {
       e.preventDefault();

@@ -5,12 +5,7 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NAHA — Connexion</title>
+
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -66,28 +61,27 @@ if (session_status() === PHP_SESSION_NONE) {
         </div>
       <?php endif; ?>
 
-      <form id="loginForm" class="auth-form" novalidate>
-          <div class="field">
-               <label for="mail">Email</label>
-               <input id="mail" type="email" name="mail" placeholder="tonemail@exemple.com">
-               <p id="err-mail" class="field-error-msg"></p>
-           </div>
+      <form class="auth-form" action="connex.php" method="post" novalidate>
+        <div class="field">
+          <label for="mail">Email</label>
+          <input id="mail" type="email" name="mail" placeholder="tonemail@exemple.com"
+                 value="<?php if(isset($_GET['mail'])) echo htmlspecialchars($_GET['mail'], ENT_QUOTES, 'UTF-8'); ?>">
+        </div>
 
-           <div class="field">
-               <label for="pswrd">Mot de passe</label>
-               <div class="password-wrap">
-                   <input id="pswrd" type="password" name="pswrd" placeholder="••••••••">
-                   <button class="show-pass" type="button">👁️</button>
-               </div>
-               <p id="err-pswrd" class="field-error-msg"></p>
-           </div>
+        <div class="field">
+          <label for="pswrd">Mot de passe</label>
+          <div class="password-wrap">
+            <input id="pswrd" type="password" name="pswrd" placeholder="••••••••" required>
+            <button class="show-pass" type="button" aria-label="Afficher le mot de passe">👁️</button>
+          </div>
+        </div>
 
+        <button class="btn btn-primary auth-submit" type="submit">Se connecter</button>
 
-          <button class="btn btn-primary auth-submit" type="submit">Se connecter</button>
-
-          <p id="loginFeedback" style="margin-top:10px; color:#b91c1c; font-weight:600;"></p>
+        <div class="auth-meta">
+          <a href="#" class="link">Mot de passe oublié ?</a>
+        </div>
       </form>
-
 
       <p class="auth-small">Pas de compte ? <a href="sinscrire.php" class="link">Inscris-toi</a></p>
     </div>
@@ -105,123 +99,13 @@ if (session_status() === PHP_SESSION_NONE) {
 </footer>
 
 <script>
-// ===== EMAIL LIVE CHECK =====
-const email = document.querySelector('#mail');
-const errMail = document.querySelector('#err-mail');
-
-email.addEventListener('input', () => {
-    let val = email.value;
-
-    if (val.endsWith("gmail.") || val.endsWith("outlook.") || val.endsWith("hotmail.")) {
-        email.value = val + "com";
-        val = email.value;
+  // Afficher/masquer le mot de passe
+  document.addEventListener('click', (e) => {
+    if (e.target.matches('.show-pass')) {
+      const inp = document.querySelector('#pswrd');
+      inp.type = inp.type === 'password' ? 'text' : 'password';
     }
-
-    const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (!pattern.test(val)) {
-        email.classList.add('input-error');
-        errMail.textContent = "Format d’email incorrect";
-    } else {
-        email.classList.remove('input-error');
-        errMail.textContent = "";
-    }
-});
-
-// ===== PASSWORD LIVE CHECK =====
-const pass = document.querySelector('#pswrd');
-const errPass = document.querySelector('#err-pswrd');
-
-pass.addEventListener('input', () => {
-    if (pass.value.length < 4) {
-        pass.classList.add('input-error');
-        errPass.textContent = "Mot de passe trop court (min 4 caractères)";
-    } else {
-        pass.classList.remove('input-error');
-        errPass.textContent = "";
-    }
-});
-
-// ===== CAPS LOCK WARNING =====
-let capsWarning = document.createElement("p");
-capsWarning.classList.add("caps-warning");
-capsWarning.textContent = "Attention : CAPS LOCK activé ⚠️";
-capsWarning.style.display = "none";
-pass.insertAdjacentElement("afterend", capsWarning);
-
-pass.addEventListener('keyup', (e) => {
-    capsWarning.style.display = e.getModifierState("CapsLock") ? "block" : "none";
-});
-
-// ===== SHOW / HIDE PASSWORD =====
-const showBtn = document.querySelector('.show-pass');
-showBtn.addEventListener('click', () => {
-    if (pass.type === "password") {
-        pass.type = "text";
-        showBtn.textContent = "🙈";
-    } else {
-        pass.type = "password";
-        showBtn.textContent = "👁️";
-    }
-});
-
-// ===== AJAX LOGIN =====
-document.querySelector('#loginForm').addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    const btn = document.querySelector('.auth-submit');
-    const feedback = document.querySelector('#loginFeedback');
-    const form = document.querySelector('#loginForm');
-
-    // Validation AVANT l'AJAX
-    if (
-        email.classList.contains('input-error') ||
-        pass.classList.contains('input-error') ||
-        email.value.trim() === "" ||
-        pass.value.trim() === ""
-    ) {
-        feedback.textContent = "Corrige les erreurs avant de continuer";
-
-        form.classList.add("shake");
-        setTimeout(() => form.classList.remove("shake"), 350);
-
-        return;
-    }
-
-    btn.classList.add("btn-loading");
-
-    const data = new FormData();
-    data.append("mail", email.value);
-    data.append("pswrd", pass.value);
-
-    const res = await fetch("login_api.php", {
-        method: "POST",
-        body: data
-    });
-
-    const json = await res.json();
-
-    btn.classList.remove("btn-loading");
-
-    if (!json.success) {
-        feedback.style.color = "#b91c1c";
-        feedback.textContent = json.msg;
-
-        form.classList.add("shake");
-        setTimeout(() => form.classList.remove("shake"), 350);
-
-    } else {
-        feedback.style.color = "#22c55e";
-        feedback.textContent = json.msg;
-
-        setTimeout(() => {
-            window.location.href = json.redirect;
-        }, 700);
-    }
-});
+  });
 </script>
-
-
-
 </body>
 </html>
