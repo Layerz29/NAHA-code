@@ -238,65 +238,122 @@ try {
     </div>
   </div>
 </header>
-
 <main class="dash">
 
-  <section class="dash-hero">
+  <!-- TITRE + SOUS TEXTE -->
+  <h1 class="dash-title">Mon suivi journalier</h1>
+  <p class="dash-sub">Un coup d’œil sur tes progrès — nutrition, sport, équilibre</p>
+
+  <!-- CONSEIL DU JOUR -->
+  <section class="dash-tip">
     <div class="container">
-      <h1 class="dash-title" data-animate="fade-up">Mon suivi journalier</h1>
-      <p class="dash-sub" data-animate="fade-up">Un coup d’œil sur tes progrès — nutrition, sport, équilibre</p>
-        <!-- ⭐ CONSEIL DU JOUR -->
-        <?php include 'conseil.php'; ?>
-
-      <div class="kpis" data-animate="fade-up">
-        <!-- Ingressées -->
-        <article class="kpi kpi-hover">
-          <div class="kpi__icon">🔥</div>
-          <div class="kpi__title">Calories ingérées</div>
-          <div class="kpi__num" data-counter="<?= $kcalIn ?>">0</div>
-          <div class="kpi__delta is-up">Aujourd’hui</div>
-
-          <!-- Tooltip -->
-          <div class="kpi-tooltip">
-              <?php if (empty($foodsToday)): ?>
-                  <p>Aucune consommation aujourd’hui.</p>
-              <?php else: ?>
-                  <ul>
-                    <?php foreach ($foodsToday as $f): ?>
-                      <li>
-                        <strong><?= htmlspecialchars($f['nom_produit']) ?></strong>
-                        — <?= $f['quantite'] ?> g
-                        (<?= $f['kcal'] ?> kcal)
-                      </li>
-                    <?php endforeach; ?>
-                  </ul>
-              <?php endif; ?>
-          </div>
-        </article>
-
-
-        <!-- Dépensées -->
-        <article class="kpi">
-          <div class="kpi__icon">🏋️‍♂️</div>
-          <div class="kpi__title">Calories dépensées</div>
-          <div class="kpi__num" data-counter="<?= $kcalOut ?>">0</div>
-          <div class="kpi__delta is-down">Aujourd’hui</div>
-        </article>
-
-        <!-- Solde -->
-        <article class="kpi">
-          <div class="kpi__icon">🧮</div>
-          <div class="kpi__title">Solde calorique</div>
-          <div class="kpi__num" data-counter="<?= $solde ?>">0</div>
-          <div class="kpi__delta <?= $solde >= 0 ? 'is-up' : 'is-down' ?>">
-            <?= $solde >= 0 ? '+' : '' ?><?= $solde ?> kcal
-          </div>
-        </article>
-      </div><!-- /kpis -->
-    </div><!-- /container -->
-
-    <div class="scroll-progress"></div>
+      <div class="tip-card">
+        <h3>Conseil du jour 🍃</h3>
+        <p><?= htmlspecialchars($conseilJour ?? "Les bons lipides (huile d'olive, œufs, avocat, saumon) gèrent tes hormones, ton énergie et ta récupération.") ?></p>
+      </div>
+    </div>
   </section>
+
+  <!-- SECTION KPIS -->
+  <section class="dash-hero">
+
+    <div class="container">
+      <div class="kpis kpis-3">
+
+
+        <!-- KPI INGEREES -->
+        <div class="kpi flip-card">
+          <div class="flip-inner">
+
+            <!-- RECTO -->
+            <div class="flip-front">
+              <div class="kpi__icon">🔥</div>
+              <div class="kpi__title">Calories ingérées</div>
+              <div class="kpi__num" data-counter="<?= $kcalIn ?>">0</div>
+              <div class="kpi__delta is-up">Aujourd’hui</div>
+            </div>
+
+            <!-- VERSO -->
+            <div class="flip-back">
+              <h4>Aliments du jour</h4>
+              <?php if (empty($foodsToday)): ?>
+                <p>Aucune consommation aujourd’hui.</p>
+              <?php else: ?>
+                <ul class="flip-list">
+                  <?php foreach ($foodsToday as $f): ?>
+                    <li>
+                      <strong><?= htmlspecialchars($f['nom_produit']) ?></strong>
+                      — <?= $f['quantite'] ?> g (<?= $f['kcal'] ?> kcal)
+                    </li>
+                  <?php endforeach; ?>
+                </ul>
+              <?php endif; ?>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- KPI DÉPENSÉES -->
+        <div class="kpi flip-card">
+          <div class="flip-inner">
+
+            <!-- RECTO -->
+            <div class="flip-front">
+              <div class="kpi__icon">🏋️‍♂️</div>
+              <div class="kpi__title">Calories dépensées</div>
+              <div class="kpi__num" data-counter="<?= $kcalOut ?>">0</div>
+              <div class="kpi__delta is-down">Aujourd’hui</div>
+            </div>
+
+            <!-- VERSO -->
+            <div class="flip-back">
+              <h4>Activités du jour</h4>
+              <?php if (empty($lastActs)): ?>
+                <p>Aucune activité.</p>
+              <?php else: ?>
+                <ul class="flip-list">
+                  <?php foreach ($lastActs as $act): ?>
+                    <li>
+                      <strong><?= htmlspecialchars($act['nom_sport']) ?></strong>
+                      — <?= (int)$act['duree_min'] ?> min (<?= (int)$act['kcal'] ?> kcal)
+                    </li>
+                  <?php endforeach; ?>
+                </ul>
+              <?php endif; ?>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- KPI SOLDE -->
+        <div class="kpi flip-card">
+          <div class="flip-inner">
+
+            <!-- RECTO -->
+            <div class="flip-front">
+              <div class="kpi__icon">🧮</div>
+              <div class="kpi__title">Solde calorique</div>
+              <div class="kpi__num" data-counter="<?= $solde ?>">0</div>
+              <div class="kpi__delta <?= $solde >= 0 ? 'is-up' : 'is-down' ?>">
+                <?= $solde >= 0 ? '+' : '' ?><?= $solde ?> kcal
+              </div>
+            </div>
+
+            <!-- VERSO -->
+            <div class="flip-back">
+              <h4>Détails</h4>
+              <p>Ingérées : <?= $kcalIn ?> kcal</p>
+              <p>Dépensées : <?= $kcalOut ?> kcal</p>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div> <!-- FIN .kpis -->
+    </div> <!-- FIN .container -->
+  </section>
+
 <!-- GRID CHARTS -->
 <section class="dash-grid">
   <div class="container grid">
