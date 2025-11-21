@@ -29,8 +29,6 @@ $err    = $_GET['err'] ?? '';
   <!-- Style global NAHA (le même que sur accueil.php) -->
   <link rel="stylesheet" href="accueil-style.css?v=<?php echo time(); ?>">
 
-  <!-- Style en plus pour le formulaire (si tu veux) -->
-  <link rel="stylesheet" href="auth-style.css?v=<?php echo time(); ?>">
 </head>
 
 <body>
@@ -60,73 +58,80 @@ $err    = $_GET['err'] ?? '';
         <a class="btn-ghost" href="deconnexion.php">Déconnexion</a>
       <?php else: ?>
         <a class="link <?php echo basename($_SERVER['PHP_SELF']) === 'seconnecter.php' ? 'is-active' : ''; ?>" href="seconnecter.php">Se connecter</a>
-        <a class="btn" href="sinscrire.php">S’inscrire</a>
+        <a class="btn-signup" href="sinscrire.php">S’inscrire</a>
+
+
       <?php endif; ?>
     </div>
 
 </header>
+<main class="auth-main">
+  <div class="container">
 
-  <!-- CONTENU PRINCIPAL -->
-  <main class="page">
-    <section class="hero">
-      <div class="hero-text">
-        <h1>Rejoins la team NAHA</h1>
-        <p>Inscris-toi pour suivre ta progression et atteindre tes objectifs.</p>
-      </div>
+    <h1 class="auth-title">Créer ton compte <span>NAHA</span></h1>
+    <p class="auth-subtitle">Rejoins la team et commence ton suivi personnalisé.</p>
+    <p class="auth-subtitle">Ton espace te permet de suivre ta progression au quotidien.</p>
 
-      <div class="auth-card">
-        <h2>Créer un compte</h2>
+    <div class="auth-card">
 
-        <?php if (!empty($err)): ?>
-          <p class="error-msg"><?= htmlspecialchars($err) ?></p>
-        <?php endif; ?>
+      <?php if (!empty($err)): ?>
+        <div class="auth-alert">
+          <?= htmlspecialchars($err) ?>
+        </div>
+      <?php endif; ?>
 
-        <form action="inscription.php" method="post" class="auth-form">
-          <div class="field">
-            <label for="nom">Nom</label>
-            <input id="nom" type="text" name="n" value="<?= htmlspecialchars($nom) ?>" required>
-          </div>
+      <form action="inscription.php" method="post" class="auth-form">
 
-          <div class="field">
-            <label for="prenom">Prénom</label>
-            <input id="prenom" type="text" name="p" value="<?= htmlspecialchars($prenom) ?>" required>
-          </div>
+        <div class="field">
+          <label for="nom">Nom</label>
+          <input id="nom" type="text" name="n" value="<?= htmlspecialchars($nom) ?>" required>
+        </div>
 
-          <div class="field">
-            <label for="adr">Adresse</label>
-            <input id="adr" type="text" name="adr" value="<?= htmlspecialchars($adr) ?>">
-          </div>
+        <div class="field">
+          <label for="prenom">Prénom</label>
+          <input id="prenom" type="text" name="p" value="<?= htmlspecialchars($prenom) ?>" required>
+        </div>
 
-          <div class="field">
-            <label for="num">Téléphone</label>
-            <input id="num" type="text" name="num" value="<?= htmlspecialchars($num) ?>">
-          </div>
+        <div class="field">
+          <label for="adr">Adresse</label>
+          <input id="adr" type="text" name="adr" value="<?= htmlspecialchars($adr) ?>">
+        </div>
 
-          <div class="field">
-            <label for="mail">Email</label>
-            <input id="mail" type="email" name="mail" value="<?= htmlspecialchars($mail) ?>" required>
-          </div>
+        <div class="field">
+          <label for="num">Téléphone</label>
+          <input id="num" type="text" name="num" value="<?= htmlspecialchars($num) ?>">
+        </div>
 
-          <div class="field">
-            <label for="pswrd1">Mot de passe</label>
+        <div class="field">
+          <label for="mail">Email</label>
+          <input id="mail" type="email" name="mail" value="<?= htmlspecialchars($mail) ?>" required>
+        </div>
+
+        <div class="field">
+          <label for="pswrd1">Mot de passe</label>
+          <div class="password-wrap">
             <input id="pswrd1" type="password" name="pswrd1" required>
+            <button class="show-pass" type="button">👁️</button>
           </div>
+        </div>
 
-          <div class="field">
-            <label for="pswrd2">Confirmer le mot de passe</label>
-            <input id="pswrd2" type="password" name="pswrd2" required>
-          </div>
+        <div class="field">
+          <label for="pswrd2">Confirmer le mot de passe</label>
+          <input id="pswrd2" type="password" name="pswrd2" required>
+        </div>
 
-          <button type="submit" class="btn btn-primary btn-full">S'inscrire</button>
+        <button type="submit" class="btn btn-primary auth-submit">S’inscrire</button>
 
-          <p class="switch-auth">
-            Déjà un compte ?
-            <a href="seconnecter.php">Se connecter</a>
-          </p>
-        </form>
-      </div>
-    </section>
-  </main>
+      </form>
+
+      <p class="auth-small">
+        Déjà un compte ? <a href="seconnecter.php" class="link">Connecte-toi</a>
+      </p>
+
+    </div>
+  </div>
+</main>
+
 
   <!-- FOOTER SIMPLE -->
 <footer class="footer">

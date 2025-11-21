@@ -293,5 +293,148 @@ canvas{display:block; width:100% !important}
   }
 }
 .auth .link {
-    color: #ffffff !important;
+    color: #e5e7eb; /* gris clair NAHA */
+}
+
+.auth .link:hover {
+    color: #fff;
+}
+
+/* === Bouton S'INSCRIRE GLOBAL NAHA === */
+.btn-signup {
+    background: var(--primary);
+    color: #fff !important;
+    padding: 10px 16px;
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 0.9rem;
+    text-decoration: none !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 14px rgba(76,91,249,.25);
+    transition: .2s ease;
+}
+
+.btn-signup:hover {
+    opacity: .92;
+}
+
+.btn-signup:active {
+    transform: translateY(1px);
+}
+/* === Bouton d'action NAHA (style unifié pour TOUTES les pages) === */
+.btn-signup {
+    background: var(--primary);
+    color: #fff !important;
+    padding: 10px 18px;
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 0.92rem;
+    text-decoration: none !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 14px rgba(76,91,249,.25);
+    transition: .2s ease;
+    white-space: nowrap;
+}
+
+.btn-signup:hover {
+    opacity: .92;
+}
+
+.btn-signup:active {
+    transform: translateY(1px);
+}
+
+/* Empêche les styles .link, .btn-primary ou autres de casser le bouton */
+.auth a.btn-signup,
+.topbar a.btn-signup {
+    color: #fff !important;
+}
+.switch-auth a,
+.auth-small a {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.switch-auth a:hover,
+.auth-small a:hover {
+    color: var(--primary) !important; /* garde le bleu */
+    text-decoration: underline;       /* petit effet clean */
+}
+.shake {
+    animation: shake .25s linear;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    50% { transform: translateX(4px); }
+    75% { transform: translateX(-4px); }
+    100% { transform: translateX(0); }
+}
+/* ================================
+   CHAMPS ERREUR
+================================ */
+.input-error {
+    border-color: #ef4444 !important;
+    box-shadow: 0 0 0 3px rgba(239,68,68,.25) !important;
+}
+
+/* Texte sous champ */
+.field-error-msg {
+    color: #dc2626;
+    font-size: 0.85rem;
+    margin-top: 4px;
+}
+
+/* ================================
+   ANIMATION SHAKE
+================================ */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-6px); }
+    40% { transform: translateX(6px); }
+    60% { transform: translateX(-4px); }
+    80% { transform: translateX(4px); }
+    100% { transform: translateX(0); }
+}
+
+.shake {
+    animation: shake .35s;
+}
+
+/* ================================
+   LOADER BOUTON
+================================ */
+.btn-loading {
+    opacity: .8;
+    pointer-events: none;
+}
+
+.btn-loading::after {
+    content: "";
+    margin-left: 10px;
+    border: 2px solid white;
+    border-right-color: transparent;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    display: inline-block;
+    animation: spin .4s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ================================
+   WARNING CAPSLOCK
+================================ */
+.caps-warning {
+    color: #d97706;
+    font-size: 0.85rem;
+    margin-top: 2px;
 }

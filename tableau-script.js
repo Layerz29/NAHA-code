@@ -145,6 +145,25 @@ function donutMacros(canvas) {
   const p = macros.prot || 0;
   const g = macros.glu  || 0;
   const l = macros.lip  || 0;
+// ===== Si aucune donnée => afficher un message à la place du donut
+if ((p + g + l) === 0) {
+    const wrap = canvas.parentElement;
+    wrap.innerHTML = `
+        <div style="
+            text-align:center;
+            padding: 55px 10px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #444;
+            line-height: 1.5;
+        ">
+             Ton tableau est encore vide<br>
+            <span style="font-weight:700;">Ajoute un aliment pour voir tes macros !</span>
+        </div>
+
+    `;
+    return; // stoppe la création du donut
+}
 
   new Chart(canvas.getContext('2d'), {
     type: 'doughnut',
