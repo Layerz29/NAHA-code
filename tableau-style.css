@@ -440,3 +440,87 @@
  }
 
 }
+.kpi-hover {
+    position: relative;
+}
+
+.kpi-tooltip {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 260px;
+    background: white;
+    border: 1px solid #eee;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(5px);
+    transition: 0.2s ease-in-out;
+    z-index: 10;
+}
+
+.kpi-hover:hover .kpi-tooltip {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.kpi-tooltip ul {
+    margin: 0;
+    padding-left: 16px;
+    font-size: 14px;
+}
+
+.kpi-tooltip li {
+    margin-bottom: 6px;
+}
+/* ========================== */
+/*   HOVER CARDS + TOOLTIP    */
+/* ========================== */
+
+.kpi {
+    position: relative;
+    transition: transform .25s ease, box-shadow .25s ease;
+    cursor: pointer;
+}
+
+.kpi:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+
+/* ----- Tooltip aliments ----- */
+.kpi-tooltip {
+    position: absolute;
+    top: -12px;
+    left: 0;
+    transform: translateY(-100%);
+    background: #fff;
+    padding: 14px 18px;
+    border-radius: 12px;
+    width: 270px;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+    display: none;           /* hidden default */
+    z-index: 20;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.kpi-tooltip ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.kpi-tooltip li {
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.kpi:hover .kpi-tooltip {
+    display: block;
+    opacity: 1;
+}

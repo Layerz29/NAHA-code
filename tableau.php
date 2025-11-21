@@ -131,6 +131,20 @@ try {
 
     $solde = $kcalIn - $kcalOut;
 
+    /* === Liste des aliments consommés aujourd’hui === */
+    $sqlFoods = "
+        SELECT p.nom_produit, c.quantite,
+               ROUND(p.energie_kcal * c.quantite / 100, 0) AS kcal
+        FROM consommation c
+        JOIN produits p ON p.id_produit = c.id_produit
+        WHERE c.id_utilisateur = :u
+          AND DATE(c.date_conso) = CURDATE()
+    ";
+    $stmtFoods = $bdd->prepare($sqlFoods);
+    $stmtFoods->execute(['u' => $idUser]);
+    $foodsToday = $stmtFoods->fetchAll(PDO::FETCH_ASSOC);
+
+
     /* === Dernières activités pour la liste à droite === */
     $sqlLast = "
         SELECT a.date_sport,
@@ -236,12 +250,30 @@ try {
 
       <div class="kpis" data-animate="fade-up">
         <!-- Ingressées -->
-        <article class="kpi">
+        <article class="kpi kpi-hover">
           <div class="kpi__icon">🔥</div>
           <div class="kpi__title">Calories ingérées</div>
           <div class="kpi__num" data-counter="<?= $kcalIn ?>">0</div>
           <div class="kpi__delta is-up">Aujourd’hui</div>
+
+          <!-- Tooltip -->
+          <div class="kpi-tooltip">
+              <?php if (empty($foodsToday)): ?>
+                  <p>Aucune consommation aujourd’hui.</p>
+              <?php else: ?>
+                  <ul>
+                    <?php foreach ($foodsToday as $f): ?>
+                      <li>
+                        <strong><?= htmlspecialchars($f['nom_produit']) ?></strong>
+                        — <?= $f['quantite'] ?> g
+                        (<?= $f['kcal'] ?> kcal)
+                      </li>
+                    <?php endforeach; ?>
+                  </ul>
+              <?php endif; ?>
+          </div>
         </article>
+
 
         <!-- Dépensées -->
         <article class="kpi">
