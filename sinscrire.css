@@ -1,0 +1,198 @@
+/* ==========================================================
+   PAGE INSCRIPTION — VERSION PREMIUM NAHA
+========================================================== */
+
+:root {
+    --primary:#4c5bf9;
+    --ink:#0f0f10;
+    --muted:#6b7280;
+    --border:#e5e7eb;
+    --bg-soft:#f7f9fc;
+}
+
+/* --- Layout global --- */
+.page {
+    min-height: calc(100vh - 90px);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 90px 16px 60px;
+    background: linear-gradient(180deg, #f2f4f9 0%, #ffffff 80%);
+}
+
+/* --- Hero grid structure --- */
+.hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    gap: 80px;
+    max-width: 1100px;
+    width: 100%;
+    align-items: center;
+    margin-top: 30px;
+}
+
+@media (max-width: 960px) {
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        text-align: center;
+    }
+}
+
+/* --- Texte gauche --- */
+.hero-text h1 {
+    font-size: clamp(2.5rem, 4vw, 3.4rem);
+    font-weight: 800;
+    margin-bottom: 14px;
+    color: #111;
+    letter-spacing: -0.025em;
+}
+
+.hero-text p {
+    color: #6b7280;
+    font-size: 17px;
+    max-width: 50ch;
+    line-height: 1.6;
+}
+
+/* --- Carte formulaire --- */
+.auth-card {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 32px 30px;
+    width: 440px;
+    border: 1px solid #ececf1;
+    box-shadow: 0 18px 38px rgba(17, 24, 39, 0.08);
+    animation: fadeIn 0.4s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: none; }
+}
+
+.auth-card h2 {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    color: #0f0f10;
+}
+
+/* --- Champ formulaire --- */
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 14px;
+}
+
+.field label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+}
+
+.field input {
+    border: 1px solid var(--border);
+    background: #f8fafc;
+    padding: 11px 14px;
+    border-radius: 14px;
+    font-size: 15px;
+    transition: all .15s ease;
+}
+
+.field input:focus {
+    border-color: var(--primary);
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(76, 91, 249, .18);
+}
+
+/* --- Bouton --- */
+.btn-primary {
+    background: var(--primary);
+    color: #fff;
+    padding: 13px 16px;
+    width: 100%;
+    border-radius: 14px;
+    border: none;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 10px 24px rgba(76,91,249,.32);
+    transition: .2s ease;
+}
+
+.btn-primary:hover {
+    opacity: .93;
+    transform: translateY(-1px);
+}
+
+.btn-primary:active {
+    transform: translateY(1px);
+}
+
+/* --- Lien changer page --- */
+.switch-auth {
+    margin-top: 18px;
+    font-size: 14px;
+    text-align: center;
+    color: #6b7280;
+}
+
+.switch-auth a {
+    color: var(--primary);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.switch-auth a:hover {
+    text-decoration: underline;
+}
+/* ---- BLOC GAUCHE / HERO ---- */
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.auth-badge {
+    display: inline-block;
+    background: rgba(76,91,249,0.10);
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 999px;
+    letter-spacing: .5px;
+    width: fit-content;
+}
+
+.hero-text h1 {
+    font-size: 40px;
+    font-weight: 800;
+    color: #111;
+    line-height: 1.15;
+}
+
+.hero-text h1 span {
+    color: var(--primary);
+}
+
+.hero-text p {
+    font-size: 16px;
+    color: #6b7280;
+    max-width: 45ch;
+}
+.switch-auth a,
+.auth-small a {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.switch-auth a:hover,
+.auth-small a:hover {
+    color: var(--primary) !important; /* garde le bleu */
+    text-decoration: underline;       /* petit effet clean */
+}

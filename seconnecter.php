@@ -7,7 +7,6 @@ if (session_status() === PHP_SESSION_NONE) {
 
 
 
-
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
@@ -62,27 +61,27 @@ if (session_status() === PHP_SESSION_NONE) {
         </div>
       <?php endif; ?>
 
-      <form class="auth-form" action="connex.php" method="post" novalidate>
-        <div class="field">
-          <label for="mail">Email</label>
-          <input id="mail" type="email" name="mail" placeholder="tonemail@exemple.com"
-                 value="<?php if(isset($_GET['mail'])) echo htmlspecialchars($_GET['mail'], ENT_QUOTES, 'UTF-8'); ?>">
-        </div>
-
-        <div class="field">
-          <label for="pswrd">Mot de passe</label>
-          <div class="password-wrap">
-            <input id="pswrd" type="password" name="pswrd" placeholder="••••••••" required>
-            <button class="show-pass" type="button" aria-label="Afficher le mot de passe">👁️</button>
+      <form id="loginForm" class="auth-form" novalidate>
+          <div class="field">
+            <label for="mail">Email</label>
+            <input id="mail" type="email" name="mail" placeholder="tonemail@exemple.com">
+            <p id="err-mail" class="field-error-msg"></p>
           </div>
-        </div>
 
-        <button class="btn btn-primary auth-submit" type="submit">Se connecter</button>
+          <div class="field">
+            <label for="pswrd">Mot de passe</label>
+            <div class="password-wrap">
+              <input id="pswrd" type="password" name="pswrd" placeholder="••••••••">
+              <button class="show-pass" type="button">👁️</button>
+            </div>
+            <p id="err-pswrd" class="field-error-msg"></p>
+          </div>
 
-        <div class="auth-meta">
-          <a href="#" class="link">Mot de passe oublié ?</a>
-        </div>
+          <button class="btn btn-primary auth-submit" type="submit">Se connecter</button>
+
+          <p id="loginFeedback" style="margin-top:10px; font-weight:600;"></p>
       </form>
+
 
       <p class="auth-small">Pas de compte ? <a href="sinscrire.php" class="link">Inscris-toi</a></p>
     </div>
@@ -100,13 +99,105 @@ if (session_status() === PHP_SESSION_NONE) {
 </footer>
 
 <script>
-  // Afficher/masquer le mot de passe
-  document.addEventListener('click', (e) => {
-    if (e.target.matches('.show-pass')) {
-      const inp = document.querySelector('#pswrd');
-      inp.type = inp.type === 'password' ? 'text' : 'password';
+// ===== EMAIL LIVE CHECK =====
+const email = document.querySelector('#mail');
+const errMail = document.querySelector('#err-mail');
+
+email.addEventListener('input', () => {
+    let val = email.value;
+
+    // auto-correction
+    if (val.endsWith("gmail.") || val.endsWith("outlook.") || val.endsWith("hotmail.")) {
+        email.value = val + "com";
+        val = email.value;
     }
-  });
+
+    const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!pattern.test(val)) {
+        email.classList.add('input-error');
+        errMail.textContent = "Format d’email incorrect";
+    } else {
+        email.classList.remove('input-error');
+        errMail.textContent = "";
+    }
+});
+
+// ===== PASSWORD LIVE CHECK =====
+const pass = document.querySelector('#pswrd');
+const errPass = document.querySelector('#err-pswrd');
+
+pass.addEventListener('input', () => {
+    if (pass.value.length < 2) {
+        pass.classList.add('input-error');
+        errPass.textContent = "Mot de passe trop court (min 2 caractères)";
+    } else {
+        pass.classList.remove('input-error');
+        errPass.textContent = "";
+    }
+});
+
+
+// ===== SHOW / HIDE PASSWORD =====
+document.querySelector('.show-pass').addEventListener('click', () => {
+    pass.type = pass.type === "password" ? "text" : "password";
+});
+
+// ===== AJAX LOGIN =====
+document.querySelector('#loginForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const feedback = document.querySelector('#loginFeedback');
+    const btn = document.querySelector('.auth-submit');
+    const form = document.querySelector('#loginForm');
+
+    // blocage si erreur front
+    if (email.classList.contains('input-error') ||
+        pass.classList.contains('input-error') ||
+        email.value.trim() === "" ||
+        pass.value.trim() === "")
+    {
+        feedback.style.color = "#dc2626";  // rouge
+        feedback.textContent = "Corrige les erreurs avant de continuer";
+        form.classList.add("shake");
+        setTimeout(() => form.classList.remove("shake"), 350);
+        return;
+    }
+
+    // loader
+    btn.classList.add("btn-loading");
+
+    const data = new FormData();
+    data.append("mail", email.value);
+    data.append("pswrd", pass.value);
+
+    const res = await fetch("login_api.php", {
+        method: "POST",
+        body: data
+    });
+
+    const json = await res.json();
+
+    btn.classList.remove("btn-loading");
+
+    if (!json.success) {
+        feedback.style.color = "#dc2626";  // 🔴 rouge erreur
+        feedback.textContent = json.msg;
+
+        form.classList.add("shake");
+        setTimeout(() => form.classList.remove("shake"), 350);
+    }
+    else {
+        feedback.style.color = "#22c55e";  // 🟢 vert succès
+        feedback.textContent = json.msg;
+
+        setTimeout(() => {
+            window.location.href = json.redirect;
+        }, 700);
+    }
+});
+
 </script>
+
+
 </body>
 </html>
