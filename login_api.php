@@ -1,49 +1,48 @@
 <?php
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
+if (session_status() === PHP_SESSION_NONE) session_start();
 
 header('Content-Type: application/json');
-
 require_once "bdd.php";
+
 $bdd = getBD();
 
-$mail   = $_POST['mail']   ?? '';
-$pswrd  = $_POST['pswrd']  ?? '';
+$mail = trim($_POST['mail'] ?? '');
+$pass = $_POST['pswrd'] ?? '';
 
-if (!$mail || !$pswrd) {
-    echo json_encode([
-        "success" => false,
-        "msg" => "Remplis tous les champs !"
-    ]);
+// Champs vides ?
+if ($mail === '' || $pass === '') {
+    echo json_encode(["success" => false, "msg" => "Email ou mot de passe manquant."]);
     exit;
 }
 
-$stmt = $bdd->prepare("SELECT * FROM utilisateur WHERE mail = ?");
+// Recherche utilisateur
+$stmt = $bdd->prepare("SELECT * FROM utilisateurs WHERE mail = ?");
 $stmt->execute([$mail]);
 $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
 if (!$user) {
-    echo json_encode([
-        "success" => false,
-        "msg" => "Cet email n’existe pas dans la base."
-    ]);
+    echo json_encode(["success" => false, "msg" => "Compte introuvable."]);
     exit;
 }
 
-if (!password_verify($pswrd, $user["mdp"])) {
-    echo json_encode([
-        "success" => false,
-        "msg" => "Mot de passe incorrect."
-    ]);
+// Vérifier mot de passe (colonne = pswrd)
+if (!password_verify($pass, $user['pswrd'])) {
+    echo json_encode(["success" => false, "msg" => "Mot de passe incorrect."]);
     exit;
 }
 
-$_SESSION['utilisateur'] = $user;
+// On charge la session
+$_SESSION['utilisateur'] = [
+    "id" => $user['id_utilisateur'],
+    "nom" => $user['nom'],
+    "prenom" => $user['prenom'],
+    "mail" => $user['mail']
+];
 
+// Réponse JSON → redirection accueil
 echo json_encode([
     "success" => true,
-    "msg"     => "Connexion réussie !",
-    "redirect"=> "tableau.php"
+    "msg" => "Connexion réussie !",
+    "redirect" => "accueil.php"
 ]);
 exit;

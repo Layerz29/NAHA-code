@@ -127,14 +127,15 @@ const pass = document.querySelector('#pswrd');
 const errPass = document.querySelector('#err-pswrd');
 
 pass.addEventListener('input', () => {
-    if (pass.value.length < 4) {
+    if (pass.value.length < 2) {
         pass.classList.add('input-error');
-        errPass.textContent = "Mot de passe trop court (min 4 caractères)";
+        errPass.textContent = "Mot de passe trop court (min 2 caractères)";
     } else {
         pass.classList.remove('input-error');
         errPass.textContent = "";
     }
 });
+
 
 // ===== SHOW / HIDE PASSWORD =====
 document.querySelector('.show-pass').addEventListener('click', () => {
@@ -155,6 +156,7 @@ document.querySelector('#loginForm').addEventListener('submit', async (e) => {
         email.value.trim() === "" ||
         pass.value.trim() === "")
     {
+        feedback.style.color = "#dc2626";  // rouge
         feedback.textContent = "Corrige les erreurs avant de continuer";
         form.classList.add("shake");
         setTimeout(() => form.classList.remove("shake"), 350);
@@ -178,13 +180,14 @@ document.querySelector('#loginForm').addEventListener('submit', async (e) => {
     btn.classList.remove("btn-loading");
 
     if (!json.success) {
-        feedback.style.color = "#b91c1c";
+        feedback.style.color = "#dc2626";  // 🔴 rouge erreur
         feedback.textContent = json.msg;
 
         form.classList.add("shake");
         setTimeout(() => form.classList.remove("shake"), 350);
-    } else {
-        feedback.style.color = "#22c55e";
+    }
+    else {
+        feedback.style.color = "#22c55e";  // 🟢 vert succès
         feedback.textContent = json.msg;
 
         setTimeout(() => {
@@ -192,6 +195,7 @@ document.querySelector('#loginForm').addEventListener('submit', async (e) => {
         }, 700);
     }
 });
+
 </script>
 
 
