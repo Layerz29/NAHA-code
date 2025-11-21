@@ -6,6 +6,7 @@ if (session_status() === PHP_SESSION_NONE) {
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NAHA — Accueil</title>
@@ -18,6 +19,7 @@ if (session_status() === PHP_SESSION_NONE) {
   <link rel="stylesheet" href="accueil-style.css" />
 </head>
 <body>
+
 
 <!-- Topbar -->
 <header class="topbar">
@@ -216,7 +218,6 @@ if (session_status() === PHP_SESSION_NONE) {
   </div>
 </footer>
 
-<!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="accueil-script.js"></script>
 </body>
