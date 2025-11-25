@@ -1,4 +1,12 @@
 <?php
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reportING(E_ALL);
+
+//------------------------------------
+//  Sécurité + connexion BDD
+//------------------------------------
 if (session_status() === PHP_SESSION_NONE) session_start();
 require_once 'bdd.php';
 $bdd = getBD();
@@ -8,87 +16,104 @@ if (!isset($_SESSION['utilisateur'])) {
     exit;
 }
 
-/* ================== AJAX ================== */
-if (isset($_GET['ajax'])) {
-    header('Content-Type: application/json; charset=utf-8');
-    $action = $_GET['ajax'];
+// ID de l'utilisateur connecté
+$idUser = $_SESSION['utilisateur']['id'];
 
-    // --- Produits ---
-    if ($action === 'produits') {
-        $sql = "SELECT id_produit, nom_produit, energie_kcal
-                FROM produits
-                ORDER BY nom_produit";
-        echo json_encode($bdd->query($sql)->fetchAll(PDO::FETCH_ASSOC));
-        exit;
+
+//------------------------------------
+//  TRAITEMENT FORMULAIRE — CONSOMMATION
+//------------------------------------
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_conso'])) {
+
+    $id_produit = $_POST['id_produit'] ?? null;
+    $quantite   = $_POST['quantite'] ?? null;
+
+    if ($id_produit && $quantite > 0) {
+        $sql = "INSERT INTO consommation (id_utilisateur, id_produit, quantite, date_conso)
+                VALUES (:u, :p, :q, NOW())";
+
+        $stmt = $bdd->prepare($sql);
+        $stmt->execute([
+            'u' => $idUser,
+            'p' => $id_produit,
+            'q' => $quantite
+        ]);
     }
-
-    // --- Sports ---
-    if ($action === 'sports') {
-        $sql = "SELECT id_sport, nom_sport, MET, kcal_h_70kg
-                FROM sports
-                ORDER BY nom_sport";
-        echo json_encode($bdd->query($sql)->fetchAll(PDO::FETCH_ASSOC));
-        exit;
-    }
-
-    // --- Log conso + sport ---
-    if ($action === 'log') {
-        $idUser    = (int) $_SESSION['utilisateur']['id_utilisateur'];
-        $idProduit = $_POST['id_produit'] ?? null;
-        $quantite  = $_POST['quantite'] ?? null;
-        $idSport   = $_POST['id_sport'] ?? null;
-        $duree     = $_POST['duree'] ?? null;
-
-        try {
-            $bdd->beginTransaction();
-
-            if ($idProduit && $quantite > 0) {
-                $sql = "INSERT INTO consommation (id_utilisateur, id_produit, quantite, date_conso)
-                        VALUES (:u, :p, :q, NOW())";
-                $st  = $bdd->prepare($sql);
-                $st->execute([
-                    'u' => $idUser,
-                    'p' => $idProduit,
-                    'q' => $quantite
-                ]);
-            }
-
-            if ($idSport && $duree > 0) {
-                $sql = "INSERT INTO activite (id_utilisateur, id_sport, date_sport, duree_minutes)
-                        VALUES (:u, :s, NOW(), :d)";
-                $st  = $bdd->prepare($sql);
-                $st->execute([
-                    'u' => $idUser,
-                    's' => $idSport,
-                    'd' => $duree
-                ]);
-            }
-
-            $bdd->commit();
-            echo json_encode(['ok' => true]);
-        } catch (Exception $e) {
-            $bdd->rollBack();
-            echo json_encode(['ok' => false, 'error' => $e->getMessage()]);
-        }
-        exit;
-    }
-
-    echo json_encode(['ok' => false, 'error' => 'unknown action']);
-    exit;
 }
+
+
+//------------------------------------
+//  TRAITEMENT FORMULAIRE — ACTIVITÉ
+//------------------------------------
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_sport'])) {
+
+    $id_sport = $_POST['id_sport'] ?? null;
+    $duree    = $_POST['duree'] ?? null;
+
+    if ($id_sport && $duree > 0) {
+        $sql = "INSERT INTO activite (id_utilisateur, id_sport, duree_minutes, date_sport)
+                VALUES (:u, :s, :d, NOW())";
+
+        $stmt = $bdd->prepare($sql);
+        $stmt->execute([
+            'u' => $idUser,
+            's' => $id_sport,
+            'd' => $duree
+        ]);
+    }
+}
+
+
+//------------------------------------
+//  RÉCUPÉRATION PRODUITS + SPORTS
+//------------------------------------
+$produits = $bdd->query("
+    SELECT id_produit, nom_produit, energie_kcal 
+    FROM produits 
+    ORDER BY nom_produit ASC
+")->fetchAll(PDO::FETCH_ASSOC);
+
+$sports = $bdd->query("
+    SELECT id_sport, nom_sport, MET, kcal_h_70kg 
+    FROM sports 
+    ORDER BY nom_sport ASC
+")->fetchAll(PDO::FETCH_ASSOC);
+
+
+//------------------------------------
+//  DERNIÈRES CONSOMMATIONS + ACTIVITÉS
+//------------------------------------
+$stmt = $bdd->prepare("
+    SELECT p.nom_produit, p.energie_kcal, c.quantite, c.date_conso 
+    FROM consommation c
+    JOIN produits p ON c.id_produit = p.id_produit
+    WHERE c.id_utilisateur = :id
+    ORDER BY c.date_conso DESC
+    LIMIT 10
+");
+$stmt->execute(['id' => $idUser]);
+$consos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+$stmt = $bdd->prepare("
+    SELECT s.nom_sport, a.duree_minutes, a.date_sport
+    FROM activite a
+    JOIN sports s ON s.id_sport = a.id_sport
+    WHERE a.id_utilisateur = :id
+    ORDER BY a.date_sport DESC
+    LIMIT 10
+");
+$stmt->execute(['id' => $idUser]);
+$activites = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
   <title>NAHA — Consommation</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="accueil-style.css">
-  <link rel="stylesheet" href="consommation-style.css">
+  <link rel="stylesheet" href="consommation-style.css?v=2">
 </head>
 
 <body>
@@ -110,8 +135,7 @@ if (isset($_GET['ajax'])) {
 
     <div class="auth">
       <span class="auth-user">
-        👤 <?= htmlspecialchars($_SESSION['utilisateur']['prenom']." ".$_SESSION['utilisateur']['nom'], ENT_QUOTES, 'UTF-8') ?>
-        <span class="auth-tag">CONNECTÉ</span>
+        👤 <?= htmlspecialchars($_SESSION['utilisateur']['prenom']." ".$_SESSION['utilisateur']['nom']) ?>
       </span>
       <a class="btn-ghost" href="deconnexion.php">Déconnexion</a>
     </div>
@@ -119,137 +143,179 @@ if (isset($_GET['ajax'])) {
 </header>
 
 <main class="page-cons">
-  <!-- Hero -->
+
   <section class="cons-hero">
     <div class="container">
       <h1 class="cons-title">Mon journal nutrition & sport</h1>
-      <p class="cons-sub">
-        Ajoute rapidement tes repas et tes séances. NAHA enregistre tout
-        et met à jour ton tableau de bord automatiquement.
-      </p>
+      <p class="cons-sub">Ajoute tes repas et séances. NAHA enregistre tout.</p>
     </div>
   </section>
 
-  <!-- Carte principale -->
   <section class="cons-main">
     <div class="container cons-container">
       <div class="cons-card">
 
         <h2>Journal rapide</h2>
-        <p class="cons-intro">
-          Choisis un aliment et/ou une activité, indique la quantité ou la durée,
-          puis clique sur <strong>« Enregistrer dans ma journée »</strong>.
-        </p>
 
-        <!-- PRODUIT -->
-        <div class="subcard">
-          <div class="subcard-header">
-            <h3>Produit</h3>
-            <span class="subtag">Calories ingérées</span>
-          </div>
-
-          <div class="field">
-            <label for="prod-select">Aliment</label>
-            <select id="prod-select">
-              <option value="">Chargement...</option>
-            </select>
-          </div>
-
-          <div class="field">
-            <label for="prod-qte">Quantité (g)</label>
-            <input type="number" id="prod-qte" value="100" min="0" step="10">
-          </div>
-
-          <p class="mini">
-            ≈ <span id="prod-kcal">0</span> kcal
-          </p>
+        <!-- 🔎 BARRE DE RECHERCHE UNIQUE -->
+        <div class="field">
+          <label>Rechercher un aliment ou un sport :</label>
+          <input type="text" id="search-global" placeholder="Tapez pour filtrer...">
         </div>
 
-        <!-- SPORT -->
-        <div class="subcard">
-          <div class="subcard-header">
-            <h3>Sport</h3>
-            <span class="subtag subtag--blue">Calories dépensées</span>
-          </div>
+        <div class="cons-forms">
 
-          <div class="field">
-            <label for="sport-select">Sport / activité</label>
-            <select id="sport-select">
-              <option value="">Chargement...</option>
-            </select>
-          </div>
+          <!-- FORMULAIRE PRODUITS -->
+          <form method="post" class="subcard">
+            <div class="subcard-header">
+              <h3>Produit</h3>
+              <span class="subtag">Calories ingérées</span>
+            </div>
 
-          <div class="field">
-            <label for="sport-duree">Durée (minutes)</label>
-            <input type="number" id="sport-duree" value="60" min="0" step="5">
-          </div>
+            <div class="field">
+              <label>Produit :</label>
+              <select name="id_produit" id="select-produit">
+                <option value="">-- Choisir un aliment --</option>
+                <?php foreach ($produits as $p): ?>
+                  <option value="<?= $p['id_produit'] ?>">
+                    <?= htmlspecialchars($p['nom_produit']) ?> (<?= $p['energie_kcal'] ?> kcal/100g)
+                  </option>
+                <?php endforeach; ?>
+              </select>
+            </div>
 
-          <p class="mini">
-            ≈ <span id="sport-kcal">0</span> kcal dépensées
-          </p>
+            <div class="field">
+              <label>Quantité (g)</label>
+              <input type="number" name="quantite" min="1" required>
+            </div>
+
+            <button type="submit" name="add_conso" class="btn big">Ajouter consommation</button>
+          </form>
+
+
+          <!-- FORMULAIRE SPORT -->
+          <form method="post" class="subcard">
+            <div class="subcard-header">
+              <h3>Sport</h3>
+              <span class="subtag subtag--blue">Calories dépensées</span>
+            </div>
+
+            <div class="field">
+              <label>Sport :</label>
+              <select name="id_sport" id="select-sport">
+                <option value="">-- Choisir un sport --</option>
+                <?php foreach ($sports as $s): ?>
+                  <option value="<?= $s['id_sport'] ?>">
+                    <?= htmlspecialchars($s['nom_sport']) ?>
+                  </option>
+                <?php endforeach; ?>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>Durée (minutes)</label>
+              <input type="number" name="duree" min="1" required>
+            </div>
+
+            <button type="submit" name="add_sport" class="btn big">Ajouter activité</button>
+          </form>
+
         </div>
-
-        <button id="btn-log" class="btn big full">
-          Enregistrer dans ma journée
-        </button>
-        <p id="log-msg" class="log-msg"></p>
-
-
 
       </div>
     </div>
   </section>
 
-  <!-- Étapes + CTA vers tableau -->
+
+  <!-- ----------------------------
+        DERNIÈRES ENTRÉES
+  ----------------------------- -->
   <section class="cons-steps">
     <div class="container">
 
-      <h2 class="steps-title">Ce que NAHA fait pour toi</h2>
-      <p class="steps-sub">
-        Chaque action que tu ajoutes ici met ton tableau de bord à jour automatiquement.
-      </p>
+      <h2 class="steps-title">Mes dernières entrées</h2>
 
       <div class="steps-grid">
 
+        <!-- DERNIÈRES CONSOMMATIONS -->
         <div class="step-item">
-          <span class="step-num">1</span>
-          <h3>J’ajoute mes aliments</h3>
-          <p>NAHA calcule les calories ingérées en temps réel à partir de la quantité renseignée.</p>
+          <h3>Consommations</h3>
+
+          <?php if (empty($consos)): ?>
+            <p>Aucune consommation enregistrée.</p>
+
+          <?php else: ?>
+            <ul>
+              <?php foreach ($consos as $c): ?>
+                <li>
+                  <?= htmlspecialchars($c['nom_produit']) ?> — 
+                  <?= $c['quantite'] ?> g — 
+                  <?= round($c['energie_kcal'] * $c['quantite'] / 100) ?> kcal —
+                  <?= $c['date_conso'] ?>
+                </li>
+              <?php endforeach; ?>
+            </ul>
+          <?php endif; ?>
+
         </div>
 
+        <!-- DERNIÈRES ACTIVITÉS -->
         <div class="step-item">
-          <span class="step-num">2</span>
-          <h3>Je renseigne mon activité</h3>
-          <p>Les dépenses caloriques sont ajoutées à ta journée selon ton sport et ta durée.</p>
-        </div>
+          <h3>Activités</h3>
 
-        <div class="step-item">
-          <span class="step-num">3</span>
-          <h3>Mon suivi est mis à jour</h3>
-          <p>Solde calorique, progrès, graphiques : ton tableau de bord se met à jour automatiquement.</p>
+          <?php if (empty($activites)): ?>
+            <p>Aucune activité enregistrée.</p>
+
+          <?php else: ?>
+            <ul>
+              <?php foreach ($activites as $a): ?>
+                <li>
+                  <?= htmlspecialchars($a['nom_sport']) ?> — 
+                  <?= $a['duree_minutes'] ?> min —
+                  <?= $a['date_sport'] ?>
+                </li>
+              <?php endforeach; ?>
+            </ul>
+          <?php endif; ?>
+
         </div>
 
       </div>
-
-      <div class="steps-cta">
-        <a href="tableau.php" class="btn steps-btn">Voir mon tableau de bord</a>
-      </div>
-
     </div>
   </section>
+
 </main>
 
 <footer class="footer">
   <div class="container footer__inner">
-    <div class="footer__left">
-      <p class="mini-quote">“Le futur c’est loin, j’attends pas assis”.</p>
-    </div>
-    <div class="footer__right">
-      <div class="legal">© 2025 NAHA — Données : Open Food Facts &amp; Compendium MET</div>
-    </div>
+    <p class="mini-quote">“Le futur c’est loin, j’attends pas assis”.</p>
+    <div class="legal">© 2025 NAHA</div>
   </div>
 </footer>
 
-<script src="consommation-script.js"></script>
+
+<!-- SCRIPT : BARRE DE RECHERCHE GLOBAL -->
+<script>
+document.getElementById("search-global").addEventListener("keyup", function() {
+
+    let filter = this.value.toLowerCase();
+
+    let selects = [
+        document.getElementById("select-produit"),
+        document.getElementById("select-sport")
+    ];
+
+    selects.forEach(select => {
+        if (!select) return;
+        let opts = select.options;
+
+        for (let i = 0; i < opts.length; i++) {
+            let txt = opts[i].text.toLowerCase();
+            opts[i].style.display = txt.includes(filter) ? "" : "none";
+        }
+    });
+});
+</script>
+
 </body>
 </html>
