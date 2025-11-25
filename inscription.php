@@ -13,14 +13,42 @@ if(
   empty($_POST['mdp1']) ||
   empty($_POST['mdp2'])
 ) {
-  die("Tous les champs doivent être remplis.");
+  header("Location: sinscrire.php?err=" . urlencode("Veuillez remplir tous les champs."));
+  exit;
 }
 
-$nom = htmlspecialchars($_POST['nom']);
-$prenom = htmlspecialchars($_POST['prenom']);
-$mail = htmlspecialchars($_POST['mail']);
-$adresse = htmlspecialchars($_POST['adresse']);
-$numero = htmlspecialchars($_POST['numero']);
+$nom = trim($_POST['nom']);
+$prenom = trim($_POST['prenom']);
+$mail = trim($_POST['mail']);
+$adresse = trim($_POST['adresse']);
+$numero = trim($_POST['numero']);
+$mdp1 = $_POST['mdp1'];
+$mdp2 = $_POST['mdp2'];
+
+if ($mdp1 !== $mdp2) {
+  header("Location: sinscrire.php?err=" . urlencode("Les mots de passe ne correspondent pas.")
+    . "&nom=" .urlencode($nom)
+    . "&prenom=" .urlencode($prenom)
+    . "&mail=" .urlencode($mail)
+    . "&adresse=" .urlencode($adresse)
+    . "&numero=" .urlencode($numero)
+  );
+  exit;
+}
+
+$sql = "SELECT mail FROM utilisateurs WHERE mail = :mail LIMIT 1";
+$stmt = $bdd->prepare($sql);
+$stmt->execute(['mail' => $mail]);
+if ($stmt->fetch(PDO::FETCH_ASSOC)) {
+  header("Location: sinscrire.php?err=" . urlencode("Cette adresse e-mail est déjà utilisée.")
+    . "&nom=" .urlencode($nom)
+    . "&prenom=" .urlencode($prenom)
+    . "&adresse=" .urlencode($adresse)
+    . "&numero=" .urlencode($numero)
+    . "&mail=" .urlencode($mail)
+  );
+  exit;
+}
 
 $hash = password_hash($_POST['mdp1'], PASSWORD_BCRYPT);
 

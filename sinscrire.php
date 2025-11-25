@@ -9,10 +9,10 @@ if (session_status() === PHP_SESSION_NONE) {
 
 <?php
 // sinscrire.php
-$nom    = $_GET['n']   ?? '';
-$prenom = $_GET['p']   ?? '';
-$adr    = $_GET['adr'] ?? '';
-$num    = $_GET['num'] ?? '';
+$nom    = $_GET['nom']   ?? '';
+$prenom = $_GET['prenom']   ?? '';
+$adr    = $_GET['adresse'] ?? '';
+$num    = $_GET['numero'] ?? '';
 $mail   = $_GET['mail']?? '';
 $err    = $_GET['err'] ?? '';
 ?>
@@ -43,7 +43,7 @@ $err    = $_GET['err'] ?? '';
     </a>
 
     <nav class="menu">
-      <a class="pill is-active" href="accueil.php">Accueil</a>
+      <a class="pill" href="accueil.php">Accueil</a>
       <a class="pill" href="tableau.php">Tableau de bord</a>
       <a class="pill" href="calculateur.php">Calculateur</a>
       <a class="pill" href="projet.php">Le Projet</a>
@@ -52,16 +52,8 @@ $err    = $_GET['err'] ?? '';
     </nav>
 
     <div class="auth">
-      <?php if (isset($_SESSION['utilisateur'])): ?>
-        <span class="auth-user">
-          👤 <?php echo htmlspecialchars($_SESSION['utilisateur']['prenom'].' '.$_SESSION['utilisateur']['nom'], ENT_QUOTES, 'UTF-8'); ?>
-          <span class="auth-tag">Connecté</span>
-        </span>
-        <a class="btn-ghost" href="deconnexion.php">Déconnexion</a>
-      <?php else: ?>
-        <a class="link <?php echo basename($_SERVER['PHP_SELF']) === 'seconnecter.php' ? 'is-active' : ''; ?>" href="seconnecter.php">Se connecter</a>
-        <a class="btn" href="sinscrire.php">S’inscrire</a>
-      <?php endif; ?>
+      <a class="link" href="seconnecter.php">Se connecter</a>
+      <a class="btn is-active" href="sinscrire.php">S'inscrire</a>
     </div>
 
 </header>
@@ -84,22 +76,22 @@ $err    = $_GET['err'] ?? '';
         <form action="inscription.php" method="post" class="auth-form">
           <div class="field">
             <label for="nom">Nom</label>
-            <input id="nom" type="text" name="n" value="<?= htmlspecialchars($nom) ?>" required>
+            <input id="nom" type="text" name="nom" value="<?= htmlspecialchars($nom) ?>" required>
           </div>
 
           <div class="field">
             <label for="prenom">Prénom</label>
-            <input id="prenom" type="text" name="p" value="<?= htmlspecialchars($prenom) ?>" required>
+            <input id="prenom" type="text" name="prenom" value="<?= htmlspecialchars($prenom) ?>" required>
           </div>
 
           <div class="field">
             <label for="adr">Adresse</label>
-            <input id="adr" type="text" name="adr" value="<?= htmlspecialchars($adr) ?>">
+            <input id="adr" type="text" name="adresse" value="<?= htmlspecialchars($adr) ?>">
           </div>
 
           <div class="field">
             <label for="num">Téléphone</label>
-            <input id="num" type="text" name="num" value="<?= htmlspecialchars($num) ?>">
+            <input id="num" type="text" name="numero" value="<?= htmlspecialchars($num) ?>">
           </div>
 
           <div class="field">
@@ -108,13 +100,13 @@ $err    = $_GET['err'] ?? '';
           </div>
 
           <div class="field">
-            <label for="pswrd1">Mot de passe</label>
-            <input id="pswrd1" type="password" name="pswrd1" required>
+            <label for="mdp1">Mot de passe</label>
+            <input id="mdp1" type="password" name="mdp1" required>
           </div>
 
           <div class="field">
-            <label for="pswrd2">Confirmer le mot de passe</label>
-            <input id="pswrd2" type="password" name="pswrd2" required>
+            <label for="mdp1">Confirmer le mot de passe</label>
+            <input id="mdp2" type="password" name="mdp2" required>
           </div>
 
           <button type="submit" class="btn btn-primary btn-full">S'inscrire</button>
