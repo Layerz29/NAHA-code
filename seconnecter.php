@@ -21,13 +21,13 @@ session_start();
             <span class="brand-text">NAHA</span>
         </a>
 
-        <nav class="nav-links">
-            <a href="accueil.php">Accueil</a>
-            <a href="tableau.php">Tableau de bord</a>
-            <a href="calculateur.php">Calculateur</a>
-            <a href="projet.php">Le Projet</a>
-            <a href="consommation.php">Consommation</a>
-            <a href="contact.php">Contact</a>
+        <nav class="menu">
+            <a class="pill" href="accueil.php">Accueil</a>
+            <a class="pill" href="tableau.php">Tableau de bord</a>
+            <a class="pill" href="calculateur.php">Calculateur</a>
+            <a class="pill" href="projet.php">Le Projet</a>
+            <a class="pill" href="consommation.php">Consommation</a>
+            <a class="pill" href="contact.php">Contact</a>
         </nav>
 
         <div class="nav-actions">
