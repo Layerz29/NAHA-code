@@ -1,12 +1,12 @@
 <?php
 function getBD() {
   try{
-
-    $dsn = "mysql:host=localhost;dbname=seconnecter;charset=utf8";
+    //si vous arrivez pas à vous connecter, vérifier le bon port
+    $dsn = "mysql:host=localhost;port=8889;dbname=naha;charset=utf8";
     $user = "root";
-    $pass = "";  
+    $pass = "root";  
 
-    $bdd = new PDO($dsn; $user; $pass);
+    $bdd = new PDO($dsn, $user, $pass);
 
     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     return $bdd;
