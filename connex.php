@@ -1,53 +1,57 @@
 <?php
 ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 session_start();
-require_once('bdd.php');
+require_once 'bdd.php';
+
 $bdd = getBD();
 
+// Empêcher l’accès en GET
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header('Location: seconnecter.php');
+    header("Location: seconnecter.php?err=" . urlencode("Accès non autorisé."));
     exit;
 }
 
-$mail  = trim($_POST['mail'] ?? '');
-$pswrd = $_POST['pswrd'] ?? '';
+// Nettoyage
+$mail = filter_input(INPUT_POST, 'mail', FILTER_SANITIZE_EMAIL);
+$mdp  = $_POST['mdp'] ?? '';
 
-if ($mail === '' || $pswrd === '') {
-    header('Location: seconnecter.php?err=' . urlencode('Email ou mot de passe manquant.') . '&mail=' . urlencode($mail));
+if (empty($mail) || empty($mdp)) {
+    header("Location: seconnecter.php?err=" . urlencode("Veuillez remplir tous les champs."));
     exit;
 }
 
-$stmt = $bdd->prepare("SELECT id_utilisateur, nom, prenom, mail, pswrd FROM utilisateurs WHERE mail = :mail LIMIT 1");
+// Chercher l'utilisateur
+$sql = "SELECT id_utilisateur, nom, prenom, mail, pswrd 
+        FROM utilisateurs WHERE mail = :mail LIMIT 1";
+$stmt = $bdd->prepare($sql);
 $stmt->execute(['mail' => $mail]);
 $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
 if (!$user) {
-    header('Location: seconnecter.php?err=' . urlencode('Compte introuvable.') . '&mail=' . urlencode($mail));
+    header("Location: seconnecter.php?err=" . urlencode("Adresse e-mail inconnue."));
     exit;
 }
 
-// Si le mot de passe en base est hashé (bcrypt)
-if (preg_match('/^\$2y\$/', $user['pswrd'])) {
-    $ok = password_verify($pswrd, $user['pswrd']);
-} else {
-    // ⚠️ fallback si tu as (temporairement) des mots de passe en clair
-    $ok = hash_equals($user['pswrd'], $pswrd);
-}
-
-if (!$ok) {
-    header('Location: seconnecter.php?err=' . urlencode('Mot de passe incorrect.') . '&mail=' . urlencode($mail));
+// Vérifier le mot de passe
+if (!password_verify($mdp, $user['pswrd'])) {
+    header("Location: seconnecter.php?err=" . urlencode("Mot de passe incorrect."));
     exit;
 }
 
-// Login OK
+// Sécurisation de la session
+session_regenerate_id(true);
+
+// Stocker les infos utilisateur
 $_SESSION['utilisateur'] = [
-    'id_utilisateur' => (int)$user['id_utilisateur'],
-    'nom' => $user['nom'],
+    'id'     => $user['id_utilisateur'],
+    'nom'    => $user['nom'],
     'prenom' => $user['prenom'],
-    'mail' => $user['mail'],
+    'mail'   => $user['mail']
 ];
 
-header('Location: accueil.php');
+header("Location: accueil.php");
 exit;
+?>
