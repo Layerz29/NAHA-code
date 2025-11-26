@@ -16,7 +16,8 @@ if (!isset($_SESSION['utilisateur'])) {
     exit;
 }
 
-$idUser = (int)$_SESSION['utilisateur']['id'];
+$idUser = (int)($_SESSION['utilisateur']['id'] ?? $_SESSION['utilisateur']['id_utilisateur']);
+
 
 try {
     /* === Données 7 derniers jours pour les graphes === */
