@@ -73,7 +73,8 @@ $err    = $_GET['err'] ?? '';
           <p class="error-msg"><?= htmlspecialchars($err) ?></p>
         <?php endif; ?>
 
-        <form action="inscription.php" method="post" class="auth-form">
+        <form action="inscription.php" method="post" class="auth-form" id="inscription-form">
+
           <div class="field">
             <label for="nom">Nom</label>
             <input id="nom" type="text" name="nom" value="<?= htmlspecialchars($nom) ?>" required>
@@ -131,6 +132,108 @@ $err    = $_GET['err'] ?? '';
     </div>
   </div>
 </footer>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const form = document.querySelector("#inscription-form");
+
+    // Regex
+    const regexName = /^[A-Za-zÀ-ÖØ-öø-ÿ\s'-]+$/;
+    const regexAdresse = /^[A-Za-z0-9À-ÖØ-öø-ÿ\s',.-]+$/;
+    const regexTel = /^[0-9]{10}$/;
+
+    // Inputs
+    const nom = document.querySelector("#nom");
+    const prenom = document.querySelector("#prenom");
+    const adresse = document.querySelector("#adr");
+    const numero = document.querySelector("#num");
+    const mail = document.querySelector("#mail");
+    const mdp1 = document.querySelector("#mdp1");
+    const mdp2 = document.querySelector("#mdp2");
+
+    // Affiche une erreur visuelle
+    function setError(input, msg) {
+        input.classList.add("input-error");
+
+        if (!input.nextElementSibling || !input.nextElementSibling.classList.contains("input-msg")) {
+            const p = document.createElement("p");
+            p.className = "input-msg";
+            p.style.color = "#e11d48";
+            p.style.fontSize = "0.8rem";
+            p.style.margin = "0";
+            p.textContent = msg;
+            input.insertAdjacentElement("afterend", p);
+        } else {
+            input.nextElementSibling.textContent = msg;
+        }
+    }
+
+    // Efface l'erreur
+    function clearError(input) {
+        input.classList.remove("input-error");
+        if (input.nextElementSibling && input.nextElementSibling.classList.contains("input-msg")) {
+            input.nextElementSibling.remove();
+        }
+    }
+
+    // Vérif LIVE
+    nom.addEventListener("input", () => {
+        if (!regexName.test(nom.value.trim())) setError(nom, "Le nom ne doit contenir que des lettres.");
+        else clearError(nom);
+    });
+
+    prenom.addEventListener("input", () => {
+        if (!regexName.test(prenom.value.trim())) setError(prenom, "Le prénom ne doit contenir que des lettres.");
+        else clearError(prenom);
+    });
+
+    adresse.addEventListener("input", () => {
+        if (!regexAdresse.test(adresse.value.trim())) setError(adresse, "Adresse invalide.");
+        else clearError(adresse);
+    });
+
+    numero.addEventListener("input", () => {
+        if (!regexTel.test(numero.value.trim())) setError(numero, "Le numéro doit faire 10 chiffres.");
+        else clearError(numero);
+    });
+
+    mail.addEventListener("input", () => {
+        if (!mail.value.includes("@") || !mail.value.includes(".")) {
+            setError(mail, "Email invalide.");
+        } else clearError(mail);
+    });
+
+    mdp1.addEventListener("input", () => {
+        if (mdp1.value.length < 4) setError(mdp1, "Minimum 4 caractères.");
+        else clearError(mdp1);
+    });
+
+    mdp2.addEventListener("input", () => {
+        if (mdp2.value !== mdp1.value) setError(mdp2, "Les mots de passe ne correspondent pas.");
+        else clearError(mdp2);
+    });
+
+    // Validation finale
+    form.addEventListener("submit", (e) => {
+        const invalid =
+            nom.classList.contains("input-error") ||
+            prenom.classList.contains("input-error") ||
+            adresse.classList.contains("input-error") ||
+            numero.classList.contains("input-error") ||
+            mail.classList.contains("input-error") ||
+            mdp1.classList.contains("input-error") ||
+            mdp2.classList.contains("input-error");
+
+        if (invalid) {
+            e.preventDefault();
+            alert("Merci de corriger les erreurs avant de continuer.");
+        }
+    });
+
+});
+</script>
+
+
 
 </body>
 </html>
