@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const form = document.querySelector("#inscription-form");
 
-    // Regex
+
     const regexName = /^[A-Za-zÀ-ÖØ-öø-ÿ\s'-]+$/;
     const regexAdresse = /^[A-Za-z0-9À-ÖØ-öø-ÿ\s',.-]+$/;
     const regexTel = /^[0-9]{10}$/;
