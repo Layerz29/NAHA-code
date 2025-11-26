@@ -16,7 +16,7 @@ if (!isset($_SESSION['utilisateur'])) {
     exit;
 }
 
-// ID de l'utilisateur connecté c'est arthur qui a changé juste cette ligne
+// ID de l'utilisateur connecté c'est arthur qui a changé juste cette ligne, si tu veux repush ahmed juste en changeant cette ligne
 $idUser = (int)($_SESSION['utilisateur']['id'] ?? $_SESSION['utilisateur']['id_utilisateur']);
 
 
