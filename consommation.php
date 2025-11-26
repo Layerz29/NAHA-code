@@ -16,9 +16,8 @@ if (!isset($_SESSION['utilisateur'])) {
     exit;
 }
 
-// ID de l'utilisateur connecté
-$idUser = $_SESSION['utilisateur']['id'];
-
+// ID de l'utilisateur connecté c'est arthur qui a changé juste cette ligne
+$idUser = (int)($_SESSION['utilisateur']['id'] ?? $_SESSION['utilisateur']['id_utilisateur']);
 
 //------------------------------------
 //  TRAITEMENT FORMULAIRE — CONSOMMATION
