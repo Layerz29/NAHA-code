@@ -317,3 +317,7 @@ body {
   background: #f9fafb;
   color: #111827 !important;
 }
+.input-error {
+    border: 2px solid #e11d48 !important;
+    background: #ffe6ea;
+}
