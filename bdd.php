@@ -2,7 +2,7 @@
 function getBD() {
   try{
     //si vous arrivez pas à vous connecter, vérifier le bon port
-    $dsn = "mysql:host=localhost;port=8889;dbname=naha;charset=utf8";
+    $dsn = "mysql:host=localhost;port=3306;dbname=naha;charset=utf8";
     $user = "root";
     $pass = "root";  
 
