@@ -1,4 +1,5 @@
 
+
 /* hérite de ta DA (accueil-style.css) */
 :root{
   --primary:#4c5bf9; --ink:#0f0f10; --muted:#6b7280;
@@ -407,16 +408,18 @@
 
 .bilan-num.green {
   color: #45c778;
-}.chart-legend {
+}
+/* ----- Légende charts ----- */
+.chart-legend {
    display: flex;
    gap: 16px;
    font-size: 14px;
    color: var(--muted);
    padding: 0 16px 6px;
    margin-top: -10px;
- }
+}
 
- .chart-legend .dot {
+.chart-legend .dot {
    width: 10px;
    height: 10px;
    border-radius: 50%;
@@ -424,19 +427,118 @@
    margin-right: 6px;
    position: relative;
    top: 1px;
- }
+}
 
- /* Couleurs alignées avec les barres du chart */
- .legend-in {
-   background: #4ade80; /* vert */
- }
+.legend-in { background: #4ade80; }
+.legend-out { background: #60a5fa; }
+.legend-cardio { background: #facc15; }
 
- .legend-out {
-   background: #60a5fa; /* bleu */
- }
+/* ============================ */
+/*      CONSEIL DU JOUR CARD    */
+/* ============================ */
 
- .legend-cardio {
-   background: #facc15; /* jaune/orangé */
- }
+.tip-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 22px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 24px rgba(0,0,0,.05);
+}
 
+.tip-card h3 {
+    margin: 0 0 6px;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.tip-card p {
+    margin: 0;
+    font-size: 15px;
+    color: #444;
+}
+
+
+/* ============================ */
+/*             KPIS             */
+/* ============================ */
+
+.kpis-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 20px;
+    justify-items: center;
+}
+
+.kpi {
+    width: 100%;
+    max-width: 340px;
+    position: relative;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 0;
+    box-shadow: 0 10px 24px rgba(0,0,0,.05);
+    min-height: 170px;
+    cursor: pointer;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.kpi:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0,0,0,.08);
+}
+
+
+/* ========================== */
+/*     FIX FLIP FINAL         */
+/* ========================== */
+
+/* Empêche l'autre côté d'être visible */
+.flip-card {
+    perspective: 1200px;
+    height: 180px;      /* tu peux ajuster à ton goût */
+    position: relative;
+}
+
+.flip-inner {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform .6s ease;
+    position: relative;
+}
+
+/* Les deux faces couvrent entièrement la carte */
+.flip-front, .flip-back {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;    /* 🔥 masque totalement l’autre face */
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;               /* 🔥 empêche le texte de dépasser */
+    padding: 18px;
+}
+
+/* Le verso uniquement tourne */
+.flip-back {
+    transform: rotateY(180deg);
+}
+
+.flip-card:hover .flip-inner {
+    transform: rotateY(180deg);
+}
+
+/* Limite la hauteur du verso + scroll */
+.flip-list {
+    max-height: 120px;
+    overflow-y: auto;
+    padding-right: 6px;
+}
+
+.flip-list li {
+    margin-bottom: 6px;
 }
