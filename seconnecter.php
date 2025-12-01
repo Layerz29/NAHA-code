@@ -6,33 +6,17 @@ session_start();
 <head>
     <meta charset="UTF-8" />
     <title>Connexion</title>
+    <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
+  
     <link rel="stylesheet" href="accueil-style.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="auth-style.css?v=<?php echo time(); ?>">
 </head>
 <body>
 
-<header class="topbar">
-    <div class="topbar-inner">
-        <a class="brand" href="accueil.php">
-            <span class="brand-logo"></span>
-            <span class="brand-text">NAHA</span>
-        </a>
-
-        <nav class="menu">
-            <a class="pill" href="accueil.php">Accueil</a>
-            <a class="pill" href="tableau.php">Tableau de bord</a>
-            <a class="pill" href="calculateur.php">Calculateur</a>
-            <a class="pill" href="projet.php">Le Projet</a>
-            <a class="pill" href="consommation.php">Consommation</a>
-            <a class="pill" href="contact.php">Contact</a>
-        </nav>
-
-        <div class="nav-actions">
-            <a href="seconnecter.php" class="btn btn-small btn-ghost active">Se connecter</a>
-            <a href="sinscrire.php" class="btn btn-small btn-primary">S’inscrire</a>
-        </div>
-    </div>
-</header>
+<!-- 👉 Inclusion du header -->
+<?php include "header.php"; ?>
 
 <main class="auth-container">
     <div class="auth-card">
@@ -149,6 +133,8 @@ document.addEventListener("DOMContentLoaded", () => {
 }
 </style>
 
+
+<?php include 'footer.php'; ?>
 
 </body>
 </html>

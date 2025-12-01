@@ -24,34 +24,7 @@ if (!isset($_SESSION['utilisateur'])) {
   <link rel="stylesheet" href="calculateur-style.css" />
 </head>
 <body>
-
-<header class="topbar">
-  <div class="container topbar__inner">
-    <a class="brand" href="accueil.php">
-      <span class="brand__logo">🍃</span>
-      <span class="brand__text">NAHA</span>
-    </a>
-
-    <nav class="menu">
-      <a class="pill" href="accueil.php">Accueil</a>
-      <a class="pill" href="tableau.php">Tableau de bord</a>
-      <a class="pill is-active" href="calculateur.php">Calculateur</a>
-      <a class="pill" href="projet.php">Le Projet</a>
-      <a class="pill" href="consommation.php">Consommation</a>
-      <a class="pill" href="contact.php">Contact</a>
-
-    </nav>
-
-    <div class="auth">
-      <span class="auth-user">
-        👤 <?= htmlspecialchars($_SESSION['utilisateur']['prenom']." ".$_SESSION['utilisateur']['nom']) ?>
-        <span class="auth-tag">Connecté</span>
-      </span>
-      <a class="btn-ghost" href="deconnexion.php">Déconnexion</a>
-    </div>
-  </div>
-</header>
-
+<?php include "header.php"; ?>
 <main class="page calc-page">
   <section class="calc-hero">
     <div class="container calc-grid">
@@ -170,17 +143,7 @@ if (!isset($_SESSION['utilisateur'])) {
     </div>
   </section>
 </main>
-
-<footer class="footer">
-  <div class="container footer__inner">
-    <div class="footer__left">
-      <p class="mini-quote">“Le futur c’est loin, j’attends pas assis”.</p>
-    </div>
-    <div class="footer__right">
-      <div class="legal">© 2025 NAHA — Données : Open Food Facts & Compendium MET</div>
-    </div>
-  </div>
-</footer>
+<?php include 'footer.php'; ?>
 
 <script defer src="calculateur-script.js"></script>
 </body>

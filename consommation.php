@@ -110,37 +110,16 @@ $activites = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <head>
   <meta charset="UTF-8">
   <title>NAHA — Consommation</title>
+   <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="accueil-style.css">
   <link rel="stylesheet" href="consommation-style.css?v=2">
 </head>
 
 <body>
-<header class="topbar">
-  <div class="container topbar__inner">
-    <a class="brand" href="accueil.php">
-      <span class="brand__logo">🍃</span>
-      <span class="brand__text">NAHA</span>
-    </a>
-
-    <nav class="menu">
-      <a class="pill" href="accueil.php">Accueil</a>
-      <a class="pill" href="tableau.php">Tableau de bord</a>
-      <a class="pill" href="calculateur.php">Calculateur</a>
-      <a class="pill" href="projet.php">Le Projet</a>
-      <a class="pill is-active" href="consommation.php">Consommation</a>
-      <a class="pill" href="contact.php">Contact</a>
-    </nav>
-
-    <div class="auth">
-      <span class="auth-user">
-        👤 <?= htmlspecialchars($_SESSION['utilisateur']['prenom']." ".$_SESSION['utilisateur']['nom']) ?>
-      </span>
-      <a class="btn-ghost" href="deconnexion.php">Déconnexion</a>
-    </div>
-  </div>
-</header>
-
+<?php include "header.php"; ?>
 <main class="page-cons">
 
   <section class="cons-hero">
@@ -285,13 +264,7 @@ $activites = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 </main>
 
-<footer class="footer">
-  <div class="container footer__inner">
-    <p class="mini-quote">“Le futur c’est loin, j’attends pas assis”.</p>
-    <div class="legal">© 2025 NAHA</div>
-  </div>
-</footer>
-
+<?php include 'footer.php'; ?>
 
 <!-- SCRIPT : BARRE DE RECHERCHE GLOBAL -->
 <script>

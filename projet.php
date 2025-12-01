@@ -63,38 +63,7 @@ if (isset($_GET['ajax']) && $_GET['ajax'] === 'feedback') {
   <link rel="stylesheet" href="projet-style.css" />
 </head>
 <body>
-
-<header class="topbar">
-  <div class="container topbar__inner">
-    <a class="brand" href="accueil.php">
-      <span class="brand__logo">🍃</span>
-      <span class="brand__text">NAHA</span>
-    </a>
-
-    <nav class="menu">
-      <a class="pill" href="accueil.php">Accueil</a>
-      <a class="pill" href="tableau.php">Tableau de bord</a>
-      <a class="pill" href="calculateur.php">Calculateur</a>
-      <a class="pill is-active" href="projet.php">Le Projet</a>
-      <a class="pill" href="consommation.php">Consommation</a>
-      <a class="pill" href="contact.php">Contact</a>
-    </nav>
-
-    <div class="auth">
-      <?php if (isset($_SESSION['utilisateur'])): ?>
-        <span class="auth-user">
-          👤 <?= htmlspecialchars($_SESSION['utilisateur']['prenom'].' '.$_SESSION['utilisateur']['nom'], ENT_QUOTES, 'UTF-8') ?>
-          <span class="auth-tag">Connecté</span>
-        </span>
-        <a class="btn-ghost" href="deconnexion.php">Déconnexion</a>
-      <?php else: ?>
-        <a class="link" href="seconnecter.php">Se connecter</a>
-        <a class="btn" href="sinscrire.php">S’inscrire</a>
-      <?php endif; ?>
-    </div>
-  </div>
-</header>
-
+<?php include "header.php"; ?>
 <main class="projet-page">
   <!-- Hero -->
   <section class="projet-hero">
@@ -318,16 +287,8 @@ if (isset($_GET['ajax']) && $_GET['ajax'] === 'feedback') {
     </section>
 </main>
 
-<footer class="footer">
-  <div class="container footer__inner">
-    <div class="footer__left">
-      <p class="mini-quote">“Le futur c’est loin, j’attends pas assis”.</p>
-    </div>
-    <div class="footer__right">
-      <div class="legal">© 2025 NAHA — Données : Open Food Facts & Compendium MET</div>
-    </div>
-  </div>
-</footer>
+<?php include "footer.php"; ?>
+
 
 <script src="projet-script.js" defer></script>
 </body>

@@ -1,0 +1,74 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+require_once "bdd.php";
+$bdd = getBD();
+
+// Vérifier si un utilisateur est connecté
+$user = null;
+$avatar = "assets/img/default-avatar.png";
+
+if (isset($_SESSION['utilisateur']['id_utilisateur'])) {
+
+    $req = $bdd->prepare("SELECT nom, prenom, avatar FROM utilisateurs WHERE id_utilisateur=?");
+    $req->execute([$_SESSION['utilisateur']['id_utilisateur']]);
+    $user = $req->fetch(PDO::FETCH_ASSOC);
+
+    if (!empty($user['avatar'])) {
+        $avatar = $user['avatar'];
+    }
+}
+?>
+
+<!-- Topbar -->
+<header class="topbar">
+  <div class="container topbar__inner">
+
+    <!-- Logo -->
+    <a class="brand" href="accueil.php">
+      <span class="brand__logo">🍃</span>
+      <span class="brand__text">NAHA</span>
+    </a>
+
+    <!-- Menu principal -->
+    <nav class="menu">
+      <a class="pill" href="accueil.php">Accueil</a>
+      <a class="pill" href="tableau.php">Tableau de bord</a>
+      <a class="pill" href="calculateur.php">Calculateur</a>
+      <a class="pill" href="projet.php">Le Projet</a>
+      <a class="pill" href="consommation.php">Consommation</a>
+      <a class="pill" href="contact.php">Contact</a>
+
+      <?php if ($user): ?>
+        <a class="pill" href="profil.php">Mon Profil</a>
+      <?php endif; ?>
+    </nav>
+
+    <!-- Zone utilisateur -->
+    <div class="auth">
+
+      <?php if ($user): ?>
+
+        <!-- Avatar + nom -->
+        <span class="auth-user">
+    <img src="<?= $avatar ?>" style="width:32px;height:32px;border-radius:50%;">
+    <?= htmlspecialchars($user['prenom'] . " " . $user['nom']) ?><span class="auth-tag"></span>
+</span>
+
+
+        <a class="btn-ghost" href="deconnexion.php">Déconnexion</a>
+
+      <?php else: ?>
+
+        <a class="link" href="seconnecter.php">Se connecter</a>
+        <a class="btn" href="sinscrire.php">S’inscrire</a>
+
+      <?php endif; ?>
+
+    </div>
+
+  </div>
+</header>
+

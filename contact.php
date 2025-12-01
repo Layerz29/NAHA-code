@@ -125,40 +125,8 @@ if (isset($_GET['ajax']) && $_GET['ajax'] === 'contact') {
 </head>
 <body>
 
-<!-- Topbar -->
-<header class="topbar">
-    <div class="container topbar__inner">
-        <a class="brand" href="#top">
-            <span class="brand__logo">🍃</span>
-            <span class="brand__text">NAHA</span>
-        </a>
+<?php include "header.php"; ?>
 
-        <nav class="menu">
-            <a class="pill" href="accueil.php">Accueil</a>
-            <a class="pill" href="tableau.php">Tableau de bord</a>
-            <a class="pill" href="calculateur.php">Calculateur</a>
-            <a class="pill" href="projet.php">Le Projet</a>
-            <a class="pill" href="consommation.php">Consommation</a>
-            <a class="pill is-active" href="contact.php">Contact</a>
-
-
-        </nav>
-
-        <div class="auth">
-            <?php if (isset($_SESSION['utilisateur'])): ?>
-                <span class="auth-user">
-          👤 <?= htmlspecialchars($_SESSION['utilisateur']['prenom'].' '.$_SESSION['utilisateur']['nom'], ENT_QUOTES, 'UTF-8') ?>
-          <span class="auth-tag">Connecté</span>
-        </span>
-                <a class="btn-ghost" href="deconnexion.php">Déconnexion</a>
-            <?php else: ?>
-                <a class="link <?= basename($_SERVER['PHP_SELF']) === 'seconnecter.php' ? 'is-active' : '' ?>"
-                   href="seconnecter.php">Se connecter</a>
-                <a class="btn" href="sinscrire.php">S’inscrire</a>
-            <?php endif; ?>
-        </div>
-    </div>
-</header>
 
 <main class="contact-main">
     <section class="contact-hero">
@@ -240,16 +208,8 @@ if (isset($_GET['ajax']) && $_GET['ajax'] === 'contact') {
         </div>
     </section>
 </main>
-<footer class="footer">
-  <div class="container footer__inner">
-    <div class="footer__left">
-      <p class="mini-quote">“Le futur c’est loin, j’attends pas assis”.</p>
-    </div>
-    <div class="footer__right">
-      <div class="legal">© 2025 NAHA — Données : Open Food Facts & Compendium MET</div>
-    </div>
-  </div>
-</footer>
+<?php include 'footer.php'; ?>
+
 <script src="contact-script.js"></script>
 </body>
 </html>
